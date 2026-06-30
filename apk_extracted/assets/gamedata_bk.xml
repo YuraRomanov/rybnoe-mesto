@@ -1,0 +1,2696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gamedata>
+	<locations>
+		<location id="0" bonus="1800" baseScore="300" sub_time_bonus="25" name="str_location_lesnaya_rechushka" description="str_location_pinery_river" bg="locations/loc_lesnaya_rechushka.jpg" fishes="0,1,2,3,4,5,7,8,9,6" fishes_ver_day="0.7,0.6,2.5,0.65,0.45,0.0,0.85,0.8,0.0,0.3" fishes_ver_night="0.2,0.2,0.2,0.3,0.30,0.6,0.0,0.0,0.7,0.0" level="0" initEnabled="true" night_bg="locations/loc_lesnaya_rechushka_night.jpg" fun_fishes="68,74,75" fun_fish_ver="0.01" collection_items="0,1,2,3,4,5,6,7,8,9,10,11,12,18,19,20,21,24,25,26,56,51,37,32" collection_ver="0.01" money_koef="1.0" isEvent="false" img="loc0.png">
+			<sounds_loop filenames="sounds/environment/loop/nature/nature1.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/birds/cuckoo1.mp3,sounds/environment/sfx/birds/cuckoo2.mp3,sounds/environment/sfx/birds/woodpecker.mp3,sounds/environment/sfx/birds/tits1.mp3,sounds/environment/sfx/birds/tits2.mp3,sounds/environment/sfx/insects/insect(bee).mp3,sounds/environment/sfx/insects/insect(fly).mp3,sounds/environment/sfx/birds_move/bird_fly1.mp3,sounds/environment/sfx/birds_move/bird_sit1.mp3"/>
+			<unblock loc_id="-1" cnt="0" cost_r="0"/>
+            <throw_rect x="500" y="115" w="180" h="120" num="4"/>
+            <world_map x="100" y="104"/>
+            <Points points_count="12">
+				<point0 x="100" y="466" />
+				<point1 x="98" y="440" />
+				<point2 x="100" y="414" />
+				<point3 x="104" y="387" />
+				<point4 x="114" y="363" />
+				<point5 x="131" y="342" />
+				<point6 x="152" y="328" />
+				<point7 x="177" y="319" />
+				<point8 x="202" y="310" />
+				<point9 x="223" y="296" />
+				<point10 x="239" y="276" />
+				<point11 x="246" y="252" />
+			</Points>
+		</location>
+		<location id="1"  bonus="1800" baseScore="300" sub_time_bonus="25" name="str_location_volga" description="str_location_honey_shure" bg="locations/loc_volga.jpg" fishes="17,5,19,20,2,0,21,22,13,8,55,7,9,65,14,18" fishes_ver_day="0.0,0.55,1.0,1.0,1.0,1.0,0.55,0.0,0.45,0.8,0.7,0.85,0.65,0.6,0.2,0.0" fishes_ver_night="0.55,0.55,0.0,1.0,1.0,1.0,0.0,0.85,0.0,0.8,0.7,0.85,0.0,0.0,0.0,0.3" level="1" initEnabled="false" night_bg="locations/loc_volga_night.jpg" fun_fishes="74,76,73" fun_fish_ver="0.01" collection_items="5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,59,58,30,27,26" collection_ver="0.01" money_koef="1.0" isEvent="false" img="loc1.png">
+			<sounds_loop filenames="sounds/environment/loop/nature5_river1.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/birds/crow1.mp3,sounds/environment/sfx/birds/crow2.mp3,sounds/environment/sfx/birds/cuckoo1.mp3,sounds/environment/sfx/birds/cuckoo2.mp3,sounds/environment/sfx/birds/tits1.mp3,sounds/environment/sfx/birds/tits2.mp3,sounds/environment/sfx/insects/insect(bee).mp3,sounds/environment/sfx/insects/insect(fly).mp3,sounds/environment/sfx/plane_pass/plane_pass1.mp3,sounds/environment/sfx/plane_pass/plane_pass2.mp3,sounds/environment/sfx/leaves/leaves2.mp3,sounds/environment/sfx/leaves/leaves3.mp3"/>
+			<unblock seq_id="" loc_id="0" cnt="7" cost_r="10" market_id="en_drimmi_location_1" />
+            <throw_rect x="500" y="180" w="180" h="200" num="4"/>
+            <world_map x="249" y="474"/>
+            <Points points_count="12">
+				<point0 x="258" y="97" />
+				<point1 x="286" y="79" />
+				<point2 x="320" y="77" />
+				<point3 x="353" y="90" />
+				<point4 x="377" y="114" />
+				<point5 x="387" y="146" />
+				<point6 x="389" y="182" />
+				<point7 x="383" y="216" />
+				<point8 x="370" y="247" />
+				<point9 x="351" y="277" />
+				<point10 x="333" y="304" />
+				<point11 x="317" y="335" />
+			</Points>
+		</location>
+		<location id="2"  bonus="1800" baseScore="300" sub_time_bonus="25" name="str_location_lesnaya_zavod" description="str_location_wildwood_pool" bg="locations/loc_lesnaya_zavod.jpg" fishes="61,62,63,64,65,66,27,28,17,67,10,15" fishes_ver_day="0.85,0.65,1.0,1.0,0.8,0.0,0.45,0.0,0.55,0.25,0.0,0.0" fishes_ver_night="0.0,0.0,1.0,1.0,0.8,0.65,0.0,0.35,0.55,0.0,0.15,0.1" level="1" initEnabled="false" night_bg="locations/loc_lesnaya_zavod_night.jpg" fun_fishes="75,69" fun_fish_ver="0.01" collection_items="8,9,10,11,12,13,15,16,19,20,21,22,23,24,25,26,27,2,8,29,30,45,52" collection_ver="0.01" money_koef="1.0" isEvent="false" img="loc2.png">
+			<sounds_loop filenames="sounds/environment/loop/nature/nature2.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/birds/cuckoo1.mp3,sounds/environment/sfx/birds/cuckoo2.mp3,sounds/environment/sfx/birds/woodpecker.mp3,sounds/environment/sfx/birds/tits1.mp3,sounds/environment/sfx/birds/tits2.mp3,sounds/environment/sfx/insects/insect(bee).mp3,sounds/environment/sfx/insects/insect(fly).mp3,sounds/environment/sfx/birds_move/bird_fly1.mp3,sounds/environment/sfx/birds_move/bird_sit1.mp3,sounds/environment/sfx/birds/duck.mp3,sounds/environment/sfx/birds/jay.mp3"/>
+			<unblock seq_id="" loc_id="1" cnt="7" cost_r="25" market_id="en_drimmi_location_2"/>
+            <throw_rect x="590" y="100" w="180" h="120" num="4"/>
+            <world_map x="304" y="232"/>
+            <Points points_count="11">
+                <point0 x="308" y="500" />
+                <point1 x="328" y="527" />
+                <point2 x="354" y="544" />
+                <point3 x="387" y="558" />
+                <point4 x="417" y="563" />
+                <point5 x="451" y="563" />
+                <point6 x="487" y="558" />
+                <point7 x="519" y="544" />
+                <point8 x="544" y="521" />
+                <point9 x="559" y="489" />
+                <point10 x="570" y="456" />
+            </Points>
+		</location>
+		<location id="3"  bonus="1800" baseScore="300" sub_time_bonus="25" name="str_location_zakatnii_bereg" description="str_location_rocky_bay" bg="locations/loc_zakatnii_bereg.jpg" fishes="42,46,7,23,25,26,27,28,8,29,3,5,40,12,24,30" fishes_ver_day="0.55,0.65,1.0,0.6,0.0,0.0,0.2,0.0,0.8,0.0,0.7,0.45,0.9,0.0,0.1,0.1" fishes_ver_night="0.55,0.0,1.0,0.6,0.7,0.35,0.0,0.3,0.8,0.2,0.7,0.0,0.9,0.25,0.0,0.0" level="2" initEnabled="false" night_bg="locations/loc_zakatnii_bereg_night.jpg" fun_fishes="70,71,72" fun_fish_ver="0.01" collection_items="19,20,21,22,23,24,25,26,27,2,8,29,30,31,32,33,34,35,47,48" collection_ver="0.01" money_koef="1.0" isEvent="false" img="loc3.png">
+			<sounds_loop filenames="sounds/environment/loop/nature3_river1.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/leaves/leaves2.mp3,sounds/environment/sfx/leaves/leaves3.mp3,sounds/environment/sfx/insects/insect(fly).mp3,sounds/environment/sfx/birds/jay.mp3,sounds/environment/sfx/birds/duck.mp3,sounds/environment/sfx/birds/owl1.mp3,sounds/environment/sfx/birds/owl2.mp3,sounds/environment/sfx/winds/wind1.mp3,sounds/environment/sfx/winds/wind4.mp3"/>
+			<unblock seq_id="" loc_id="2" cnt="8" cost_r="36" market_id="en_drimmi_location_3"/>
+            <throw_rect x="530" y="150" w="180" h="150" num="4"/>
+            <world_map x="574" y="290"/>
+            <Points points_count="11">
+                <point0 x="559" y="269" />
+                <point1 x="559" y="234" />
+                <point2 x="567" y="196" />
+                <point3 x="582" y="159" />
+                <point4 x="605" y="127" />
+                <point5 x="637" y="100" />
+                <point6 x="673" y="87" />
+                <point7 x="714" y="82" />
+                <point8 x="748" y="84" />
+                <point9 x="786" y="96" />
+                <point10 x="814" y="117" />
+            </Points>
+		</location>
+		<location id="4"  bonus="1800" baseScore="300" sub_time_bonus="25" name="str_location_velikie_ozera" description="str_location_mountain_lake" bg="locations/loc_velikie_ozera.jpg" fishes="9,44,56,25,19,8,29,58,59,60,26,28,46,45,43" fishes_ver_day="0.75,0.45,0.15,0.0,0.0,0.8,0.0,0.7,0.8,0.65,0.0,0.0,0.4,0.1,0.15" fishes_ver_night="0.75,0.45,0.0,0.7,0.75,0.8,0.15,0.7,0.8,0.65,1.0,0.6,0.0,0.0,0.0" level="2" initEnabled="false" night_bg="locations/loc_velikie_ozera_night.jpg" fun_fishes="75,76,77" fun_fish_ver="0.01" collection_items="25,26,27,2,8,29,30,31,32,33,34,35,36,37,38,39" collection_ver="0.01" money_koef="1.0" isEvent="false" img="loc4.png">
+			<sounds_loop filenames="sounds/environment/loop/nature5_river1.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/birds/jay.mp3,sounds/environment/sfx/birds/duck.mp3,sounds/environment/sfx/birds/tits1.mp3,sounds/environment/sfx/birds/tits2.mp3,sounds/environment/sfx/insects/insect(bee).mp3,sounds/environment/sfx/insects/insect(fly).mp3,sounds/environment/sfx/birds/woodpecker.mp3,sounds/environment/sfx/birds_move/bird_fly1.mp3,sounds/environment/sfx/birds_move/bird_sit1.mp3,sounds/environment/sfx/winds/wind1.mp3,sounds/environment/sfx/winds/wind4.mp3"/>
+			<unblock seq_id="" loc_id="3" cnt="9" cost_r="65" market_id="en_drimmi_location_4"/>
+            <throw_rect x="530" y="150" w="180" h="150" num="4"/>
+            <world_map x="828" y="451"/>
+            <Points points_count="10">
+                <point0 x="824" y="264" />
+                <point1 x="801" y="285" />
+                <point2 x="774" y="299" />
+                <point3 x="755" y="320" />
+                <point4 x="745" y="350" />
+                <point5 x="749" y="381" />
+                <point6 x="764" y="408" />
+                <point7 x="794" y="419" />
+                <point8 x="827" y="423" />
+                <point9 x="854" y="437" />
+            </Points>
+		</location>
+		<location id="5"  bonus="1800" baseScore="300" sub_time_bonus="25" name="str_location_nochnaya" description="str_location_secret_backwater" bg="locations/loc_nochnaya.jpg" fishes="10,11,12,13,9,14,15,55,59,29,61,20,6,3,28,16" fishes_ver_day="0.0,0.8,0.75,0.7,0.0,0.0,0.0,1.0,0.85,0.5,1.0,1.0,0.0,1.0,0.0,0.05"  fishes_ver_night="0.45,0.0,0.75,0.0,0.85,0.3,0.15,0.0,0.0,0.0,1.0,1.0,0.9,1.0,0.45,0.0" level="3" initEnabled="false" night_bg="locations/loc_nochnaya_night.jpg" fun_fishes="76,70,71" fun_fish_ver="0.01" collection_items="29,30,31,32,33,34,35,36,37,38,39,45,46,47,48" collection_ver="0.01" money_koef="1.0" isEvent="false" img="loc5.png">
+			<sounds_loop filenames="sounds/environment/loop/river1_insects1.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/leaves/leaves3.mp3,sounds/environment/sfx/birds/owl1.mp3,sounds/environment/sfx/birds/owl2.mp3,sounds/environment/sfx/birds_move/bird_fly1.mp3,sounds/environment/sfx/birds_move/bird_sit1.mp3"/>
+			<unblock seq_id="" loc_id="4" cnt="10" cost_r="83" market_id="en_drimmi_location_5"/>
+            <throw_rect x="530" y="150" w="180" h="150" num="4"/>
+            <world_map x="873" y="130"/>
+            <Points points_count="12">
+                <point0 x="887" y="582" />
+                <point1 x="919" y="591" />
+                <point2 x="951" y="590" />
+                <point3 x="984" y="581" />
+                <point4 x="1010" y="564" />
+                <point5 x="1033" y="541" />
+                <point6 x="1050" y="515" />
+                <point7 x="1060" y="483" />
+                <point8 x="1067" y="450" />
+                <point9 x="1071" y="414" />
+                <point10 x="1074" y="379" />
+                <point11 x="1073" y="343" />
+            </Points>
+		</location>
+		<location id="6"  bonus="1800" baseScore="300" sub_time_bonus="25"  name="str_location_gornaya_rechka" description="str_location_river_valley" bg="locations/loc_gornaya_rechka.jpg" fishes="31,38,32,33,34,25,35,36,37,8,41,65,21,17,39,46,111" fishes_ver_day="0.0,0.5,0.0,1.0,0.35,0.9,0.0,0.7,0.9,0.82,0.95,0.0,0.55,0.64,0.15,0.0,0.5" fishes_ver_night="1.0,0.0,0.45,1.0,0.35,0.9,0.5,0.0,0.0,0.82,0.95,0.15,0.55,0.64,0.0,0.15,0.0" level="3" initEnabled="false" night_bg="locations/loc_gornaya_rechka_night.jpg" fun_fishes="68,69,70,71,72,73,74" fun_fish_ver="0.01" collection_items="38,39,45,46,47,48,49,50,51,52,53,0,1,2,3,4,5,6,7" collection_ver="0.01" money_koef="1.0"  isEvent="false" img="loc6.png">
+			<sounds_loop filenames="sounds/environment/loop/river4_nature4.mp3"/>
+			<sounds_sfx filenames="sounds/environment/loop/insects/insects1.mp3,sounds/environment/sfx/winds/wind1.mp3,sounds/environment/sfx/winds/wind2.mp3,sounds/environment/sfx/winds/wind3.mp3,sounds/environment/sfx/winds/wind4.mp3,sounds/environment/sfx/winds/wind5.mp3,sounds/environment/sfx/birds/tits1.mp3,sounds/environment/sfx/birds/tits2.mp3,sounds/environment/sfx/birds/duck.mp3"/>
+			<unblock seq_id="" loc_id="5" cnt="10" cost_r="126" market_id="en_drimmi_location_6"/>
+            <throw_rect x="500" y="150" w="150" h="200" num="4"/>
+            <world_map x="1066" y="378"/>
+            <Points points_count="11">
+                <point0 x="1055" y="189" />
+                <point1 x="1064" y="158" />
+                <point2 x="1089" y="131" />
+                <point3 x="1119" y="119" />
+                <point4 x="1157" y="122" />
+                <point5 x="1183" y="141" />
+                <point6 x="1204" y="173" />
+                <point7 x="1215" y="206" />
+                <point8 x="1223" y="239" />
+                <point9 x="1228" y="276" />
+                <point10 x="1230" y="314" />
+            </Points>
+		</location>
+		<location id="7"  bonus="1800" baseScore="300" sub_time_bonus="25"  name="str_location_baikal" description="str_location_sand_barrier" bg="locations/loc_baikal.jpg" fishes="57,22,47,48,49,50,51,52,53,54" fishes_ver_day="0.9,0.9,0.6,0.0,1.0,0.05,0.05,0.35,0.0,0.0" fishes_ver_night="0.9,0.9,0.6,0.8,1.0,0.0,0.0,0.35,1.0,0.05" level="3" initEnabled="false" night_bg="locations/loc_baikal_night.jpg" fun_fishes="74,75,76,77,79" fun_fish_ver="0.01"  collection_items="45,44,46,47,48,49,50,51,52,53,55,56,57,58,59,19,20,21,22,23" collection_ver="0.01" money_koef="1.0"  isEvent="false" img="loc7.png">
+			<sounds_loop filenames="sounds/environment/loop/river/river1.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/leaves/leaves1.mp3,sounds/environment/sfx/leaves/leaves2.mp3,sounds/environment/sfx/leaves/leaves3.mp3,sounds/environment/sfx/leaves/leaves4.mp3,sounds/environment/sfx/leaves/leaves5.mp3,sounds/environment/sfx/winds/wind1.mp3,,sounds/environment/sfx/winds/wind2.mp3,sounds/environment/sfx/winds/wind3.mp3,sounds/environment/sfx/winds/wind4.mp3,,sounds/environment/sfx/winds/wind5.mp3,sounds/environment/sfx/birds/crow1.mp3,sounds/environment/sfx/birds/crow2.mp3"/>
+			<unblock seq_id="" loc_id="6" cnt="9" cost_r="155" market_id="en_drimmi_location_7"/>
+            <throw_rect x="590" y="180" w="180" h="240" num="4"/>
+            <world_map x="1233" y="234"/>
+            <Points points_count="10">
+                <point0 x="1235" y="491" />
+                <point1 x="1240" y="528" />
+                <point2 x="1261" y="560" />
+                <point3 x="1293" y="578" />
+                <point4 x="1331" y="586" />
+                <point5 x="1370" y="589" />
+                <point6 x="1412" y="588" />
+                <point7 x="1450" y="581" />
+                <point8 x="1486" y="568" />
+                <point9 x="1516" y="546" />
+            </Points>
+		</location>
+		<location id="8"   bonus="1800" baseScore="300" sub_time_bonus="25" name="str_location_lochness" description="str_location_lochhness" bg="locations/loc_lochness.jpg" fishes="56,5,43,8,12,29,60,2,44,46,14,45,34,1,83,82,81,80,57" fishes_ver_day="0.5,0.79,0.73,0.95,0.79,0.49,0.85,0.95,0.58,0.0,0.58,0.46,0.51,0.9,0.0,1.0,0.0,0.0,0,7" fishes_ver_night="0.5,0.0,0.0,0.95,0.79,0.49,0.85,0.95,0.58,0.25,0.0,0.46,0.51,0.9,0.05,0.0,0.26,0.05,0.1" level="3" initEnabled="false" night_bg="locations/loc_lochness_night.jpg" fun_fishes="74,75,76" fun_fish_ver="0.01" collection_items="19,20,21,22,23,24,25,26,27,2,8,29,30,31,32,33,34,35,47,48" collection_ver="0.01" money_koef="1.0"  isEvent="false" img="loc9.png">
+			<sounds_loop filenames="sounds/environment/loop/nature/nature2.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/birds/crow2.mp3,sounds/environment/sfx/birds/cuckoo2.mp3,sounds/environment/sfx/winds/wind3.mp3,sounds/environment/sfx/birds/owl1.mp3,sounds/environment/sfx/birds/woodpecker.mp3,sounds/environment/sfx/birds_move/bird_fly1.mp3,sounds/environment/sfx/birds_move/bird_sit1.mp3,sounds/environment/sfx/fish_splash/fish_splash5.mp3,sounds/environment/sfx/birds/crow2.mp3"/>
+			<unblock seq_id="" loc_id="7" cnt="9" cost_r="170" market_id="en_drimmi_location_8"/>
+            <throw_rect x="540" y="180" w="180" h="210" num="4"/>
+            <world_map x="1528" y="184"/>
+            <Points points_count="12">
+                <point0 x="1526" y="384" />
+                <point1 x="1518" y="354" />
+                <point2 x="1497" y="331" />
+                <point3 x="1466" y="340" />
+                <point4 x="1449" y="368" />
+                <point5 x="1434" y="398" />
+                <point6 x="1410" y="412" />
+                <point7 x="1381" y="393" />
+                <point8 x="1365" y="364" />
+                <point9 x="1357" y="332" />
+                <point10 x="1352" y="295" />
+                <point11 x="1353" y="258" />
+            </Points>
+		</location>
+		<location id="9"  bonus="1800" baseScore="300" sub_time_bonus="25" name="str_location_army" description="str_location_army_descr" bg="locations/loc_army.jpg" fishes="84,85,86,89,65,40,33,19,27,15,45,18,35,42,38,87,88" fishes_ver_day="0.05,0.05,1.0,0.15,0.9,1.0,0.95,0.95,0.55,0.55,0.45,0.65,0.7,0.85,0.55,0.15,0.15" fishes_ver_night="0.0,0.05,1.0,0.0,0.9,1.0,0.95,0.95,0.0,0.0,0.45,0.65,0.7,0.85,0.55,0.0,0.0" level="3" initEnabled="false" night_bg="locations/loc_army.jpg" fun_fishes="76,69" fun_fish_ver="0.01" collection_items="65,66,67,68,69" collection_ver="0.02" money_koef="1.0"  isEvent="true">
+			<sounds_loop filenames="sounds/environment/loop/nature5_river1.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/plane_pass/plane_pass2.mp3,sounds/environment/sfx/plane_pass/plane_pass1.mp3,sounds/environment/sfx/winds/wind2.mp3,sounds/environment/sfx/birds/duck.mp3,sounds/environment/sfx/birds_move/bird_fly1.mp3,sounds/environment/sfx/birds_move/bird_sit1.mp3,sounds/environment/sfx/fish_splash/fish_splash5.mp3"/>
+			<unblock seq_id="" loc_id="8" cnt="9" cost_r="185" market_id="en_drimmi_location_9"/>
+            <throw_rect x="540" y="180" w="180" h="210" num="4"/>
+		</location>
+		<location id="10"  bonus="1800" baseScore="300" sub_time_bonus="25" name="str_location_amazon" description="str_location_amazon_descr" bg="locations/loc_amazon.jpg" fishes="90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107" fishes_ver_day="0.4,0.8,0.55,0.8,0.5,0.0,0.05,0.9,0.0,0.6,0.0,0.05,0.4,0.3,0.0,0.0,0.5,0.6" fishes_ver_night="0.0,0.8,0.55,0.8,0.0,0.05,0.0,0.9,0.35,0.0,0.05,0.05,0.4,0.3,0.05,0.05,0.0,0.6" level="3" initEnabled="false" night_bg="locations/loc_amazon_night.jpg" fun_fishes="74,75" fun_fish_ver="0.01" collection_items="25,26,27,28,29,35,36,37,38,39" collection_ver="0.01" money_koef="1.0"  isEvent="false" img="loc10.png">
+			<sounds_loop filenames="sounds/environment/loop/river4_nature4.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/leaves/leaves4.mp3,sounds/environment/sfx/birds_move/birds_fly1.mp3,sounds/environment/sfx/winds/wind2.mp3,sounds/environment/sfx/fish_splash/fish_splash3.mp3,sounds/environment/sfx/birds_move/bird_fly1.mp3,sounds/environment/sfx/birds_move/bird_sit1.mp3,sounds/environment/sfx/fish_splash/fish_splash5.mp3"/>
+			<unblock seq_id="" loc_id="9" cnt="9" cost_r="230" market_id="en_drimmi_location_10"/>
+            <throw_rect x="520" y="150" w="180" h="180" num="4"/>
+            <world_map x="1366" y="466"/>
+            <Points points_count="10">
+                <point0 x="1383" y="100" />
+                <point1 x="1414" y="86" />
+                <point2 x="1446" y="84" />
+                <point3 x="1478" y="89" />
+                <point4 x="1509" y="89" />
+                <point5 x="1542" y="89" />
+                <point6 x="1570" y="101" />
+                <point7 x="1592" y="127" />
+                <point8 x="1604" y="160" />
+                <point9 x="1607" y="198" />
+            </Points>
+		</location>
+		<location id="11" bonus="1800" baseScore="300" sub_time_bonus="25"  name="str_location_elovii" description="str_location_elovii_descr" bg="locations/loc_elovii.jpg" fishes="39,53,51,50,37,31,28,22,19,16,66,46,108,109,36,112" fishes_ver_day="0.0,0.7,0.25,0.4,0.75,0.75,0.0,0.9,0.9,0.05,0.7,0.0,0.0,0.65,0.35" fishes_ver_night="0.4,0.7,0.0,0.4,0.0,0.75,0.6,0.9,0.9,0.05,0.7,0.5,0.05,0.65,0.0" level="3" initEnabled="false" night_bg="locations/loc_elovii_night.jpg" fun_fishes="68,73,75,79" fun_fish_ver="0.01" collection_items="7,13,18,22,26,33,47,58,59" collection_ver="0.01" money_koef="1.0"  isEvent="false" img="loc11.png">
+			<sounds_loop filenames="sounds/environment/loop/nature2_river3.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/leaves/leaves3.mp3,sounds/environment/sfx/birds_move/birds_fly1.mp3,sounds/environment/sfx/winds/wind2.mp3,sounds/environment/sfx/fish_splash/fish_splash3.mp3,sounds/environment/sfx/birds_move/bird_fly1.mp3,sounds/environment/sfx/birds_move/bird_sit1.mp3,sounds/environment/sfx/fish_splash/fish_splash5.mp3"/>
+			<unblock seq_id="" loc_id="10" cnt="9" cost_r="260" market_id="en_drimmi_location_11"/>
+            <throw_rect x="520" y="150" w="180" h="180" num="4"/>
+            <world_map x="1614" y="368"/>
+            <Points points_count="12">
+                <point0 x="1613" y="351" />
+                <point1 x="1614" y="383" />
+                <point2 x="1625" y="420" />
+                <point3 x="1636" y="450" />
+                <point4 x="1656" y="477" />
+                <point5 x="1687" y="503" />
+                <point6 x="1712" y="516" />
+                <point7 x="1745" y="527" />
+                <point8 x="1780" y="524" />
+                <point9 x="1809" y="500" />
+                <point10 x="1818" y="461" />
+                <point11 x="1816" y="426" />
+            </Points>
+		</location>
+        <location id="12"  bonus="1800" baseScore="300" sub_time_bonus="25" name="str_location_seversky" description="str_location_seversky_descr" bg="locations/loc_seversky.jpg" fishes="0,1,2,3,5,6,7,14,11,12,13,16,18,29,60,42,109,110" fishes_ver_day="0.9,0.9,0.9,0.9,0.8,0.8,0.7,0.0,0.8,0.7,0.8,0.05,0.0,0.5,0.8,0.0,0.05,0.0" fishes_ver_night="0.9,0.9,0.9,0.9,0.8,0.8,0.7,0.6,0.8,0.7,0.8,0.0,0.65,0.0,0.8,0.6,0.0,0.5" level="3" initEnabled="false" night_bg="locations/loc_seversky_night.jpg" fun_fishes="75,77,79,73" fun_fish_ver="0.01" collection_items="19,20,21,22,23,24,25,26,27,2,8,29,30,31,32,33,34,35,47,48" collection_ver="0.01" money_koef="1.0"  isEvent="false" img="loc12.png">
+			<sounds_loop filenames="sounds/environment/loop/nature5_river1.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/leaves/leaves3.mp3,sounds/environment/sfx/birds_move/birds_fly1.mp3,sounds/environment/sfx/winds/wind2.mp3,sounds/environment/sfx/fish_splash/fish_splash3.mp3,sounds/environment/sfx/birds_move/bird_fly1.mp3,sounds/environment/sfx/birds_move/bird_sit1.mp3,sounds/environment/sfx/fish_splash/fish_splash5.mp3"/>
+			<unblock seq_id="" loc_id="11" cnt="9" cost_r="320" market_id="en_drimmi_location_12"/>
+            <throw_rect x="540" y="180" w="180" h="170" num="4"/>
+            <world_map x="1814" y="290"/>
+            <Points points_count="9">
+				<point0 x="1803" y="272" />
+				<point1 x="1796" y="236" />
+				<point2 x="1790" y="199" />
+				<point3 x="1797" y="154" />
+				<point4 x="1814" y="115" />
+				<point5 x="1849" y="89" />
+				<point6 x="1891" y="79" />
+				<point7 x="1920" y="87" />
+				<point8 x="1940" y="105" />
+			</Points>
+		</location>
+        <location id="13" bonus="1800" baseScore="300" sub_time_bonus="25"  name="str_location_thousand" description="str_location_thousand_descr" bg="locations/loc_thousand.jpg" fishes="113,114,115,116,117,53,15,59,44,0,1,29,25,23,7,16" fishes_ver_day="0.8,0.0,0.9,0.0,0.6,0.0,0.55,0.0,0.6,0.9,0.9,0.5,0.8,0.7,0.9,0.05," fishes_ver_night="0.0,0.5,0.0,0.05,0.0,0.7,0.0,0.85,0.0,0.9,0.9,0.5,0.85,0.7,0.9,0.0" level="3" initEnabled="false" night_bg="locations/loc_thousand_night.jpg" fun_fishes="70,71,72,75,69" fun_fish_ver="0.01" collection_items="30,31,32,33,34,54,55,56,57,58,59" collection_ver="0.01" money_koef="1.0"  isEvent="false" img="loc13.png">
+			<sounds_loop filenames="sounds/environment/loop/nature3_river1.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/leaves/leaves3.mp3,sounds/environment/sfx/birds_move/birds_fly1.mp3,sounds/environment/sfx/winds/wind2.mp3,sounds/environment/sfx/fish_splash/fish_splash3.mp3,sounds/environment/sfx/birds_move/bird_fly1.mp3,sounds/environment/sfx/birds_move/bird_sit1.mp3,sounds/environment/sfx/fish_splash/fish_splash5.mp3"/>
+			<unblock seq_id="" loc_id="12" cnt="9" cost_r="350" market_id="en_drimmi_location_13"/>
+            <throw_rect x="540" y="180" w="180" h="170" num="4"/>
+            <world_map x="1960" y="463"/>
+            <Points points_count="13">
+				<point0 x="1969" y="254" />
+				<point1 x="1975" y="281" />
+				<point2 x="1986" y="297" />
+				<point3 x="2010" y="299" />
+				<point4 x="2037" y="301" />
+				<point5 x="2052" y="309" />
+				<point6 x="2060" y="330" />
+				<point7 x="2060" y="351" />
+				<point8 x="2051" y="372" />
+				<point9 x="2033" y="395" />
+				<point10 x="2024" y="421" />
+				<point11 x="2027" y="441" />
+				<point12 x="2035" y="473" />
+			</Points>
+		</location>
+        <location id="14"  bonus="1800" baseScore="300" sub_time_bonus="25" name="str_location_beer" description="str_location_beer_descr" bg="locations/loc_pivnaya.jpg" fishes="118,119,117,116,120,115,114,113,121,42,107,122" fishes_ver_day="0.9,0.5,0.7,0.5,0.6,0.7,0.55,0.85,0.6,0.9,0.9,0.5" fishes_ver_night="0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0" level="3" initEnabled="false" night_bg="locations/loc_pivnaya.jpg" fun_fishes="70,71,72,75,69" fun_fish_ver="0.01" collection_items="30,31,32,33,34,54,55,56,57,58,59" collection_ver="0.01" money_koef="1.0"  isEvent="true" img="loc12.png">
+			<sounds_loop filenames="sounds/environment/loop/nature3_river1.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/leaves/leaves3.mp3,sounds/environment/sfx/birds_move/birds_fly1.mp3,sounds/environment/sfx/winds/wind2.mp3,sounds/environment/sfx/fish_splash/fish_splash3.mp3,sounds/environment/sfx/birds_move/bird_fly1.mp3,sounds/environment/sfx/birds_move/bird_sit1.mp3,sounds/environment/sfx/fish_splash/fish_splash5.mp3"/>
+            <unblock  cnt="0" cost_r="99" market_id="en_drimmi_location_14"/>
+            <throw_rect x="495" y="180" w="170" h="160" num="4"/>
+		</location>
+		<location id="15"  bonus="1800" baseScore="300" sub_time_bonus="25" name="str_location_snow" description="str_location_snow_descr" bg="locations/loc_newyear.jpg" fishes="77,61,123,11,125,90,126,35,124,19,2,22" fishes_ver_day="0.6,0.5,0.7,0.5,0.6,0.7,0.55,0.85,0.6,0.9,0.9,0.5" fishes_ver_night="0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0" level="3" initEnabled="false" night_bg="locations/loc_newyear.jpg" fun_fishes="70,71,72,75,69" fun_fish_ver="0.01" collection_items="70,71,72,73,74" collection_ver="0.01" money_koef="1.0"  isEvent="true" img="loc12.png">
+			<sounds_loop filenames="sounds/environment/loop/nature3_river1.mp3"/>
+			<sounds_sfx filenames="sounds/environment/sfx/leaves/leaves3.mp3,sounds/environment/sfx/birds_move/birds_fly1.mp3,sounds/environment/sfx/winds/wind2.mp3,sounds/environment/sfx/fish_splash/fish_splash3.mp3,sounds/environment/sfx/birds_move/bird_fly1.mp3,sounds/environment/sfx/birds_move/bird_sit1.mp3,sounds/environment/sfx/fish_splash/fish_splash5.mp3"/>
+            <unblock  seq_id="event_new_year" cnt="9" cost_r="350" market_id="en_drimmi_location_15"/>
+            <throw_rect x="495" y="180" w="170" h="160" num="4"/>
+            <world_map x="50" y="467"/>
+		</location>
+        
+	</locations>
+
+
+    <day_night change_time="57600" price="3"/>
+    
+	<location_levels>
+		<level id="0" cost_1h_v="0" cost_1d_r="0" cost_5d_r="0" cost_forever_r="0"/>
+		<level id="1" cost_1h_v="215" cost_1d_r="15" cost_5d_r="43" cost_forever_r="198"/>
+		<level id="2" cost_1h_v="530" cost_1d_r="25" cost_5d_r="71" cost_forever_r="476"/>
+		<level id="3" cost_1h_v="740" cost_1d_r="98" cost_5d_r="347" cost_forever_r="1463"/>
+	</location_levels>
+<!--
+	foodGroup (пищевая группа)
+	0 - травоядные
+	1 - всеядные
+	2 - хищники
+-->
+	<fishes>
+		<fish id="0" name="str_fish_ukleika" desc="str_fish_bleak" sprite_name="items/fishes/icon0.png" minWeight="0.01" maxWeight="0.06" bigWeight="0.1" rareWeight="0.2" foodGroup="0" category="1" exp_catch="1" exp_open="2"/>
+		<fish id="1" name="str_fish_peskar" desc="str_fish_gudgeon" sprite_name="items/fishes/icon1.png" minWeight="0.07" maxWeight="0.16" bigWeight="0.2" rareWeight="0.3" foodGroup="1" category="1"/>
+		<fish id="2" name="str_fish_plotva" desc="str_fish_roach" sprite_name="items/fishes/icon2.png" minWeight="0.05" maxWeight="0.6" bigWeight="1.4" rareWeight="3.0" foodGroup="0" category="1"/>
+		<fish id="3" name="str_fish_ersh" desc="str_fish_ruff" sprite_name="items/fishes/icon3.png" minWeight="0.05" maxWeight="0.7" bigWeight="1.2" rareWeight="1.5" foodGroup="1" category="1"/>
+		<fish id="4" name="str_fish_podleshik" desc="str_fish_small_bream" sprite_name="items/fishes/icon4.png" minWeight="0.2" maxWeight="1.0" bigWeight="1.5" rareWeight="2.0" foodGroup="0" category="1"/>
+		<fish id="5" name="str_fish_lesh" desc="str_fish_bream" sprite_name="items/fishes/icon5.png" minWeight="0.3" maxWeight="1.2" bigWeight="3.0" rareWeight="5.0" foodGroup="0" category="2"/>
+		<fish id="6" name="str_fish_lin" desc="str_fish_tench" sprite_name="items/fishes/icon6.png" minWeight="0.1" maxWeight="1.0" bigWeight="2.0" rareWeight="3.0" foodGroup="1" category="2"/>
+		<fish id="7" name="str_fish_karas" desc="str_fish_crucian" sprite_name="items/fishes/icon7.png" minWeight="0.06" maxWeight="0.5" bigWeight="1.2" rareWeight="3.0" foodGroup="0" category="1"/>
+		<fish id="8" name="str_fish_okun" desc="str_fish_perch" sprite_name="items/fishes/icon8.png" minWeight="0.05" maxWeight="0.6" bigWeight="1.5" rareWeight="3.0" foodGroup="2" category="1"/>
+		<fish id="9" name="str_fish_shuchka" desc="str_fish_grass_pike" sprite_name="items/fishes/icon9.png" minWeight="0.15" maxWeight="1.0" bigWeight="1.5" rareWeight="3.0" foodGroup="2" category="2"/>
+		<fish id="10" name="str_fish_zmeegolov" desc="str_fish_snakehead" sprite_name="items/fishes/icon10.png" minWeight="0.4" maxWeight="2.0" bigWeight="5.3" rareWeight="13.0" foodGroup="2" category="3"/>
+		<fish id="11" name="str_fish_zhereh" desc="str_fish_asp" sprite_name="items/fishes/icon11.png" minWeight="0.2" maxWeight="0.8" bigWeight="2.0" rareWeight="4.0" foodGroup="1" category="2"/>
+		<fish id="12" name="str_fish_golavl" desc="str_fish_chub" sprite_name="items/fishes/icon12.png" minWeight="0.3" maxWeight="1.3" bigWeight="2.5" rareWeight="8.0" foodGroup="1" category="2"/>
+		<fish id="13" name="str_fish_yaz" desc="str_fish_Ide" sprite_name="items/fishes/icon13.png" minWeight="0.2" maxWeight="1.4" bigWeight="2.5" rareWeight="4.0" foodGroup="1" category="7"/>
+		<fish id="14" name="str_fish_shuka" desc="str_fish_pike" sprite_name="items/fishes/icon14.png" minWeight="0.3" maxWeight="1.8" bigWeight="7.0" rareWeight="14.0" foodGroup="2" category="3"/>
+		<fish id="15" name="str_fish_nalim" desc="str_fish_burbot" sprite_name="items/fishes/icon15.png" minWeight="0.5" maxWeight="2.1" bigWeight="4.0" rareWeight="12.0" foodGroup="1" category="4"/>
+		<fish id="16" name="str_fish_som" desc="str_fish_catfish" sprite_name="items/fishes/icon16.png" minWeight="1.0" maxWeight="2.8" bigWeight="12.0" rareWeight="300.0" foodGroup="2" category="5"/>
+		<fish id="17" name="str_fish_podust" desc="str_fish_nase" sprite_name="items/fishes/icon17.png" minWeight="0.3" maxWeight="1.1" bigWeight="2.0" rareWeight="3.2" foodGroup="1" category="6"/>
+		<fish id="18" name="str_fish_sazan" desc="str_fish_common_carp" sprite_name="items/fishes/icon48.png" minWeight="0.4" maxWeight="1.3" bigWeight="3.0" rareWeight="12.0" foodGroup="0" category="3"/>
+		<fish id="19" name="str_fish_sinec" desc="str_fish_blue_bream" sprite_name="items/fishes/icon19.png" minWeight="0.05" maxWeight="0.4" bigWeight="0.8" rareWeight="2.5" foodGroup="1" category="1"/>
+		<fish id="20" name="str_fish_gustera"  desc="str_fish_flat_bream" sprite_name="items/fishes/icon20.png" minWeight="0.1" maxWeight="0.6" bigWeight="1.2" rareWeight="2.0" foodGroup="0" category="1"/>
+		<fish id="21" name="str_fish_verhoglyad" desc="str_fish_sky_gazer" sprite_name="items/fishes/icon21.png" minWeight="0.25" maxWeight="1.2" bigWeight="4.0" rareWeight="7.0" foodGroup="2" category="2"/>
+		<fish id="22" name="str_fish_chehon" desc="str_fish_sabre" sprite_name="items/fishes/icon22.png" minWeight="0.1" maxWeight="0.7" bigWeight="1.0" rareWeight="1.8" foodGroup="1" category="1"/>
+		<fish id="23" name="str_fish_sereb_karas" desc="str_fish_silver_crucian" sprite_name="items/fishes/icon23.png" minWeight="0.02" maxWeight="0.4" bigWeight="1.6" rareWeight="2.3" foodGroup="0" category="3"/>
+		<fish id="24" name="str_fish_zolot_karas" desc="str_fish_gold_crucian" sprite_name="items/fishes/icon24.png" minWeight="0.1" maxWeight="0.6" bigWeight="2.0" rareWeight="3.0" foodGroup="0" category="5"/>
+		<fish id="25" name="str_fish_sig" desc="str_fish_cisco" sprite_name="items/fishes/icon25.png" minWeight="0.1" maxWeight="0.8" bigWeight="1.3" rareWeight="5.0" foodGroup="1" category="6"/>
+		<fish id="26" name="str_fish_osman" desc="str_fish_osman_descr" sprite_name="items/fishes/icon26.png" minWeight="0.1" maxWeight="1.0" bigWeight="2.5" rareWeight="3.4" foodGroup="1" category="4"/>
+		<fish id="27" name="str_fish_usach" desc="str_fish_barb" sprite_name="items/fishes/icon27.png" minWeight="0.32" maxWeight="2.0" bigWeight="8.0" rareWeight="16.0" foodGroup="1" category="3"/>
+		<fish id="28" name="str_fish_ugor" desc="str_fish_freshwater_eel" sprite_name="items/fishes/icon28.png" minWeight="0.3" maxWeight="2.3" bigWeight="4.6" rareWeight="6.0" foodGroup="2" category="2"/>
+		<fish id="29" name="str_fish_sudak" desc="str_fish_zunder" sprite_name="items/fishes/icon29.png" minWeight="0.3" maxWeight="1.4" bigWeight="7.0" rareWeight="15.0" foodGroup="2" category="4"/>
+		<fish id="30" name="str_fish_beloper_peskar" desc="str_fish_whitefin_gudgeon" sprite_name="items/fishes/icon30.png" minWeight="0.66" maxWeight="0.4" bigWeight="0.7" rareWeight="1.4" foodGroup="0" category="5"/>
+		<fish id="31" name="str_fish_harius" desc="str_fish_grayling" sprite_name="items/fishes/icon31.png" minWeight="0.1" maxWeight="1.0" bigWeight="1.6" rareWeight="3.1" foodGroup="1" category="3"/>
+		<fish id="32" name="str_fish_rechnaya_forel" desc="str_fish_trout" sprite_name="items/fishes/icon32.png" minWeight="0.5" maxWeight="3.3" bigWeight="4.7" rareWeight="13.0" foodGroup="1" category="4"/>
+		<fish id="33" name="str_fish_ryapushka" desc="str_fish_vendace" sprite_name="items/fishes/icon33.png" minWeight="0.03" maxWeight="0.4" bigWeight="0.8" rareWeight="1.1" foodGroup="0" category="1"/>
+		<fish id="34" name="str_fish_golyan" desc="str_fish_minnow" sprite_name="items/fishes/icon34.png" minWeight="0.3" maxWeight="2.4" bigWeight="5.1" rareWeight="9.0" foodGroup="2" category="4"/>
+		<fish id="35" name="str_fish_chernospinka" desc="str_fish_black_backed" sprite_name="items/fishes/icon35.png" minWeight="0.3" maxWeight="1.1" bigWeight="2.2" rareWeight="8.0" foodGroup="0" category="3"/>
+		<fish id="36" name="str_fish_gorbusha" desc="str_fish_humpback_salmon" sprite_name="items/fishes/icon36.png" minWeight="0.3" maxWeight="1.6" bigWeight="3.2" rareWeight="8.5" foodGroup="1" category="4"/>
+		<fish id="37" name="str_fish_omul" desc="str_fish_omul_descr" sprite_name="items/fishes/icon37.png" minWeight="0.3" maxWeight="1.3" bigWeight="2.9" rareWeight="4.5" foodGroup="1" category="7"/>
+		<fish id="38" name="str_fish_kizuch" desc="str_fish_coho" sprite_name="items/fishes/icon74.png" minWeight="0.32" maxWeight="2.3" bigWeight="9.5" rareWeight="16.0" foodGroup="1" category="3"/>
+		<fish id="39" name="str_fish_keta" desc="str_fish_chum" sprite_name="items/fishes/icon73.png" minWeight="0.4" maxWeight="2.4" bigWeight="10.0" rareWeight="19.0" foodGroup="1" category="4"/>
+		<fish id="40" name="str_fish_mramor_bichok" desc="str_fish_mramor_bichok_descr" sprite_name="items/fishes/icon44.png" minWeight="0.02" maxWeight="0.15" bigWeight="0.3" rareWeight="0.4" foodGroup="1" category="1"/>
+		<fish id="41" name="str_fish_bichok_krugl" desc="str_fish_round_goby" sprite_name="items/fishes/icon45.png" minWeight="0.01" maxWeight="0.3" bigWeight="0.6" rareWeight="0.8" foodGroup="1" category="1"/>
+		<fish id="42" name="str_fish_shemaya" desc="str_fish_shemaya_descr" sprite_name="items/fishes/icon46.png" minWeight="0.33" maxWeight="0.5" bigWeight="0.7" rareWeight="1.0" foodGroup="1" category="2"/>
+		<fish id="43" name="str_fish_ozernaya_forel" desc="str_fish_lake_trout" sprite_name="items/fishes/icon47.png" minWeight="0.2" maxWeight="0.8" bigWeight="1.6" rareWeight="6.0" foodGroup="1" category="3"/>
+		<fish id="44" name="str_fish_karp" desc="str_fish_karp_descr" sprite_name="items/fishes/icon48.png" minWeight="0.2" maxWeight="1.6" bigWeight="20.0" rareWeight="28.0" foodGroup="0" category="3"/>
+		<fish id="45" name="str_fish_zerkalny_karp" desc="str_fish_mirror_carp" sprite_name="items/fishes/icon49.png" minWeight="0.3" maxWeight="1.7" bigWeight="7.0" rareWeight="26.0" foodGroup="0" category="4"/>
+		<fish id="46" name="str_fish_semga" desc="str_fish_salmon" sprite_name="items/fishes/icon50.png" minWeight="0.4" maxWeight="2.3" bigWeight="10.0" rareWeight="40.0" foodGroup="1" category="5"/>
+		<fish id="47" name="str_fish_baikal_sig" desc="str_fish_baikal_sig_descr" sprite_name="items/fishes/icon51.png" minWeight="0.5" maxWeight="1.8" bigWeight="3.5" rareWeight="8.5" foodGroup="1" category="4"/>
+		<fish id="48" name="str_fish_baikal_harius" desc="str_fish_baikal_grayling" sprite_name="items/fishes/icon52.png" minWeight="0.1" maxWeight="1.2" bigWeight="2.4" rareWeight="5.6" foodGroup="1" category="3"/>
+		<fish id="49" name="str_fish_sibir_plotva" desc="str_fish_siberian_roach" sprite_name="items/fishes/icon53.png" minWeight="0.1" maxWeight="0.5" bigWeight="0.9" rareWeight="1.3" foodGroup="0" category="3"/>
+		<fish id="50" name="str_fish_amur_sazan" desc="str_fish_amur_sazan_descr" sprite_name="items/fishes/icon54.png" minWeight="0.4" maxWeight="2.4" bigWeight="5.2" rareWeight="15.0" foodGroup="0" category="5"/>
+		<fish id="51" name="str_fish_amur_som" desc="str_fish_baikal_catfish" sprite_name="items/fishes/icon55.png" minWeight="1.7" maxWeight="4.0" bigWeight="9.0" rareWeight="17.0" foodGroup="2" category="5"/>
+		<fish id="52" name="str_fish_baikal_omul" desc="str_fish_baikal_omul_descr" sprite_name="items/fishes/icon56.png" minWeight="0.6" maxWeight="3.0" bigWeight="5.6" rareWeight="14.5" foodGroup="1" category="4"/>
+		<fish id="53" name="str_fish_sibir_harius" desc="str_fish_sibir_harius_descr" sprite_name="items/fishes/icon57.png" minWeight="0.4" maxWeight="1.3" bigWeight="2.2" rareWeight="3.9" foodGroup="1" category="3"/>
+		<fish id="54" name="str_fish_baikal_osetr" desc="str_fish_baikal_osetr_descr" sprite_name="items/fishes/icon58.png" minWeight="1.6" maxWeight="6.6" bigWeight="22.5" rareWeight="190.0" foodGroup="1" category="5"/>
+		<fish id="55" name="str_fish_bersh" desc="str_fish_bersh_descr" sprite_name="items/fishes/icon59.png" minWeight="0.3" maxWeight="0.9" bigWeight="1.2" rareWeight="1.5" foodGroup="2" category="7"/>
+		<fish id="56" name="str_fish_goldfish" desc="str_fish_goldfish_descr" sprite_name="items/fishes/icon60.png" minWeight="0.01" maxWeight="0.5" bigWeight="0.6" rareWeight="0.8" foodGroup="1" category="5"/>
+		<fish id="57" name="str_fish_verhovka" desc="str_fish_verhovka_descr" sprite_name="items/fishes/icon61.png" minWeight="0.2" maxWeight="1.1" bigWeight="2.2" rareWeight="3.5" foodGroup="1" category="3"/>
+		<fish id="58" name="str_fish_ribec" desc="str_fish_vimba" sprite_name="items/fishes/icon62.png" minWeight="0.12" maxWeight="0.7" bigWeight="1.3" rareWeight="3" foodGroup="0" category="2"/>
+		<fish id="59" name="str_fish_usat_golec" desc="str_fish_stone_loach" sprite_name="items/fishes/icon63.png" minWeight="0.05" maxWeight="0.6" bigWeight="1.0" rareWeight="1.4" foodGroup="0" category="2"/>
+		<fish id="60" name="str_fish_krasnoperka" desc="str_fish_red_eye" sprite_name="items/fishes/icon64.png" minWeight="0.07" maxWeight="0.9" bigWeight="1.2" rareWeight="1.4" foodGroup="1" category="2"/>
+		<fish id="61" name="str_fish_rotan" desc="str_fish_rotan_descr" sprite_name="items/fishes/icon65.png" minWeight="0.03" maxWeight="0.9" bigWeight="1.2" rareWeight="1.7" foodGroup="2" category="2"/>
+		<fish id="62" name="str_fish_brand_rotan" desc="str_fish_brand_rotan_descr" sprite_name="items/fishes/icon69.png" minWeight="0.02" maxWeight="0.4" bigWeight="0.6" rareWeight="0.8" foodGroup="2" category="1"/>
+		<fish id="63" name="str_fish_beloglazka" desc="str_fish_white_eye" sprite_name="items/fishes/icon66.png" minWeight="0.1" maxWeight="0.7" bigWeight="1.1" rareWeight="1.3" foodGroup="0" category="4"/>
+		<fish id="64" name="str_fish_elec" desc="str_fish_dace" sprite_name="items/fishes/icon67.png" minWeight="0.01" maxWeight="0.3" bigWeight="0.4" rareWeight="0.6" foodGroup="1" category="1"/>
+		<fish id="65" name="str_fish_gorchak" desc="str_fish_gorchak_descr" sprite_name="items/fishes/icon70.png" minWeight="0.01" maxWeight="0.4" bigWeight="0.6" rareWeight="1" foodGroup="0" category="2"/>
+		<fish id="66" name="str_fish_arktich_golec" desc="str_fish_arktich_golec_descr" sprite_name="items/fishes/icon71.png" minWeight="0.08" maxWeight="0.9" bigWeight="1.5" rareWeight="10" foodGroup="1" category="3"/>
+		<fish id="67" name="str_fish_shipovka" desc="str_fish_shipovka_descr" sprite_name="items/fishes/icon72.png" minWeight="0.01" maxWeight="0.15" bigWeight="0.2" rareWeight="0.35" foodGroup="1" category="2"/>
+		<fish id="68" name="str_fish_fun_frogprince" desc="str_fish_fun_frogprince_descr" sprite_name="items/fishes/icon75.png" sprite_name_alt="items/fishes/icon75_1.png" minWeight="0.5" maxWeight="0.5" bigWeight="0.5" rareWeight="150" foodGroup="1" category="2" isFunFish="true"/>
+		<fish id="69" name="str_fish_fun_general" desc="str_fish_fun_general_descr" sprite_name="items/fishes/icon79.png" sprite_name_alt="" minWeight="0.5" maxWeight="0.5" bigWeight="0.5" rareWeight="350" foodGroup="1" category="6" isFunFish="true"/>
+		<fish id="70" name="str_fish_fun_sosiska" desc="str_fish_fun_sosiska_descr" sprite_name="items/fishes/icon84.png" sprite_name_alt="" minWeight="0.5" maxWeight="0.5" bigWeight="0.5" rareWeight="150" foodGroup="1" category="7" isFunFish="true"/>
+		<fish id="71" name="str_fish_fun_sordelka" desc="str_fish_fun_sordelka_descr" sprite_name="items/fishes/icon83.png" sprite_name_alt="" minWeight="0.5" maxWeight="0.5" bigWeight="0.5" rareWeight="250" foodGroup="1" category="7" isFunFish="true"/>
+		<fish id="72" name="str_fish_fun_kolbaska" desc="str_fish_fun_kolbaska_descr" sprite_name="items/fishes/icon80.png" sprite_name_alt="" minWeight="0.5" maxWeight="0.5" bigWeight="0.5" rareWeight="350" foodGroup="1" category="6" isFunFish="true"/>
+		<fish id="73" name="str_fish_fun_konfeta" desc="str_fish_fun_konfeta_descr" sprite_name="items/fishes/icon86.png" sprite_name_alt="" minWeight="0.5" maxWeight="0.5" bigWeight="0.5" rareWeight="150" foodGroup="1" category="2" isFunFish="true"/>
+		<fish id="74" name="str_fish_fun_lineika" desc="str_fish_fun_lineika_descr" sprite_name="items/fishes/icon85.png" sprite_name_alt="" minWeight="0.5" maxWeight="0.5" bigWeight="0.5" rareWeight="75" foodGroup="1" category="6" isFunFish="true"/>
+		<fish id="75" name="str_fish_fun_bober" desc="str_fish_fun_bober_descr" sprite_name="items/fishes/icon78.png" sprite_name_alt="" minWeight="0.5" maxWeight="0.5" bigWeight="0.5" rareWeight="100" foodGroup="1" category="6" isFunFish="true"/>
+		<fish id="76" name="str_fish_fun_artelerist" desc="str_fish_fun_artelerist_descr" sprite_name="items/fishes/icon76.png" sprite_name_alt="" minWeight="0.5" maxWeight="0.5" bigWeight="0.5" rareWeight="200" foodGroup="1" category="6" isFunFish="true"/>
+		<fish id="77" name="str_fish_fun_shar" desc="str_fish_fun_shar_descr" sprite_name="items/fishes/icon77.png" sprite_name_alt="" minWeight="0.3" maxWeight="1.0" bigWeight="1.5" rareWeight="2.0" foodGroup="1" category="8"/>
+		<fish id="78" name="str_fish_fun_devil" desc="str_fish_fun_devil_descr" sprite_name="items/fishes/icon82.png" sprite_name_alt="" minWeight="0.2" maxWeight="0.5" bigWeight="0.5" rareWeight="3" foodGroup="1" category="7" />
+		<fish id="79" name="str_fish_fun_morozko" desc="str_fish_fun_morozko_descr" sprite_name="items/fishes/icon81.png" sprite_name_alt="" minWeight="0.5" maxWeight="0.5" bigWeight="0.5" rareWeight="450" foodGroup="1" category="5" isFunFish="true"/>
+		<fish id="80" name="str_fish_atlantich_osetr" desc="str_fish_atlantic_sturgeon_descr" sprite_name="items/fishes/icon87.png" minWeight="1.5" maxWeight="20.0" bigWeight="80.0" rareWeight="130.00" foodGroup="1" category="5"/>
+		<fish id="81" name="str_fish_losos_dunaisk" desc="str_fish_danube_salmon_descr" sprite_name="items/fishes/icon88.png" minWeight="0.5" maxWeight="5.0" bigWeight="10.0" rareWeight="30.0" foodGroup="2" category="4"/>
+		<fish id="82" name="str_fish_bystryanka" desc="str_fish_speedy_descr" sprite_name="items/fishes/icon89.png" minWeight="0.01" maxWeight="0.2" bigWeight="0.1" rareWeight="0.2" foodGroup="0" category="4"/>
+		<fish id="83" name="str_fish_artrodir" desc="str_fish_artrodir_descr" sprite_name="items/fishes/icon90.png" minWeight="10.0" maxWeight="25.0" bigWeight="28.0" rareWeight="35.00" foodGroup="2" category="6"/>
+		<fish id="84" name="str_fish_jeltoshek" desc="str_fish_jeltoshek_descr" sprite_name="items/fishes/icon94.png" minWeight="5.0" maxWeight="15.0" bigWeight="20.0" rareWeight="40.00" foodGroup="2" category="5"/>
+		<fish id="85" name="str_fish_soldatova" desc="str_fish_soldatova_descr" sprite_name="items/fishes/icon95.png" minWeight="2.5" maxWeight="8.0" bigWeight="18.0" rareWeight="200.00" foodGroup="2" category="3"/>
+		<fish id="86" name="str_fish_trekolushka" desc="str_fish_trekolushka_descr" sprite_name="items/fishes/icon96.png" minWeight="0.01" maxWeight="0.05" bigWeight="0.06" rareWeight="0.05" foodGroup="1" category="1"/>
+		<fish id="87" name="str_fish_tank" desc="str_fish_tank_descr" sprite_name="items/fishes/icon92.png" minWeight="0.5" maxWeight="5.0" bigWeight="8.0" rareWeight="9.3" foodGroup="2" category="6"/>
+		<fish id="88" name="str_fish_shtrafbat" desc="str_fish_shtrafbat_descr" sprite_name="items/fishes/icon93.png" minWeight="0.5" maxWeight="5.0" bigWeight="8.0" rareWeight="9.3" foodGroup="2" category="6"/>
+		<fish id="89" name="str_fish_lenta" desc="str_fish_lenta_descr" sprite_name="items/fishes/icon91.png" minWeight="0.5" maxWeight="5.0" bigWeight="8.0" rareWeight="9.3" foodGroup="2" category="6"/>
+		<fish id="90" name="str_fish_dorado" desc="str_fish_dorado_descr" sprite_name="items/fishes/icon97.png" minWeight="3.5" maxWeight="5.0" bigWeight="15.0" rareWeight="38.0" foodGroup="1" category="4"/>
+		<fish id="91" name="str_fish_tilapia" desc="str_fish_tilapia_descr" sprite_name="items/fishes/icon98.png" minWeight="0.3" maxWeight="1.0" bigWeight="2.0" rareWeight="3.0" foodGroup="1" category="5"/>
+		<fish id="92" name="str_fish_korvina" desc="str_fish_korvina_descr" sprite_name="items/fishes/icon99.png" minWeight="1.0" maxWeight="4.0" bigWeight="6.0" rareWeight="10.0" foodGroup="0" category="3"/>
+		<fish id="93" name="str_fish_pirapytanga" desc="str_fish_pirapytanga_descr" sprite_name="items/fishes/icon100.png" minWeight="0.5" maxWeight="1.6" bigWeight="2.0" rareWeight="3.0" foodGroup="0" category="2"/>
+		<fish id="94" name="str_fish_okun_pavlin" desc="str_fish_okun_pavlin_descr" sprite_name="items/fishes/icon101.png" minWeight="1.5" maxWeight="4.0" bigWeight="7.0" rareWeight="12.0" foodGroup="2" category="3"/>
+		<fish id="95" name="str_fish_ygor" desc="str_fish_ygor_descr" sprite_name="items/fishes/icon103.png" minWeight="3.0" maxWeight="17.0" bigWeight="20.0" rareWeight="40.0" foodGroup="2" category="5"/>
+		<fish id="96" name="str_fish_piraiba" desc="str_fish_piraiba_descr" sprite_name="items/fishes/icon104.png" minWeight="7.0" maxWeight="29.0" bigWeight="35.0" rareWeight="45" foodGroup="2" category="7"/>
+		<fish id="97" name="str_fish_pirania" desc="str_fish_pirania_descr" sprite_name="items/fishes/icon105.png" minWeight="0.3" maxWeight="1.8" bigWeight="2.0" rareWeight="3.0" foodGroup="2" category="1"/>
+		<fish id="98" name="str_fish_araya" desc="str_fish_araya_descr" sprite_name="items/fishes/icon106.png" minWeight="1.5" maxWeight="6.0" bigWeight="7.0" rareWeight="10.0" foodGroup="0" category="4"/>
+		<fish id="99" name="str_fish_dogfish" desc="str_fish_dogfish_descr" sprite_name="items/fishes/icon107.png" minWeight="0.7" maxWeight="3.8" bigWeight="5.0" rareWeight="6.0" foodGroup="1" category="3"/>
+		<fish id="100" name="str_fish_krasn_som" desc="str_fish_krasn_som_descr" sprite_name="items/fishes/icon108.png" minWeight="5.0" maxWeight="18.0" bigWeight="32.0" rareWeight="42.0" foodGroup="1" category="7"/>
+		<fish id="101" name="str_fish_tambakyi" desc="str_fish_tambakyi_descr" sprite_name="items/fishes/icon109.png" minWeight="4.0" maxWeight="9.0" bigWeight="15.0" rareWeight="24.0" foodGroup="1" category="5"/>
+		<fish id="102" name="str_fish_arovana" desc="str_fish_arovana_descr" sprite_name="items/fishes/icon110.png" minWeight="0.8" maxWeight="4.0" bigWeight="4.5" rareWeight="6.0" foodGroup="0" category="5"/>
+		<fish id="103" name="str_fish_paku" desc="str_fish_paku_descr" sprite_name="items/fishes/icon111.png" minWeight="2.5" maxWeight="7.0" bigWeight="12.0" rareWeight="25.0" foodGroup="0" category="2"/>
+		<fish id="104" name="str_fish_trairao" desc="str_fish_trairao_descr" sprite_name="items/fishes/icon112.png" minWeight="4.0" maxWeight="13.0" bigWeight="18.0" rareWeight="21.0" foodGroup="2" category="7"/>
+		<fish id="105" name="str_fish_paiara" desc="str_fish_paiara_descr" sprite_name="items/fishes/icon113.png" minWeight="3.0" maxWeight="14.5" bigWeight="16.0" rareWeight="19.0" foodGroup="1" category="7"/>
+		<fish id="106" name="str_fish_oscar" desc="str_fish_oscar_descr" sprite_name="items/fishes/icon114.png" minWeight="0.3" maxWeight="1.5" bigWeight="2.0" rareWeight="2.5" foodGroup="1" category="5"/>
+		<fish id="107" name="str_fish_polosat_som" desc="str_fish_polosat_som_descr" sprite_name="items/fishes/icon102.png" minWeight="0.2" maxWeight="2.0" bigWeight="2.5" rareWeight="3.0" foodGroup="0" category="4"/>
+		<fish id="108" name="str_fish_ayha" desc="str_fish_ayha_descr" sprite_name="items/fishes/icon116.png" minWeight="2.0" maxWeight="5.5" bigWeight="7.0" rareWeight="9.0" foodGroup="2" category="2"/>
+		<fish id="109" name="str_fish_belyi_amyr" desc="str_fish_belyi_amyr_descr" sprite_name="items/fishes/icon117.png" minWeight="5.0" maxWeight="15.0" bigWeight="25.0" rareWeight="33.0" foodGroup="0" category="4"/>
+        <fish id="110" name="str_fish_minoga" desc="str_fish_minoga_descr" sprite_name="items/fishes/icon118.png" minWeight="0.01" maxWeight="0.3" bigWeight="0.7" rareWeight="1.3" foodGroup="2" category="3"/>
+        <fish id="111" name="str_fish_taimen" desc="str_fish_taimen_descr" sprite_name="items/fishes/icon120.png" minWeight="6.0" maxWeight="25.0" bigWeight="38.0" rareWeight="60.0" foodGroup="2" category="5"/>
+        <fish id="112" name="str_fish_lenok" desc="str_fish_lenok_descr" sprite_name="items/fishes/icon119.png" minWeight="1.2" maxWeight="4.0" bigWeight="6.0" rareWeight="8.0" foodGroup="2" category="1"/>
+       
+        <fish id="113" name="str_fish_amer_som" desc="str_fish_amer_som_descr" sprite_name="items/fishes/icon121.png" minWeight="0.3" maxWeight="1.5" bigWeight="2.0" rareWeight="3.0" foodGroup="2" category="7"/>
+        <fish id="114" name="str_fish_canal_som" desc="str_fish_canal_som_descr" sprite_name="items/fishes/icon122.png" minWeight="0.5" maxWeight="3.5" bigWeight="4.0" rareWeight="5.0" foodGroup="2" category="7"/>
+        <fish id="115" name="str_fish_okun_pirat" desc="str_fish_okun_pirat_descr" sprite_name="items/fishes/icon123.png" minWeight="0.15" maxWeight="0.45" bigWeight="0.5" rareWeight="0.6" foodGroup="1" category="1"/>
+        <fish id="116" name="str_fish_olivk_som" desc="str_fish_olivk_som_descr" sprite_name="items/fishes/icon124.png" minWeight="3.0" maxWeight="26.0" bigWeight="33.0" rareWeight="42.0" foodGroup="2" category="1"/>
+        <fish id="117" name="str_fish_palia_ozern" desc="str_fish_palia_ozern_descr" sprite_name="items/fishes/icon125.png" minWeight="0.8" maxWeight="5.0" bigWeight="7.5" rareWeight="9.0" foodGroup="2" category="4"/>
+		
+        <fish id="118" name="str_fish_bottle" desc="str_fish_bottle_descr" sprite_name="items/fishes/icon126.png" minWeight="0.9" maxWeight="5.0" bigWeight="7.6" rareWeight="8.8" foodGroup="0" category="5"/>
+        <fish id="119" name="str_fish_cask" desc="str_fish_cask_descr" sprite_name="items/fishes/icon127.png" minWeight="1.3" maxWeight="8.5" bigWeight="12.5" rareWeight="16.0" foodGroup="2" category="4"/>
+        <fish id="120" name="str_fish_dried" desc="str_fish_dried_descr" sprite_name="items/fishes/icon128.png" minWeight="0.8" maxWeight="3.0" bigWeight="4.5" rareWeight="6.0" foodGroup="0" category="5"/>
+        <fish id="121" name="str_fish_opener" desc="str_fish_opener_descr" sprite_name="items/fishes/icon129.png" minWeight="1.2" maxWeight="4.0" bigWeight="6.3" rareWeight="7.5" foodGroup="1" category="6"/>
+        <fish id="122" name="str_fish_pint" desc="str_fish_pint_descr" sprite_name="items/fishes/icon130.png" minWeight="1.7" maxWeight="5.2" bigWeight="7.5" rareWeight="11.2" foodGroup="1" category="7"/>
+
+        <fish id="123" name="str_fish_santa" desc="str_fish_santa_descr" sprite_name="items/fishes/icon131.png" minWeight="1.8" maxWeight="5.5" bigWeight="7.5" rareWeight="11.2" foodGroup="2" category="8"/>
+        <fish id="124" name="str_fish_ice" desc="str_fish_ice_descr" sprite_name="items/fishes/icon134.png" minWeight="1.2" maxWeight="4.7" bigWeight="7.5" rareWeight="11.2" foodGroup="2" category="8"/>
+        <fish id="125" name="str_fish_elf" desc="str_fish_elf_descr" sprite_name="items/fishes/icon133.png" minWeight="3.2" maxWeight="7.4" bigWeight="9.5" rareWeight="15.2" foodGroup="0" category="8"/>
+        <fish id="126" name="str_fish_snow" desc="str_fish_snow_descr" sprite_name="items/fishes/icon132.png" minWeight="5.2" maxWeight="12.2" bigWeight="15.5" rareWeight="18.2" foodGroup="1" category="8"/>
+		
+		<fish id="127" name="str_fish_bayonet" desc="str_fish_bayonet_descr" sprite_name="items/fishes/icon132.png" minWeight="3.5" maxWeight="6.2" bigWeight="7.8" rareWeight="9.1" foodGroup="2" category="6"/>
+		<fish id="128" name="str_fish_partizan" desc="str_fish_partizan_descr" sprite_name="items/fishes/icon132.png" minWeight="2.2" maxWeight="4.5" bigWeight="5.3" rareWeight="7.1" foodGroup="1" category="6"/>
+		<fish id="129" name="str_fish_svyaz" desc="str_fish_svyaz_descr" sprite_name="items/fishes/icon132.png" minWeight="2.4" maxWeight="3.9" bigWeight="4.8" rareWeight="6.3" foodGroup="0" category="6"/>
+
+        
+	</fishes>
+
+	<fisheslist_data>
+		<fish_list_item fish_id="8"  list_cat="0"/>
+		<fish_list_item fish_id="7"  list_cat="0"/>
+		<fish_list_item fish_id="9"  list_cat="0"/>
+		<fish_list_item fish_id="3"  list_cat="0"/>
+		<fish_list_item fish_id="25" list_cat="0"/>
+		<fish_list_item fish_id="0"  list_cat="0"/>
+		<fish_list_item fish_id="86" list_cat="0"/>
+		<fish_list_item fish_id="20" list_cat="0"/>
+		<fish_list_item fish_id="61" list_cat="0"/>
+		<fish_list_item fish_id="2"  list_cat="0"/>
+		<fish_list_item fish_id="19" list_cat="0"/>
+		<fish_list_item fish_id="22" list_cat="0"/>
+		<fish_list_item fish_id="17" list_cat="0"/>
+		<fish_list_item fish_id="82" list_cat="0"/>
+		<fish_list_item fish_id="28" list_cat="0"/>
+		<fish_list_item fish_id="55" list_cat="0"/>
+		<fish_list_item fish_id="59" list_cat="0"/>
+		<fish_list_item fish_id="65" list_cat="0"/>
+		<fish_list_item fish_id="26" list_cat="0"/>
+		<fish_list_item fish_id="5"  list_cat="0"/>
+		<fish_list_item fish_id="6"  list_cat="0"/>
+		<fish_list_item fish_id="46" list_cat="0"/>
+		<fish_list_item fish_id="13" list_cat="0"/>
+		<fish_list_item fish_id="21" list_cat="0"/>
+		<fish_list_item fish_id="12" list_cat="0"/>
+		<fish_list_item fish_id="31" list_cat="0"/>
+		<fish_list_item fish_id="33" list_cat="0"/>
+		<fish_list_item fish_id="49" list_cat="0"/>
+		<fish_list_item fish_id="53" list_cat="0"/>
+		<fish_list_item fish_id="63" list_cat="0"/>
+		<fish_list_item fish_id="64" list_cat="0"/>
+		<fish_list_item fish_id="41" list_cat="0"/>
+		<fish_list_item fish_id="37" list_cat="0"/>
+		<fish_list_item fish_id="40" list_cat="0"/>
+		<fish_list_item fish_id="57" list_cat="0"/>
+		<fish_list_item fish_id="1"  list_cat="0"/>
+		<fish_list_item fish_id="29" list_cat="0"/>
+		<fish_list_item fish_id="11" list_cat="0"/>
+		<fish_list_item fish_id="48" list_cat="0"/>
+		<fish_list_item fish_id="90" list_cat="0"/>
+		<fish_list_item fish_id="91" list_cat="0"/>
+		<fish_list_item fish_id="92" list_cat="0"/>
+		<fish_list_item fish_id="93" list_cat="0"/>
+		<fish_list_item fish_id="94" list_cat="0"/>
+		<fish_list_item fish_id="97" list_cat="0"/>
+		<fish_list_item fish_id="98" list_cat="0"/>
+		<fish_list_item fish_id="108" list_cat="0"/>
+		<fish_list_item fish_id="103" list_cat="0"/>
+		<fish_list_item fish_id="107" list_cat="0"/>
+        <fish_list_item fish_id="115" list_cat="0"/>
+		<fish_list_item fish_id="36" list_cat="1"/>
+		<fish_list_item fish_id="58" list_cat="1"/>
+		<fish_list_item fish_id="27" list_cat="1"/>
+		<fish_list_item fish_id="60" list_cat="1"/>
+		<fish_list_item fish_id="62" list_cat="1"/>
+		<fish_list_item fish_id="66" list_cat="1"/>
+		<fish_list_item fish_id="10" list_cat="1"/>
+		<fish_list_item fish_id="23" list_cat="1"/>
+		<fish_list_item fish_id="47" list_cat="1"/>
+		<fish_list_item fish_id="42" list_cat="1"/>
+		<fish_list_item fish_id="14" list_cat="1"/>
+		<fish_list_item fish_id="35" list_cat="1"/>
+		<fish_list_item fish_id="38" list_cat="1"/>
+		<fish_list_item fish_id="4"  list_cat="1"/>
+		<fish_list_item fish_id="32" list_cat="1"/>
+		<fish_list_item fish_id="44" list_cat="1"/>
+		<fish_list_item fish_id="34" list_cat="1"/>
+		<fish_list_item fish_id="52" list_cat="1"/>
+		<fish_list_item fish_id="15" list_cat="1"/>
+		<fish_list_item fish_id="67" list_cat="1"/>
+		<fish_list_item fish_id="18" list_cat="1"/>
+		<fish_list_item fish_id="39" list_cat="1"/>
+		<fish_list_item fish_id="43" list_cat="1"/>
+		<fish_list_item fish_id="56" list_cat="1"/>
+		<fish_list_item fish_id="95" list_cat="1"/>
+		<fish_list_item fish_id="99" list_cat="1"/>
+		<fish_list_item fish_id="101" list_cat="1"/>
+		<fish_list_item fish_id="102" list_cat="1"/>
+		<fish_list_item fish_id="106" list_cat="1"/>
+        <fish_list_item fish_id="113" list_cat="1"/>
+        <fish_list_item fish_id="114" list_cat="1"/>
+        <fish_list_item fish_id="117" list_cat="1"/>
+		<fish_list_item fish_id="24" list_cat="2"/>
+		<fish_list_item fish_id="30" list_cat="2"/>
+		<fish_list_item fish_id="45" list_cat="2"/>
+		<fish_list_item fish_id="16" list_cat="2"/>
+		<fish_list_item fish_id="50" list_cat="2"/>
+		<fish_list_item fish_id="51" list_cat="2"/>
+		<fish_list_item fish_id="54" list_cat="2"/>
+		<fish_list_item fish_id="80" list_cat="2"/>
+		<fish_list_item fish_id="81" list_cat="2"/>
+		<fish_list_item fish_id="83" list_cat="2"/>
+		<fish_list_item fish_id="84" list_cat="2"/>
+		<fish_list_item fish_id="85" list_cat="2"/>	
+		<fish_list_item fish_id="96" list_cat="2"/>
+	    <fish_list_item fish_id="100" list_cat="2"/>
+		<fish_list_item fish_id="104" list_cat="2"/>
+		<fish_list_item fish_id="105" list_cat="2"/>
+		<fish_list_item fish_id="109" list_cat="2"/>
+        <fish_list_item fish_id="110" list_cat="2"/>
+        <fish_list_item fish_id="111" list_cat="2"/>
+        <fish_list_item fish_id="112" list_cat="2"/>
+        <fish_list_item fish_id="116" list_cat="2"/>
+		<fish_list_item fish_id="75" list_cat="3"/>
+		<fish_list_item fish_id="76" list_cat="3"/>
+		<fish_list_item fish_id="70" list_cat="3"/>
+		<fish_list_item fish_id="71" list_cat="3"/>
+		<fish_list_item fish_id="78" list_cat="3"/>
+		<fish_list_item fish_id="68" list_cat="3"/>
+		<fish_list_item fish_id="87" list_cat="3"/>
+		<fish_list_item fish_id="88" list_cat="3"/>
+		<fish_list_item fish_id="89" list_cat="3"/>	
+		<fish_list_item fish_id="69" list_cat="3"/>
+		<fish_list_item fish_id="72" list_cat="3"/>
+		<fish_list_item fish_id="73" list_cat="3"/>
+		<fish_list_item fish_id="74" list_cat="3"/>
+		<fish_list_item fish_id="77" list_cat="3"/>
+		<fish_list_item fish_id="79" list_cat="3"/>
+        <fish_list_item fish_id="118" list_cat="3"/>
+        <fish_list_item fish_id="119" list_cat="3"/>
+        <fish_list_item fish_id="120" list_cat="3"/>
+        <fish_list_item fish_id="121" list_cat="3"/>
+        <fish_list_item fish_id="122" list_cat="3"/>
+		
+		<fish_list_item fish_id="123" list_cat="3"/>
+		<fish_list_item fish_id="124" list_cat="3"/>
+		<fish_list_item fish_id="125" list_cat="3"/>
+		<fish_list_item fish_id="126" list_cat="3"/>
+
+
+	</fisheslist_data>
+	<prices>
+		<price category="1" cost="20" />
+		<price category="2" cost="25" />
+		<price category="3" cost="30" />
+		<price category="4" cost="33" />
+		<price category="5" cost="20" />
+		<price category="6" cost="19" />
+		<price category="7" cost="19" />
+		<price category="8" cost="26" />
+	</prices>
+    
+    
+	<udochki>
+        
+		<udochka id="0" name="str_udochka_staraya" description="str_udochka_old_rod" sprite_name="items/udochki/icon1.png" cost_v="0" cost_r="0" maxWeight="0.5" kWeight="1.0" durab="-1"/>
+		<udochka id="1" name="str_udochka_derevyannaya" description="str_udochka_wood_rod" sprite_name="items/udochki/icon2.png" cost_v="150" cost_r="0" maxWeight="1.0" kWeight="1.0" durab="-1"/>
+		<udochka id="10" name="str_udochka_spark" description="str_udochka_spark_desc" sprite_name="items/udochki/icon6.png" cost_v="0" cost_r="20" maxWeight="2.5" kWeight="1.0" durab="-1"/>
+
+		<udochka id="3" name="str_udochka_plastikovaya" description="str_udochka_plastic" sprite_name="items/udochki/icon3.png" cost_v="500" cost_r="0" maxWeight="1.25" kWeight="1.0" durab="-1" unlock_loc="1" />
+		<udochka id="11" name="str_udochka_spining_caplia" description="str_udochka_spining_caplia_descr" sprite_name="items/udochki/icon12.png" cost_v="300" cost_r="0" maxWeight="1.5" unlock_loc="1" isSpining="true" spining_param1="0.55" kWeight="1.0" durab="-1"/>
+        <udochka id="2" name="str_udochka_middlerpro" description="str_udochka_middler_pro" sprite_name="items/udochki/icon9.png" cost_v="0" cost_r="75" maxWeight="5.0" unlock_loc="1" isSpining="true" spining_param1="0.50" kWeight="1.0" durab="-1"/>
+
+		
+		<udochka id="14" name="str_udochka_goodfish" description="str_udochka_goodfish_desc" sprite_name="items/udochki/icon14.png" cost_v="1000" cost_r="0" maxWeight="1.5" unlock_loc="2" kWeight="1.0" durab="-1"/>
+	    <udochka id="23" name="str_udochka_army" description="str_udochka_army_rod" sprite_name="items/udochki/icon21.png" cost_v="0" cost_r="95" maxWeight="15" unlock_loc="2" kWeight="1.0" durab="-1"/>
+		<udochka id="20" name="str_udochka_hyper" description="str_udochka_hyper_desc" sprite_name="items/udochki/icon20.png" cost_v="0" cost_r="150" maxWeight="10.0" unlock_loc="2" isSpining="true" spining_param1="0.65" kWeight="1.0" durab="-1"/>
+
+		<udochka id="15" name="str_udochka_nublsimpl" description="str_udochka_nublsimpl_desc" sprite_name="items/udochki/icon15.png" cost_v="2500" cost_r="0" maxWeight="2.0" unlock_loc="3" isSpining="true" spining_param1="0.55" kWeight="1.0" durab="-1"/>
+		
+		<udochka id="5" name="str_udochka_middler15" description="str_udochka_nubler" sprite_name="items/udochki/icon4.png" cost_v="2500" cost_r="0" maxWeight="2.0" unlock_loc="4" kWeight="1.0" durab="-1"/>
+		<udochka id="6" name="str_udochka_super_middler1000" description="str_udochka_bear_light" sprite_name="items/udochki/icon7.png" cost_v="0" cost_r="200" maxWeight="20.0" unlock_loc="6" isSpining="true" spining_param1="0.65" kWeight="1.0" durab="-1"/>
+
+	
+		<udochka id="18" name="str_udochka_longx" description="str_udochka_longx_desc" sprite_name="items/udochki/icon18.png" cost_v="0" cost_r="150" maxWeight="25.0" unlock_loc="5" kWeight="1.0" durab="-1"/>
+       	<udochka id="25" name="str_spining_fishmaster" description="str_spining_fishmaster_descr" sprite_name="items/udochki/icon26.png" cost_v="5000" cost_r="0" maxWeight="2.5" unlock_loc="5" isSpining="true" spining_param1="0.85" kWeight="1.0" durab="-1"/>
+
+		<udochka id="16" name="str_udochka_nublsmt" description="str_udochka_nublsmt_desc" sprite_name="items/udochki/icon16.png" cost_v="5000" cost_r="0" maxWeight="2.5" unlock_loc="6" kWeight="1.0" durab="-1"/>
+		<udochka id="21" name="str_udochka_elitesmpl" description="str_udochka_elitesmpl_desc" sprite_name="items/udochki/icon17.png" cost_v="0" cost_r="300" maxWeight="30.0" unlock_loc="6" isSpining="true" spining_param1="0.75" kWeight="1.0" durab="-1"/>
+
+		<udochka id="4" name="str_udochka_newbie2000" description="str_udochka_longlass" sprite_name="items/udochki/icon5.png" cost_v="0" cost_r="250" maxWeight="35.0" unlock_loc="7" kWeight="1.0" durab="-1"/>
+		<udochka id="26" name="str_spining_hurricane" description="str_spining_hurricane_descr" sprite_name="items/udochki/icon27.png" cost_v="7500" cost_r="0" maxWeight="3" unlock_loc="7" isSpining="true" spining_param1="0.85" kWeight="1.0" durab="-1"/>
+
+		<udochka id="7" name="str_udochka_middler50" description="str_udochka_nubler_h" sprite_name="items/udochki/icon10.png" cost_v="7500" cost_r="0" maxWeight="3.0" unlock_loc="8" kWeight="1.0" durab="-1"/>
+		<udochka id="22" name="str_udochka_elite2000" description="str_udochka_elite2000_desc" sprite_name="items/udochki/icon8.png" cost_v="0" cost_r="400" maxWeight="40.0" unlock_loc="8" isSpining="true" spining_param1="0.75" kWeight="1.0" durab="-1"/>
+
+		
+		<udochka id="19" name="str_udochka_beastm" description="str_udochka_beastm_desc" sprite_name="items/udochki/icon19.png" cost_v="0" cost_r="350" maxWeight="45.0" unlock_loc="9" kWeight="1.0" durab="-1"/>
+		<udochka id="27" name="str_spining_vector" description="str_spining_vector_descr" sprite_name="items/udochki/icon25.png" cost_v="10000" cost_r="0" maxWeight="3.5" unlock_loc="9" isSpining="true" spining_param1="0.85" kWeight="1.0" durab="-1"/>
+		
+		<udochka id="17" name="str_udochka_goodfishs" description="str_udochka_goodfishs_desc" sprite_name="items/udochki/icon17.png" cost_v="10000" cost_r="0" maxWeight="3.5" unlock_loc="10" kWeight="1.0" durab="-1"/>
+		<udochka id="12" name="str_udochka_spining_molnia" description="str_udochka_spining_molnia_descr" sprite_name="items/udochki/icon13.png" cost_v="0" cost_r="500" maxWeight="50" unlock_loc="10" isSpining="true" spining_param1="0.85" kWeight="1.0" durab="-1"/>
+
+		<udochka id="9" name="str_udochka_middler100" description="str_udochka_middler" sprite_name="items/udochki/icon11.png" cost_v="15000" cost_r="0" maxWeight="4" unlock_loc="12" kWeight="1.0" durab="-1"/>
+
+						
+		<udochka id="13" name="str_udochka_spining_garpun" description="str_udochka_spining_garpun_descr" sprite_name="items/udochki/icon14.png" cost_v="0" cost_r="185" maxWeight="5.0" unlock_loc="1" isSpining="true" spining_param1="0.75" kWeight="1.0" durab="-1" isVisible="false"/>
+		<udochka id="8" name="str_udochka_super_middler5000" description="str_udochka_super_bear" sprite_name="items/udochki/icon8.png" cost_v="0" cost_r="465" maxWeight="999.0" unlock_loc="4" kWeight="1.0" durab="-1" isVisible="false"/>
+		<udochka id="24" name="str_udochka_new_year" description="str_udochka_new_year_descr" sprite_name="items/udochki/icon24.png" cost_v="0" cost_r="465" maxWeight="500.0" unlock_loc="15" kWeight="1.0" durab="-1"  isVisible="false" />
+
+	</udochki>
+
+    <fishnet_params>
+        <time id="0" time="1800" cnt="2"/>
+        <time id="1" time="7200" cnt="3"/>
+        <time id="2" time="28800" cnt="4"/>
+        <time id="3" time="43200" cnt="5"/>
+        <time id="4" time="57600" cnt="6"/>
+    </fishnet_params>
+    
+    <fishnets>
+		<fishnet id="0" name="str_fishnet_net0" description="str_fishnet_net0_descr" sprite_name="items/nets/net0.png" cost_v="49" cost_r="0" speed_cost="1">
+            <prizes>
+                <low_fish p="0.9" cnt="1"/>
+                <high_fish p="0.05" cnt="1"/>
+                <gold p="0.002" min="1" max="3"/>
+                <silver p="0.018" min="60" max="240"/>
+                <lure p="0.02" cnt="1"/>
+                <collection p="0.01" cnt="1"/>
+            </prizes>
+        </fishnet>
+        <fishnet id="1" name="str_fishnet_net1" description="str_fishnet_net1_descr" sprite_name="items/nets/net1.png" cost_v="149" cost_r="0"  speed_cost="2">
+            <prizes>
+                <low_fish p="0.8" cnt="1"/>
+                <high_fish p="0.07" cnt="1"/>
+                <gold p="0.004" min="1" max="3"/>
+                <silver p="0.046" min="180" max="360"/>
+                <lure p="0.06" cnt="1"/>
+                <collection p="0.02" cnt="1"/>
+            </prizes>
+        </fishnet>
+        <fishnet id="2" name="str_fishnet_net2" description="str_fishnet_net2_descr" sprite_name="items/nets/net2.png" cost_v="499" cost_r="0"  speed_cost="3">
+            <prizes>
+                <low_fish p="0.47" cnt="1"/>
+                <high_fish p="0.3" cnt="1"/>
+                <gold p="0.02" min="2" max="5"/>
+                <silver p="0.08" min="1200" max="2400"/>
+                <lure p="0.09" cnt="1"/>
+                <collection p="0.04" cnt="1"/>
+            </prizes>
+        </fishnet>
+        
+        <fishnet id="3" name="str_fishnet_net3" description="str_fishnet_net3_descr" sprite_name="items/nets/net3.png" cost_v="0" cost_r="3" speed_cost="4">
+            <prizes>
+                <low_fish p="0.47" cnt="1"/>
+                <high_fish p="0.3" cnt="1"/>
+                <gold p="0.02" min="2" max="5"/>
+                <silver p="0.08" min="1200" max="2400"/>
+                <lure p="0.09" cnt="1"/>
+                <collection p="0.04" cnt="1"/>
+            </prizes>
+        </fishnet>
+        <fishnet id="4" name="str_fishnet_net4" description="str_fishnet_net4_descr" sprite_name="items/nets/net4.png" cost_v="0" cost_r="7" speed_cost="5">
+            <prizes>
+                <low_fish p="0.32" cnt="1"/>
+                <high_fish p="0.35" cnt="1"/>
+                <gold p="0.04" min="4" max="11"/>
+                <silver p="0.09" min="1200" max="2400"/>
+                <lure p="0.12" cnt="1"/>
+                <collection p="0.08" cnt="1"/>
+            </prizes>
+        </fishnet>
+        <fishnet id="5" name="str_fishnet_net5" description="str_fishnet_net5_descr" sprite_name="items/nets/net5.png" cost_v="0" cost_r="16" speed_cost="6">
+            <prizes>
+                <low_fish p="0.18" cnt="1"/>
+                <high_fish p="0.4" cnt="1"/>
+                <gold p="0.05" min="10" max="24"/>
+                <silver p="0.12" min="1200" max="2400"/>
+                <lure p="0.15" cnt="1"/>
+                <collection p="0.1" cnt="1"/>
+            </prizes>
+        </fishnet>
+    </fishnets>
+    
+    
+    <!--
+	<fishnets>
+		<fishnet id="0" name="str_fishnet_net1" description="str_fishnet_net1_descr" sprite_name="items/nets/net0.png" cost_v="0" cost_r="3" min_qnt="3" max_qnt="6" min_weight="0.15" max_weight="1.0" time="28800" durab="30">
+		   <bonus>
+		    <category id="1" value="10"/>
+		    <category id="2" value="-10"/>
+		    <category id="3" value="-50"/>
+		    <category id="4" value="-100"/>
+		    <category id="5" value="-100"/>
+		    <category id="6" value="-100"/>
+		   </bonus>
+	  </fishnet>
+	  <fishnet id="1" name="str_fishnet_net2" description="str_fishnet_net2_descr" sprite_name="items/nets/net1.png" cost_v="0" cost_r="7" min_qnt="3" max_qnt="6" min_weight="0.3" max_weight="2.0" time="28800"  durab="30">
+	   <bonus>
+	    <category id="1" value="-35"/>
+	    <category id="2" value="15"/>
+	    <category id="3" value="10"/>
+	    <category id="4" value="-50"/>
+	    <category id="5" value="-100"/>
+	    <category id="6" value="-100"/>
+		<category id="6" value="-100"/>
+	   </bonus>
+	  </fishnet>
+	  <fishnet id="2" name="str_fishnet_net3" description="str_fishnet_net3_descr" sprite_name="items/nets/net2.png" cost_v="0" cost_r="16" min_qnt="2" max_qnt="6" min_weight="0.5" max_weight="6.0" time="28800" durab="30">
+	   <bonus>
+	    <category id="1" value="-40"/>
+	    <category id="2" value="10"/>
+	    <category id="3" value="20"/>
+	    <category id="4" value="20"/>
+	    <category id="5" value="20"/>
+	    <category id="6" value="-100"/>
+	   </bonus>
+	  </fishnet>
+	</fishnets>
+     
+     -->
+<!--
+	foodGroup (пищевая группа)
+	0 - травоядные
+	1 - всеядные
+	2 - хищники
+
+	category - ?
+-->
+	<najivki>
+        
+        <najivka id="5" name="str_najivka_chervyak" description="str_najivka_earthworm" sprite_name="items/najivki/najivka5.png" cost_v="75" cost_r="0" count="5" foodGroup="1" level="1">
+			<foodGroup2>
+				<category id="1" value="10"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="80"/>
+				<category id="2" value="40"/>
+				<category id="3" value="20"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="10"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+
+		<najivka id="33" name="str_najivka_coins" description="str_najivka_coins_desc" sprite_name="items/najivki/najivka33.png" cost_v="0" cost_r="6" count="5" foodGroup="1" level="2" isSpoon="true"  durab="9" ver_sriva="0.2">
+            <foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="10"/>
+				<category id="4" value="80"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+
+        <najivka id="17" name="str_najivka_blesna_blesna_cherviak" description="str_najivka_blesna_blesna_cherviak_descr" sprite_name="items/najivki/najivka17.png" cost_v="200" cost_r="0" count="1" foodGroup="1" level="2" isSpoon="true"  durab="9" ver_sriva="0.2">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="10"/>
+				<category id="5" value="10"/>
+				<category id="6" value="80"/>
+                <category id="7" value="40"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="10"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+
+		<najivka id="36" name="str_najivka_gaika" description="str_najivka_gaika_desc" sprite_name="items/najivki/najivka36.png" cost_v="0" cost_r="6" count="5" foodGroup="2" level="3" isSpoon="true"  durab="9" ver_sriva="0.2">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="10"/>
+				<category id="5" value="80"/>
+				<category id="6" value="10"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+
+
+        <najivka id="19" name="str_najivka_blesna_gidra" description="str_najivka_blesna_gidra_descr" sprite_name="items/najivki/najivka20.png" cost_v="200" cost_r="0" count="1" foodGroup="2" level="3" isSpoon="true"  durab="9" ver_sriva="0.2">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="10"/>
+				<category id="5" value="10"/>
+				<category id="6" value="40"/>
+                <category id="7" value="80"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="10"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+        <najivka id="10" name="str_najivka_maybug" description="str_najivka_chafer" sprite_name="items/najivki/najivka15.png" cost_v="150" cost_r="0" count="5" foodGroup="2" level="1">
+			<foodGroup2>
+				<category id="1" value="80"/>
+				<category id="2" value="40"/>
+				<category id="3" value="10"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="10"/>
+				<category id="2" value="10"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="10"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		<najivka id="1" name="str_najivka_testo" description="str_najivka_dough" sprite_name="items/najivki/najivka1.png" cost_v="0" cost_r="4" count="5" foodGroup="0" level="2">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="80"/>
+				<category id="2" value="20"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+        <najivka id="6" name="str_najivka_motil" description="str_najivka_bloodworm" sprite_name="items/najivki/najivka6.png" cost_v="0" cost_r="2" count="5" foodGroup="1" level="2">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="80"/>
+				<category id="2" value="20"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		<najivka id="2" name="str_najivka_parenie_zerna" description="str_najivka_steamed_corn" sprite_name="items/najivki/najivka2.png" cost_v="175" cost_r="0" count="5" foodGroup="0" level="3" unlock_loc="0">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="10"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="10"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="10"/>
+				<category id="3" value="80"/>
+				<category id="4" value="40"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+        <najivka id="7" name="str_najivka_strekoza" description="str_najivka_dragonfly" sprite_name="items/najivki/najivka7.png" cost_v="75" cost_r="0" count="5" foodGroup="1" level="3" >
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="10"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="10"/>
+				<category id="2" value="80"/>
+				<category id="3" value="40"/>
+				<category id="4" value="10"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="10"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+
+		<najivka id="40" name="str_najivka_skalp" description="str_najivka_skalp_desc" sprite_name="items/najivki/najivka40.png" cost_v="0" cost_r="6" count="1" foodGroup="2" level="1" isSpoon="true"  durab="9" ver_sriva="0.2">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="10"/>
+				<category id="3" value="80"/>
+				<category id="4" value="10"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+
+        <najivka id="15" name="str_najivka_blesna_okun" description="str_najivka_blesna_okun_descr" sprite_name="items/najivki/najivka16.png" cost_v="225" cost_r="0" count="1" foodGroup="2" level="1" isSpoon="true"  durab="9" ver_sriva="0.2">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="40"/>
+				<category id="5" value="80"/>
+				<category id="6" value="10"/>
+                <category id="7" value="10"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+        <najivka id="11" name="str_najivka_piavka" description="str_najivka_leech" sprite_name="items/najivki/najivka14.png" cost_v="0" cost_r="3" count="5" foodGroup="2" level="2">
+			<foodGroup2>
+				<category id="1" value="80"/>
+				<category id="2" value="20"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		<najivka id="3" name="str_najivka_zelen" description="str_najivka_alga" sprite_name="items/najivki/najivka4.png" cost_v="100" cost_r="0" count="5" foodGroup="0" level="4">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="10"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="10"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="10"/>
+				<category id="2" value="80"/>
+				<category id="3" value="40"/>
+				<category id="4" value="10"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		<najivka id="4" name="str_najivka_aroma_najivka" description="str_najivka_flavored_bait" sprite_name="items/najivki/najivka13.png" cost_v="0" count="5" cost_r="3" foodGroup="0" level="5" >
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="10"/>
+				<category id="2" value="80"/>
+				<category id="3" value="10"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		
+		<najivka id="8" name="str_najivka_kuznechik" description="str_najivka_grasshopper" sprite_name="items/najivki/najivka8.png" cost_v="0" cost_r="3" count="5" foodGroup="1" level="4">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="10"/>
+				<category id="2" value="80"/>
+				<category id="3" value="10"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		<najivka id="9" name="str_najivka_mollusk" description="str_najivka_clam" sprite_name="items/najivki/najivka9.png" cost_v="125" cost_r="0" count="5" foodGroup="1" level="5" unlock_loc="2">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="10"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="10"/>
+				<category id="3" value="80"/>
+				<category id="4" value="40"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="10"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+
+		<najivka id="12" name="str_najivka_malek" description="str_najivka_fry" sprite_name="items/najivki/najivka10.png" cost_v="150" cost_r="0" count="5" foodGroup="2" level="3" >
+			<foodGroup2>
+				<category id="1" value="10"/>
+				<category id="2" value="80"/>
+				<category id="3" value="40"/>
+				<category id="4" value="10"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="10"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="10"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		<najivka id="13" name="str_najivka_golovastik" description="str_najivka_tadpole" sprite_name="items/najivki/najivka11.png" cost_v="0" cost_r="4" count="5" foodGroup="2" level="4" >
+			<foodGroup2>
+				<category id="1" value="10"/>
+				<category id="2" value="80"/>
+				<category id="3" value="10"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		<najivka id="14" name="str_najivka_al_zhivec" description="str_najivka_live_bait" sprite_name="items/najivki/najivka12.png" cost_v="175" cost_r="0" count="5" foodGroup="2" level="5" unlock_loc="1">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="10"/>
+				<category id="3" value="80"/>
+				<category id="4" value="40"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="10"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="10"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		<najivka id="25" name="str_najivka_ybiica" description="str_najivka_killing_worm" sprite_name="items/najivki/najivka26.png" cost_v="0" cost_r="5" count="5" foodGroup="2" level="3" unlock_loc="2">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="10"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="10"/>
+				<category id="3" value="80"/>
+				<category id="4" value="40"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="10"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+        <najivka id="27" name="str_najivka_paek" description="str_najivka_ration" sprite_name="items/najivki/najivka28.png" cost_v="0" cost_r="5" count="5" foodGroup="2" level="3" unlock_loc="9">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="10"/>
+				<category id="3" value="80"/>
+				<category id="4" value="10"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+        <najivka id="26" name="str_najivka_gylza" description="str_najivka_sleeve" sprite_name="items/najivki/najivka27.png" cost_v="175" cost_r="0" count="5" foodGroup="2" level="3" unlock_loc="3">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="40"/>
+				<category id="5" value="80"/>
+				<category id="6" value="10"/>
+                <category id="7" value="10"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		<najivka id="29" name="str_najivka_blesna_usuall" description="str_najivka_blesna_usuall_descr" sprite_name="items/najivki/najivka30.png" cost_v="175" cost_r="0" count="1" foodGroup="2" level="1" isSpoon="true"  durab="9" ver_sriva="0.2">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="10"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="10"/>
+				<category id="4" value="40"/>
+				<category id="5" value="80"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		
+		<najivka id="32" name="str_najivka_trubka" description="str_najivka_trubka_desc" sprite_name="items/najivki/najivka32.png" cost_v="200" cost_r="0" count="5" foodGroup="2" level="2" isSpoon="true"  durab="9" ver_sriva="0.2">
+            <foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="10"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="10"/>
+				<category id="4" value="80"/>
+				<category id="5" value="40"/>
+				<category id="6" value="10"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="10"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+
+
+		<najivka id="16" name="str_najivka_blesna_vertuska" description="str_najivka_blesna_vertuska_descr" sprite_name="items/najivki/najivka18.png" cost_v="0" cost_r="9" count="1" foodGroup="2" level="2" isSpoon="true"  durab="9" ver_sriva="0.2">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="10"/>
+				<category id="5" value="80"/>
+				<category id="6" value="10"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		
+		<najivka id="38" name="str_najivka_iron" description="str_najivka_iron_desc" sprite_name="items/najivki/najivka38.png" cost_v="175" cost_r="0" count="5" foodGroup="2" level="3" isSpoon="true"  durab="9" ver_sriva="0.2">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="10"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="10"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="10"/>
+				<category id="3" value="40"/>
+				<category id="4" value="80"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+
+
+		<najivka id="18" name="str_najivka_blesna_krovosos" description="str_najivka_blesna_krovosos_descr" sprite_name="items/najivki/najivka19.png" cost_v="0" cost_r="7" count="1" foodGroup="2" level="3" isSpoon="true"  durab="9" ver_sriva="0.2">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="10"/>
+				<category id="6" value="80"/>
+                <category id="7" value="10"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		
+		<najivka id="20" name="str_najivka_blesna_rachok" description="str_najivka_blesna_rachok_descr" sprite_name="items/najivki/najivka21.png" cost_v="150" cost_r="0" count="1" foodGroup="2" level="3" isSpoon="true"  durab="9" ver_sriva="0.2" unlock_loc="1">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="10"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="10"/>
+				<category id="5" value="10"/>
+				<category id="6" value="80"/>
+                <category id="7" value="40"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		<najivka id="21" name="str_najivka_blesna_plotvichka" description="str_najivka_blesna_plotvichka_descr" sprite_name="items/najivki/najivka22.png" cost_v="0" cost_r="4" count="1" foodGroup="2" level="3" isSpoon="true"  durab="9" ver_sriva="0.2" unlock_loc="1">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="10"/>
+				<category id="6" value="80"/>
+                <category id="7" value="10"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+
+		<najivka id="35" name="str_najivka_spoon" description="str_najivka_spoon_desc" sprite_name="items/najivki/najivka35.png" cost_v="0" cost_r="6" count="5" foodGroup="2" level="3" isSpoon="true"  durab="9" ver_sriva="0.2" unlock_loc="2">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="10"/>
+				<category id="4" value="80"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+
+		<najivka id="22" name="str_najivka_blesna_molusk" description="str_najivka_blesna_molusk_descr" sprite_name="items/najivki/najivka23.png" cost_v="0" cost_r="5" count="1" foodGroup="2" level="3" isSpoon="true"  durab="9" ver_sriva="0.2" unlock_loc="3">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="20"/>
+                <category id="7" value="80"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+
+
+		<najivka id="34" name="str_najivka_mulaj" description="str_najivka_mulaj_desc" sprite_name="items/najivki/najivka34.png" cost_v="225" cost_r="0" count="5" foodGroup="2" level="3" isSpoon="true"  durab="9" ver_sriva="0.2" unlock_loc="4">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="40"/>
+				<category id="4" value="80"/>
+				<category id="5" value="10"/>
+				<category id="6" value="10"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="10"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="10"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+
+		<najivka id="23" name="str_najivka_blesna_jivec" description="str_najivka_blesna_jivec_descr" sprite_name="items/najivki/najivka24.png" cost_v="150" cost_r="0" count="1" foodGroup="2" level="3" isSpoon="true"  durab="9" ver_sriva="0.2" unlock_loc="1">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="10"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="10"/>
+				<category id="5" value="10"/>
+				<category id="6" value="40"/>
+                <category id="7" value="80"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		<najivka id="30" name="str_najivka_blesna_rainbow" description="str_najivka_blesna_rainbow_descr" sprite_name="items/najivki/najivka29.png" cost_v="0" cost_r="7" count="1" foodGroup="2" level="3" isSpoon="true"  durab="9" ver_sriva="0.2" unlock_loc="10">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+				<category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+				<category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="20"/>
+				<category id="5" value="80"/>
+				<category id="6" value="-100"/>
+				<category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		<najivka id="24" name="str_najivka_blesna_nautilus" description="str_najivka_blesna_nautilus_descr" sprite_name="items/najivki/najivka25.png" cost_v="0" cost_r="3" count="1" foodGroup="2" level="3" isSpoon="true"  durab="9" ver_sriva="0.2" unlock_loc="1">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="20"/>
+                <category id="7" value="80"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+        <najivka id="0" name="str_najivka_hlebnii_myakish" description="str_najivka_breadcrumb" sprite_name="items/najivki/najivka0.png" cost_v="10" cost_r="0" count="-1" foodGroup="0" level="1">
+			<foodGroup2>
+				<category id="1" value="0"/>
+				<category id="2" value="0"/>
+				<category id="3" value="0"/>
+				<category id="4" value="0"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="0"/>
+				<category id="2" value="0"/>
+				<category id="3" value="0"/>
+				<category id="4" value="0"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="0"/>
+				<category id="2" value="0"/>
+				<category id="3" value="0"/>
+				<category id="4" value="0"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		
+		<!-- Новогодние наживки -->
+		
+		 <najivka id="41" name="str_najivka_staff" description="str_najivka_staff_descr" sprite_name="items/najivki/najivka41.png" cost_v="250" cost_r="0" count="5" foodGroup="0" level="1" isVisible="false">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="15"/>
+			</foodGroup0>
+		</najivka>
+		
+		<najivka id="42" name="str_najivka_round" description="str_najivka_round_descr" sprite_name="items/najivki/najivka42.png" cost_v="0" cost_r="19" count="25" foodGroup="0" level="1" isVisible="false">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="30"/>
+			</foodGroup0>
+		</najivka>
+		
+		<najivka id="43" name="str_najivka_zefir" description="str_najivka_zefir_descr" sprite_name="items/najivki/najivka43.png" cost_v="0" cost_r="15" count="10" foodGroup="1" level="1" isVisible="false">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="30"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		
+		<najivka id="44" name="str_najivka_snow" description="str_najivka_snow_descr" sprite_name="items/najivki/najivka44.png" cost_v="0" cost_r="29" count="5" foodGroup="2" level="1" isSpoon="true"  durab="24" ver_sriva="0.2"  isVisible="false" >
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="25"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		
+		
+		<najivka id="45" name="str_najivka_choco" description="str_najivka_choco_descr" sprite_name="items/podkormki/aroma14.png" cost_v="0" cost_r="9" count="10" foodGroup="2" level="1" isVisible="false">
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="35"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		
+
+		<najivka id="46" name="str_najivka_novaya" description="str_najivka_novaya_descr" sprite_name="items/najivki/najivka45.png" cost_v="0" cost_r="9" count="5" foodGroup="2" level="1" >
+			<foodGroup2>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="10"/>
+				<category id="4" value="80"/>
+				<category id="5" value="10"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="-100"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		
+		<najivka id="47" name="str_najivka_goroh" description="str_najivka_goroh_descr" sprite_name="items/najivki/najivka46.png" cost_v="100" cost_r="0"  count="5" foodGroup="2" level="1" >
+			<foodGroup2>
+				<category id="1" value="10"/>
+				<category id="2" value="-100"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup2>
+			<foodGroup1>
+				<category id="1" value="10"/>
+				<category id="2" value="10"/>
+				<category id="3" value="-100"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup1>
+			<foodGroup0>
+				<category id="1" value="80"/>
+				<category id="2" value="40"/>
+				<category id="3" value="10"/>
+				<category id="4" value="-100"/>
+				<category id="5" value="-100"/>
+				<category id="6" value="-100"/>
+                <category id="7" value="-100"/>
+				<category id="8" value="-100"/>
+			</foodGroup0>
+		</najivka>
+		
+		
+	</najivki>
+
+	<podkormki>
+		<podkormka id="11" name="str_energy1" description="str_energy1_descr" sprite_name="items/podkormki/energy1.png" cost_v="0" cost_r="4" count="1" foodGroup="0" cat_1_2="0" cat_3_4="0" cat_5="0" ver_cat_1="0" ver_cat_2="0" ver_cat_3="0" ver_cat_4="0" ver_cat_5="0" level="1" isEnergetic="true" energetic_koef="1.05" time="900"/>
+		<podkormka id="12" name="str_energy2" description="str_energy2_descr" sprite_name="items/podkormki/energy2.png" cost_v="0" cost_r="9" count="1" foodGroup="0" cat_1_2="0" cat_3_4="0" cat_5="0" ver_cat_1="0" ver_cat_2="0" ver_cat_3="0" ver_cat_4="0" ver_cat_5="0" level="1" isEnergetic="true" energetic_koef="1.15" time="900"/>
+		<podkormka id="13" name="str_energy3" description="str_energy3_descr" sprite_name="items/podkormki/energy3.png" cost_v="0" cost_r="15" count="1" foodGroup="0" cat_1_2="0" cat_3_4="0" cat_5="0" ver_cat_1="0" ver_cat_2="0" ver_cat_3="0" ver_cat_4="0" ver_cat_5="0" level="1" isEnergetic="true" energetic_koef="1.20" time="900"/>
+		<podkormka id="0"  name="str_pdkormka_suhariki" description="str_pdkormka_suhariki_descr" sprite_name="items/podkormki/aroma_1.png" cost_v="0" cost_r="2" count="3" foodGroup="0" cat_1_2="25.0" cat_3_4="0" cat_5="0" ver_cat_1="-15.0" ver_cat_2="15.0" ver_cat_3="0" ver_cat_4="0" ver_cat_5="0" level="1" time="300"/>
+		<podkormka id="1"  name="str_pdkormka_krahmal" description="str_pdkormka_krahmal_descr" sprite_name="items/podkormki/aroma_2.png" cost_v="0" cost_r="5" count="3" foodGroup="0" cat_1_2="0" cat_3_4="25.0" cat_5="0" ver_cat_1="0" ver_cat_2="0" ver_cat_3="15.0" ver_cat_4="10.0" ver_cat_5="0" level="2" time="300"/>
+		<podkormka id="2"  name="str_pdkormka_mol_goroh" description="str_pdkormka_mol_goroh_descr" sprite_name="items/podkormki/aroma_3.png" cost_v="0" cost_r="8" count="5" foodGroup="0" cat_1_2="0" cat_3_4="0" cat_5="25.0" ver_cat_1="0" ver_cat_2="0" ver_cat_3="0" ver_cat_4="0" ver_cat_5="15.0" level="3" time="300"/>
+		<podkormka id="10" name="str_pdkormka_tushenka" description="str_pdkormka_stew_descr" sprite_name="items/podkormki/aroma_12.png" cost_v="0" cost_r="20" count="4" foodGroup="2" cat_1_2="0" cat_3_4="0" cat_5="10.0" cat_6="20.0" ver_cat_1="0" ver_cat_2="0" ver_cat_3="0" ver_cat_4="0" ver_cat_5="10.0" ver_cat_6="15.0" unlock_loc="9" level="3" time="300"/>
+		<podkormka id="3"  name="str_pdkormka_cherviak" description="str_pdkormka_worm_descr" sprite_name="items/podkormki/aroma_10.png" cost_v="0" cost_r="3" count="3" foodGroup="1" cat_1_2="25.0" cat_3_4="0" cat_5="0" ver_cat_1="-15.0" ver_cat_2="15.0" ver_cat_3="0" ver_cat_4="0" ver_cat_5="0" level="1" time="300"/>
+		<podkormka id="4"  name="str_pdkormka_rub_motil" description="str_pdkormka_motil_descr" sprite_name="items/podkormki/aroma_6.png" cost_v="0" cost_r="6" count="3" foodGroup="1" cat_1_2="0" cat_3_4="25.0" cat_5="0" ver_cat_1="0" ver_cat_2="0" ver_cat_3="15.0" ver_cat_4="10.0" ver_cat_5="0" level="2" time="300"/>
+		<podkormka id="5"  name="str_pdkormka_oparish" description="str_pdkormka_oparish_descr" sprite_name="items/podkormki/aroma_7.png" cost_v="0" cost_r="12" count="3" foodGroup="1" cat_1_2="0" cat_3_4="0" cat_5="25.0" ver_cat_1="0" ver_cat_2="0" ver_cat_3="0" ver_cat_4="0" ver_cat_5="15.0" level="3" time="300"/>
+		<podkormka id="6"  name="str_pdkormka_kukuruza" description="str_pdkormka_kukuruza_descr" sprite_name="items/podkormki/aroma_5.png" cost_v="0" cost_r="4" count="3" foodGroup="2" cat_1_2="25.0" cat_3_4="0" cat_5="0" ver_cat_1="-15.0" ver_cat_2="15.0" ver_cat_3="0" ver_cat_4="0" ver_cat_5="0" level="1" time="300"/>
+		<podkormka id="7"  name="str_pdkormka_sahar" description="str_pdkormka_sahar_descr" sprite_name="items/podkormki/aroma_8.png" cost_v="0" cost_r="8" count="3" foodGroup="2" cat_1_2="0" cat_3_4="25.0" cat_5="0" ver_cat_1="0" ver_cat_2="0" ver_cat_3="15.0" ver_cat_4="10.0" ver_cat_5="0" level="2" time="300"/>
+		<podkormka id="8"  name="str_pdkormka_specprimanka" description="str_pdkormka_specprimanka_descr" sprite_name="items/podkormki/aroma_9.png" cost_v="0" cost_r="15" count="3" foodGroup="2" cat_1_2="0" cat_3_4="0" cat_5="25.0" ver_cat_1="0" ver_cat_2="0" ver_cat_3="0" ver_cat_4="0" ver_cat_5="15.0" level="3" time="300"/>
+		<podkormka id="9"  name="str_pdkormka_yantar" description="str_pdkormka_yantar_descr" sprite_name="items/podkormki/aroma_11.png" cost_v="0" cost_r="25" count="3" foodGroup="2" cat_1_2="0" cat_3_4="0" cat_5="10.0" cat_6="20.0" ver_cat_1="0" ver_cat_2="0" ver_cat_3="0" ver_cat_4="0" ver_cat_5="10.0" ver_cat_6="20.0" level="3" time="300"/>
+		
+		<!-- Новгодние подкормки -->
+		<podkormka id="14" name="str_candy" description="str_candy_descr" sprite_name="items/podkormki/lure_candy.png" cost_v="0" cost_r="12" count="3" foodGroup="0" cat_1_2="0" cat_3_4="0" cat_5="0" cat_8="10"  ver_cat_1="0" ver_cat_2="0" ver_cat_3="0" ver_cat_4="0" ver_cat_5="0" ver_cat_8="15" level="1"  time="300"  isVisible="false"/>
+		<podkormka id="15" name="str_mandarine" description="str_mandarine_descr" sprite_name="items/podkormki/aroma16.png" cost_v="0" cost_r="24" count="3" foodGroup="1" cat_1_2="0" cat_3_4="0" cat_5="0" cat_8="10"  ver_cat_1="0" ver_cat_2="0" ver_cat_3="0" ver_cat_4="0" ver_cat_5="0" ver_cat_8="15" level="1"  time="300" isVisible="false"/>
+		<podkormka id="16" name="str_salat" description="str_salat_descr" sprite_name="items/podkormki/aroma15.png" cost_v="0" cost_r="18" count="3" foodGroup="2" cat_1_2="0" cat_3_4="0" cat_5="0" cat_8="15"  ver_cat_1="0" ver_cat_2="0" ver_cat_3="0" ver_cat_4="0" ver_cat_5="0" ver_cat_8="15" level="1"  time="300" isVisible="false"/>
+		
+	</podkormki>
+
+	
+	
+		
+	<gold_prices_0>
+  
+		<price id="6" gold1="3000" gold2="900" bonus="0.3" usd="99.99" best_value="1" most_popular="0" bankname="EPIC GOLD PACK" strID="en_drimmi_gold_epic" andrID="en_drimmi_goldgp_epic"/>
+		<price id="5" gold1="1500" gold2="350" bonus="0.25" usd="49.99" best_value="0" most_popular="0" bankname="SUPER GOLD PACK" strID="en_drimmi_gold_super" andrID="en_drimmi_goldgp_super"/>
+		<price id="4" gold1="750" gold2="125" bonus="0.2" usd="24.99" best_value="0" most_popular="0" bankname="HUGE GOLD PACK" strID="en_drimmi_gold_500" andrID="en_drimmi_goldgp_500"/>
+		<price id="3" gold1="300" gold2="45" bonus="0.15" usd="9.99" best_value="0" most_popular="0" bankname="BIG GOLD PACK" strID="en_drimmi_gold_195" andrID="en_drimmi_goldgp_195"/>
+		<price id="2" gold1="150" gold2="15" bonus="0.1334" usd="4.99" best_value="0" most_popular="1" bankname="NORMAL GOLD PACK" strID="en_drimmi_gold_85" andrID="en_drimmi_goldgp_85"/>
+		<price id="1" gold1="90" gold2="5" bonus="0.12" usd="2.99" best_value="0" most_popular="0" bankname="SMALL GOLD PACK" strID="en_drimmi_gold_35" andrID="en_drimmi_goldgp_35"/>
+		<price id="0" gold1="30" gold2="0" bonus="0.0" usd="0.99" best_value="0" most_popular="0" bankname="TINY GOLD PACK" strID="en_drimmi_gold_5" andrID="en_drimmi_goldgp_5"/>
+
+	</gold_prices_0>
+	
+	
+    
+    
+	<gold_prices_1>
+        <price id="6" gold="2400" usd="99.99" bankname="EPIC GOLD PACK"/>
+        <price id="5" gold="1100" usd="49.99" bankname="SUPER GOLD PACK"/>
+		<price id="4" gold="500" usd="24.99" bankname="HUGE GOLD PACK"/>
+		<price id="3" gold="195" usd="9.99" bankname="BIG GOLD PACK"/>
+		<price id="2" gold="90" usd="4.99" bankname="NORMAL GOLD PACK"/>
+		<price id="1" gold="50" usd="2.99" bankname="SMALL GOLD PACK"/>
+		<price id="0" gold="15" usd="0.99" bankname="TINY GOLD PACK"/>
+	</gold_prices_1>
+	
+	<silver_prices>
+		<price id="0" gold="1" silver="50" bankname="TINY SILVER PACK"/>
+	</silver_prices>
+
+	<ach_locations>
+		<!--tutorial-->
+		<ach id="tutorial0" fish_id="8" fish_amount="1" fish_w="1.0" fish_sw="-1" loc_id="0" descr="str_ach_loc_tut_descr_0"/>
+		<!-- location 0 -->
+		<ach id="0.1" fish_id="0" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="0" descr="str_ach_loc0_descr_0"/>
+		<ach id="0.2" fish_id="2" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="0" descr="str_ach_loc0_descr_1"/>
+		<ach id="0.3" fish_id="1" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="0" descr="str_ach_loc0_descr_2"/>
+		<ach id="0.4" fish_id="4" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="0" descr="str_ach_loc0_descr_3"/>
+		<ach id="0.5" fish_id="3" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="0" descr="str_ach_loc0_descr_4"/>
+		<ach id="0.6" fish_id="7" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="0" descr="str_ach_loc0_descr_5"/>
+		<ach id="0.7" fish_id="8" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="0" descr="str_ach_loc0_descr_6"/>
+		<ach id="0.8" fish_id="5" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="0" descr="str_ach_loc0_descr_7"/>
+		<ach id="0.9" fish_id="6" fish_amount="-1" fish_w="-1" fish_sw="5.5" loc_id="0" descr="str_ach_loc0_descr_8"/>
+        <ach id="0.10" fish_id="9" fish_amount="-1" fish_w="-1" fish_sw="7.0" loc_id="0" descr="str_ach_loc0_descr_9"/>
+		<!-- location 1 -->
+		<ach id="1.1" fish_id="20" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="1" descr="str_ach_loc1_descr_0"/>
+		<ach id="1.2" fish_id="7" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="1" descr="str_ach_loc1_descr_1"/>
+		<ach id="1.3" fish_id="19" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="1" descr="str_ach_loc1_descr_2"/>
+		<ach id="1.4" fish_id="22" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="1" descr="str_ach_loc1_descr_3"/>
+		<ach id="1.5" fish_id="65" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="1" descr="str_ach_loc1_descr_4"/>
+		<ach id="1.6" fish_id="13" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="1" descr="str_ach_loc1_descr_5"/>
+		<ach id="1.7" fish_id="17" fish_amount="-1" fish_w="-1" fish_sw="5.0" loc_id="1" descr="str_ach_loc1_descr_6"/>
+		<ach id="1.8" fish_id="14" fish_amount="-1" fish_w="-1" fish_sw="10.0" loc_id="1" descr="str_ach_loc1_descr_7"/>
+		<ach id="1.9" fish_id="18" fish_amount="5" fish_w="1.5" fish_sw="-1" loc_id="1" descr="str_ach_loc1_descr_8"/>
+        <ach id="1.10" fish_id="21" fish_amount="1" fish_w="5.0" fish_sw="-1" loc_id="1" descr="str_ach_loc1_descr_9"/>
+		<!-- location 2 -->
+		<ach id="2.1" fish_id="62" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="2" descr="str_ach_loc2_descr_0"/>
+		<ach id="2.2" fish_id="64" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="2" descr="str_ach_loc2_descr_1"/>
+		<ach id="2.3" fish_id="63" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="2" descr="str_ach_loc2_descr_2"/>
+		<ach id="2.4" fish_id="27" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="2" descr="str_ach_loc2_descr_3"/>
+		<ach id="2.5" fish_id="-1" fish_amount="1" fish_w="1.5" fish_sw="-1" loc_id="2" descr="str_ach_loc2_descr_4"/>
+		<ach id="2.6" fish_id="10" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="2" descr="str_ach_loc2_descr_5"/>
+		<ach id="2.7" fish_id="61" fish_amount="-1" fish_w="-1" fish_sw="6.0" loc_id="2" descr="str_ach_loc2_descr_6"/>
+		<ach id="2.8" fish_id="66" fish_amount="-1" fish_w="-1" fish_sw="11.0" loc_id="2" descr="str_ach_loc2_descr_7"/>
+		<ach id="2.9" fish_id="28" fish_amount="7" fish_w="2.0" fish_sw="-1" loc_id="2" descr="str_ach_loc2_descr_8"/>
+        <ach id="2.10" fish_id="27" fish_amount="1" fish_w="8.0" fish_sw="-1" loc_id="2" descr="str_ach_loc2_descr_9"/>
+		<!-- location 3 -->
+		<ach id="3.1" fish_id="40" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="3" descr="str_ach_loc3_descr_0"/>
+		<ach id="3.2" fish_id="23" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="3" descr="str_ach_loc3_descr_1"/>
+		<ach id="3.3" fish_id="5" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="3" descr="str_ach_loc3_descr_2"/>
+		<ach id="3.4" fish_id="25" fish_amount="4" fish_w="-1" fish_sw="-1" loc_id="3" descr="str_ach_loc3_descr_3"/>
+		<ach id="3.5" fish_id="24" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="3" descr="str_ach_loc3_descr_4"/>
+		<ach id="3.6" fish_id="30" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="3" descr="str_ach_loc3_descr_5"/>
+		<ach id="3.7" fish_id="26" fish_amount="-1" fish_w="-1" fish_sw="8.0" loc_id="3" descr="str_ach_loc3_descr_6"/>
+		<ach id="3.8" fish_id="12" fish_amount="-1" fish_w="-1" fish_sw="12.0" loc_id="3" descr="str_ach_loc3_descr_7"/>
+		<ach id="3.9" fish_id="24" fish_amount="6" fish_w="0.5" fish_sw="-1" loc_id="3" descr="str_ach_loc3_descr_8"/>
+        <ach id="3.10" fish_id="46" fish_amount="1" fish_w="18.0" fish_sw="-1" loc_id="3" descr="str_ach_loc3_descr_9"/>
+		<!-- location 4 -->
+		<ach id="4.1" fish_id="44" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="4" descr="str_ach_loc4_descr_0"/>
+		<ach id="4.2" fish_id="60" fish_amount="5" fish_w="-1" fish_sw="-1" loc_id="4" descr="str_ach_loc4_descr_1"/>
+		<ach id="4.3" fish_id="19" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="4" descr="str_ach_loc4_descr_2"/>
+		<ach id="4.4" fish_id="58" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="4" descr="str_ach_loc4_descr_3"/>
+		<ach id="4.5" fish_id="43" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="4" descr="str_ach_loc4_descr_4"/>
+		<ach id="4.6" fish_id="29" fish_amount="-1" fish_w="-1" fish_sw="6.0" loc_id="4" descr="str_ach_loc4_descr_5"/>
+		<ach id="4.7" fish_id="45" fish_amount="-1" fish_w="-1" fish_sw="18.0" loc_id="4" descr="str_ach_loc4_descr_6"/>
+		<ach id="4.8" fish_id="25" fish_amount="8" fish_w="1.0" fish_sw="-1" loc_id="4" descr="str_ach_loc4_descr_7"/>
+		<ach id="4.9" fish_id="46" fish_amount="6" fish_w="5.5" fish_sw="-1" loc_id="4" descr="str_ach_loc4_descr_8"/>
+        <ach id="4.10" fish_id="44" fish_amount="1" fish_w="19.0" fish_sw="-1" loc_id="4" descr="str_ach_loc4_descr_9"/>
+		<!-- location 5 -->
+		<ach id="5.1" fish_id="61" fish_amount="4" fish_w="-1" fish_sw="-1" loc_id="5" descr="str_ach_loc5_descr_0"/>
+		<ach id="5.2" fish_id="55" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="5" descr="str_ach_loc5_descr_1"/>
+		<ach id="5.3" fish_id="59" fish_amount="4" fish_w="-1" fish_sw="-1" loc_id="5" descr="str_ach_loc5_descr_2"/>
+		<ach id="5.4" fish_id="9" fish_amount="4" fish_w="-1" fish_sw="-1" loc_id="5" descr="str_ach_loc5_descr_3"/>
+		<ach id="5.5" fish_id="16" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="5" descr="str_ach_loc5_descr_4"/>
+		<ach id="5.6" fish_id="29" fish_amount="-1" fish_w="-1" fish_sw="12.0" loc_id="5" descr="str_ach_loc5_descr_5"/>
+		<ach id="5.7" fish_id="15" fish_amount="-1" fish_w="-1" fish_sw="15.0" loc_id="5" descr="str_ach_loc5_descr_6"/>
+		<ach id="5.8" fish_id="11" fish_amount="8" fish_w="0.8" fish_sw="-1" loc_id="5" descr="str_ach_loc5_descr_7"/>
+		<ach id="5.9" fish_id="6" fish_amount="7" fish_w="1.5" fish_sw="-1" loc_id="5" descr="str_ach_loc5_descr_8"/>
+        <ach id="5.10" fish_id="16" fish_amount="1" fish_w="26.0" fish_sw="-1" loc_id="5" descr="str_ach_loc5_descr_9"/>
+		<!-- location 6 -->
+		<ach id="6.1" fish_id="33" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="6" descr="str_ach_loc6_descr_0"/>
+		<ach id="6.2" fish_id="35" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="6" descr="str_ach_loc6_descr_1"/>
+		<ach id="6.3" fish_id="41" fish_amount="4" fish_w="-1" fish_sw="-1" loc_id="6" descr="str_ach_loc6_descr_2"/>
+		<ach id="6.4" fish_id="34" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="6" descr="str_ach_loc6_descr_3"/>
+		<ach id="6.5" fish_id="46" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="6" descr="str_ach_loc6_descr_4"/>
+		<ach id="6.6" fish_id="39" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="6" descr="str_ach_loc6_descr_5"/>
+		<ach id="6.7" fish_id="32" fish_amount="-1" fish_w="-1" fish_sw="26.0" loc_id="6" descr="str_ach_loc6_descr_6"/>
+		<ach id="6.8" fish_id="36" fish_amount="-1" fish_w="-1" fish_sw="18.0" loc_id="6" descr="str_ach_loc6_descr_7"/>
+		<ach id="6.9" fish_id="31" fish_amount="8" fish_w="1.3" fish_sw="-1" loc_id="6" descr="str_ach_loc6_descr_8"/>
+        <ach id="6.10" fish_id="111" fish_amount="1" fish_w="30.0" fish_sw="-1" loc_id="6" descr="str_ach_loc6_descr_9"/>
+		<!-- location 7 -->
+		<ach id="7.1" fish_id="22" fish_amount="5" fish_w="-1" fish_sw="-1" loc_id="7" descr="str_ach_loc7_descr_0"/>
+		<ach id="7.2" fish_id="54" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="7" descr="str_ach_loc7_descr_1"/>
+		<ach id="7.3" fish_id="57" fish_amount="8" fish_w="-1" fish_sw="-1" loc_id="7" descr="str_ach_loc7_descr_2"/>
+		<ach id="7.4" fish_id="52" fish_amount="4" fish_w="-1" fish_sw="-1" loc_id="7" descr="str_ach_loc7_descr_3"/>
+		<ach id="7.5" fish_id="53" fish_amount="5" fish_w="-1" fish_sw="-1" loc_id="7" descr="str_ach_loc7_descr_4"/>
+		<ach id="7.6" fish_id="51" fish_amount="-1" fish_w="-1" fish_sw="25.0" loc_id="7" descr="str_ach_loc7_descr_5"/>
+		<ach id="7.7" fish_id="48" fish_amount="-1" fish_w="-1" fish_sw="13.0" loc_id="7" descr="str_ach_loc7_descr_6"/>
+		<ach id="7.8" fish_id="50" fish_amount="8" fish_w="2.5" fish_sw="-1" loc_id="7" descr="str_ach_loc7_descr_7"/>
+		<ach id="7.9" fish_id="54" fish_amount="1" fish_w="30.0" fish_sw="-1" loc_id="7" descr="str_ach_loc7_descr_8"/>
+		<!-- location 8 -->
+		<ach id="8.1" fish_id="82" fish_amount="4" fish_w="-1" fish_sw="-1" loc_id="8" descr="str_ach_loc8_descr_0"/>
+		<ach id="8.2" fish_id="14" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="8" descr="str_ach_loc8_descr_1"/>
+		<ach id="8.3" fish_id="8" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="8" descr="str_ach_loc8_descr_2"/>
+		<ach id="8.4" fish_id="44" fish_amount="4" fish_w="-1" fish_sw="-1" loc_id="8" descr="str_ach_loc8_descr_3"/>
+		<ach id="8.5" fish_id="29" fish_amount="5" fish_w="-1" fish_sw="-1" loc_id="8" descr="str_ach_loc8_descr_4"/>
+		<ach id="8.6" fish_id="46" fish_amount="-1" fish_w="-1" fish_sw="35.0" loc_id="8" descr="str_ach_loc8_descr_5"/>
+		<ach id="8.7" fish_id="43" fish_amount="6" fish_w="1.4" fish_sw="-1" loc_id="8" descr="str_ach_loc8_descr_6"/>
+		<ach id="8.8" fish_id="81" fish_amount="4" fish_w="12.0" fish_sw="-1" loc_id="8" descr="str_ach_loc8_descr_7"/>
+		<ach id="8.9" fish_id="80" fish_amount="1" fish_w="37.0" fish_sw="-1" loc_id="8" descr="str_ach_loc8_descr_8"/>
+		<!-- location 9 -->
+		<ach id="9.1" fish_id="87" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="9" descr="str_ach_loc9_descr_0"/>
+		<ach id="9.2" fish_id="89" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="9" descr="str_ach_loc9_descr_1"/>
+		<ach id="9.3" fish_id="88" fish_amount="1" fish_w="-1" fish_sw="-1" loc_id="9" descr="str_ach_loc9_descr_2"/>
+		<ach id="9.4" fish_id="84" fish_amount="4" fish_w="-1" fish_sw="-1" loc_id="9" descr="str_ach_loc9_descr_3"/>
+		<ach id="9.5" fish_id="38" fish_amount="5" fish_w="-1" fish_sw="-1" loc_id="9" descr="str_ach_loc9_descr_4"/>
+		<ach id="9.6" fish_id="27" fish_amount="-1" fish_w="-1" fish_sw="28.0" loc_id="9" descr="str_ach_loc9_descr_5"/>
+		<ach id="9.7" fish_id="18" fish_amount="7" fish_w="1.5" fish_sw="-1" loc_id="9" descr="str_ach_loc9_descr_6"/>
+		<ach id="9.8" fish_id="15" fish_amount="6" fish_w="2.5" fish_sw="-1" loc_id="9" descr="str_ach_loc9_descr_7"/>
+		<ach id="9.9" fish_id="85" fish_amount="1" fish_w="40.0" fish_sw="-1" loc_id="9" descr="str_ach_loc9_descr_8"/>
+		<!-- location 10 -->
+		<ach id="10.1" fish_id="90" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="10" descr="str_ach_loc10_descr_0"/>
+		<ach id="10.2" fish_id="91" fish_amount="4" fish_w="-1" fish_sw="-1" loc_id="10" descr="str_ach_loc10_descr_1"/>
+		<ach id="10.3" fish_id="97" fish_amount="7" fish_w="-1" fish_sw="-1" loc_id="10" descr="str_ach_loc10_descr_2"/>
+		<ach id="10.4" fish_id="98" fish_amount="5" fish_w="-1" fish_sw="-1" loc_id="10" descr="str_ach_loc10_descr_3"/>
+		<ach id="10.5" fish_id="106" fish_amount="-1" fish_w="-1" fish_sw="16.0" loc_id="10" descr="str_ach_loc10_descr_4"/>
+		<ach id="10.6" fish_id="105" fish_amount="-1" fish_w="-1" fish_sw="30.0" loc_id="10" descr="str_ach_loc10_descr_5"/>
+		<ach id="10.7" fish_id="99" fish_amount="1" fish_w="4.5" fish_sw="-1" loc_id="10" descr="str_ach_loc10_descr_6"/>
+		<ach id="10.8" fish_id="100" fish_amount="5" fish_w="25.0" fish_sw="-1" loc_id="10" descr="str_ach_loc10_descr_7"/>
+		<ach id="10.9" fish_id="96" fish_amount="1" fish_w="200.00" fish_sw="-1" loc_id="10" descr="str_ach_loc10_descr_8"/>
+		<!-- location 11 -->
+		<ach id="11.1" fish_id="108" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="11" descr="str_ach_loc11_descr_0"/>
+		<ach id="11.2" fish_id="36" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="11" descr="str_ach_loc11_descr_1"/>
+		<ach id="11.3" fish_id="37" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="11" descr="str_ach_loc11_descr_2"/>
+		<ach id="11.4" fish_id="28" fish_amount="7" fish_w="-1" fish_sw="-1" loc_id="11" descr="str_ach_loc11_descr_3"/>
+		<ach id="11.5" fish_id="112" fish_amount="4" fish_w="-1" fish_sw="-1" loc_id="11" descr="str_ach_loc11_descr_4"/>
+		<ach id="11.6" fish_id="39" fish_amount="-1" fish_w="-1" fish_sw="28.0" loc_id="11" descr="str_ach_loc11_descr_5"/>
+		<ach id="11.7" fish_id="46" fish_amount="6" fish_w="7.0" fish_sw="-1" loc_id="11" descr="str_ach_loc11_descr_6"/>
+		<ach id="11.8" fish_id="109" fish_amount="4" fish_w="12.0" fish_sw="-1" loc_id="11" descr="str_ach_loc11_descr_7"/>
+		<ach id="11.9" fish_id="16" fish_amount="1" fish_w="250.00" fish_sw="-1" loc_id="11" descr="str_ach_loc11_descr_8"/>
+        <!-- location 12 -->
+		<ach id="12.1" fish_id="12" fish_amount="4" fish_w="-1" fish_sw="-1" loc_id="12" descr="str_ach_loc12_descr_0"/>
+		<ach id="12.2" fish_id="5" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="12" descr="str_ach_loc12_descr_1"/>
+		<ach id="12.3" fish_id="60" fish_amount="2" fish_w="-1" fish_sw="-1" loc_id="12" descr="str_ach_loc12_descr_2"/>
+		<ach id="12.4" fish_id="11" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="12" descr="str_ach_loc12_descr_3"/>
+		<ach id="12.5" fish_id="13" fish_amount="4" fish_w="-1" fish_sw="-1" loc_id="12" descr="str_ach_loc12_descr_4"/>
+		<ach id="12.6" fish_id="14" fish_amount="-1" fish_w="-1" fish_sw="25.0" loc_id="12" descr="str_ach_loc12_descr_5"/>
+		<ach id="12.7" fish_id="16" fish_amount="-1" fish_w="-1" fish_sw="50.0" loc_id="12" descr="str_ach_loc12_descr_6"/>
+		<ach id="12.8" fish_id="18" fish_amount="5" fish_w="7.5" fish_sw="-1" loc_id="12" descr="str_ach_loc12_descr_7"/>
+		<ach id="12.9" fish_id="29" fish_amount="6" fish_w="9.0" fish_sw="-1" loc_id="12" descr="str_ach_loc12_descr_8"/>
+        <ach id="12.10" fish_id="110" fish_amount="1" fish_w="0.4" fish_sw="-1" loc_id="12" descr="str_ach_loc12_descr_9"/>
+        <ach id="12.11" fish_id="109" fish_amount="1" fish_w="33.0" fish_sw="-1" loc_id="12" descr="str_ach_loc12_descr_10"/>
+        
+        <!-- location 13 -->
+		<ach id="13.1" fish_id="7" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="13" descr="str_ach_loc13_descr_0"/>
+		<ach id="13.2" fish_id="44" fish_amount="4" fish_w="-1" fish_sw="-1" loc_id="13" descr="str_ach_loc13_descr_1"/>
+		<ach id="13.3" fish_id="16" fish_amount="3" fish_w="-1" fish_sw="-1" loc_id="13" descr="str_ach_loc13_descr_2"/>
+		<ach id="13.4" fish_id="15" fish_amount="5" fish_w="-1" fish_sw="-1" loc_id="13" descr="str_ach_loc13_descr_3"/>
+		<ach id="13.5" fish_id="23" fish_amount="-1" fish_w="-1" fish_sw="13.0" loc_id="13" descr="str_ach_loc13_descr_4"/>
+		<ach id="13.6" fish_id="113" fish_amount="-1" fish_w="-1" fish_sw="16.0" loc_id="13" descr="str_ach_loc13_descr_5"/>
+		<ach id="13.7" fish_id="114" fish_amount="-1" fish_w="-1" fish_sw="18.0" loc_id="13" descr="str_ach_loc13_descr_6"/>
+		<ach id="13.8" fish_id="115" fish_amount="7" fish_w="0.4" fish_sw="-1" loc_id="13" descr="str_ach_loc13_descr_7"/>
+		<ach id="13.9" fish_id="117" fish_amount="6" fish_w="6.5" fish_sw="-1" loc_id="13" descr="str_ach_loc13_descr_8"/>
+        <ach id="13.10" fish_id="116" fish_amount="1" fish_w="52.0" fish_sw="-1" loc_id="13" descr="str_ach_loc13_descr_9"/>
+
+        <!-- location 14 -->
+		<ach id="14.1" fish_id="-1" fish_amount="-1" fish_w="-1" fish_sw="5" loc_id="14" descr="str_ach_loc14_descr_0"/>
+        <ach id="14.2" fish_id="118" fish_amount="6" fish_w="-1" fish_sw="-1" loc_id="14" descr="str_ach_loc14_descr_1"/>
+		<ach id="14.3" fish_id="118" fish_amount="-1" fish_w="-1" fish_sw="5" loc_id="14" descr="str_ach_loc14_descr_2"/>
+        <ach id="14.4" fish_id="119" fish_amount="8" fish_w="-1" fish_sw="-1" loc_id="14" descr="str_ach_loc14_descr_3"/>
+        <ach id="14.5" fish_id="120" fish_amount="6" fish_w="2.2" fish_sw="-1" loc_id="14" descr="str_ach_loc14_descr_4"/>
+        <ach id="14.6" fish_id="120" fish_amount="-1" fish_w="-1" fish_sw="18.0" loc_id="14" descr="str_ach_loc14_descr_5"/>
+        <ach id="14.7" fish_id="121" fish_amount="12" fish_w="-1" fish_sw="-1" loc_id="14" descr="str_ach_loc14_descr_6"/>
+        <ach id="14.8" fish_id="121" fish_amount="7" fish_w="3.0" fish_sw="-1" loc_id="14" descr="str_ach_loc14_descr_7"/>	
+        <ach id="14.9" fish_id="122" fish_amount="-1" fish_w="-1" fish_sw="26" loc_id="14" descr="str_ach_loc14_descr_8"/>
+        <ach id="14.10" fish_id="122" fish_amount="8" fish_w="4" fish_sw="-1" loc_id="14" descr="str_ach_loc14_descr_9"/>
+		
+		 <!-- location 15 -->
+		<ach id="15.1" fish_id="77" fish_amount="-1" fish_w="-1" fish_sw="60" loc_id="15" descr="str_ach_loc15_descr_0"/>
+        <ach id="15.2" fish_id="77" fish_amount="1" fish_w="1" fish_sw="-1" loc_id="15" descr="str_ach_loc15_descr_1"/>		
+		<ach id="15.3" fish_id="-1" fish_amount="-1" fish_w="-1" fish_sw="300" loc_id="15" descr="str_ach_loc15_descr_2"/>
+    <!-- <ach id="15.4" fish_id="31" fish_amount="1" fish_w="1" fish_sw="-1" loc_id="15" descr="str_ach_loc15_descr_3"/>  -->
+		<ach id="15.5" fish_id="22" fish_amount="1" fish_w="0.7" fish_sw="-1" loc_id="15" descr="str_ach_loc15_descr_4"/>
+        <ach id="15.6" fish_id="35" fish_amount="30" fish_w="-1" fish_sw="-1" loc_id="15" descr="str_ach_loc15_descr_5"/>
+		<ach id="15.7" fish_id="35" fish_amount="1" fish_w="1.1" fish_sw="-1" loc_id="15" descr="str_ach_loc15_descr_6"/>
+    <!-- <ach id="15.8" fish_id="44" fish_amount="1" fish_w="1.6" fish_sw="-1" loc_id="15" descr="str_ach_loc15_descr_7"/> -->
+        <ach id="15.9" fish_id="11" fish_amount="1" fish_w="0.8" fish_sw="-1" loc_id="15" descr="str_ach_loc15_descr_8"/>
+
+    </ach_locations>
+
+	<ach_general>
+	    <ach id="100" fish_id="-1" fish_amount="10" fish_w="-1" fish_sw="-1" loc_id="0" descr="str_ach_gen_descr_9"/>
+		<ach id="200" fish_id="-1" fish_amount="-1" fish_w="-1" fish_sw="10.0" loc_id="0" descr="str_ach_gen_descr_10"/>
+		<ach id="300" fish_id="-1" fish_amount="-1" fish_w="1.5" fish_sw="-1" loc_id="0" descr="str_ach_gen_descr_11"/>
+		<ach id="400" fish_id="-1" fish_amount="-1" fish_w="-1" fish_sw="-1" loc_id="0" descr="str_ach_gen_descr_0"/>
+		<ach id="500" fish_id="-1" fish_amount="-1" fish_w="-1" fish_sw="-1" loc_id="1" descr="str_ach_gen_descr_1"/>
+		<ach id="600" fish_id="-1" fish_amount="-1" fish_w="-1" fish_sw="-1" loc_id="2" descr="str_ach_gen_descr_2"/>
+		<ach id="700" fish_id="-1" fish_amount="-1" fish_w="-1" fish_sw="-1" loc_id="3" descr="str_ach_gen_descr_3"/>
+		<ach id="800" fish_id="-1" fish_amount="-1" fish_w="-1" fish_sw="-1" loc_id="4" descr="str_ach_gen_descr_4"/>
+		<ach id="900" fish_id="-1" fish_amount="-1" fish_w="-1" fish_sw="-1" loc_id="6" descr="str_ach_gen_descr_5"/>
+		<ach id="1000" fish_id="-1" fish_amount="-1" fish_w="-1" fish_sw="-1" loc_id="5" descr="str_ach_gen_descr_6"/>
+		<ach id="1100" fish_id="-1" fish_amount="-1" fish_w="-1" fish_sw="-1" loc_id="9" descr="str_ach_gen_descr_12"/>
+		<ach id="1200" fish_id="-1" fish_amount="-1" fish_w="-1" fish_sw="-1" loc_id="10" descr="str_ach_gen_descr_13"/>
+	</ach_general>
+
+	<collection_items>
+		<collection_item id="0" name="str_coll_item_0" sprite_name="items/collection/item0.png"/>
+		<collection_item id="1" name="str_coll_item_1" sprite_name="items/collection/item1.png"/>
+		<collection_item id="2" name="str_coll_item_2" sprite_name="items/collection/item2.png"/>
+		<collection_item id="3" name="str_coll_item_3" sprite_name="items/collection/item3.png"/>
+		<collection_item id="4" name="str_coll_item_4" sprite_name="items/collection/item4.png"/>
+		<collection_item id="5" name="str_coll_item_5" sprite_name="items/collection/item5.png"/>
+		<collection_item id="6" name="str_coll_item_6" sprite_name="items/collection/item6.png"/>
+		<collection_item id="7" name="str_coll_item_7" sprite_name="items/collection/item7.png"/>
+		<collection_item id="8" name="str_coll_item_8" sprite_name="items/collection/item8.png"/>
+		<collection_item id="9" name="str_coll_item_9" sprite_name="items/collection/item9.png"/>
+		<collection_item id="10" name="str_coll_item_9" sprite_name="items/collection/item10.png"/>
+		<collection_item id="11" name="str_coll_item_9" sprite_name="items/collection/item11.png"/>
+		<collection_item id="12" name="str_coll_item_9" sprite_name="items/collection/item12.png"/>
+		<collection_item id="13" name="str_coll_item_9" sprite_name="items/collection/item13.png"/>
+		<collection_item id="14" name="str_coll_item_9" sprite_name="items/collection/item14.png"/>
+		<collection_item id="15" name="str_coll_item_9" sprite_name="items/collection/item15.png"/>
+		<collection_item id="16" name="str_coll_item_9" sprite_name="items/collection/item16.png"/>
+		<collection_item id="17" name="str_coll_item_9" sprite_name="items/collection/item17.png"/>
+		<collection_item id="18" name="str_coll_item_9" sprite_name="items/collection/item18.png"/>
+		<collection_item id="19" name="str_coll_item_9" sprite_name="items/collection/item19.png"/>
+		<collection_item id="20" name="str_coll_item_9" sprite_name="items/collection/item20.png"/>
+		<collection_item id="21" name="str_coll_item_9" sprite_name="items/collection/item21.png"/>
+		<collection_item id="22" name="str_coll_item_9" sprite_name="items/collection/item22.png"/>
+		<collection_item id="23" name="str_coll_item_9" sprite_name="items/collection/item23.png"/>
+		<collection_item id="24" name="str_coll_item_9" sprite_name="items/collection/item24.png"/>
+		<collection_item id="25" name="str_coll_item_9" sprite_name="items/collection/item25.png"/>
+		<collection_item id="26" name="str_coll_item_9" sprite_name="items/collection/item26.png"/>
+		<collection_item id="27" name="str_coll_item_9" sprite_name="items/collection/item27.png"/>
+		<collection_item id="28" name="str_coll_item_9" sprite_name="items/collection/item28.png"/>
+		<collection_item id="29" name="str_coll_item_9" sprite_name="items/collection/item29.png"/>
+		<collection_item id="30" name="str_coll_item_9" sprite_name="items/collection/item30.png"/>
+		<collection_item id="31" name="str_coll_item_9" sprite_name="items/collection/item31.png"/>
+		<collection_item id="32" name="str_coll_item_9" sprite_name="items/collection/item32.png"/>
+		<collection_item id="33" name="str_coll_item_9" sprite_name="items/collection/item33.png"/>
+		<collection_item id="34" name="str_coll_item_9" sprite_name="items/collection/item34.png"/>
+		<collection_item id="35" name="str_coll_item_9" sprite_name="items/collection/item35.png"/>
+		<collection_item id="36" name="str_coll_item_9" sprite_name="items/collection/item36.png"/>
+		<collection_item id="37" name="str_coll_item_9" sprite_name="items/collection/item37.png"/>
+		<collection_item id="38" name="str_coll_item_9" sprite_name="items/collection/item38.png"/>
+		<collection_item id="39" name="str_coll_item_9" sprite_name="items/collection/item39.png"/>
+		<collection_item id="40" name="str_coll_item_9" sprite_name="items/collection/item40.png"/>
+		<collection_item id="41" name="str_coll_item_9" sprite_name="items/collection/item41.png"/>
+		<collection_item id="42" name="str_coll_item_9" sprite_name="items/collection/item42.png"/>
+		<collection_item id="43" name="str_coll_item_9" sprite_name="items/collection/item43.png"/>
+		<collection_item id="44" name="str_coll_item_9" sprite_name="items/collection/item44.png"/>
+		<collection_item id="45" name="str_coll_item_9" sprite_name="items/collection/item45.png"/>
+		<collection_item id="46" name="str_coll_item_9" sprite_name="items/collection/item46.png"/>
+		<collection_item id="47" name="str_coll_item_9" sprite_name="items/collection/item47.png"/>
+		<collection_item id="48" name="str_coll_item_9" sprite_name="items/collection/item48.png"/>
+		<collection_item id="49" name="str_coll_item_9" sprite_name="items/collection/item49.png"/>
+		<collection_item id="50" name="str_coll_item_9" sprite_name="items/collection/item50.png"/>
+		<collection_item id="51" name="str_coll_item_9" sprite_name="items/collection/item51.png"/>
+		<collection_item id="52" name="str_coll_item_9" sprite_name="items/collection/item52.png"/>
+		<collection_item id="53" name="str_coll_item_9" sprite_name="items/collection/item53.png"/>
+		<collection_item id="54" name="str_coll_item_9" sprite_name="items/collection/item54.png"/>
+		<collection_item id="55" name="str_coll_item_9" sprite_name="items/collection/item55.png"/>
+		<collection_item id="56" name="str_coll_item_9" sprite_name="items/collection/item56.png"/>
+		<collection_item id="57" name="str_coll_item_9" sprite_name="items/collection/item57.png"/>
+		<collection_item id="58" name="str_coll_item_9" sprite_name="items/collection/item58.png"/>
+		<collection_item id="59" name="str_coll_item_9" sprite_name="items/collection/item59.png"/>
+		<collection_item id="60" name="str_coll_item_9" sprite_name="items/collection/item60.png"/>
+		<collection_item id="61" name="str_coll_item_9" sprite_name="items/collection/item61.png"/>
+		<collection_item id="62" name="str_coll_item_9" sprite_name="items/collection/item62.png"/>
+		<collection_item id="63" name="str_coll_item_9" sprite_name="items/collection/item63.png"/>
+		<collection_item id="64" name="str_coll_item_9" sprite_name="items/collection/item64.png"/>
+		<collection_item id="65" name="str_coll_item_9" sprite_name="items/collection/item65.png"/>
+		<collection_item id="66" name="str_coll_item_9" sprite_name="items/collection/item66.png"/>
+		<collection_item id="67" name="str_coll_item_9" sprite_name="items/collection/item67.png"/>
+		<collection_item id="68" name="str_coll_item_9" sprite_name="items/collection/item68.png"/>
+		<collection_item id="69" name="str_coll_item_9" sprite_name="items/collection/item69.png"/>
+		
+		<!-- Новогодняя коллекция -->
+		<collection_item id="70" name="str_coll_item_10" sprite_name="items/collection/item70.png"/>
+		<collection_item id="71" name="str_coll_item_10" sprite_name="items/collection/item71.png"/>
+		<collection_item id="72" name="str_coll_item_10" sprite_name="items/collection/item72.png"/>
+		<collection_item id="73" name="str_coll_item_10" sprite_name="items/collection/item73.png"/>
+		<collection_item id="74" name="str_coll_item_10" sprite_name="items/collection/item74.png"/>
+	
+	
+	</collection_items>
+
+	<collections>
+		<collection_set id="0" name="str_coll_set_karty" descr="str_coll_set_karty_descr" items="0,1,2,3,4" cost_r="3" rew_item_type="naj" rew_item_id="19"/>
+		<collection_set id="1" name="str_coll_set_obuv" descr="str_coll_set_obuv_descr" items="5,6,7,8,9" cost_r="3" rew_item_type="naj" rew_item_id="18"/>
+		<collection_set id="2" name="str_coll_set_listia" descr="str_coll_set_listia_descr" items="10,11,12,13,14" cost_r="3" rew_item_type="naj" rew_item_id="20"/>
+		<collection_set id="3" name="str_coll_set_alcohol" descr="str_coll_set_alcohol_descr" items="15,16,17,18,19" cost_r="4" rew_item_type="naj" rew_item_id="21"/>
+		<collection_set id="4" name="str_coll_set_banki" descr="str_coll_set_banki_descr" items="20,21,22,23,24" cost_r="3" rew_item_type="pod" rew_item_id="13"/>
+		<collection_set id="5" name="str_coll_set_koriagi" descr="str_coll_set_koriagi_descr" items="25,26,27,28,29" cost_r="3" rew_item_type="pod" rew_item_id="8"/>
+		<collection_set id="6" name="str_coll_set_soldatiki" descr="str_coll_set_soldatiki_descr" items="30,31,32,33,34" cost_r="4" rew_item_type="pod" rew_item_id="9"/>
+		<collection_set id="7" name="str_coll_set_zemnovodnie" descr="str_coll_set_zemnovodnie_descr" items="35,36,37,38,39" cost_r="3" rew_item_type="naj" rew_item_id="21"/>
+		<collection_set id="8" name="str_coll_set_igrushki" descr="str_coll_set_igrushki_descr" items="45,46,47,48,49" cost_r="4" rew_item_type="naj" rew_item_id="22"/>
+		<collection_set id="9" name="str_coll_set_vodorosli" descr="str_coll_set_vodorosli_descr" items="50,51,52,53,54" cost_r="10" rew_item_type="naj" rew_item_id="24"/>
+		<collection_set id="10" name="str_coll_set_brelki" descr="str_coll_set_brelki_descr" items="55,56,57,58,59" cost_r="10" rew_item_type="naj" rew_item_id="30"/>
+		<collection_set id="11" name="str_coll_set_udochka" descr="str_coll_set_udochka_descr" items="65,66,67,68,69" cost_r="20" rew_item_type="ud" rew_item_id="23"/>
+
+		<collection_set id="12" name="str_coll_set_santa" descr="str_coll_set_santa_descr" items="70,71,72,73,74" cost_r="20" rew_item_type="naj" rew_item_id="30"/>
+
+	</collections>
+
+    <trajectories>
+        <trajectory name="s2" difficulty="easy"/>
+        <trajectory name="s3" difficulty="easy"/>
+        <trajectory name="s4" difficulty="easy"/>
+        <trajectory name="s5" difficulty="easy"/>
+        <trajectory name="s6" difficulty="easy"/>
+        <trajectory name="s2" difficulty="middle"/>
+        <trajectory name="s3" difficulty="middle"/>
+        <trajectory name="s4" difficulty="middle"/>
+        <trajectory name="s5" difficulty="middle"/>
+        <trajectory name="s6" difficulty="middle"/>
+        <trajectory name="s2" difficulty="hard"/>
+        <trajectory name="s3" difficulty="hard"/>
+        <trajectory name="s4" difficulty="hard"/>
+        <trajectory name="s5" difficulty="hard"/>
+        <trajectory name="s6" difficulty="hard"/>
+    </trajectories>
+    
+    <!--direction = 1 - dragonfly turn left
+     direction = -1 - dragonfly turn right-->
+    <dragonfly_trajectories>
+        <dragonfly_trajectory id="0">
+            <point id="1" x="868" y="0" scale="0.7" direction="1" time = ""/>
+            <point id="2" x="691" y="220" scale="0.7" direction="1" time = ""/>
+            <point id="3" x="336" y="150" scale="0.9" direction="1" time = ""/>
+            <point id="4" x="164" y="245" scale="0.6" direction="-1" time = ""/>
+            <point id="5" x="261" y="278" scale="0.55" direction="-1" time = ""/>
+            <point id="6" x="694" y="134" scale="0.9" direction="-1" time = ""/>
+            <point id="7" x="1124" y="382" scale="1.0" direction="-1" time = ""/>
+            <point id="8" x="4124" y="-382" scale="1.0" direction="-1" time = ""/>
+        </dragonfly_trajectory>
+        <dragonfly_trajectory id="1">
+            <point id="1" x="688" y="-100" scale="1" direction="1" time = ""/>
+            <point id="2" x="220" y="344" scale="1" direction="1" time = ""/>
+            <point id="3" x="254" y="305" scale="1" direction="1" time = ""/>
+            <point id="4" x="197" y="256" scale="1" direction="1" time = ""/>
+            <point id="5" x="147" y="288" scale="1" direction="1" time = ""/>
+            <point id="6" x="62" y="358" scale="1" direction="1" time = ""/>
+            <point id="7" x="-100" y="420" scale="1" direction="1" time = ""/>
+        </dragonfly_trajectory>
+        <dragonfly_trajectory id="2">
+            <point id="1" x="1124" y="0" scale="1" direction="1" time = ""/>
+            <point id="2" x="698" y="107" scale="1" direction="1" time = ""/>
+            <point id="3" x="714" y="148" scale="1" direction="1" time = ""/>
+            <point id="4" x="681" y="98" scale="1" direction="1" time = ""/>
+            <point id="5" x="637" y="241" scale="0.7" direction="1" time = ""/>
+            <point id="6" x="383" y="318" scale="0.5" direction="1" time = ""/>
+            <point id="7" x="227" y="270" scale="1" direction="1" time = ""/>
+            <point id="8" x="208" y="301" scale="1" direction="1" time = ""/>
+            <point id="9" x="277" y="234" scale="1" direction="1" time = ""/>
+            <point id="10" x="-100" y="384" scale="1" direction="1" time = ""/>
+        </dragonfly_trajectory>
+        <dragonfly_trajectory id="3">
+            <point id="1" x="1124" y="0" scale="0.5" direction="1" time = ""/>
+            <point id="2" x="794" y="254" scale="0.5" direction="1" time = ""/>
+            <point id="3" x="638" y="278" scale="0.5" direction="1" time = ""/>
+            <point id="4" x="659" y="249" scale="0.55" direction="-1" time = ""/>
+            <point id="5" x="735" y="288" scale="0.6" direction="-1" time = ""/>
+            <point id="6" x="735" y="288" scale="0.6" direction="1" time = ""/>
+            <point id="7" x="663" y="217" scale="0.7" direction="1" time = ""/>
+            <point id="8" x="663" y="217" scale="0.6" direction="1" time = ""/>
+            <point id="9" x="663" y="217" scale="0.7" direction="1" time = ""/>
+            <point id="10" x="663" y="217" scale="0.6" direction="1" time = ""/>
+            <point id="11" x="465" y="-100" scale="0.7" direction="1" time = ""/>
+        </dragonfly_trajectory>
+    </dragonfly_trajectories>
+    
+    <Reset30thParams isEnabled="false" level="30" num_to_show="3"/>
+    <daily_bonus>
+        <day id="1" type="money" idx="0" cnt="1"/>
+        <day id="2" type="money" idx="0" cnt="2"/>
+        <day id="3" type="money" idx="0" cnt="3"/>
+        <day id="4" type="money" idx="0" cnt="4"/>
+        <day id="5" type="money" idx="0" cnt="5"/>
+        <day id="6" type="money" idx="0" cnt="6"/>
+        <day id="7" type="money" idx="0" cnt="7"/>
+    </daily_bonus>
+    
+    <mascot_reminder repeat_time="30.0" first_time_to_show="60.0" mascot_reminder_time="10.0" seq_id="loc_0" quest_id="0"/>
+    
+   	<confirmations shop_in_app="true" />
+	<reboot timeout="60"/>
+	<show_fishnets seq_id = "loc_0" quest_id="5"/>
+	<heavy_fish seq_id = "loc_0" quest_id="5" level="1"/>
+	
+	<some_params load_friends_every_rodins="10"/>
+	<continuePrice price = "3" posibility = "1"  continueTime="5"/>
+	<comboPoints v0="5" v1="8" v2="10" v3="13" v4="15" v5="18" v6="20"/>
+	<gold_factor factor="1.5"/>
+    	<silver_factor factor="1.5"/>
+
+	<apology money="300"/>
+ 	<adTime days="4"/>
+    <adTimePremium days="8"/>
+	
+	<entityShowTime time="2"/>
+    <entityInterval time="2"/>
+    
+	<entities>
+		<entity id="15"  pic="interface/mini_game/12.png" title="entity_expirience_title"                desc="entity_expirience"                ver="" level="2" value="1" bg="interface/mini_game/bubble.png"  sound="sounds/user_actions/entityPositive.mp3"/>
+		<entity id="3"  pic="interface/mini_game/03.png" title="entity_accelerator_base_title"          desc="entity_accelerator_base"          ver="" level="3" value="100" bg="interface/mini_game/bubble.png"  sound="sounds/user_actions/entityPositive.mp3"/>
+		<entity id="2"  pic="interface/mini_game/03.png" title="entity_inhibitor_base_title"            desc="entity_inhibitor_base"            ver="" level="4" value="30" bg="interface/mini_game/bubble.png" sound="sounds/user_actions/entityNegative.mp3"/>	
+		<entity id="0"  pic="interface/mini_game/01.png" title="entity_placebo_title"                   desc="entity_placebo"                   ver="" level="5" value="" bg="interface/mini_game/bubble.png" sound="sounds/user_actions/entityPositive.mp3" />
+		<entity id="4"  pic="interface/mini_game/04.png" title="entity_accelerator_combo_title"         desc="entity_accelerator_combo"         ver="" level="6" value="15" bg="interface/mini_game/bubble.png" sound="sounds/user_actions/entityPositive.mp3"/>
+		<entity id="14"  pic="interface/mini_game/11.png" title="entity_accelerator_fish_title"           desc="entity_accelerator_fish"          ver="" level="7" value="1" bg="interface/mini_game/bubble.png"  sound="sounds/user_actions/entityPositive.mp3"/>
+		<entity id="5"  pic="interface/mini_game/04.png" title="entity_inhibitor_combo_title"           desc="entity_inhibitor_combo"           ver="" level="8" value="15" bg="interface/mini_game/bubble.png"  sound="sounds/user_actions/entityNegative.mp3"/>
+		<entity id="1"  pic="interface/mini_game/02.png" title="entity_placebo_title"                   desc="entity_placebo"                   ver="" level="9" value="" bg="interface/mini_game/bubble.png"  sound="sounds/user_actions/entityPositive.mp3"/>
+		<entity id="7"  pic="interface/mini_game/05.png" title="entity_inhibitor_progress_title"        desc="entity_inhibitor_progress"        ver="" level="10" value="5" bg="interface/mini_game/bubble.png" sound="sounds/user_actions/entityNegative.mp3"/>
+		<entity id="13"  pic="interface/mini_game/10.png" title="entity_accelerator_base_score_title"     desc="entity_accelerator_base_score"    ver="" level="11" value="3" bg="interface/mini_game/bubble.png"  sound="sounds/user_actions/entityPositive.mp3"/>
+		<entity id="10" pic="interface/mini_game/08.png" title="entity_silver_coin_title"               desc="entity_silver_coin"               ver="" level="12" value="3" bg="interface/mini_game/bubble.png"  sound="sounds/user_actions/entityPositive.mp3"/>
+		<entity id="6" pic="interface/mini_game/05.png" title="entity_accelerator_progress_title"      desc="entity_accelerator_progress"      ver="" level="13" value="5" bg="interface/mini_game/bubble.png" sound="sounds/user_actions/entityPositive.mp3"/>
+		<entity id="12" pic="interface/mini_game/10.png" title="entity_inhibitor_base_score_title"      desc="entity_inhibitor_base_score"      ver="" level="14" value="3" bg="interface/mini_game/bubble.png"  sound="sounds/user_actions/entityNegative.mp3"/>
+		<entity id="11" pic="interface/mini_game/09.png" title="entity_inhibitor_fish_title"            desc="entity_inhibitor_fish"            ver="" level="15" value="1" bg="interface/mini_game/bubble.png"  sound="sounds/user_actions/entityNegative.mp3"/>
+		<entity id="8" pic="interface/mini_game/06.png" title="entity_gold_coin_title"                desc="entity_gold_coin"                 ver="" level="16" value="1" bg="interface/mini_game/bubble.png"  sound="sounds/user_actions/entityPositive.mp3"/>
+		<entity id="9" pic="interface/mini_game/07.png" title="entity_random_title"                    desc="entity_random"                    ver="" level="17" value="1" bg="interface/mini_game/bubble.png"  sound="sounds/user_actions/entityPositive.mp3"/>
+	</entities>
+	
+	
+	
+ 
+	<level_entities>
+	 
+		<level lvl="2" min="1" max="2"   id="15" ver="0.1"/>
+		<level lvl="3" min="1" max="2"   id="15,3" ver="0.1,0.1"/>
+		<level lvl="4" min="1" max="2"   id="15,3,2" ver="0.05,0.1,0.1"/>
+		<level lvl="5" min="1" max="2"   id="3,2,15,0" ver="0.1,0.1,0.1,0.2"/>
+		<level lvl="6" min="1" max="2"   id="3,2,15,0,4" ver="0.1,0.1,0.1,0.2,0.1"/>
+		<level lvl="7" min="2" max="3"   id="3,2,15,0,4,14" ver="0.1,0.1,0.1,0.2,0.1,0.1"/>
+		<level lvl="8" min="2" max="3"   id="3,2,15,0,4,14,5" ver="0.1,0.1,0.1,0.2,0.1,0.1,0.1"/>
+		<level lvl="9" min="2" max="3"   id="3,2,15,0,4,14,5,1" ver="0.1,0.1,0.1,0.2,0.1,0.1,0.1,0.1"/>
+		<level lvl="10" min="2" max="3"  id="3,2,15,0,4,14,5,1,7" ver="0.1,0.1,0.1,0.2,0.1,0.1,0.1,0.1,0.1"/>
+		<level lvl="11" min="2" max="3"  id="3,2,15,0,4,14,5,1,7,13" ver="0.1,0.1,0.1,0.2,0.1,0.1,0.1,0.1,0.1,0.1"/>
+		<level lvl="12" min="2" max="4"  id="3,2,15,0,4,14,5,1,7,13,10" ver="0.1,0.1,0.1,0.2,0.1,0.1,0.1,0.1,0.1,0.1,0.05"/>
+		<level lvl="13" min="2" max="4"  id="3,2,15,0,4,14,5,1,7,13,10,6" ver="0.1,0.1,0.1,0.2,0.1,0.1,0.1,0.1,0.1,0.1,0.05,0.1"/>
+		<level lvl="14" min="2" max="4"  id="3,2,15,0,4,14,5,1,7,13,10,6,12" ver="0.1,0.1,0.1,0.2,0.1,0.1,0.1,0.1,0.1,0.1,0.05,0.1,0.1"/>
+		<level lvl="15" min="2" max="5"  id="3,2,15,0,4,14,5,1,7,13,10,6,12,11" ver="0.1,0.1,0.1,0.2,0.1,0.1,0.1,0.1,0.1,0.1,0.05,0.1,0.1,0.1"/>
+		<level lvl="16" min="2" max="5"  id="3,2,15,0,4,14,5,1,7,13,10,6,12,11,8" ver="0.1,0.1,0.1,0.2,0.1,0.1,0.1,0.1,0.1,0.1,0.05,0.1,0.1,0.1,0.03"/>
+		<level lvl="17" min="2" max="5"  id="3,2,15,0,4,14,5,1,7,13,10,6,12,11,8,9" ver="0.1,0.1,0.1,0.2,0.1,0.1,0.1,0.1,100,0.1,0.05,0.1,0.1,0.1,0.03,0.1"/>
+	</level_entities>	
+	
+	<show_comics flag="false"/>
+	
+	<zendesk_kb>http://support.corpwebgames.com</zendesk_kb>
+    <zendesk_ticket>http://support.corpwebgames.com/hc/requests/new</zendesk_ticket>
+    
+    <saimon_base>http://92.241.163.51:8080/saimon-web/ABTest</saimon_base>
+    <saimon_base_download>http://ab-mobile.corpwebgames.com/</saimon_base_download>
+	
+</gamedata>

@@ -1,0 +1,22 @@
+{
+  "version": "3.0.0",
+  "source": "c:/Users/User/Desktop/Иконки",
+  "iconCount": 15,
+  "files": [
+    "rod-bamboo.png",
+    "reel-tier-1.png",
+    "hook.png",
+    "bait-worm.png",
+    "bait-maggot.png",
+    "bait-corn.png",
+    "bait-minnow.png",
+    "bait-dough.png",
+    "line.png",
+    "float.png",
+    "net.png",
+    "silver.png",
+    "gold.png",
+    "energy.png",
+    "map.png"
+  ]
+}

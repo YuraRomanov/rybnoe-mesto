@@ -1,0 +1,1765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<common_quests>
+  <sequence id="loc_0" next_sequence_id="loc_1" factor="1">
+    <quests>
+      <quest id="0" name="tut_1_1" desc="tut_1_1_desc" icon="quests/icons/icon_girl.png" exp="5">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_id="-1" fish_cnt="1" loc_id="0" desc="tut_1_1_1"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="5"></reward>
+          <reward type="money" idx="0" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_bonus_1" desc="quest_bonus_1_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_id="-1" fish_cnt="2" loc_id="0" desc="quest_bonus_1_1"></task>
+          <task id="1" type="catch_a_fish_cnt_w" fish_cnt="2" fish_w="0.1" loc_id="0" desc="quest_bonus_1_2"></task>
+          <task id="2" type="catch_a_fish_sw" fish_sw="0.4" loc_id="0" desc="quest_bonus_1_3" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="1"></reward>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="naj" idx="1" cnt="3"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_1_3" desc="quest_1_3_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="use_bait" item_type="naj" item_id="1" item_cnt="1" desc="quest_1_3_5"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="2" fish_cnt="1" fish_w="0.1" loc_id="0" desc="quest_1_3_1"></task>
+          <task id="2" type="catch_a_fish_sw" fish_id="-1" fish_sw="1.0" loc_id="0" desc="quest_1_3_4"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="money" idx="0" cnt="1"></reward>
+          <reward type="money" idx="1" cnt="50"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_1_1" desc="quest_1_1_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="buy_item" item_type="naj" item_id="10" item_cnt="1" desc="quest_1_1_1" price_cnt="3" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="8" fish_cnt="1" loc_id="0" desc="quest_1_1_4" price_cnt="9" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="1"></reward>
+          <reward type="money" idx="1" cnt="100"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_1_4" desc="quest_1_4_desc" icon="quests/icons/icon_uncle.png">
+        <tasks>
+          <task id="0" type="use_rod" item_type="ud" item_id="1" item_cnt="1" desc="quest_1_4_4" price_cnt="3" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="7" fish_cnt="1" loc_id="0" desc="quest_1_4_2" price_cnt="8" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="4" fish_cnt="1" loc_id="0" desc="quest_1_4_1" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="13"></reward>
+          <reward type="money" idx="0" cnt="1"></reward>
+          <reward type="money" idx="1" cnt="150"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_1_2" desc="quest_1_2_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="use_fishnet" item_type="fn" item_id="-1" item_cnt="1" desc="quest_1_2_1" price_cnt="2" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="1.5" loc_id="0" desc="quest_1_2_2" price_cnt="4" price_type="gold"></task>
+          <task id="2" type="earn_money" money="silver" money_cnt="80" desc="quest_1_2_3" price_cnt="3" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="1"></reward>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="money" idx="1" cnt="100"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="quest_1_5" desc="quest_1_5_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="3" fish_cnt="1" loc_id="0" desc="quest_1_5_1" price_cnt="6" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="3" fish_cnt="1" fish_w="0.4" loc_id="0" desc="quest_1_5_2" price_cnt="8" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="3" fish_sw="0.7" loc_id="0" desc="quest_1_5_3" price_cnt="11" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="money" idx="0" cnt="1"></reward>
+          <reward type="money" idx="1" cnt="100"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="quest_1_6" desc="quest_1_6_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="use_bait" loc_id="0" item_type="naj" item_id="8" item_cnt="1" desc="quest_1_6_5" price_cnt="4" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="6" fish_cnt="2" loc_id="0" desc="quest_1_6_1" price_cnt="7" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="1"></reward>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="money" idx="1" cnt="50"></reward>
+        </rewards>
+      </quest>
+      <quest id="8" name="quest_1_8" desc="quest_1_8_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="9" fish_cnt="2" loc_id="0" desc="quest_1_8_1" price_cnt="5" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="5" fish_cnt="2" loc_id="0" desc="quest_1_8_2" price_cnt="6" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_sw="1.5" loc_id="0" desc="quest_1_8_3" price_cnt="4" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="1"></reward>
+          <reward type="exp" idx="0" cnt="12"></reward>
+        </rewards>
+      </quest>
+      <quest id="9" name="quest_1_9" desc="quest_1_9_desc" icon="quests/icons/icon_map.png">
+        <tasks>
+          <task id="0" type="earn_money" money="silver" money_cnt="120" desc="quest_1_9_2" price_cnt="5" price_type="gold"></task>
+          <task id="1" type="spend_money" money="gold" money_cnt="3" desc="quest_6_10_1" price_cnt="3" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="money" idx="0" cnt="1"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="30"></reward>
+      <reward type="exp" idx="0" cnt="30"></reward>
+    </rewards>
+  </sequence>
+  <sequence id="loc_1" next_sequence_id="loc_2" factor="2">
+    <quests>
+      <quest id="0" name="quest_2_1" desc="quest_2_1_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="use_rod" loc_id="1" item_type="ud" item_id="-1" item_cnt="5" desc="quest_2_1_1"></task>
+          <task id="1" type="catch_a_fish_cnt" fish_cnt="5" loc_id="1" desc="quest_2_1_2" price_cnt="5" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_cnt_w" fish_cnt="2" fish_w="0.35" loc_id="1" desc="quest_2_1_3" price_cnt="5" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="pod" idx="6" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_2_2" desc="quest_2_2_desc" icon="quests/icons/icon_girl.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="8" fish_cnt="2" loc_id="1" desc="quest_2_2_1" price_cnt="5" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="8" fish_cnt="1" fish_w="0.13" loc_id="1" desc="quest_2_2_2" price_cnt="5" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="8" fish_sw="0.6" loc_id="1" desc="quest_2_2_3" price_cnt="9" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="pod" idx="7" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_2_3" desc="quest_2_3_desc" icon="quests/icons/icon_comp.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt_w" fish_id="20" fish_cnt="1" fish_w="0.25" loc_id="1" desc="quest_2_3_1" price_cnt="7" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="14" fish_cnt="3" loc_id="1" desc="quest_2_3_2" price_cnt="8" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="19" fish_sw="1.2" loc_id="1" desc="quest_2_3_3" price_cnt="8" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="1" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_2_5" desc="quest_2_5_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt_w" fish_id="21" fish_cnt="1" fish_w="0.5" loc_id="1" desc="quest_2_5_1" price_cnt="7" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="22" fish_cnt="3" loc_id="1" desc="quest_2_5_2" price_cnt="9" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="18" fish_sw="3" loc_id="1" desc="quest_2_5_3" price_cnt="7" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="naj" idx="2" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_2_6" desc="quest_2_6_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="spend_money" money="silver" money_cnt="100" desc="quest_2_6_1" price_cnt="4" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="65" fish_cnt="3" loc_id="1" desc="quest_2_6_2" price_cnt="5" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt_w" fish_id="65" fish_cnt="2" fish_w="0.2" loc_id="1" desc="quest_2_6_3" price_cnt="9" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_2_7" desc="quest_2_7_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="use_rod" loc_id="1" item_type="ud" item_id="11" item_cnt="1" desc="quest_2_4_1" price_cnt="5" price_type="gold"></task>
+          <task id="1" type="buy_item" loc_id="1" item_type="naj" item_id="23" item_cnt="1" desc="quest_6_3_1" price_cnt="4" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="13" fish_sw="3" loc_id="1" desc="quest_2_7_3" price_cnt="8" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="6" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="quest_2_8" desc="quest_2_8_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt_w" fish_id="55" fish_cnt="1" fish_w="0.8" loc_id="1" desc="quest_2_8_1" price_cnt="7" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="55" fish_cnt="3" loc_id="1" desc="quest_2_8_2" price_cnt="5" price_type="gold"></task>
+          <task id="2" type="spend_money" money="silver" money_cnt="100" desc="quest_2_8_3" price_cnt="4" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="quest_2_9" desc="quest_2_9_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt_w" fish_id="17" fish_cnt="1" fish_w="0.7" loc_id="1" desc="quest_2_9_1" price_cnt="5" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="17" fish_cnt="3" loc_id="1" desc="quest_2_9_2" price_cnt="5" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="17" fish_sw="3.75" loc_id="1" desc="quest_2_9_3" price_cnt="8" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="naj" idx="1" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="8" name="quest_2_10" desc="quest_2_10_desc" icon="quests/icons/icon_map.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt_w" fish_id="7" fish_cnt="2" fish_w="0.4" loc_id="1" desc="quest_2_10_1" price_cnt="8" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="8" fish_cnt="2" loc_id="1" desc="quest_2_10_2" price_cnt="13" price_type="gold"></task>
+          <task id="2" type="spend_money" money="silver" money_cnt="240" desc="quest_2_10_3" price_cnt="9" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="12"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="10"></reward>
+    </rewards>
+  </sequence>
+  <sequence id="loc_10" next_sequence_id="loc_11" factor="1">
+    <quests>
+      <quest id="0" name="quest_11_1" desc="quest_11_1_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_id="-1" fish_cnt="5" loc_id="10" desc="quest_11_1_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="3.0" loc_id="10" desc="quest_11_1_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="use_rod" loc_id="10" item_type="ud" item_id="-1" item_cnt="15" desc="quest_11_1_3"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="4" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_11_2" desc="quest_11_2_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="90" fish_cnt="3" loc_id="10" desc="quest_11_2_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="90" fish_cnt="3" fish_w="4.5" loc_id="10" desc="quest_11_2_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_sw="5.0" loc_id="10" desc="quest_11_2_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="6" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_11_3" desc="quest_11_3_desc" icon="quests/icons/icon_girl.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="97" fish_cnt="3" loc_id="10" desc="quest_11_3_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="97" fish_cnt="3" fish_w="1.5" loc_id="10" desc="quest_11_3_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_sw="6.0" loc_id="10" desc="quest_11_3_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="naj" idx="2" cnt="3"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_11_5" desc="quest_11_5_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="93" fish_cnt="3" loc_id="10" desc="quest_11_5_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="94" fish_cnt="3" loc_id="10" desc="quest_11_5_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="95" fish_cnt="3" loc_id="10" desc="quest_11_5_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="1" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_11_6" desc="quest_11_6_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="105" fish_cnt="3" loc_id="10" desc="quest_11_6_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="98" fish_cnt="3" loc_id="10" desc="quest_11_6_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="99" fish_cnt="3" loc_id="10" desc="quest_11_6_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_11_7" desc="quest_11_7_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="91" fish_cnt="3" loc_id="10" desc="quest_11_7_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="92" fish_cnt="3" loc_id="10" desc="quest_11_7_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_id="-1" fish_sw="6.0" loc_id="10" desc="quest_11_7_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="quest_11_8" desc="quest_11_8_desc" icon="quests/icons/icon_comp.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="100" fish_cnt="3" loc_id="10" desc="quest_11_8_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_cnt_w" fish_id="-1" fish_cnt="3" fish_w="3" loc_id="10" desc="quest_11_8_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_id="-1" fish_sw="8.0" loc_id="10" desc="quest_11_8_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="quest_11_9" desc="quest_11_9_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="use_rod" loc_id="10" item_type="ud" item_id="-1" item_cnt="8" desc="quest_11_9_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_id="-1" fish_sw="6.0" loc_id="10" desc="quest_11_9_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" money="none" money_cnt="12" desc="quest_11_9_3" price_cnt="12" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="10"></reward>
+    </rewards>
+  </sequence>
+  <sequence id="loc_11" next_sequence_id="loc_12" factor="1">
+    <quests>
+      <quest id="0" name="quest_12_1" desc="quest_12_1_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_id="-1" fish_cnt="5" loc_id="11" desc="quest_12_1_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="3.0" loc_id="11" desc="quest_12_1_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="use_rod" loc_id="11" item_type="ud" item_id="-1" item_cnt="15" desc="quest_12_1_3"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="4" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_12_2" desc="quest_12_2_desc" icon="quests/icons/icon_comp.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="39" fish_cnt="3" loc_id="11" desc="quest_12_2_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="39" fish_cnt="3" fish_w="2" loc_id="11" desc="quest_12_2_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_cnt" fish_id="-1" fish_cnt="6" loc_id="11" desc="quest_12_2_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="5" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_12_4" desc="quest_12_4_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="46" fish_cnt="5" loc_id="11" desc="quest_12_4_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="53" fish_cnt="3" fish_w="1.1" loc_id="11" desc="quest_12_4_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" money="silver" money_cnt="550" desc="quest_12_4_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_12_3" desc="quest_12_3_desc" icon="quests/icons/icon_comp.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt_w" fish_id="51" fish_cnt="3" fish_w="3" loc_id="11" desc="quest_12_3_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="37" fish_cnt="3" loc_id="11" desc="quest_12_3_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_sw="6.0" loc_id="11" desc="quest_12_3_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="6" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_12_5" desc="quest_12_5_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="66" fish_cnt="3" loc_id="11" desc="quest_12_5_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="108" fish_cnt="3" loc_id="11" desc="quest_12_5_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_cnt" fish_id="-1" fish_cnt="3" loc_id="11" desc="quest_12_5_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="naj" idx="5" cnt="3"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_12_7" desc="quest_12_7_desc" icon="quests/icons/icon_lab.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="19" fish_cnt="3" loc_id="11" desc="quest_12_7_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="19" fish_cnt="3" loc_id="4" desc="quest_12_7_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="19" fish_cnt="3" loc_id="1" desc="quest_12_7_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="1" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="quest_12_6" desc="quest_12_6_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="109" fish_cnt="3" loc_id="11" desc="quest_12_6_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="112" fish_cnt="3" loc_id="11" desc="quest_12_6_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_id="-1" fish_sw="3" loc_id="11" desc="quest_12_6_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="quest_12_8" desc="quest_12_8_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="use_rod" loc_id="11" item_type="ud" item_id="-1" item_cnt="8" desc="quest_12_8_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_id="-1" fish_sw="6.0" loc_id="11" desc="quest_12_8_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" money="none" money_cnt="12" desc="quest_12_8_3" price_cnt="12" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="10"></reward>
+    </rewards>
+  </sequence>
+  <sequence id="loc_12" next_sequence_id="loc_13" factor="1">
+    <quests>
+      <quest id="0" name="quest_13_1" desc="quest_13_1_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_id="-1" fish_cnt="5" loc_id="12" desc="quest_13_1_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="3.0" loc_id="12" desc="quest_13_1_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="use_rod" loc_id="12" item_type="ud" item_id="-1" item_cnt="15" desc="quest_13_1_3"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="naj" idx="2" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_13_2" desc="quest_13_2_desc" icon="quests/icons/icon_comp.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="0" fish_cnt="3" loc_id="12" desc="quest_13_2_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="5" fish_cnt="3" fish_w="1" loc_id="12" desc="quest_13_2_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_sw="4.0" loc_id="12" desc="quest_13_2_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_13_3" desc="quest_13_3_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="1" fish_cnt="3" loc_id="12" desc="quest_13_3_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="2" fish_cnt="3" fish_w="4" loc_id="12" desc="quest_13_3_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_sw="4.0" loc_id="12" desc="quest_13_3_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_13_4" desc="quest_13_4_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_cnt="5" loc_id="12" desc="quest_13_4_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="earn_money" money="silver" money_cnt="100" desc="quest_13_4_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" money="silver" money_cnt="570" desc="quest_13_4_3" price_cnt="14" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_13_6" desc="quest_13_6_desc" icon="quests/icons/icon_lab.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="42" fish_cnt="3" loc_id="12" desc="quest_13_6_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="42" fish_cnt="3" loc_id="3" desc="quest_13_6_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="8" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_13_5" desc="quest_13_5_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="110" fish_cnt="3" loc_id="12" desc="quest_13_5_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="110" fish_cnt="5" fish_w="0.23" loc_id="12" desc="quest_13_5_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="110" fish_sw="3.0" loc_id="12" desc="quest_13_5_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="quest_13_7" desc="quest_13_7_desc" icon="quests/icons/icon_map.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="13" fish_cnt="3" loc_id="12" desc="quest_13_7_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="13" fish_cnt="3" loc_id="5" desc="quest_13_7_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="13" fish_cnt="3" loc_id="1" desc="quest_13_7_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="quest_13_8" desc="quest_13_8_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="use_rod" loc_id="12" item_type="ud" item_id="-1" item_cnt="8" desc="quest_13_8_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_id="-1" fish_sw="6.0" loc_id="12" desc="quest_13_8_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" money="none" money_cnt="12" desc="quest_13_8_3" price_cnt="12" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="10"></reward>
+    </rewards>
+  </sequence>
+  <sequence id="loc_13" next_sequence_id="" factor="1">
+    <quests>
+      <quest id="0" name="quest_14_1" desc="quest_14_1_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_id="-1" fish_cnt="5" loc_id="13" desc="quest_14_1_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="3.0" loc_id="13" desc="quest_14_1_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="use_rod" loc_id="13" item_type="ud" item_id="-1" item_cnt="15" desc="quest_14_1_3"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="4" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_14_2" desc="quest_14_2_desc" icon="quests/icons/icon_uncle.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="53" fish_cnt="3" loc_id="13" desc="quest_14_2_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="53" fish_cnt="3" fish_w="1.1" loc_id="13" desc="quest_14_2_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_sw="9.0" loc_id="13" desc="quest_14_2_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="6" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_14_3" desc="quest_14_3_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="113" fish_cnt="3" loc_id="13" desc="quest_14_3_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="113" fish_cnt="3" fish_w="1.3" loc_id="13" desc="quest_14_3_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="113" fish_sw="6.0" loc_id="13" desc="quest_14_3_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_14_4" desc="quest_14_4_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_cnt="5" loc_id="13" desc="quest_14_4_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="earn_money" money="silver" money_cnt="100" desc="quest_14_4_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" money="silver" money_cnt="620" desc="quest_14_4_3" price_cnt="12" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="7" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_14_5" desc="quest_14_5_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="114" fish_cnt="3" loc_id="13" desc="quest_14_5_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="114" fish_cnt="5" fish_w="3" loc_id="13" desc="quest_14_5_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_sw="3.0" loc_id="13" desc="quest_14_5_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_14_6" desc="quest_14_6_desc" icon="quests/icons/icon_comp.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="115" fish_cnt="3" loc_id="13" desc="quest_14_6_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="116" fish_cnt="5" fish_w="0.35" loc_id="13" desc="quest_14_6_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="117" fish_sw="6.0" loc_id="13" desc="quest_14_6_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="1" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="quest_14_7" desc="quest_14_7_desc" icon="quests/icons/icon_lab.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="44" fish_cnt="3" loc_id="13" desc="quest_14_7_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="44" fish_cnt="3" loc_id="8" desc="quest_14_7_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="44" fish_cnt="3" loc_id="4" desc="quest_14_7_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="quest_14_8" desc="quest_14_8_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="use_rod" loc_id="13" item_type="ud" item_id="-1" item_cnt="8" desc="quest_14_8_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_id="-1" fish_sw="6.0" loc_id="13" desc="quest_14_8_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" money="none" money_cnt="12" desc="quest_14_8_3" price_cnt="12" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="10"></reward>
+    </rewards>
+  </sequence>
+  <sequence id="loc_14" next_sequence_id="" factor="1">
+    <quests>
+      <quest id="0" name="quest_15_1" desc="quest_15_1_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_id="-1" fish_cnt="5" loc_id="14" desc="quest_15_1_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="3.0" loc_id="14" desc="quest_15_1_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="use_rod" loc_id="14" item_type="ud" item_id="-1" item_cnt="15" desc="quest_15_1_3"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="1" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_15_3" desc="quest_15_3_desc" icon="quests/icons/icon_girl.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="118" fish_cnt="8" loc_id="14" desc="quest_15_3_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="118" fish_cnt="5" fish_w="4" loc_id="14" desc="quest_15_3_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="118" fish_sw="6.0" loc_id="14" desc="quest_15_3_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="7" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_15_4" desc="quest_15_4_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="119" fish_cnt="8" loc_id="14" desc="quest_15_4_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="119" fish_cnt="5" fish_w="7" loc_id="14" desc="quest_15_4_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="119" fish_sw="6.0" loc_id="14" desc="quest_15_4_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="2" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_15_5" desc="quest_15_5_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="120" fish_cnt="8" loc_id="14" desc="quest_15_5_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="120" fish_cnt="5" fish_w="2.0" loc_id="14" desc="quest_15_5_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="120" fish_sw="6.0" loc_id="14" desc="quest_15_5_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="naj" idx="25" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_15_6" desc="quest_15_6_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="121" fish_cnt="8" loc_id="14" desc="quest_15_6_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="121" fish_cnt="5" fish_w="3.2" loc_id="14" desc="quest_15_6_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="121" fish_sw="6.0" loc_id="14" desc="quest_15_6_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_15_7" desc="quest_15_7_desc" icon="quests/icons/icon_girl.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="122" fish_cnt="8" loc_id="14" desc="quest_15_7_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="122" fish_cnt="5" fish_w="4.0" loc_id="14" desc="quest_15_7_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="122" fish_sw="6.0" loc_id="14" desc="quest_15_7_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="10"></reward>
+    </rewards>
+  </sequence>
+  <sequence id="loc_2" next_sequence_id="loc_3" factor="1">
+    <quests>
+      <quest id="0" name="quest_3_1" desc="quest_3_1_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="64" fish_cnt="5" loc_id="2" desc="quest_3_1_1"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="27" fish_cnt="3" loc_id="2" desc="quest_3_1_2" price_cnt="7" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="67" fish_cnt="3" loc_id="2" desc="quest_3_1_3" price_cnt="9" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="6" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_3_2" desc="quest_3_2_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="28" fish_cnt="5" loc_id="2" desc="quest_3_2_1" price_cnt="6" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="28" fish_cnt="3" fish_w="0.8" loc_id="2" desc="quest_3_2_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="28" fish_sw="3.5" loc_id="2" desc="quest_3_2_3" price_cnt="6" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="naj" idx="1" cnt="3"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_3_3" desc="quest_3_3_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="61" fish_cnt="5" loc_id="2" desc="quest_3_3_1" price_cnt="8" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="62" fish_cnt="3" loc_id="2" desc="quest_3_3_2" price_cnt="12" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="61" fish_sw="2.3" loc_id="2" desc="quest_3_3_3" price_cnt="12" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_3_5" desc="quest_3_5_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="buy_item" loc_id="2" item_type="naj" item_id="23" item_cnt="1" desc="quest_3_5_1" price_cnt="4" price_type="gold"></task>
+          <task id="1" type="buy_item" loc_id="2" item_type="naj" item_id="9" item_cnt="1" desc="quest_3_5_2" price_cnt="4" price_type="gold"></task>
+          <task id="2" type="buy_item" loc_id="2" item_type="pod" item_id="1" item_cnt="1" desc="quest_3_5_3" price_cnt="4" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="7" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_3_6" desc="quest_3_6_desc" icon="quests/icons/icon_uncle.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="66" fish_cnt="6" loc_id="2" desc="quest_3_6_1" price_cnt="13" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="10" fish_cnt="3" loc_id="2" desc="quest_3_6_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="67" fish_cnt="3" loc_id="2" desc="quest_3_6_3" price_cnt="9" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_3_7" desc="quest_3_7_desc" icon="quests/icons/icon_lab.png">
+        <tasks>
+          <task id="0" type="spend_money" money="silver" money_cnt="150" desc="quest_3_7_1" price_cnt="5" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="17" fish_cnt="4" loc_id="2" desc="quest_3_7_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="17" fish_cnt="4" loc_id="1" desc="quest_3_7_3" price_cnt="5" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="6" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="quest_3_8" desc="quest_3_8_desc" icon="quests/icons/icon_comp.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="66" fish_cnt="15" loc_id="2" desc="quest_3_8_1" price_cnt="7" price_type="gold"></task>
+          <task id="1" type="catch_fish_sw" fish_id="27" fish_sw="7" loc_id="2" desc="quest_3_8_2" price_cnt="7" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt_w" fish_id="61" fish_cnt="5" fish_w="0.5" loc_id="2" desc="quest_3_8_3" price_cnt="13" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="quest_3_9" desc="quest_3_9_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="use_bait" item_type="naj" item_id="38" item_cnt="1" desc="quest_3_9_1" price_cnt="7" price_type="gold"></task>
+          <task id="1" type="use_bait" item_type="naj" item_id="35" item_cnt="1" desc="quest_3_9_2" price_cnt="7" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="63" fish_sw="3" desc="quest_3_9_3" price_cnt="11" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="4" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="8" name="quest_3_10" desc="quest_3_10_desc" icon="quests/icons/icon_map.png">
+        <tasks>
+          <task id="0" type="catch_fish_sw" fish_id="15" fish_sw="3" loc_id="2" desc="quest_3_10_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="spend_money" money="silver" money_cnt="360" desc="quest_3_10_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt_w" fish_id="15" fish_cnt="1" fish_w="1.4" loc_id="2" desc="quest_3_10_3" price_cnt="13" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="10"></reward>
+    </rewards>
+  </sequence>
+  <sequence id="loc_3" next_sequence_id="loc_4" factor="1">
+    <quests>
+      <quest id="0" name="quest_4_1" desc="quest_4_1_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="42" fish_cnt="5" loc_id="3" desc="quest_4_1_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="1" loc_id="3" desc="quest_4_1_2"></task>
+          <task id="2" type="catch_fish_cnt_w" fish_id="42" fish_cnt="2" fish_w="0.35" loc_id="3" desc="quest_4_1_3" price_cnt="11" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_4_2" desc="quest_4_2_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="use_rod" loc_id="3" item_type="ud" item_id="-1" item_cnt="3" desc="quest_4_2_2" price_cnt="8" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="8" loc_id="3" desc="quest_1_8_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="naj" idx="5" cnt="3"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_4_4" desc="quest_4_4_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="40" fish_cnt="5" loc_id="3" desc="quest_4_4_1" price_cnt="8" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="40" fish_cnt="2" fish_w="0.12" loc_id="3" desc="quest_4_4_2" price_cnt="14" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="40" fish_sw="3" loc_id="3" desc="quest_4_4_3" price_cnt="8" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="1" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_4_5" desc="quest_4_5_desc" icon="quests/icons/icon_girl.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="24" fish_cnt="3" loc_id="3" desc="quest_4_5_1" price_cnt="8" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="24" fish_cnt="2" fish_w="0.35" loc_id="3" desc="quest_4_5_2" price_cnt="16" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="23" fish_cnt="10" loc_id="3" desc="quest_4_5_3" price_cnt="17" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="5" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_4_6" desc="quest_4_6_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="27" fish_cnt="6" loc_id="3" desc="quest_4_6_1" price_cnt="20" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="30" fish_cnt="5" loc_id="3" desc="quest_4_6_2" price_cnt="23" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="46" fish_cnt="9" loc_id="3" desc="quest_4_6_3" price_cnt="19" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="7" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_4_7" desc="quest_4_7_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="spend_money" money="silver" money_cnt="350" desc="quest_4_7_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="26" fish_cnt="5" loc_id="3" desc="quest_4_7_2" price_cnt="18" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="29" fish_cnt="9" loc_id="3" desc="quest_4_7_3" price_cnt="17" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="4" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="quest_4_8" desc="quest_4_8_desc" icon="quests/icons/icon_comp.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="27" fish_cnt="5" loc_id="3" desc="quest_4_8_1" price_cnt="17" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="5" fish_cnt="2" fish_w="1.05" loc_id="3" desc="quest_4_8_2" price_cnt="18" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="25" fish_sw="7" loc_id="3" desc="quest_4_8_3" price_cnt="17" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="6" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="quest_4_9" desc="quest_4_9_desc" icon="quests/icons/icon_lab.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="8" fish_cnt="4" loc_id="3" desc="quest_4_9_1" price_cnt="16" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="8" fish_cnt="4" loc_id="1" desc="quest_4_9_2" price_cnt="22" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="8" fish_cnt="4" loc_id="0" desc="quest_4_9_3" price_cnt="21" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="8" name="quest_4_10" desc="quest_4_10_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="spend_money" money="silver" money_cnt="400" desc="quest_4_10_1" price_cnt="15" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="18" loc_id="3" desc="quest_4_10_2" price_cnt="17" price_type="gold"></task>
+          <task id="2" type="spend_money" money="gold" money_cnt="15" desc="quest_4_10_3" price_cnt="15" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="10"></reward>
+    </rewards>
+  </sequence>
+  <sequence id="loc_4" next_sequence_id="loc_5" factor="1">
+    <quests>
+      <quest id="0" name="quest_5_1" desc="quest_5_1_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_id="-1" fish_cnt="10" loc_id="4" desc="quest_5_1_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_id="-1" fish_sw="15" loc_id="4" desc="quest_5_1_2" price_cnt="14" price_type="gold"></task>
+          <task id="2" type="use_rod" loc_id="4" item_type="ud" item_id="-1" item_cnt="15" desc="quest_5_1_3"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="1" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_5_2" desc="quest_5_1_desc" icon="quests/icons/icon_girl.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="44" fish_cnt="5" loc_id="4" desc="quest_5_2_1" price_cnt="18" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_id="-1" fish_sw="4" loc_id="4" desc="quest_5_2_2" price_cnt="12" price_type="gold"></task>
+          <task id="2" type="spend_money" money="silver" money_cnt="420" desc="quest_5_2_3" price_cnt="17" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="0" cnt="1"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_5_4" desc="quest_5_4_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="44" fish_cnt="5" loc_id="4" desc="quest_5_4_1" price_cnt="18" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="58" fish_cnt="9" loc_id="4" desc="quest_5_4_2" price_cnt="24" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="59" fish_cnt="8" loc_id="4" desc="quest_5_4_3" price_cnt="15" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="5" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_5_5" desc="quest_5_5_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="56" fish_cnt="10" loc_id="4" desc="quest_5_5_1" price_cnt="15" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="56" fish_cnt="1" fish_w="0.43" loc_id="4" desc="quest_5_5_2" price_cnt="26" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="56" fish_sw="1.5" loc_id="4" desc="quest_5_5_3" price_cnt="15" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_5_6" desc="quest_5_6_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="19" fish_cnt="25" loc_id="4" desc="quest_5_6_1" price_cnt="31" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="26" fish_cnt="10" loc_id="4" desc="quest_5_6_2" price_cnt="29" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="46" fish_cnt="10" loc_id="4" desc="quest_5_6_3" price_cnt="27" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="4" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_5_7" desc="quest_5_7_desc" icon="quests/icons/icon_girl.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt_w" fish_id="60" fish_cnt="4" fish_w="0.75" loc_id="4" desc="quest_5_7_1" price_cnt="24" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="45" fish_cnt="2" fish_w="1.2" loc_id="4" desc="quest_5_7_2" price_cnt="22" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt_w" fish_id="43" fish_cnt="2" fish_w="0.7" loc_id="4" desc="quest_5_7_3" price_cnt="22" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="6" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="quest_5_8" desc="quest_5_8_desc" icon="quests/icons/icon_lab.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="28" fish_cnt="5" loc_id="4" desc="quest_5_8_1" price_cnt="24" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="28" fish_cnt="5" loc_id="3" desc="quest_5_8_2" price_cnt="20" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="28" fish_cnt="5" loc_id="2" desc="quest_5_8_3" price_cnt="16" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="6" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="quest_5_9" desc="quest_5_9_desc" icon="quests/icons/icon_map.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="25" fish_cnt="15" loc_id="4" desc="quest_5_9_1" price_cnt="20" price_type="gold"></task>
+          <task id="1" type="catch_fish_sw" fish_id="25" fish_sw="6" loc_id="4" desc="quest_5_9_2" price_cnt="21" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt_w" fish_id="9" fish_cnt="3" fish_w="0.75" loc_id="4" desc="quest_5_9_3" price_cnt="30" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="8" name="quest_5_10" desc="quest_5_10_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="spend_money" money="silver" money_cnt="470" desc="quest_5_10_1" price_cnt="20" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="30" loc_id="4" desc="quest_5_10_2" price_cnt="29" price_type="gold"></task>
+          <task id="2" type="spend_money" money="gold" money_cnt="10" desc="quest_5_10_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="10"></reward>
+    </rewards>
+  </sequence>
+  <sequence id="loc_5" next_sequence_id="loc_6" factor="1">
+    <quests>
+      <quest id="0" name="quest_6_1" desc="quest_6_1_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_cnt="3" loc_id="5" desc="quest_6_1_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="5" loc_id="5" desc="quest_6_1_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="use_rod" loc_id="5" item_type="ud" item_id="-1" item_cnt="3" desc="quest_6_1_3"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_6_2" desc="quest_6_2_desc" icon="quests/icons/icon_girl.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="12" fish_cnt="3" loc_id="5" desc="quest_6_2_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="20" fish_cnt="3" loc_id="5" desc="quest_6_2_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="15" fish_cnt="3" loc_id="5" desc="quest_6_2_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_6_3" desc="quest_6_3_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="use_bait" loc_id="5" item_type="naj" item_id="23" item_cnt="2" desc="quest_6_3_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="use_lure" loc_id="5" item_type="pod" item_id="7" item_cnt="1" desc="quest_6_3_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_sw="3" loc_id="5" desc="quest_6_3_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="7" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_6_4" desc="quest_6_4_desc" icon="quests/icons/icon_girl.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt_w" fish_id="14" fish_cnt="1" fish_w="1.5" loc_id="5" desc="quest_6_4_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="61" fish_cnt="1" fish_w="0.7" loc_id="5" desc="quest_6_4_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt_w" fish_id="3" fish_cnt="1" fish_w="0.5" loc_id="5" desc="quest_6_4_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="naj" idx="5" cnt="3"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_6_6" desc="quest_6_6_desc" icon="quests/icons/icon_lab.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="3" fish_cnt="4" loc_id="5" desc="quest_6_6_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="3" fish_cnt="4" fish_w="1.1" loc_id="3" desc="quest_6_6_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="3" fish_cnt="4" loc_id="0" desc="quest_6_6_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_6_7" desc="quest_6_7_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_cnt="2" loc_id="5" desc="quest_6_7_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_w="1.1" fish_sw="5" loc_id="5" desc="quest_6_7_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_cnt_w" fish_cnt="2" fish_w="2" loc_id="5" desc="quest_6_7_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="quest_6_8" desc="quest_6_8_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="earn_money" loc_id="5" money="silver" money_cnt="100" desc="quest_6_8_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="use_rod" loc_id="5" item_type="ud" item_id="-1" item_cnt="3" desc="quest_6_8_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" money="silver" money_cnt="320" desc="quest_6_8_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="quest_6_9" desc="quest_6_9_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="11" fish_cnt="2" loc_id="5" desc="quest_6_9_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="16" fish_cnt="2" loc_id="5" desc="quest_6_9_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt_w" fish_id="16" fish_cnt="2" fish_w="2.4" loc_id="5" desc="quest_6_9_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="8" name="quest_6_10" desc="quest_6_10_desc" icon="quests/icons/icon_map.png">
+        <tasks>
+          <task id="0" type="spend_money" money="gold" money_cnt="13" desc="quest_6_10_1" price_cnt="13" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="6" loc_id="5" desc="quest_6_10_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" money="silver" money_cnt="100" desc="quest_6_10_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="10"></reward>
+    </rewards>
+  </sequence>
+  <sequence id="loc_6" next_sequence_id="loc_7" factor="1">
+    <quests>
+      <quest id="0" name="quest_7_1" desc="quest_7_1_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_cnt="3" loc_id="6" desc="quest_7_1_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="5" loc_id="6" desc="quest_7_1_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="use_rod" loc_id="6" item_type="ud" item_id="-1" item_cnt="3" desc="quest_7_1_3"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="4" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_7_2" desc="quest_7_2_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="31" fish_cnt="3" loc_id="6" desc="quest_7_2_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_sw" fish_id="31" fish_sw="2" loc_id="6" desc="quest_7_2_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="32" fish_cnt="2" loc_id="6" desc="quest_7_2_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_7_3" desc="quest_7_3_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="use_bait" loc_id="6" item_type="naj" item_id="19" item_cnt="1" desc="quest_7_3_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="use_lure" loc_id="6" item_type="pod" item_id="4" item_cnt="1" desc="quest_7_3_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_sw="3" loc_id="6" desc="quest_7_3_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_7_4" desc="quest_7_4_desc" icon="quests/icons/icon_lab.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="25" fish_cnt="3" loc_id="6" desc="quest_7_4_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="25" fish_cnt="3" loc_id="4" desc="quest_7_4_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="25" fish_cnt="3" loc_id="3" desc="quest_7_4_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="1" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_7_6" desc="quest_7_6_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="35" fish_cnt="4" loc_id="6" desc="quest_7_6_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="35" fish_cnt="2" fish_w="0.9" loc_id="6" desc="quest_7_6_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="35" fish_sw="3" loc_id="6" desc="quest_7_6_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_7_7" desc="quest_7_7_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="36" fish_cnt="3" loc_id="6" desc="quest_7_7_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="37" fish_cnt="3" loc_id="6" desc="quest_7_7_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="111" fish_cnt="5" loc_id="6" desc="quest_7_7_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="4" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="quest_7_8" desc="quest_7_8_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="39" fish_cnt="2" loc_id="6" desc="quest_7_8_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="39" fish_cnt="1" fish_w="2" loc_id="6" desc="quest_7_8_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="39" fish_sw="6" loc_id="6" desc="quest_7_8_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="naj" idx="5" cnt="3"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="quest_7_9" desc="quest_7_9_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="41" fish_cnt="2" loc_id="6" desc="quest_7_9_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="41" fish_cnt="1" fish_w="0.2" loc_id="6" desc="quest_7_9_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="41" fish_sw="3" loc_id="6" desc="quest_7_9_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="8" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="8" name="quest_7_10" desc="quest_7_10_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt_w" fish_id="111" fish_cnt="2" fish_w="20" loc_id="6" desc="quest_7_10_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="6" loc_id="6" desc="quest_7_10_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" money="gold" money_cnt="10" desc="quest_7_10_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="50"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="10"></reward>
+    </rewards>
+  </sequence>
+  <sequence id="loc_7" next_sequence_id="loc_8" factor="1">
+    <quests>
+      <quest id="0" name="quest_8_1" desc="quest_8_1_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_cnt="3" loc_id="7" desc="quest_8_1_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="5" loc_id="7" desc="quest_8_1_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="use_rod" loc_id="7" item_type="ud" item_id="-1" item_cnt="3" desc="quest_8_1_3"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="2" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_8_2" desc="quest_8_2_desc" icon="quests/icons/icon_lab.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="48" fish_cnt="3" loc_id="7" desc="quest_8_2_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="49" fish_cnt="3" loc_id="7" desc="quest_8_2_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="50" fish_cnt="3" loc_id="7" desc="quest_8_2_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="3" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_8_3" desc="quest_8_3_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="57" fish_cnt="3" loc_id="7" desc="quest_8_3_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="22" fish_cnt="3" loc_id="7" desc="quest_8_3_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="47" fish_cnt="3" loc_id="7" desc="quest_8_3_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="4" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_8_4" desc="quest_8_4_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt_w" fish_id="22" fish_cnt="2" fish_w="0.5" loc_id="7" desc="quest_8_4_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="57" fish_cnt="2" fish_w="0.9" loc_id="7" desc="quest_8_4_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_sw="7" loc_id="7" desc="quest_8_4_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="8" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_8_5" desc="quest_8_5_desc" icon="quests/icons/icon_comp.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="51" fish_cnt="2" fish_w="3" loc_id="7" desc="quest_8_5_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="51" fish_cnt="1" fish_w="3" loc_id="7" desc="quest_8_5_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="51" fish_sw="9" loc_id="7" desc="quest_8_5_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_8_6" desc="quest_8_6_desc" icon="quests/icons/icon_uncle.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_cnt="2" loc_id="7" desc="quest_8_6_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="earn_money" loc_id="7" money="silver" money_cnt="50" desc="quest_8_6_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" loc_id="7" money="silver" money_cnt="100" desc="quest_8_6_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="5" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="quest_8_7" desc="quest_8_7_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="52" fish_cnt="2" loc_id="7" desc="quest_8_7_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="53" fish_cnt="2" loc_id="7" desc="quest_8_7_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="54" fish_cnt="2" loc_id="7" desc="quest_8_7_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="4" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="quest_8_8" desc="quest_8_8_desc" icon="quests/icons/icon_girl.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_cnt="10" loc_id="7" desc="quest_8_8_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="22" fish_cnt="2" fish_w="0.5" loc_id="7" desc="quest_8_8_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="57" fish_sw="8" loc_id="7" desc="quest_8_8_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="8" name="quest_8_9" desc="quest_8_9_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="use_rod" loc_id="7" item_type="ud" item_id="-1" item_cnt="3" desc="quest_8_9_2" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="5" loc_id="7" desc="quest_8_9_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="9" name="quest_8_10" desc="quest_8_10_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="use_rod" loc_id="7" item_type="ud" item_id="-1" item_cnt="3" desc="quest_8_10_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="6" loc_id="7" desc="quest_8_10_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" money="gold" money_cnt="10" desc="quest_8_10_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="50"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="10"></reward>
+    </rewards>
+  </sequence>
+  <sequence id="loc_8" next_sequence_id="loc_10" factor="1">
+    <quests>
+      <quest id="0" name="quest_9_1" desc="quest_9_1_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_cnt="3" loc_id="8" desc="quest_9_1_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="6" loc_id="8" desc="quest_9_1_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="use_rod" loc_id="8" item_type="ud" item_id="-1" item_cnt="3" desc="quest_9_1_3"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="naj" idx="2" cnt="3"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_9_2" desc="quest_9_2_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="5" fish_cnt="3" loc_id="8" desc="quest_9_2_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="43" fish_cnt="3" loc_id="8" desc="quest_9_2_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="44" fish_cnt="3" loc_id="8" desc="quest_9_2_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="7" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_9_3" desc="quest_9_3_desc" icon="quests/icons/icon_girl.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="83" fish_cnt="3" loc_id="8" desc="quest_9_3_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="29" fish_cnt="1" fish_w="1.2" loc_id="8" desc="quest_9_3_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_sw="8" loc_id="8" desc="quest_9_3_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="5" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_9_5" desc="quest_9_5_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="80" fish_cnt="2" loc_id="8" desc="quest_9_5_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="80" fish_cnt="1" fish_w="17" loc_id="8" desc="quest_9_5_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="80" fish_sw="6" loc_id="8" desc="quest_9_5_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="pod" idx="0" cnt="1"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_9_6" desc="quest_9_6_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_cnt="2" loc_id="8" desc="quest_9_6_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="82" fish_cnt="2" fish_w="3" loc_id="8" desc="quest_9_6_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_sw="5" loc_id="8" desc="quest_9_6_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_9_7" desc="quest_9_7_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="buy_item" item_type="naj" item_id="16" item_cnt="1" desc="quest_9_7_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="use_bait" loc_id="8" item_type="naj" item_id="16" item_cnt="1" desc="quest_9_7_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="use_rod" loc_id="8" item_type="ud" item_id="-1" item_cnt="3" desc="quest_9_7_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="4" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="quest_9_8" desc="quest_9_8_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="81" fish_cnt="2" loc_id="8" desc="quest_9_8_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="1" fish_cnt="2" loc_id="8" desc="quest_9_8_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="57" fish_sw="8" loc_id="8" desc="quest_9_8_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="7" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="quest_9_9" desc="quest_9_9_desc" icon="quests/icons/icon_lab.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="14" fish_cnt="6" loc_id="8" desc="quest_9_9_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="14" fish_cnt="6" loc_id="5" desc="quest_9_9_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="14" fish_cnt="6" loc_id="1" desc="quest_9_9_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="8" name="quest_9_10" desc="quest_9_10_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="use_rod" loc_id="8" item_type="ud" item_id="-1" item_cnt="3" desc="quest_9_10_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="6" loc_id="8" desc="quest_9_10_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" money="gold" money_cnt="10" desc="quest_9_10_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="10"></reward>
+    </rewards>
+  </sequence>
+  <sequence id="loc_9" next_sequence_id="loc_10" factor="1">
+    <quests>
+      <quest id="0" name="quest_10_1" desc="quest_10_1_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_id="-1" fish_cnt="5" loc_id="9" desc="quest_10_1_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_sw="3.0" loc_id="9" desc="quest_10_1_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="use_rod" loc_id="9" item_type="ud" item_id="-1" item_cnt="15" desc="quest_10_1_3"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="naj" idx="2" cnt="3"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="quest_10_2" desc="quest_10_2_desc" icon="quests/icons/icon_fishes.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="65" fish_cnt="3" loc_id="9" desc="quest_10_2_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="33" fish_cnt="3" fish_w="0.3" loc_id="9" desc="quest_10_2_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_id="-1" fish_sw="5.0" loc_id="9" desc="quest_10_2_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="quest_10_3" desc="quest_10_3_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="use_rod" loc_id="9" item_type="ud" item_id="-1" item_cnt="15" desc="quest_10_3_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="earn_money" money="silver" money_cnt="100" desc="quest_10_3_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" money="silver" money_cnt="530" desc="quest_10_3_3" price_cnt="14" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="naj" idx="5" cnt="3"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="quest_10_5" desc="quest_10_5_desc" icon="quests/icons/icon_zoo.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="84" fish_cnt="3" loc_id="9" desc="quest_10_5_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="86" fish_cnt="3" loc_id="9" desc="quest_10_5_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="27" fish_cnt="3" loc_id="9" desc="quest_10_5_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="10" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="quest_10_6" desc="quest_10_6_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="88" fish_cnt="3" loc_id="9" desc="quest_10_6_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="88" fish_cnt="3" fish_w="4.0" loc_id="9" desc="quest_10_6_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_id="-1" fish_sw="4" loc_id="9" desc="quest_10_6_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="10" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="quest_10_7" desc="quest_10_7_desc" icon="quests/icons/icon_water.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="89" fish_cnt="3" loc_id="9" desc="quest_10_7_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="89" fish_cnt="3" fish_w="4.0" loc_id="9" desc="quest_10_7_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_id="-1" fish_sw="5.0" loc_id="9" desc="quest_10_7_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="pod" idx="10" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="quest_10_8" desc="quest_10_8_desc" icon="quests/icons/icon_fish.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="87" fish_cnt="3" loc_id="9" desc="quest_10_8_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="87" fish_cnt="3" fish_w="4" loc_id="9" desc="quest_10_8_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_id="-1" fish_sw="4.0" loc_id="9" desc="quest_10_8_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+          <reward type="pod" idx="1" cnt="1"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="quest_10_9" desc="quest_10_9_desc" icon="quests/icons/icon_lab.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="45" fish_cnt="9" loc_id="9" desc="quest_10_9_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="45" fish_cnt="9" loc_id="8" desc="quest_10_9_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="45" fish_cnt="9" loc_id="4" desc="quest_10_9_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+      <quest id="8" name="quest_10_10" desc="quest_10_10_desc" icon="quests/icons/icon_coins.png">
+        <tasks>
+          <task id="0" type="use_rod" loc_id="9" item_type="ud" item_id="-1" item_cnt="8" desc="quest_10_10_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_id="-1" fish_sw="6.0" loc_id="9" desc="quest_10_10_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="spend_money" money="none" money_cnt="10" desc="quest_10_10_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="2"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="10"></reward>
+    </rewards>
+  </sequence>
+</common_quests>
+<event_quests>
+  <sequence id="event_victory_day" next_sequence_id="" level="1" factor="1" start="22.04.2014" end="14.05.2014">
+    <quests>
+      <quest id="0" name="victory_day_1" desc="victory_day_1_desc" icon="quests/icons/loc8_9.png">
+        <tasks>
+          <task id="0" type="catch_a_fish_cnt" fish_id="-1" fish_cnt="6" loc_id="9" desc="victory_day_1_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_sw" fish_id="-1" fish_sw="3" loc_id="9" desc="victory_day_1_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="use_rod" loc_id="9" item_type="ud" item_id="-1" item_cnt="6" desc="victory_day_1_3"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="4"></reward>
+        </rewards>
+      </quest>
+      <quest id="1" name="victory_day_2" desc="victory_day_2_desc" icon="quests/icons/icon79_9.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="69" fish_cnt="3" loc_id="9" desc="victory_day_2_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="use_lure" loc_id="9" item_type="pod" item_id="0" item_cnt="1" desc="victory_day_2_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt_w" fish_id="69" fish_cnt="1" fish_w="0.6" loc_id="9" desc="victory_day_2_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="4"></reward>
+        </rewards>
+      </quest>
+      <quest id="10" name="victory_day_11" desc="victory_day_11_desc" icon="quests/icons/icon79_9.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt_w" fish_id="69" fish_cnt="2" fish_w="0.7" loc_id="9" desc="victory_day_11_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="69" fish_cnt="8" loc_id="9" desc="victory_day_11_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt_w" fish_id="87" fish_cnt="3" fish_w="5.2" loc_id="9" desc="victory_day_11_3"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="4"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="11" name="victory_day_12" desc="victory_day_12_desc" icon="quests/icons/icon91_9.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="89" fish_cnt="7" loc_id="9" desc="victory_day_12_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="89" fish_cnt="1" fish_w="2.4" loc_id="9" desc="victory_day_12_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_sw" fish_id="89" fish_sw="15" loc_id="9" desc="victory_day_12_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="4"></reward>
+        </rewards>
+      </quest>
+      <quest id="2" name="victory_day_3" desc="victory_day_3_desc" icon="quests/icons/icon_water_9.png">
+        <tasks>
+          <task id="0" type="use_lure" loc_id="9" item_type="pod" item_id="6" item_cnt="1" desc="victory_day_3_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_a_fish_cnt" fish_id="-1" fish_cnt="12" loc_id="9" desc="victory_day_3_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_id="-1" fish_sw="5" loc_id="9" desc="victory_day_3_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="4"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="3" name="victory_day_4" desc="victory_day_4_desc" icon="quests/icons/icon135_9.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="129" fish_cnt="5" loc_id="9" desc="victory_day_4_1"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="129" fish_cnt="3" fish_w="3.0" loc_id="9" desc="victory_day_4_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="use_bait" loc_id="9" item_type="naj" item_id="29" item_cnt="1" desc="victory_day_4_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="4"></reward>
+        </rewards>
+      </quest>
+      <quest id="4" name="victory_day_5" desc="victory_day_5_desc" icon="quests/icons/icon93_9.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="88" fish_cnt="6" loc_id="9" desc="victory_day_5_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="88" fish_cnt="3" fish_w="3.8" loc_id="9" desc="victory_day_5_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_id="-1" fish_sw="12" loc_id="9" desc="victory_day_5_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="4"></reward>
+        </rewards>
+      </quest>
+      <quest id="5" name="victory_day_6" desc="victory_day_6_desc" icon="quests/icons/icon136_9.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="128" fish_cnt="7" loc_id="9" desc="victory_day_6_1"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="128" fish_cnt="3" fish_w="3.4" loc_id="9" desc="victory_day_6_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_id="-1" fish_sw="14" loc_id="9" desc="victory_day_6_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="4"></reward>
+        </rewards>
+      </quest>
+      <quest id="6" name="victory_day_7" desc="victory_day_7_desc" icon="quests/icons/icon137_9.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="127" fish_cnt="8" loc_id="9" desc="victory_day_7_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="127" fish_cnt="3" fish_w="4.7" loc_id="9" desc="victory_day_7_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_id="-1" fish_sw="18" loc_id="9" desc="victory_day_7_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="4"></reward>
+        </rewards>
+      </quest>
+      <quest id="7" name="victory_day_8" desc="victory_day_8_desc" icon="quests/icons/icon_fish_9.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="88" fish_cnt="3" loc_id="9" desc="victory_day_8_1"></task>
+          <task id="1" type="catch_fish_cnt" fish_id="128" fish_cnt="3" loc_id="9" desc="victory_day_8_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_fish_cnt" fish_id="127" fish_cnt="3" loc_id="9" desc="victory_day_8_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="exp" idx="0" cnt="10"></reward>
+          <reward type="money" idx="0" cnt="4"></reward>
+        </rewards>
+      </quest>
+      <quest id="8" name="victory_day_9" desc="victory_day_9_desc" icon="quests/icons/icon76_9.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="76" fish_cnt="5" loc_id="9" desc="victory_day_9_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_sw" fish_id="76" fish_sw="20" loc_id="9" desc="victory_day_9_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="use_rod" loc_id="9" item_type="ud" item_id="-1" item_cnt="8" desc="victory_day_9_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="4"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+      <quest id="9" name="victory_day_10" desc="victory_day_10_desc" icon="quests/icons/icon92_9.png">
+        <tasks>
+          <task id="0" type="catch_fish_cnt" fish_id="87" fish_cnt="5" loc_id="9" desc="victory_day_10_1" price_cnt="10" price_type="gold"></task>
+          <task id="1" type="catch_fish_cnt_w" fish_id="87" fish_cnt="3" fish_w="7.3" loc_id="9" desc="victory_day_10_2" price_cnt="10" price_type="gold"></task>
+          <task id="2" type="catch_a_fish_sw" fish_id="-1" fish_sw="22" loc_id="9" desc="victory_day_10_3" price_cnt="10" price_type="gold"></task>
+        </tasks>
+        <rewards>
+          <reward type="money" idx="0" cnt="4"></reward>
+          <reward type="exp" idx="0" cnt="10"></reward>
+        </rewards>
+      </quest>
+    </quests>
+    <rewards>
+      <reward type="money" idx="0" cnt="31"></reward>
+      <reward type="exp" idx="0" cnt="30"></reward>
+      <reward type="exp" idx="0" cnt="30"></reward>
+      <reward type="money" idx="0" cnt="31"></reward>
+    </rewards>
+  </sequence>
+</event_quests>

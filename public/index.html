@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#0d1a24">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Рыбное место — Новая эра</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/hud.css">
+</head>
+<body oncontextmenu="return false">
+  <div id="rotate-hint" class="rotate-hint hidden" aria-live="polite">
+    <div class="rotate-hint-icon" aria-hidden="true">📱</div>
+    <p class="rotate-hint-title">Поверните телефон</p>
+    <p class="rotate-hint-text">Игра рассчитана на горизонтальный экран</p>
+  </div>
+  <div id="game-app">
+    <div class="scene-layer">
+      <canvas id="scene-canvas"></canvas>
+    </div>
+
+    <div id="hud" class="hud-root is-hidden">
+      <header class="hud-top">
+        <div class="hud-top-left">
+          <div class="level-row">
+            <div class="level-badge" aria-label="Уровень"><span id="player-level">1</span></div>
+            <div class="bars-stack">
+              <div class="res-bar res-bar--xp">
+                <div class="res-bar-track"><div id="exp-bar" class="res-bar-fill"></div></div>
+                <span id="exp-text" class="res-bar-text">0 / 500</span>
+              </div>
+              <div class="res-bar res-bar--energy">
+                <img class="res-bar-ico" data-hud-icon="energy" alt="">
+                <div class="res-bar-track"><div id="energy-bar" class="res-bar-fill"></div></div>
+                <span id="energy-text" class="res-bar-text">150 / 150</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="currency-block">
+            <div class="currency-bar currency-bar--silver">
+              <img data-hud-icon="silver" alt="">
+              <span id="silver-top" class="currency-val">0</span>
+            </div>
+            <div class="currency-bar currency-bar--gold">
+              <img data-hud-icon="gold" alt="">
+              <span id="gold-top" class="currency-val">0</span>
+              <button type="button" class="btn-gold-plus" id="btn-gold-plus" title="Магазин">+</button>
+            </div>
+            <div class="quick-icons">
+              <button type="button" class="quick-ico-btn" id="btn-map" title="Карта">
+                <img data-hud-icon="map" alt="">
+              </button>
+              <button type="button" class="quick-ico-btn" id="btn-weather" title="Локация">
+                <img data-hud-icon="water" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hud-top-center">
+          <div class="club-banner">
+            <img data-hud-icon="club" alt="" class="club-emblem">
+            <div class="club-text">
+              <span class="club-sub">Клуб «На крючке»</span>
+              <strong id="location-name" class="club-loc">Лесное Озеро</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="hud-top-right">
+          <span id="player-name" class="player-nameplate">Рыбак</span>
+        </div>
+      </header>
+
+      <div id="bobber" class="bobber bobber--calm hidden" aria-hidden="true">
+        <img class="bobber-img" src="assets/ui/hud/bobber.png?v=5" alt="">
+      </div>
+
+      <div id="cast-power-wrap" class="cast-power hidden">
+        <div class="cast-power-track"><div id="cast-power-fill" class="cast-power-fill"></div></div>
+        <span id="cast-power-label" class="cast-power-label">Удерживай для силы</span>
+      </div>
+
+      <button id="cast-btn" class="water-cast-btn" type="button" aria-label="Забросить">
+        <img id="cast-btn-img" class="cast-btn-img" src="assets/ui/hud/cast-default.png?v=6" alt="">
+      </button>
+
+      <footer class="hud-bottom">
+        <div class="dock-bar">
+          <div class="dock-slot" title="Удочка">
+            <img id="dock-icon-rod" class="dock-slot-img" data-game-icon="rod-bamboo" alt="">
+          </div>
+          <div class="dock-slot" title="Крючки">
+            <img id="dock-icon-hook" class="dock-slot-img" data-hud-icon="hook" alt="">
+            <span id="qty-hook" class="dock-slot-qty">5</span>
+          </div>
+          <div class="dock-slot" title="Наживка" data-lock-while-fishing role="button" tabindex="0">
+            <img id="dock-icon-bait" class="dock-slot-img" data-hud-icon="bait" alt="">
+            <span id="qty-bait" class="dock-slot-qty">20</span>
+          </div>
+          <div class="dock-slot" title="Готовка">
+            <img class="dock-slot-img" data-hud-icon="cook" alt="">
+          </div>
+          <div class="dock-slot" title="Садок" id="btn-sadok" role="button" tabindex="0">
+            <img class="dock-slot-img" data-hud-icon="net" alt="">
+            <span id="qty-sadok" class="dock-slot-qty hidden">0</span>
+          </div>
+          <div class="dock-slot dock-slot--boost" title="Бустеры" id="btn-shop-quick" data-lock-while-fishing role="button" tabindex="0">
+            <img class="dock-slot-img" data-hud-icon="boost" alt="">
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="silver-bar" class="sr-only" aria-hidden="true"></div>
+
+    <div id="fishing-ui" class="hidden">
+      <div id="hook-window" class="hook-window hidden">
+        <p class="hook-window-title">Подсечка!</p>
+        <div class="hook-track">
+          <div id="hook-zone-good" class="hook-zone hook-zone--good"></div>
+          <div id="hook-zone-perfect" class="hook-zone hook-zone--perfect"></div>
+          <div id="hook-marker" class="hook-marker"></div>
+        </div>
+        <p class="hook-window-hint">Жми, когда маркер в зелёной зоне</p>
+      </div>
+    </div>
+
+    <div id="fight-ui" class="fight-dock hidden">
+      <div class="reel-bar-widget" id="reel-bar">
+        <img class="reel-bar-bg" src="assets/ui/hud/reel-bar-bg.png?v=4" alt="">
+        <div class="reel-bar-inner">
+          <div id="reel-bar-fill" class="reel-bar-fill"></div>
+        </div>
+        <div class="reel-fish-track">
+          <div id="fish-marker" class="reel-fish-marker">
+            <div id="fight-fish-icon" class="reel-fish-icon"></div>
+          </div>
+        </div>
+        <div class="reel-tension-track">
+          <div id="reel-progress" class="reel-progress"></div>
+        </div>
+      </div>
+      <p id="fight-hint" class="fight-hint">Тяни к берегу</p>
+      <span id="fight-fish-name" class="sr-only">Рыба</span>
+      <span id="fight-rarity" class="sr-only"></span>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <div id="modal-tutorial" class="modal hidden">
+      <div class="modal-window tutorial-window panel-frame">
+        <h2>Как ловить</h2>
+        <ol class="tutorial-steps">
+          <li>Нажми <strong>«Забросить»</strong> — поплавок улетит на воду</li>
+          <li>Жди поклёвки — поплавок слегка покачивается. Нажми <strong>«Жди»</strong>, чтобы вытащить удочку</li>
+          <li>Когда клюнёт — жми <strong>«Тяни»</strong></li>
+          <li>Удерживай кнопку — тяни рыбу к берегу (влево), отпускай при рывке</li>
+          <li>После поимки — <strong>в садок</strong> или сразу <strong>продать</strong> рыбу</li>
+        </ol>
+        <button type="button" class="btn-primary" id="tutorial-start">Понятно</button>
+      </div>
+    </div>
+
+    <div id="modal-map" class="modal hidden">
+      <div class="modal-window map-window panel-frame">
+        <button class="modal-close" data-close="modal-map">✕</button>
+        <h2 id="map-region">Центральная Россия</h2>
+        <div class="map-content">
+          <button class="map-arrow left" type="button">◀</button>
+          <div class="map-area" id="map-area"></div>
+          <button class="map-arrow right" type="button">▶</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-location" class="modal hidden">
+      <div class="modal-window location-window panel-frame">
+        <button class="modal-close" data-close="modal-location">✕</button>
+        <h2 id="loc-preview-name">Лесное Озеро</h2>
+        <div class="location-preview" id="loc-preview-img"></div>
+        <p id="loc-preview-desc" class="loc-preview-desc"></p>
+        <button class="btn-primary" id="btn-enter-location" type="button">Перейти</button>
+        <div class="location-fish"><span>Рыба:</span><div id="loc-fish-icons" class="fish-icons"></div></div>
+      </div>
+    </div>
+
+    <div id="modal-shop" class="modal hidden">
+      <div class="modal-window shop-window panel-frame">
+        <button class="modal-close" data-close="modal-shop">✕</button>
+        <div class="shop-header">
+          <h2>Магазин</h2>
+          <div class="shop-currency">
+            <span class="shop-curr"><img data-hud-icon="silver" alt=""><span id="shop-silver">0</span></span>
+            <span class="shop-curr"><img data-hud-icon="gold" alt=""><span id="shop-gold">0</span></span>
+          </div>
+        </div>
+        <div class="tabs" id="shop-tabs">
+          <button class="tab active" data-tab="rods" type="button">Удочки</button>
+          <button class="tab" data-tab="hooks" type="button">Крючки</button>
+          <button class="tab" data-tab="bait" type="button">Наживка</button>
+          <button class="tab" data-tab="net" type="button">Сачок</button>
+          <button class="tab" data-tab="soup" type="button">Супы</button>
+        </div>
+        <div class="shop-items" id="shop-items"></div>
+      </div>
+    </div>
+
+    <div id="modal-backpack" class="modal hidden">
+      <div class="modal-window backpack-window panel-frame">
+        <button class="modal-close" data-close="modal-backpack">✕</button>
+        <h2>Рюкзак</h2>
+        <div class="backpack-content" id="backpack-content"></div>
+      </div>
+    </div>
+
+    <div id="modal-sadok" class="modal hidden">
+      <div class="modal-window sadok-window panel-frame">
+        <button class="modal-close" data-close="modal-sadok" type="button">✕</button>
+        <h2>Садок</h2>
+        <p class="sadok-hint">Улов хранится здесь. Продайте рыбу, когда будете готовы.</p>
+        <div id="sadok-list" class="sadok-list"></div>
+        <div class="sadok-footer">
+          <p id="sadok-total" class="sadok-total"></p>
+          <button type="button" class="btn-primary" id="sadok-sell-all" disabled>Продать всё</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-catch" class="modal hidden" aria-hidden="true">
+      <div class="modal-window catch-window">
+        <button class="modal-close" id="catch-close" type="button" aria-label="Закрыть">✕</button>
+        <h2 class="catch-title">Получите улов!</h2>
+        <div id="catch-fish-img" class="catch-fish-hero"></div>
+        <div class="catch-card">
+          <p id="catch-name" class="catch-fish-name">Окунь</p>
+          <p id="catch-weight" class="catch-fish-weight">вес: 11 г.</p>
+          <div class="catch-price-kg">
+            <span class="catch-price-kg-label">цена за кг.</span>
+            <div class="catch-price-kg-row">
+              <img src="assets/ui/icons/silver.png" alt="" width="20" height="20">
+              <span id="catch-price-kg-val">20</span>
+            </div>
+          </div>
+        </div>
+        <div class="catch-stats">
+          <div class="catch-stat">
+            <span class="catch-stat-label">Стоимость</span>
+            <div class="catch-stat-value">
+              <img src="assets/ui/icons/silver.png" alt="">
+              <span id="catch-total-silver">1</span>
+            </div>
+          </div>
+          <div class="catch-stat">
+            <span class="catch-stat-label">Получено опыта</span>
+            <span id="catch-exp" class="catch-stat-value catch-stat-exp">2</span>
+          </div>
+        </div>
+        <div class="catch-actions">
+          <button type="button" class="btn-catch btn-catch--sadok" id="catch-to-sadok">В садок</button>
+          <button type="button" class="btn-catch btn-catch--sell" id="catch-sell">Продать</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="auth-screen">
+      <div class="auth-box panel-frame">
+        <div class="auth-logo">🐟</div>
+        <h1>Рыбное место</h1>
+        <p class="auth-sub">Новая эра</p>
+        <div class="auth-tabs">
+          <button type="button" class="auth-tab active" data-tab="login">Вход</button>
+          <button type="button" class="auth-tab" data-tab="register">Регистрация</button>
+        </div>
+        <div id="auth-login" class="auth-form">
+          <input type="text" id="login-name" placeholder="Имя рыбака" maxlength="20" autocomplete="username">
+          <input type="password" id="login-pass" placeholder="Пароль" autocomplete="current-password">
+          <label class="remember"><input type="checkbox" id="remember-me" checked> Запомнить меня</label>
+          <button type="button" class="btn-primary" id="btn-login">Войти</button>
+        </div>
+        <div id="auth-register" class="auth-form hidden">
+          <input type="text" id="reg-name" placeholder="Придумай имя" maxlength="20" autocomplete="username">
+          <input type="password" id="reg-pass" placeholder="Пароль (мин. 4)" autocomplete="new-password">
+          <input type="password" id="reg-pass2" placeholder="Повтори пароль">
+          <button type="button" class="btn-primary" id="btn-register">Создать аккаунт</button>
+        </div>
+        <p id="auth-error" class="auth-error"></p>
+        <div id="saved-users" class="saved-users"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="apk-data.js"></script>
+  <script src="data/misc-fish.js"></script>
+  <script src="data/forest-lake.js"></script>
+  <script src="data.js"></script>
+  <script src="data/game-config.js"></script>
+  <script src="js/core/events.js"></script>
+  <script src="js/core/rng.js"></script>
+  <script src="js/core/fsm.js"></script>
+  <script src="js/systems/gear.js"></script>
+  <script src="js/systems/fish-behavior.js"></script>
+  <script src="js/systems/fight.js"></script>
+  <script src="js/systems/economy.js"></script>
+  <script src="js/ui/icons.js"></script>
+  <script src="js/ui/bobber-ui.js"></script>
+  <script src="js/ui/fishing-ui.js"></script>
+  <script src="js/fishing-controller.js"></script>
+  <script src="rod-sprites.js"></script>
+  <script src="auth.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

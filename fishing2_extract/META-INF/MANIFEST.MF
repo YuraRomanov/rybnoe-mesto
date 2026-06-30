@@ -1,0 +1,1416 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android)
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_dutch.txt
+SHA1-Digest: ubXAOlBgTG6cluGh9Yg9omLd9gY=
+
+Name: res/drawable/com_facebook_picker_list_longpressed.9.png
+SHA1-Digest: /uU9+qqC9MjC0cwR3L+DskCy9xM=
+
+Name: org/apache/commons/codec/android/language/bm/ash_exact_common.tx
+ t
+SHA1-Digest: 4KUii83+gs6HZqsqdVTJKWmbKLE=
+
+Name: assets/sounds/user_actions/finish_quest.mp3
+SHA1-Digest: hfbOOnM6sV/NXPIwVLp3fMzOWz4=
+
+Name: assets/sounds/environment/sfx/fish_splash/fish_splash4.mp3
+SHA1-Digest: C9GNFTajCuNhIrajmUDb2sxUAGg=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_disabled_light.9.png
+SHA1-Digest: UUeGKfmWgJl/rutroPXP57LpkoU=
+
+Name: assets/rod/rodIn2.png
+SHA1-Digest: V59TAZu3QHVKU3zNCtA2wrx21+8=
+
+Name: res/drawable-mdpi/ic_plusone_medium_off_client.png
+SHA1-Digest: HHc+sqWu5XtWgMQhN1F5cAwzeew=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_disabled_light.9.png
+SHA1-Digest: UbXqMwM30HBljuHn+la04UPzB1Y=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_hungarian
+ .txt
+SHA1-Digest: w312gpWjUSsWx0VAK7N26JpOv3E=
+
+Name: assets/sounds/user_actions/rod/rod_off2.mp3
+SHA1-Digest: QUE9r3HHBq1uXaM5cpvn62EKvJ0=
+
+Name: res/drawable-hdpi/com_facebook_logo.png
+SHA1-Digest: +F9i6TennSQx3Unl/q4mPr3itE8=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_pressed_dark.9.png
+SHA1-Digest: bENWi8ZugwD88Ech+3ZELNcC/Kw=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_disabled_dark.9.png
+SHA1-Digest: UUeGKfmWgJl/rutroPXP57LpkoU=
+
+Name: assets/sounds/environment/loop/nature/nature2.mp3
+SHA1-Digest: /JDfcNs7Jt/ejq71yLMbaaKYkns=
+
+Name: assets/sounds/environment/sfx/birds/crow2.mp3
+SHA1-Digest: k5vOUvC+keftLyhw8e2xxrA86VI=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_romanian
+ .txt
+SHA1-Digest: h57+YZWPX1cnEcSdoXhfGLuta3s=
+
+Name: assets/sounds/user_actions/rod/draw5.mp3
+SHA1-Digest: N/LB4NOaAcFW0Q99Gv0THu0cTUU=
+
+Name: assets/sounds/user_actions/bookmark.mp3
+SHA1-Digest: xnydQLM+opk+Nh2EDQDCZtnCiC4=
+
+Name: assets/quest_sequence.xml
+SHA1-Digest: l9v+7+aUxg/jPkleUawprcaHu60=
+
+Name: res/drawable-xxhdpi/ic_plusone_small_off_client.png
+SHA1-Digest: QITJ8CHL6O6NtaNSW5zIXy1Z3PY=
+
+Name: res/drawable-hdpi/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: s11gcQnxG2CBh+07EhR73hIWugc=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_disabled_focus_light.
+ 9.png
+SHA1-Digest: /ps9lLPOdDdwDt2YyGRRyGkRCMw=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_normal_light.9.png
+SHA1-Digest: FkxxTiMZkZMXGXmeMfd02TtKL64=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_polish.t
+ xt
+SHA1-Digest: e4PksIbpzRqmyfXiE+gxLVhuVNA=
+
+Name: assets/loading/preloader_small_c_bank.png
+SHA1-Digest: TUd/3ge1oFtvkNXpsY57A+vwl0w=
+
+Name: res/drawable/common_signin_btn_text_light.xml
+SHA1-Digest: XNfep17EiW58h9WfaUKXU0kgWc0=
+
+Name: org/apache/commons/codec/android/language/bm/ash_rules_english.t
+ xt
+SHA1-Digest: xDM5Kj+RvDu2y5bXf+6seM3O0Ww=
+
+Name: assets/sounds/environment/loop/nature3_river1.mp3
+SHA1-Digest: UXgqUaQIGqTd0C6PGX2v0SAmvzA=
+
+Name: assets/gamedata_bk.xml
+SHA1-Digest: Amje5iJ1HoTCu94cnKciTBunKO4=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_normal_dark.9.png
+SHA1-Digest: 5yTFZLZtCPpeiVFtQvpG2K4xDdE=
+
+Name: assets/sounds/environment/sfx/fish_splash/fish_splash1.mp3
+SHA1-Digest: b9tjOehDKgkZtMjiLwmyz9InoQU=
+
+Name: res/drawable-hdpi/common_signin_btn_text_disabled_dark.9.png
+SHA1-Digest: 1nB29gilkMG21U2c1UzWz5vtjpc=
+
+Name: assets/sounds/user_actions/rod/draw3.mp3
+SHA1-Digest: GI945kAsoNebMIhRSe6EtcnpW8Q=
+
+Name: assets/rod/rodIn1.plist
+SHA1-Digest: SFkSTZc4HqMtcCQKvGKiEQjA/B0=
+
+Name: assets/sounds/environment/sfx/fish_splash/fish_splash3.mp3
+SHA1-Digest: wnjs6IgMF2CrY8DxbTJTytaU7cY=
+
+Name: res/layout/com_facebook_search_bar_layout.xml
+SHA1-Digest: bMIEw3txite7FelcIQMgIVW326Q=
+
+Name: res/drawable-mdpi/com_facebook_picker_magnifier.png
+SHA1-Digest: yotnhVn7HzOwvsA1iVxnQdW+R6Y=
+
+Name: res/drawable-xhdpi/ic_plusone_standard_off_client.png
+SHA1-Digest: NEAofQuoLcRt99gbmL+/kRTDnUE=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_disabled_focus_light.9
+ .png
+SHA1-Digest: 5te3wznPBVYtZMjVj49FYN5YlRA=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_pressed_light.9.png
+SHA1-Digest: ppRAUb4e8AfMY+hiTgUxYeX8bDw=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_portugues
+ e.txt
+SHA1-Digest: 2tGtdUrB2oruPbgFAC1SD4R2Mn0=
+
+Name: res/drawable-mdpi/common_signin_btn_text_normal_light.9.png
+SHA1-Digest: CFcKGCNCXdElgRyG3GU1cR7Lpck=
+
+Name: assets/sounds/environment/sfx/birds/seagulls.mp3
+SHA1-Digest: /FJvlNmn7SmCYKq0goCgGTIOioY=
+
+Name: org/apache/commons/codec/android/language/bm/sep_rules_french.tx
+ t
+SHA1-Digest: B8soq3ODQdgyws77pmFOVzo66uI=
+
+Name: assets/rod/rodOut2.plist
+SHA1-Digest: /g/1tt0gBTNv2LYO2Ay3wHHhPH0=
+
+Name: res/drawable/com_facebook_picker_list_pressed.9.png
+SHA1-Digest: ughAWBlhb5fxIgHli8NgEiGGjGY=
+
+Name: res/drawable/com_facebook_button_check_on.png
+SHA1-Digest: ObcSDxnphDDTROHTniwThtnJVWk=
+
+Name: res/drawable/com_facebook_logo.png
+SHA1-Digest: COOFdQDqXjvNdi+5TMPa3bPhaEQ=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_romanian.
+ txt
+SHA1-Digest: 9XU05+EK41PC/HwRw9zxny5awCw=
+
+Name: res/drawable-xxhdpi/ic_plusone_medium_off_client.png
+SHA1-Digest: 5jta9QUYJ9k9tMHwzhYqoefVy+o=
+
+Name: org/apache/commons/codec/android/language/bm/ash_approx_romanian
+ .txt
+SHA1-Digest: 8dJCy93UqGPxUAM5qiwy8UeOCpA=
+
+Name: org/apache/commons/codec/android/language/bm/ash_approx_polish.t
+ xt
+SHA1-Digest: d7PswPXB40uZY4D8wXcuG7osFGk=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_spanish.t
+ xt
+SHA1-Digest: v/X501bGOhAvKUt41xXerI3WFvE=
+
+Name: res/drawable-hdpi/common_signin_btn_text_focus_light.9.png
+SHA1-Digest: cyroPBwNNxlz5xXq1uSZsOxhnH0=
+
+Name: res/drawable-xxhdpi/ic_plusone_standard_off_client.png
+SHA1-Digest: GsuPJv1dNcolfrnKEL4GX2NHRmk=
+
+Name: res/drawable/com_facebook_button_blue.xml
+SHA1-Digest: 7jgXX21XRL4ZqkSf8TXk0X7XYKw=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_normal_dark.9.png
+SHA1-Digest: dV3F0Sz7MxTs+Trhe4uXp7Q7aSs=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_focus_light.9.png
+SHA1-Digest: oslddavjaxT0f8U4Mn8PG9Z+jNM=
+
+Name: assets/sounds/environment/loop/insects/insects1.mp3
+SHA1-Digest: j1h88qV4j/IMtMEZ0yhiLe+O9Ys=
+
+Name: res/drawable-hdpi/ic_plusone_small_off_client.png
+SHA1-Digest: MDqgTVve/ECWdg1RF1Xo/IJ49zo=
+
+Name: res/layout/com_facebook_usersettingsfragment.xml
+SHA1-Digest: tM4dGbNuJgBVuWPz/XzCobnJd1I=
+
+Name: res/drawable-xhdpi/ic_plusone_small_off_client.png
+SHA1-Digest: LtV8CfoAmgWuTGWNZXeWeNDR1hY=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_focus_light.9.png
+SHA1-Digest: THnQ9r/oTuPB60ajOYXvK1GrUsE=
+
+Name: assets/spin/spin_bar.png
+SHA1-Digest: Y+9bOC8ny47LgsLhR0JWCvBTajw=
+
+Name: assets/locale/ru_RU.xml
+SHA1-Digest: 7HnmjjQe0GTuzfpKsvPphtPYyYo=
+
+Name: res/drawable/com_facebook_picker_list_selector_background_transi
+ tion.xml
+SHA1-Digest: jGr2Ud+kdCJRbYNguzNSGVBp4fs=
+
+Name: assets/sounds/user_actions/unlocked.mp3
+SHA1-Digest: JR0MZRkX/Vhz+bMShKSmy4hmrM4=
+
+Name: org/apache/commons/codec/android/language/bm/ash_approx_french.t
+ xt
+SHA1-Digest: q9sgIysKftSjudOa4wXU3BLc/4Y=
+
+Name: assets/sounds/user_actions/sound18.mp3
+SHA1-Digest: 58PxNM5zAB/2FnUXvzWWLGbC+ZQ=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: CKFnDef2GfRTaRgjuT6+/5YzUk4=
+
+Name: org/apache/commons/codec/android/language/bm/sep_approx_french.t
+ xt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: assets/rod/rodKlev1.png
+SHA1-Digest: e4Cl7yxGu7vkSvfYewkX+0v1wzI=
+
+Name: res/drawable-mdpi/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: +tjTExmZ1lk9Ox0aZm5rNcUPoFY=
+
+Name: assets/sounds/user_actions/rod/rod_throw1.mp3
+SHA1-Digest: OdsyenLguoyXL6S0eVtR9VIZ5Sc=
+
+Name: res/layout/com_facebook_picker_checkbox.xml
+SHA1-Digest: 32OdRzgQdNE+a+cMl9QIJlAT3RU=
+
+Name: res/drawable-mdpi/common_signin_btn_text_disabled_focus_dark.9.p
+ ng
+SHA1-Digest: 29jlpwaYo8yADFvg53lRNdVbvt0=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_disabled_light.9.png
+SHA1-Digest: 1Hnpvj2UzKDvPZv175SFBfp0Gn8=
+
+Name: res/drawable-xxhdpi/ic_plusone_tall_off_client.png
+SHA1-Digest: nnQrYOSge8+DJ/aZ1dVTUztprv8=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_normal_light.9.png
+SHA1-Digest: WqQF3y/vDvl0c3tlpCQMUlAGR90=
+
+Name: org/apache/commons/codec/android/language/bm/sep_approx_spanish.
+ txt
+SHA1-Digest: wGpv/4nTHPd+c4HkTvDnN2PUYOU=
+
+Name: res/drawable-xhdpi/com_facebook_close.png
+SHA1-Digest: 0IaTuYpHdwNgyn8PrCfM4P1LSUM=
+
+Name: res/layout/com_facebook_placepickerfragment.xml
+SHA1-Digest: qDAJPXZhUFwJLt7J9bGYo6kzrEg=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_disabled_focus_dark.9
+ .png
+SHA1-Digest: /ps9lLPOdDdwDt2YyGRRyGkRCMw=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_approx_co
+ mmon.txt
+SHA1-Digest: Hxjkq50d1HJRTfhnGsjVmtUwQ38=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_polish.tx
+ t
+SHA1-Digest: BKwAayJJNnmipd/rFV3jPkaErSE=
+
+Name: assets/sounds/environment/sfx/birds/cuckoo1.mp3
+SHA1-Digest: 96BPz3gySSNCA5xMbkqDXKQk8fw=
+
+Name: org/apache/commons/codec/android/language/bm/ash_exact_approx_co
+ mmon.txt
+SHA1-Digest: c9AqKhHVO0VPlbeLnJTrKdy/gSs=
+
+Name: res/drawable/com_facebook_button_blue_normal.9.png
+SHA1-Digest: plzlqLb7elFLaBIIHG8jVWFUnfU=
+
+Name: org/apache/commons/codec/android/language/bm/ash_rules_spanish.t
+ xt
+SHA1-Digest: jxaPlVZm4rC0Egc7UWeCEFaLVsQ=
+
+Name: res/drawable/common_signin_btn_icon_dark.xml
+SHA1-Digest: f0Zkh1uBSWycApwYTTBJnkqrghg=
+
+Name: assets/rod/rodOut2.png
+SHA1-Digest: 3uGdZLvMlVzJC/bIJ6SrF/Zplzc=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_focus_light.9.png
+SHA1-Digest: THnQ9r/oTuPB60ajOYXvK1GrUsE=
+
+Name: assets/sounds/environment/sfx/fish_splash/fish_splash7.mp3
+SHA1-Digest: b5k5At9qHVdeQY0O7UTy76ASMZg=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_greek.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: assets/sounds/environment/sfx/birds/owl2.mp3
+SHA1-Digest: xN1xAP1kM2ofjtg6YgHudsMGvZE=
+
+Name: org/apache/commons/codec/android/language/bm/ash_exact_spanish.t
+ xt
+SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_italian.t
+ xt
+SHA1-Digest: fpEQsllQFifzCfJ/dp1xEwvBVdg=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_turkish.t
+ xt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/android/language/bm/sep_approx_any.txt
+SHA1-Digest: 0mWytx3QfDcxQYesfSLfKaaiPGc=
+
+Name: assets/sounds/environment/sfx/leaves/leaves4.mp3
+SHA1-Digest: 5IFS8FrjvFfr2bnkdVQfgzT0/f8=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_focus_dark.9.png
+SHA1-Digest: +YXDOKcowsglHKYLvgWRriKCdQI=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_pressed_dark.9.png
+SHA1-Digest: VuHJWuT/6iilvSab3F78/jbS8VQ=
+
+Name: assets/sounds/environment/sfx/leaves/leaves5.mp3
+SHA1-Digest: HW8iIQyWID8OrqAQOF4oEVPkDq0=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_disabled_dark.9.png
+SHA1-Digest: ZDogSdlgVekmFIAbKguvig7+XGg=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: tWUWjtTo3HxE/8a02qZ5QsaeyfM=
+
+Name: assets/rod/rodKlev2.png
+SHA1-Digest: /zgwcz5iX8frAIxn7fJ1Uz6R+Ug=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_english.t
+ xt
+SHA1-Digest: CHRv59odKbwWuNzWNtwmYNxOEH4=
+
+Name: res/drawable-hdpi/icon.png
+SHA1-Digest: TUDGj9i4fkyUsgHoKXb9oBFftQE=
+
+Name: res/layout/com_facebook_friendpickerfragment.xml
+SHA1-Digest: oPxfTaBKpmEPbnsNvSN36ac84gc=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_hebrew.tx
+ t
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/android/language/bm/ash_rules_polish.tx
+ t
+SHA1-Digest: bnV3hR/TM8/nCLUXvfXHWUmvShI=
+
+Name: res/drawable-mdpi/common_signin_btn_text_focus_dark.9.png
+SHA1-Digest: dF5oQhWFz2szuye4UCQeGH4CFRk=
+
+Name: org/apache/commons/codec/android/language/bm/ash_rules_german.tx
+ t
+SHA1-Digest: YO+2+bquWxcrjLHWD06sQ4ycQYc=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_focused.9.png
+SHA1-Digest: wx0FTcs+RGcIb3fC9wYKpWawDgI=
+
+Name: assets/sounds/environment/sfx/fish_splash/fish_splash6.mp3
+SHA1-Digest: 7ujzOodnxLYowSNACcrAljqPQQs=
+
+Name: org/apache/commons/codec/android/language/bm/sep_approx_common.t
+ xt
+SHA1-Digest: VLGwCVv3uxq8eYkWPr7gmtHLOnU=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_any.txt
+SHA1-Digest: 5FHNYWkE/iE9uhTrfBSWz2fh4rI=
+
+Name: assets/sounds/environment/loop/nature/nature1.mp3
+SHA1-Digest: vN4/6LFUbk7htelVwfdFgYV5Ib8=
+
+Name: res/layout/com_facebook_picker_list_row.xml
+SHA1-Digest: fWkG1xsIZYUZ1T9UtnkKg1oibPQ=
+
+Name: res/drawable-xhdpi/com_facebook_picker_magnifier.png
+SHA1-Digest: VqEt89wuwGEqEtvuU36zIvHS4VY=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_italian.t
+ xt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: assets/loading/preloader_icon_bg.png
+SHA1-Digest: QcX/TRouo88ykeshXNohToAtWwQ=
+
+Name: res/drawable-mdpi/common_signin_btn_text_disabled_focus_light.9.
+ png
+SHA1-Digest: 29jlpwaYo8yADFvg53lRNdVbvt0=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_pressed_dark.9.png
+SHA1-Digest: bENWi8ZugwD88Ech+3ZELNcC/Kw=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_cyrillic
+ .txt
+SHA1-Digest: T3Kwm8H/aw/kkF6SaYfagX9J1mw=
+
+Name: assets/sounds/environment/sfx/plane_pass/plane_pass2.mp3
+SHA1-Digest: Wu+KNkSy05tNkx5JQ776jdL5Qlo=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_russian.
+ txt
+SHA1-Digest: ln5mpI7m/dYz8po1m2pe5V1t//k=
+
+Name: assets/gamedata.xml
+SHA1-Digest: xLyXET2U0sFkPetZ8nqlc92lvz8=
+
+Name: res/drawable/com_facebook_place_default_icon.png
+SHA1-Digest: T6PfkzvzoTErI9HPUHhPTzYuaOw=
+
+Name: manifest
+SHA1-Digest: mMPMo8V6pVtuzWe7ZFR440kXloo=
+
+Name: res/drawable-mdpi/common_signin_btn_text_normal_dark.9.png
+SHA1-Digest: AT9w5rSAMWW0uoROEE4O/DyXQj4=
+
+Name: com/google/thirdparty/publicsuffix/PublicSuffixPatterns.gwt.xml
+SHA1-Digest: CZGMQclJdq2CCCn/JwSWNUmymDc=
+
+Name: AndroidManifest.xml
+SHA1-Digest: WQOPnKi51hY4cWxvNNXKFG0jh/A=
+
+Name: res/color/common_signin_btn_text_light.xml
+SHA1-Digest: eAfgBs0hEAYvSYpmTMWpYxApgjU=
+
+Name: org/apache/commons/codec/android/language/bm/sep_rules_portugues
+ e.txt
+SHA1-Digest: sqGys16ESrXOXSg9obu8ix9O0DQ=
+
+Name: res/layout/com_facebook_picker_search_box.xml
+SHA1-Digest: CNIVtKgUqMSDqZ+wydrEyigKwu0=
+
+Name: assets/sounds/environment/loop/nature5_river1.mp3
+SHA1-Digest: X3I1WcuGfS0RbIOiQaP5GLMHg58=
+
+Name: org/apache/commons/codec/android/language/bm/sep_exact_french.tx
+ t
+SHA1-Digest: FzpQ+GbWmzaOeTszrpAHMAbmuII=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_any.txt
+SHA1-Digest: s7KvcfwD+yZtsux5sF8HC7SSwKw=
+
+Name: assets/locale/de_DE.xml
+SHA1-Digest: mLQf5hQ5fkPJHciZatbHd4w1jqw=
+
+Name: res/drawable-ldpi/com_facebook_close.png
+SHA1-Digest: lg0izCnB1flsd2QqLisbxkcuGyU=
+
+Name: classes.dex
+SHA1-Digest: m+yPk7mSQgvYt/RQAiNPq5HFji4=
+
+Name: org/apache/commons/codec/android/language/bm/sep_languages.txt
+SHA1-Digest: N9Nby7yZl/CNB4XLYMOy4NPkDns=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_focus_light.9.png
+SHA1-Digest: re+zLFhPUMSpBod/+8AnbiOF95E=
+
+Name: assets/fonts/DIGITAL-7.ttf
+SHA1-Digest: GJSIqZLyUIh4UQA5cP/hB0GUqsI=
+
+Name: res/drawable-hdpi/common_signin_btn_text_normal_dark.9.png
+SHA1-Digest: /w/b5Ahd692RhVH4wOIahCMTR9s=
+
+Name: res/drawable-xhdpi/com_facebook_logo.png
+SHA1-Digest: 94ZTspodsrcPndjRFwq4Cqz6Wc4=
+
+Name: assets/rod/rodKlev2.plist
+SHA1-Digest: pDIyyxujaVLMANOezhRl8rSraQA=
+
+Name: res/raw/logo.mp4
+SHA1-Digest: zoiHeG18/QOWEQX9k0dyvhShlBY=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_greek.tx
+ t
+SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_arabic.tx
+ t
+SHA1-Digest: yt4PLY35eX3omtnfi8cYJAdUwDA=
+
+Name: res/drawable/com_facebook_profile_picture_blank_square.png
+SHA1-Digest: ii3g4mqHjQXtghNZE1cibJA1Jbs=
+
+Name: assets/locale/ch_CH.xml
+SHA1-Digest: XUmwvPXNDQZTYfnI6mv4X0N08CE=
+
+Name: org/apache/commons/codec/android/language/bm/ash_exact_hebrew.tx
+ t
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/android/language/bm/lang.txt
+SHA1-Digest: H+gJtZUsHsM9QHoCyS/cdT9yjaQ=
+
+Name: res/drawable-mdpi/ic_plusone_standard_off_client.png
+SHA1-Digest: xWYT0qzRVNaGybBaBeMKbeGgkgE=
+
+Name: com/tapjoy/res/tj_close_button.png
+SHA1-Digest: 1BB0wiH8Gx+YWwfzyC7kzfV4tlg=
+
+Name: res/drawable-mdpi/ic_plusone_tall_off_client.png
+SHA1-Digest: AD2aFw6TcqHuDE1AdYky7h+et9s=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_hungarian
+ .txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: res/drawable-mdpi/common_signin_btn_text_disabled_dark.9.png
+SHA1-Digest: vgTn+pEQhSLa5buaCqjDd3w3UWU=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_normal_light.9.png
+SHA1-Digest: rk4+RrLhcP6lThhrsLhux6sOaW0=
+
+Name: assets/sounds/user_actions/rod/rod_off3.mp3
+SHA1-Digest: 6M6ptG+opN7HeXgFKDuXoEcUfzM=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_dutch.tx
+ t
+SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_hebrew.t
+ xt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/android/language/bm/ash_approx_german.t
+ xt
+SHA1-Digest: MxrOjj0j10k/YbNQybQuDJBum3c=
+
+Name: org/apache/commons/codec/android/language/bm/ash_approx_russian.
+ txt
+SHA1-Digest: k/nguda0I1ot8kuzX5C5xNb+MhY=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_french.tx
+ t
+SHA1-Digest: CrDzmQQb/nDj6G9KGuej8e+uHIU=
+
+Name: assets/loading/preloader_small_c.png
+SHA1-Digest: TUd/3ge1oFtvkNXpsY57A+vwl0w=
+
+Name: res/drawable-ldpi/icon.png
+SHA1-Digest: wSN/aOOyFYJzhs0MNj6T3VisfXE=
+
+Name: assets/sounds/environment/sfx/birds/duck.mp3
+SHA1-Digest: vzFqqM1KWoDBvEO03NEUDo24abM=
+
+Name: assets/sounds/user_actions/rod/draw2.mp3
+SHA1-Digest: djD8M06jLVCTIClvZoA9hnOcnAA=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_dutch.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: assets/sounds/user_actions/rod/draw1.mp3
+SHA1-Digest: I3Q61LLUkEbygh1imfTcYWxD3b0=
+
+Name: res/drawable/com_facebook_button_check.xml
+SHA1-Digest: 4katch+Z/3cWOfcOKA0/Rj5Js+s=
+
+Name: res/drawable-xhdpi/com_facebook_button_blue_focused.9.png
+SHA1-Digest: 0mL9bvBnguGGZdnft4TaGoEw08Q=
+
+Name: res/drawable/com_facebook_picker_list_focused.9.png
+SHA1-Digest: wq1XBihYEP7fT9hT55vx2S7+KDQ=
+
+Name: assets/sounds/user_actions/mangal_finish.mp3
+SHA1-Digest: YwFhFh4k4M8wKZO3fnEkVpJe1yI=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_disabled_light.9.png
+SHA1-Digest: 1Hnpvj2UzKDvPZv175SFBfp0Gn8=
+
+Name: org/apache/commons/codec/android/language/bm/ash_rules_russian.t
+ xt
+SHA1-Digest: T4ZqaaGytR6k0txV4R9HaAMRd8M=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_disabled_focus_light.9
+ .png
+SHA1-Digest: /ps9lLPOdDdwDt2YyGRRyGkRCMw=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_focus_dark.9.png
+SHA1-Digest: QvCsDHmHTCeFtKK23z0HRetpRJI=
+
+Name: assets/sounds/environment/sfx/birds/tits1.mp3
+SHA1-Digest: tApJsrxlhgaR2V7Zeybcp4dPKDs=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_pressed_light.9.png
+SHA1-Digest: zXl4gOYVm22pGbkGC4i82wLIMyg=
+
+Name: assets/sounds/environment/sfx/birds/cuckoo2.mp3
+SHA1-Digest: tOpIZ7ZDt8ug45aveqY60UbOe5w=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_pressed_light.9.png
+SHA1-Digest: w/L+nKDDWadDlwiDybC+JmpbqaI=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_common.t
+ xt
+SHA1-Digest: LdAHq1Uf7ZJObFLplHkMBg62o8g=
+
+Name: res/drawable/com_facebook_picker_top_button.xml
+SHA1-Digest: FpCN68q2eV+3WjoqLCPZ0C/7pGQ=
+
+Name: assets/sounds/environment/sfx/fish_splash/fish_splash2.mp3
+SHA1-Digest: /WFcLUsj5tIdoU6bl2v8IcXPCIU=
+
+Name: org/apache/commons/codec/android/language/bm/ash_approx_english.
+ txt
+SHA1-Digest: WdrL/vp21NUtryKaVCYaAfnUY9U=
+
+Name: res/drawable/com_facebook_top_background.xml
+SHA1-Digest: 2jGeRfgb5Xm7OmXOYRKQWRbaaUw=
+
+Name: assets/sounds/environment/sfx/birds/crow1.mp3
+SHA1-Digest: iMv/ds+FEcfgPLR9XSGKCELj0OA=
+
+Name: res/drawable-hdpi/common_signin_btn_text_disabled_focus_light.9.
+ png
+SHA1-Digest: YmWnuLFTsxsuwRBtvQiQ6Y6KnsI=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_disabled_focus_light.9.
+ png
+SHA1-Digest: 0ky7hJW6fNsa6m2tmjhllqHXHfg=
+
+Name: assets/sounds/environment/sfx/birds/owl1.mp3
+SHA1-Digest: vXQc0egD2wGZyKp/pNb4ugDzw8g=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_pressed_dark.9.png
+SHA1-Digest: VuHJWuT/6iilvSab3F78/jbS8VQ=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_turkish.
+ txt
+SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+
+Name: assets/anims/beer_anims.png
+SHA1-Digest: N5beORoY64ffkeRuE+8VRGgz9v0=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_disabled_focus_light.9.
+ png
+SHA1-Digest: IXqmYG4624bef7DnPxFG+Uwx1ak=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_french.t
+ xt
+SHA1-Digest: fG8iHIY7dmE+dzMnRN1V8U+CAWs=
+
+Name: org/apache/commons/codec/android/language/bm/ash_exact_german.tx
+ t
+SHA1-Digest: w4DMVKfl4a7tpge4d91vRsE09Uc=
+
+Name: org/apache/commons/codec/android/language/bm/sep_rules_spanish.t
+ xt
+SHA1-Digest: uTGxICniFcGE+85pnK+pGH1Xzt8=
+
+Name: assets/sounds/environment/sfx/fish_splash/fish_splash5.mp3
+SHA1-Digest: LQuVtOPjZccCwwhyqf/uizB0aT0=
+
+Name: org/apache/commons/codec/android/language/bm/ash_exact_russian.t
+ xt
+SHA1-Digest: rXaMJ4HIP1dVq2JA4YDx9goSHNo=
+
+Name: org/apache/commons/codec/android/language/bm/ash_hebrew_common.t
+ xt
+SHA1-Digest: lhqN1L0rc6oqNcToAM5w5eXc69k=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_english.
+ txt
+SHA1-Digest: WdrL/vp21NUtryKaVCYaAfnUY9U=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_german.tx
+ t
+SHA1-Digest: ASWiPOCybslDsqdqSYrJCczwNBA=
+
+Name: assets/sounds/user_actions/rod/rod_off4.mp3
+SHA1-Digest: 0AHYHMzAl5VhPt0GmjuK3+p4fIE=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_focus_dark.9.png
+SHA1-Digest: vo5IER5aYP04fs9WVhNf8ZG8h6g=
+
+Name: res/drawable-xhdpi/icon.png
+SHA1-Digest: x4tBSCZe/Gkc8MSCaqMKQS58sfc=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_disabled_focus_dark.9.p
+ ng
+SHA1-Digest: 0ky7hJW6fNsa6m2tmjhllqHXHfg=
+
+Name: res/drawable-xhdpi/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: q04LLz2eNuM6e8D8RaRhm1e3WbQ=
+
+Name: res/drawable/com_facebook_profile_picture_blank_portrait.png
+SHA1-Digest: 9kGOeq/tVClWE7Lz9AgjtukRZnQ=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_any.txt
+SHA1-Digest: jWl5fcYklf5KZQOVQOhWuWwoUAM=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_normal_light.9.png
+SHA1-Digest: FkxxTiMZkZMXGXmeMfd02TtKL64=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_disabled_focus_dark.9
+ .png
+SHA1-Digest: 5te3wznPBVYtZMjVj49FYN5YlRA=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_polish.tx
+ t
+SHA1-Digest: C2oXvKtemOA5+wbuURYYZrRXawk=
+
+Name: res/drawable/com_facebook_picker_list_selector.xml
+SHA1-Digest: WHqB9RVhykjDfj90mkBVqervSyM=
+
+Name: assets/sounds/user_actions/rod/rod_throw3.mp3
+SHA1-Digest: 9oM5XdFT1BGLwQUuMqig99/yKIg=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_cyrillic.
+ txt
+SHA1-Digest: Yg5q1pDwdRE2199a3lBn//aVSZ0=
+
+Name: res/drawable/com_facebook_list_divider.9.png
+SHA1-Digest: 45BAgKtOkC0fHYqIunSXrQ8YubM=
+
+Name: assets/locale/es_ES.xml
+SHA1-Digest: 3FNsUk+j7GTKSAkjTiB4LKIRlzs=
+
+Name: res/drawable/com_facebook_close.png
+SHA1-Digest: FDOOYcRoxfXB5QdY1YikzqT7kx8=
+
+Name: assets/sounds/environment/sfx/birds/jay.mp3
+SHA1-Digest: rIsWlOuHSSmZ7XtSsvBABqXdt+k=
+
+Name: assets/rod/rodIn2.plist
+SHA1-Digest: IV8azJ+yMRzmEkB7qq9wB00bxw4=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_czech.tx
+ t
+SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+
+Name: res/drawable/com_facebook_loginbutton_silver.xml
+SHA1-Digest: fOFYT1e2WRn8qF3X7YA4fYO79ko=
+
+Name: assets/sounds/user_actions/rod/draw4.mp3
+SHA1-Digest: WPJ7fDiJVn8yMvg1pkAfnK3xKiM=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_pressed_light.9.png
+SHA1-Digest: zXl4gOYVm22pGbkGC4i82wLIMyg=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_focus_dark.9.png
+SHA1-Digest: sa6MQEFa8whxq6hug+zvczJa8Ss=
+
+Name: res/drawable/com_facebook_button_grey_focused.9.png
+SHA1-Digest: oegkN07TNc6Ko8z3qqCgUGgnvRw=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_spanish.t
+ xt
+SHA1-Digest: T+njbAJy1Bqc9+cbiIJMwcI9HrU=
+
+Name: res/layout/com_facebook_picker_image.xml
+SHA1-Digest: J7iJUfYjCru51wBkUim6irBNGhk=
+
+Name: org/apache/commons/codec/android/language/bm/ash_languages.txt
+SHA1-Digest: x5ijgzijaJwexI8tGvYq1Ys8W0o=
+
+Name: res/drawable-mdpi/common_signin_btn_text_disabled_light.9.png
+SHA1-Digest: vgTn+pEQhSLa5buaCqjDd3w3UWU=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_romanian.
+ txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: res/drawable/com_facebook_profile_default_icon.png
+SHA1-Digest: hnc7R7K+VpzIWKki/iGEw6AlfPw=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_disabled_focus_dark.9.p
+ ng
+SHA1-Digest: IXqmYG4624bef7DnPxFG+Uwx1ak=
+
+Name: org/apache/commons/codec/android/language/bm/ash_exact_romanian.
+ txt
+SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_pressed_dark.9.png
+SHA1-Digest: 3+x2t/WZmDnWpRsGihxGb1wjfKk=
+
+Name: assets/sounds/user_actions/catch_success.mp3
+SHA1-Digest: hlNmrRUopV5HmhcrYnI+PrrI4Sw=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_arabic.t
+ xt
+SHA1-Digest: 8LPDBpkhGMPrbgNH/3GMv5DW2Vs=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_english.t
+ xt
+SHA1-Digest: 00E7VR452tbgGSDvaN2vH71JXd0=
+
+Name: res/drawable/com_facebook_inverse_icon.png
+SHA1-Digest: F87dFjM8iCRCeWSfrxkG/jcMtZY=
+
+Name: assets/quest_sequence_bk.xml
+SHA1-Digest: 1OAXyfRYOBLXp7IO7d9FHBk92H8=
+
+Name: res/drawable-xhdpi/ic_plusone_tall_off_client.png
+SHA1-Digest: znT4P8AI3xcWsBof3ElTFY2hDrk=
+
+Name: assets/sounds/environment/sfx/winds/wind4.mp3
+SHA1-Digest: QZcOzLaRqOL0RnwaR7A0dkRVR5I=
+
+Name: org/apache/commons/codec/android/language/bm/sep_rules_italian.t
+ xt
+SHA1-Digest: 4OtvhiYVCX6Pngy4UP1SKrIDoro=
+
+Name: assets/sounds/user_actions/steps.mp3
+SHA1-Digest: +ZCXpaJ/oBAlAk/BDewpqEpL0XE=
+
+Name: assets/fishing.xml
+SHA1-Digest: icv9ycec0Y6aYugeCkmDEwWKhtg=
+
+Name: org/apache/commons/codec/android/language/bm/gen_languages.txt
+SHA1-Digest: Wd+YcHRM0F23bj/qZsPhOjYOa+4=
+
+Name: assets/rod/rodOut1.plist
+SHA1-Digest: m/EY6D5KjtwwWgjr/Ir74imJCns=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_normal_dark.9.png
+SHA1-Digest: vGictS/UYFmX8tbz7DG/BKWlA1A=
+
+Name: res/drawable-hdpi/ic_plusone_standard_off_client.png
+SHA1-Digest: 3M2Hwey0trjQpX8kpVoQgSeehjY=
+
+Name: assets/spin/spin_bar.plist
+SHA1-Digest: 1GJzKAliWwF5bzYABWu9zaBcVmA=
+
+Name: org/apache/commons/codec/android/language/bm/ash_approx_common.t
+ xt
+SHA1-Digest: padRPYJ0BaElGjLugFZoVeiaNRQ=
+
+Name: assets/sounds/user_actions/rod/rod_throw5.mp3
+SHA1-Digest: imVA+Tynff2Fj0U7B83hu83AjEI=
+
+Name: res/color/common_signin_btn_text_dark.xml
+SHA1-Digest: BaNQKLTExlr7d1i5w11FKzRyyx8=
+
+Name: assets/sounds/environment/sfx/birds/woodpecker.mp3
+SHA1-Digest: XXMeCCqLx80KudtQUFYJUGhUd74=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_normal_dark.9.png
+SHA1-Digest: dV3F0Sz7MxTs+Trhe4uXp7Q7aSs=
+
+Name: org/apache/commons/codec/android/language/bm/sep_rules_hebrew.tx
+ t
+SHA1-Digest: G0Yn8vlBmcqKqvsNdi9pfDl8Mbs=
+
+Name: assets/sounds/user_actions/rod/rod_throw4.mp3
+SHA1-Digest: KkPXb2cPVtWnv82rvcypRiJDRkE=
+
+Name: res/layout/com_facebook_picker_activity_circle_row.xml
+SHA1-Digest: sNwj5m5GYX/OX7RG+5EZvLIjGSI=
+
+Name: res/layout/com_facebook_login_activity_layout.xml
+SHA1-Digest: 96GxSAw/yzqm+sFwWtPxC0KIQUw=
+
+Name: assets/sounds/user_actions/rod/rod_off1.mp3
+SHA1-Digest: kPKWUU9kff3Xm2AzdIku6eSsQfQ=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_disabled_dark.9.png
+SHA1-Digest: UbXqMwM30HBljuHn+la04UPzB1Y=
+
+Name: org/apache/commons/codec/android/language/bm/ash_exact_polish.tx
+ t
+SHA1-Digest: YtjlwefN2I0RWdC2euL3eS1iTgQ=
+
+Name: org/apache/commons/codec/android/language/bm/ash_approx_cyrillic
+ .txt
+SHA1-Digest: zhdfuG3lpctSYxuUJ7xTMIjSPNs=
+
+Name: assets/sounds/environment/loop/nature2_river3.mp3
+SHA1-Digest: A0t9eUXP+UoeceQOpjnkLyIuvlY=
+
+Name: org/apache/commons/codec/android/language/bm/ash_exact_french.tx
+ t
+SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+
+Name: assets/sounds/environment/sfx/birds/tits2.mp3
+SHA1-Digest: Md0s6Yd0p4xL0X9DqTHNWRaNsS4=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_turkish.t
+ xt
+SHA1-Digest: rN+fxuizg39UWtnHiV1G1d2AaVY=
+
+Name: res/drawable-mdpi/icon.png
+SHA1-Digest: wIoACtjKD2oY3rViWapghMPH8WU=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_focus_light.9.png
+SHA1-Digest: KUWcrP9v7FORu4ojRjzVSn0JZio=
+
+Name: res/drawable-mdpi/common_signin_btn_text_pressed_dark.9.png
+SHA1-Digest: MQsj73rqoxGdFvNYEPkKJZPqXBU=
+
+Name: org/apache/commons/codec/android/language/bm/ash_exact_english.t
+ xt
+SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+
+Name: assets/sounds/user_actions/new_quest.mp3
+SHA1-Digest: SP4mmwpEZ8ET86EP8E1A+siDkjA=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_disabled_focus_dark.9.
+ png
+SHA1-Digest: 5te3wznPBVYtZMjVj49FYN5YlRA=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_german.t
+ xt
+SHA1-Digest: 0/CejklscQ18lQIcpLZ4h2ZwsQ0=
+
+Name: assets/sounds/user_actions/entityPositive.mp3
+SHA1-Digest: X4fNwxevm/C/nZLgamAo5tmCCVk=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_normal.9.png
+SHA1-Digest: ObpXSA4NH1YwVj8ZgzYz74kaDfE=
+
+Name: org/apache/commons/codec/android/language/bm/sep_approx_italian.
+ txt
+SHA1-Digest: sQ1CrX8M+aYXtqb+FaAQJlodnx0=
+
+Name: assets/exp_data.xml
+SHA1-Digest: qK7F6IXqaN60Xy5Ch+WvhIOVeig=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_greeklat
+ in.txt
+SHA1-Digest: KM44dvGlJjA1G1+QMxAorjQfVZo=
+
+Name: org/apache/commons/codec/android/language/bm/sep_approx_hebrew.t
+ xt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: res/drawable/com_facebook_button_check_off.png
+SHA1-Digest: NDLFyRfWjBjm9xCkOlx9fqTCMug=
+
+Name: org/apache/commons/codec/android/language/bm/sep_approx_portugue
+ se.txt
+SHA1-Digest: wGpv/4nTHPd+c4HkTvDnN2PUYOU=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_normal_dark.9.png
+SHA1-Digest: uRAyDpH07H9tazGPj+pquxEo+4U=
+
+Name: res/layout/com_facebook_picker_list_section_header.xml
+SHA1-Digest: sxqSHT7dEK2HXJ8eF9BYondKg/o=
+
+Name: res/drawable-hdpi/ic_plusone_medium_off_client.png
+SHA1-Digest: NHqkBfIL0tvXQGsGHO91mUCAPyI=
+
+Name: assets/sounds/environment/loop/river4_nature4.mp3
+SHA1-Digest: a6vZqtRn49Zt1AKKWg2I77tXb0s=
+
+Name: assets/sounds/environment/sfx/insects/insect(bee).mp3
+SHA1-Digest: vCzDbrdtHdxkhYDi81RsHaDo3Xo=
+
+Name: res/drawable-hdpi/common_signin_btn_text_disabled_light.9.png
+SHA1-Digest: 1nB29gilkMG21U2c1UzWz5vtjpc=
+
+Name: res/drawable-hdpi/com_facebook_picker_magnifier.png
+SHA1-Digest: IRytpOlTJ0L0tqrpIfR65gTRRSo=
+
+Name: org/apache/commons/codec/android/language/bm/sep_rules_any.txt
+SHA1-Digest: tBhirNuraiANjlje0HNzz2Rd8XY=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_portugue
+ se.txt
+SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+
+Name: assets/sounds/environment/sfx/winds/wind2.mp3
+SHA1-Digest: 9AqBLww46mr7qGNvV8dETWJH/dk=
+
+Name: res/drawable-xhdpi/com_facebook_inverse_icon.png
+SHA1-Digest: JlToIy/BS1SwLA3JoedKEQBE76E=
+
+Name: res/layout/com_facebook_picker_title_bar.xml
+SHA1-Digest: JEGrKtApPCedTmSciWGCILKDp58=
+
+Name: res/drawable-mdpi/common_signin_btn_text_pressed_light.9.png
+SHA1-Digest: VSw7l3gn6Xmrfp6USiW4t6QJmPw=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_normal_dark.9.png
+SHA1-Digest: vGictS/UYFmX8tbz7DG/BKWlA1A=
+
+Name: org/apache/commons/codec/android/language/bm/ash_approx_hebrew.t
+ xt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: res/drawable-xhdpi/com_facebook_button_blue_normal.9.png
+SHA1-Digest: nqGHiPOhSaIXmMVgJ9Ux7JqUxEk=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_hungaria
+ n.txt
+SHA1-Digest: kpJ0pEDOyFBEu6wl4QdynsUq6jE=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_arabic.tx
+ t
+SHA1-Digest: 6qj8otnCUSRgzzY1XsPSLprI8l4=
+
+Name: res/drawable-hdpi/ic_plusone_tall_off_client.png
+SHA1-Digest: mKmFlpzPqO2eN1UQWWTrY/HvgmA=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_normal.9.png
+SHA1-Digest: BvNuj0JM4dW1M5X/qZOU04aa9aQ=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_italian.
+ txt
+SHA1-Digest: kpJ0pEDOyFBEu6wl4QdynsUq6jE=
+
+Name: org/apache/commons/codec/android/language/bm/ash_rules_hungarian
+ .txt
+SHA1-Digest: KxrQuSBewEePK/XN5khH0PWw7yE=
+
+Name: assets/sounds/user_actions/dialog.mp3
+SHA1-Digest: YxFyAmlA8GAKwUZ+lKeUCcuUdg8=
+
+Name: org/apache/commons/codec/android/language/bm/ash_exact_any.txt
+SHA1-Digest: 31+z+V5I9I/BsRgZo688C7Nmz5c=
+
+Name: assets/sounds/user_actions/catch_fail.mp3
+SHA1-Digest: 1aU+8hyAYATFVFuurHuxVgBxZNY=
+
+Name: js/closebutton.html
+SHA1-Digest: HNKUUr65xvF43DhYePNX2XJIC0A=
+
+Name: assets/sounds/environment/loop/river/river1.mp3
+SHA1-Digest: 8DSpd0DU8BAZzXh6/EF1xUJjIOE=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_hebrew.tx
+ t
+SHA1-Digest: 80bIa465/ozUslfQBb84wPL42nY=
+
+Name: res/drawable/com_facebook_list_section_header_background.9.png
+SHA1-Digest: UlppTzQMf0S8p04nUqt4qCBKRF0=
+
+Name: res/drawable-hdpi/com_facebook_inverse_icon.png
+SHA1-Digest: 2IKuzG1QMycYYLdEWoHnQDoZ07E=
+
+Name: assets/loading/loading_retina.jpg
+SHA1-Digest: 2XmjHHnBMvlA9gesfzP+zH5lLtk=
+
+Name: org/apache/commons/codec/android/language/bm/ash_rules_any.txt
+SHA1-Digest: dLYj+QzWWMV1HWCtEJPX4xYg2q0=
+
+Name: org/apache/commons/codec/android/language/bm/ash_approx_spanish.
+ txt
+SHA1-Digest: 604dJC1I4/8Oy3q/B/iDaSTWh7Y=
+
+Name: assets/sounds/environment/sfx/winds/wind5.mp3
+SHA1-Digest: +CKnsHA5qZlgt0cl2mE6PyIJ3Xs=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_normal_light.9.png
+SHA1-Digest: he0SlIYzLlZChBg6d38hheLzBns=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_russian.t
+ xt
+SHA1-Digest: lulM+eX+omlYPVagYcZ7S+1OOAg=
+
+Name: res/drawable/com_facebook_picker_item_background.xml
+SHA1-Digest: Cq51aZYoaRIqNbq/2ExWblR0CEQ=
+
+Name: assets/sounds/environment/sfx/plane_pass/plane_pass1.mp3
+SHA1-Digest: 8Z4Gk9+NDOwFB5s2vnXKnd10J+A=
+
+Name: assets/sounds/environment/loop/river1_insects1.mp3
+SHA1-Digest: 3Penff7bEiBCDcGu7aUhBx/SHgc=
+
+Name: res/drawable-mdpi/ic_plusone_small_off_client.png
+SHA1-Digest: lOwgiwPxI8R2+0EZBBOzp3VD+bg=
+
+Name: assets/sounds/user_actions/rod/rod_throw2.mp3
+SHA1-Digest: p70YPtlnGZ30wyodnLiFmnJYkdI=
+
+Name: assets/loading/loading_1024x768.jpg
+SHA1-Digest: bLDetYg0rP+MLLK4VA/Yfm+SzNU=
+
+Name: org/apache/commons/codec/android/language/bm/ash_approx_any.txt
+SHA1-Digest: 54nb4ON7/wkHOr32PrSKqoszAGk=
+
+Name: assets/rod/rodOut1.png
+SHA1-Digest: h9lCFGg96mtHj3OmI2Kh7x1ouWk=
+
+Name: res/layout/videol.xml
+SHA1-Digest: DxXQgMR3RzXrixCbKb0ptQTL3fM=
+
+Name: res/drawable/com_facebook_usersettingsfragment_background_gradie
+ nt.xml
+SHA1-Digest: UudkMujfDbVwQrl+1pBZ2WIJ8ro=
+
+Name: assets/sounds/environment/sfx/insects/insect(fly).mp3
+SHA1-Digest: YcUeP7uKyLmU8BEmiVPqChah2PU=
+
+Name: res/drawable-hdpi/common_signin_btn_text_disabled_focus_dark.9.p
+ ng
+SHA1-Digest: YmWnuLFTsxsuwRBtvQiQ6Y6KnsI=
+
+Name: org/apache/commons/codec/android/language/bm/ash_exact_hungarian
+ .txt
+SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_portugues
+ e.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: assets/sounds/environment/sfx/winds/wind3.mp3
+SHA1-Digest: rsop3sT1eXH/TEkZi4Uet3oy6vA=
+
+Name: assets/loading/preloader_big_c.png
+SHA1-Digest: g1Ai+y047QCzgJLSO/qoAaV4I0Q=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_normal_light.9.png
+SHA1-Digest: rk4+RrLhcP6lThhrsLhux6sOaW0=
+
+Name: res/layout/com_facebook_picker_title_bar_stub.xml
+SHA1-Digest: jVB+5GjPsKVOkmrdE2sMK//0VxY=
+
+Name: assets/rod/rodIn1.png
+SHA1-Digest: PR0jInjdM1RMWDfaPGsZZ52H6j0=
+
+Name: res/drawable-hdpi/com_facebook_button_blue_focused.9.png
+SHA1-Digest: f6ffxUARnD4OE2WatPT59yDgeJ8=
+
+Name: assets/sounds/user_actions/p32.mp3
+SHA1-Digest: MQgXXHTINdM34kG1n723gjp5a4s=
+
+Name: assets/sounds/environment/sfx/leaves/leaves3.mp3
+SHA1-Digest: I8kJf3CJ0xtbQYD4JWbkdnukoD4=
+
+Name: res/drawable-hdpi/common_signin_btn_text_normal_light.9.png
+SHA1-Digest: BPO7rZUizcNQMnWeRsW2OCnWgH4=
+
+Name: resources.arsc
+SHA1-Digest: FConZMIVTv+I5tuKPoxoADJR518=
+
+Name: org/apache/commons/codec/android/language/bm/ash_rules_romanian.
+ txt
+SHA1-Digest: c2FG81GO6lTa5eTZpNvoIjKLPfw=
+
+Name: res/drawable-hdpi/common_signin_btn_text_pressed_light.9.png
+SHA1-Digest: Wx/93xRl4fEGrkADqVPH6ShswfU=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_focus_dark.9.png
+SHA1-Digest: +YXDOKcowsglHKYLvgWRriKCdQI=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_german.tx
+ t
+SHA1-Digest: 3GlHgMBkvi2mEoFnPYxoBXIh4No=
+
+Name: res/drawable/com_facebook_button_grey_normal.9.png
+SHA1-Digest: kZ9314YgSZHYcEuP+vXCuujxd48=
+
+Name: assets/locale/fr_FR.xml
+SHA1-Digest: LzsMo0XLWxa3zb5PlEPK846W/AI=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_common.tx
+ t
+SHA1-Digest: u/mGD68aVPmhFiWBCiQdju9UoVw=
+
+Name: res/drawable-xxhdpi/icon.png
+SHA1-Digest: /9mxD0Y8wyY8rFM4U7TyEtRJVYY=
+
+Name: res/drawable-mdpi/common_signin_btn_text_focus_light.9.png
+SHA1-Digest: 7vLApczB6mEex3xCchwoPVizP8w=
+
+Name: res/drawable-mdpi/com_facebook_button_blue_normal.9.png
+SHA1-Digest: plzlqLb7elFLaBIIHG8jVWFUnfU=
+
+Name: org/apache/commons/codec/android/language/bm/ash_rules_hebrew.tx
+ t
+SHA1-Digest: 1d23tX+8Zs6txZql1HQugopK6Dw=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_disabled_light.9.png
+SHA1-Digest: ZDogSdlgVekmFIAbKguvig7+XGg=
+
+Name: res/drawable/common_signin_btn_icon_light.xml
+SHA1-Digest: pZXzJJuJSMrDIb6L/aY5XfbMRik=
+
+Name: org/apache/commons/codec/android/language/bm/sep_exact_spanish.t
+ xt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: assets/loading/bg.jpg
+SHA1-Digest: ktpZ6GK3CneRRfTky2R28LTkHOk=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_cyrillic.
+ txt
+SHA1-Digest: 00E7VR452tbgGSDvaN2vH71JXd0=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_greeklati
+ n.txt
+SHA1-Digest: epTnnPkJV3kP2U6NeMgMH2hMESs=
+
+Name: assets/loading/loading_1136x640.jpg
+SHA1-Digest: FRO2JRPvyrbZuXcIynp/WEWp180=
+
+Name: res/drawable/com_facebook_top_button.xml
+SHA1-Digest: /FUqhbP4sLyDV5ZsrVCDCjtI2zA=
+
+Name: assets/fonts/Arial_BoldMT.ttf
+SHA1-Digest: mIGNQLg67M+3r9f9llPhA3UZrGE=
+
+Name: org/apache/commons/codec/android/language/bm/sep_exact_italian.t
+ xt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: res/drawable/common_signin_btn_text_dark.xml
+SHA1-Digest: WI9Xz/ozMFugtmTfPYQJfphHwuI=
+
+Name: res/drawable/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: +tjTExmZ1lk9Ox0aZm5rNcUPoFY=
+
+Name: assets/rod/rodKlev1.plist
+SHA1-Digest: Nc9ln22QHmyLIJK/z0urOeD29OA=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_czech.txt
+SHA1-Digest: iPK8bJaVzSZc5K5rvtJ99cdrL3g=
+
+Name: res/drawable-hdpi/common_signin_btn_text_pressed_dark.9.png
+SHA1-Digest: VBdIt82ioiZO0Qmr7/J+8sPnop8=
+
+Name: assets/sounds/user_actions/button_click.mp3
+SHA1-Digest: yYn786jZnLYaGp3p34VXN/LQaUI=
+
+Name: org/apache/commons/codec/android/language/bm/gen_hebrew_common.t
+ xt
+SHA1-Digest: U+3sGtHvTz+ZqpSe1f7MYHB2TsQ=
+
+Name: org/apache/commons/codec/android/language/bm/sep_exact_approx_co
+ mmon.txt
+SHA1-Digest: 2wGOF99LQlKr0epBg2LDfgg5c/k=
+
+Name: assets/sounds/environment/sfx/birds_move/bird_sit1.mp3
+SHA1-Digest: WCd8GXIPIoL68tyVdVqWXn7+hns=
+
+Name: assets/sounds/environment/sfx/winds/wind1.mp3
+SHA1-Digest: pHLkS4deexPf4k7+wNhZHQVcgQQ=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_disabled_light.9.png
+SHA1-Digest: UbXqMwM30HBljuHn+la04UPzB1Y=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_greek.txt
+SHA1-Digest: /j/A9h8+FfAazMODJJHekOCQB5c=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_greeklati
+ n.txt
+SHA1-Digest: T0MDehullcH0uAY9slGJMUAhTkQ=
+
+Name: js/mraid.js
+SHA1-Digest: fJRITYOyHYdamhEtzTgzGT6+74I=
+
+Name: res/drawable/com_facebook_picker_list_selector_disabled.9.png
+SHA1-Digest: cKGQg8jgT0IkOi1RPo5Y+TSnQb4=
+
+Name: org/apache/commons/codec/android/language/bm/gen_approx_spanish.
+ txt
+SHA1-Digest: lGrj01vFVhIZq42vqijMqqlw+eo=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_focus_dark.9.png
+SHA1-Digest: QvCsDHmHTCeFtKK23z0HRetpRJI=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_pressed_light.9.png
+SHA1-Digest: UsY+c7jSRS1f1aEh0HgE8187rLI=
+
+Name: org/apache/commons/codec/android/language/bm/ash_exact_cyrillic.
+ txt
+SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_disabled_focus_light.
+ 9.png
+SHA1-Digest: 5te3wznPBVYtZMjVj49FYN5YlRA=
+
+Name: org/apache/commons/codec/android/language/bm/sep_exact_portugues
+ e.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: res/drawable/com_facebook_button_blue_focused.9.png
+SHA1-Digest: rZf/vriiPguZZUS/3ww/w7LJ8fo=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_pressed_light.9.png
+SHA1-Digest: UsY+c7jSRS1f1aEh0HgE8187rLI=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_disabled_dark.9.png
+SHA1-Digest: 1Hnpvj2UzKDvPZv175SFBfp0Gn8=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_czech.txt
+SHA1-Digest: 00E7VR452tbgGSDvaN2vH71JXd0=
+
+Name: assets/locale/en_EN.xml
+SHA1-Digest: esN5GXkm2v3S7vJkQjRwtetb1Ps=
+
+Name: org/apache/commons/codec/android/language/bm/sep_exact_any.txt
+SHA1-Digest: vokBnqDrzgh7ubmg4N5ltqYJsgY=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_disabled_focus_dark.9.
+ png
+SHA1-Digest: /ps9lLPOdDdwDt2YyGRRyGkRCMw=
+
+Name: assets/sounds/user_actions/fish_bite.mp3
+SHA1-Digest: bbQdvbZr8FGm+ZfcwmOR9JgCTX8=
+
+Name: org/apache/commons/codec/android/language/bm/sep_exact_common.tx
+ t
+SHA1-Digest: yMn8iqUiPF5RM7J9xhj6gb3A6E4=
+
+Name: org/apache/commons/codec/android/language/bm/ash_approx_hungaria
+ n.txt
+SHA1-Digest: 604dJC1I4/8Oy3q/B/iDaSTWh7Y=
+
+Name: assets/sounds/environment/sfx/leaves/leaves2.mp3
+SHA1-Digest: xmWTbfpCR+u9qY0uvj+uJ+DlYFk=
+
+Name: org/apache/commons/codec/android/language/bm/gen_exact_french.tx
+ t
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: res/drawable-mdpi/com_facebook_inverse_icon.png
+SHA1-Digest: F87dFjM8iCRCeWSfrxkG/jcMtZY=
+
+Name: assets/crashlytics-build.properties
+SHA1-Digest: KaHlkyOk1KQhx0vF2c5J6rrBUsQ=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_pressed_dark.9.png
+SHA1-Digest: IkOjI29UDeEmriO620NWQRYQBQM=
+
+Name: org/apache/commons/codec/android/language/bm/ash_rules_french.tx
+ t
+SHA1-Digest: o5S4BN9+movhRfKv/CPmwVWMk0s=
+
+Name: assets/sounds/environment/sfx/leaves/leaves1.mp3
+SHA1-Digest: u94jaK6sm8wFGg+v8eDfcRoVDuM=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_disabled_dark.9.png
+SHA1-Digest: UbXqMwM30HBljuHn+la04UPzB1Y=
+
+Name: assets/fonts/MarkerFelt.ttf
+SHA1-Digest: Ul8qSkVFD87LPYpf1H07D0hPYps=
+
+Name: assets/sounds/environment/sfx/birds_move/bird_fly1.mp3
+SHA1-Digest: 8oairRGelfGlFYWX+3Y4aT0Fqdc=
+
+Name: res/drawable-mdpi/com_facebook_button_blue_focused.9.png
+SHA1-Digest: rZf/vriiPguZZUS/3ww/w7LJ8fo=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_disabled_dark.9.png
+SHA1-Digest: 1Hnpvj2UzKDvPZv175SFBfp0Gn8=
+
+Name: res/layout/com_facebook_placepickerfragment_list_row.xml
+SHA1-Digest: tqPQt9cafe7Rg+J7yonDOqe8Y7Q=
+
+Name: res/drawable/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: P0wPjAW7g0+CwVv4YccsLFHlsh0=
+
+Name: org/apache/commons/codec/android/language/bm/sep_exact_hebrew.tx
+ t
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: res/drawable-xhdpi/ic_plusone_medium_off_client.png
+SHA1-Digest: pxNZ8SkEfPjyfAiSKNlW4SZk60Q=
+
+Name: org/apache/commons/codec/android/language/bm/gen_rules_russian.t
+ xt
+SHA1-Digest: i18jgMcJnz+/whRVChudyvXR6bQ=
+
+Name: assets/sounds/user_actions/rod/rod_off5.mp3
+SHA1-Digest: hRS1jtiW/iskkPz0KdmDfSOy9qE=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_focus_light.9.png
+SHA1-Digest: re+zLFhPUMSpBod/+8AnbiOF95E=
+
+Name: res/drawable-hdpi/com_facebook_button_blue_normal.9.png
+SHA1-Digest: t/q1ll8cIcWlFuKff/cUYYaKKw0=
+
+Name: com/google/thirdparty/publicsuffix/PublicSuffixType.gwt.xml
+SHA1-Digest: q7QhlslKPNaomxpwlSMFRaM4swg=
+
+Name: res/drawable-hdpi/common_signin_btn_text_focus_dark.9.png
+SHA1-Digest: CdS2JYcO2aYMRPs8uE6z0+hK3SA=
+
+Name: org/apache/commons/codec/android/language/bm/sep_hebrew_common.t
+ xt
+SHA1-Digest: pLUCmc4T/RjuklQ1aIULtSUwHKI=
+
+Name: assets/fonts/Arimo.ttf
+SHA1-Digest: jvOaaHMnkJEQR3A+7ZCXb9D0DEU=
+
+Name: assets/sounds/user_actions/entityNegative.mp3
+SHA1-Digest: IiUaj4e38qkMYHenyLkiBBrX0+8=
+
+Name: assets/loading/preloader_icon_bg_bank.png
+SHA1-Digest: QcX/TRouo88ykeshXNohToAtWwQ=
+
+Name: lib/armeabi/libcocos2dcpp.so
+SHA1-Digest: pXlwo0Ndo3med3MOjgBdJtZc0bc=
+
+Name: res/drawable-hdpi/com_facebook_close.png
+SHA1-Digest: vzoVwUXnEtJQCL4582EeDreqvIA=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_focused.9.png
+SHA1-Digest: xw3C3hxhbAqRc7fZEiHwllptNuM=
+
+Name: assets/anims/beer_anims.plist
+SHA1-Digest: Lo0fhr7iec4hsJ2Ce2td/W3LXGk=
+
+Name: org/apache/commons/codec/android/language/bm/ash_rules_cyrillic.
+ txt
+SHA1-Digest: EsR+HI42mjkQMSRBChc6UJMNHnk=
+

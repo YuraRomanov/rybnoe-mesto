@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exp_data>
+    <exp_levels>
+        <level id="0"  exp="18" rew_id="0"/>
+        <level id="1"  exp="27" rew_id="1"/>
+        <level id="2"  exp="40" rew_id="2"/>
+        <level id="3"  exp="50" rew_id="3"/>
+        <level id="4"  exp="60" rew_id="4"/>
+        <level id="5"  exp="72" rew_id="5"/>
+        <level id="6"  exp="86" rew_id="6"/>
+        <level id="7"  exp="103" rew_id="7"/>
+        <level id="8"  exp="123" rew_id="8"/>
+        <level id="9"  exp="147" rew_id="9"/>
+        <level id="10" exp="176" rew_id="10"/>
+        <level id="11" exp="211" rew_id="11"/>
+        <level id="12" exp="253" rew_id="12"/>
+        <level id="13" exp="303" rew_id="13"/>
+        <level id="14" exp="363" rew_id="14"/>
+        <level id="15" exp="435" rew_id="15"/>
+        <level id="16" exp="522" rew_id="16"/>
+        <level id="17" exp="626" rew_id="17"/>
+        <level id="18" exp="751" rew_id="18"/>
+        <level id="19" exp="901" rew_id="19"/>
+        <level id="20" exp="1081" rew_id="20"/>
+        <level id="21" exp="1297" rew_id="21"/>
+        <level id="22" exp="1556" rew_id="22"/>
+        <level id="23" exp="1867" rew_id="23"/>
+        <level id="24" exp="2240" rew_id="24"/>
+        <level id="25" exp="2688" rew_id="25"/>
+        <level id="26" exp="3225" rew_id="26"/>
+        <level id="27" exp="3870" rew_id="27"/>
+        <level id="28" exp="4644" rew_id="28"/>
+        <level id="29" exp="5572" rew_id="29"/>
+        <level id="30" exp="6686" rew_id="30"/>
+        <level id="31" exp="8023" rew_id="31"/>
+        <level id="32" exp="9627" rew_id="32"/>
+        <level id="33" exp="11552" rew_id="33"/>
+        <level id="34" exp="13862" rew_id="34"/>
+        <level id="35" exp="16634" rew_id="35"/>
+        <level id="36" exp="19960" rew_id="36"/>
+        <level id="37" exp="23952" rew_id="37"/>
+        <level id="38" exp="28742" rew_id="38"/>
+        <level id="39" exp="34490" rew_id="39"/>
+        <level id="40" exp="41388" rew_id="40"/>
+        <level id="41" exp="49665" rew_id="41"/>
+        <level id="42" exp="59598" rew_id="42"/>
+        <level id="43" exp="71517" rew_id="43"/>
+        <level id="44" exp="85820" rew_id="44"/>
+        <level id="45" exp="102984" rew_id="45"/>
+        <level id="46" exp="123580" rew_id="46"/>
+        <level id="47" exp="148296" rew_id="47"/>
+        <level id="48" exp="177955" rew_id="48"/>
+        <level id="49" exp="213546" rew_id="49"/>
+        <level id="50" exp="256255" rew_id="50"/>
+        <level id="51" exp="307506" rew_id="51"/>
+        <level id="52" exp="369007" rew_id="52"/>
+        <level id="53" exp="442808" rew_id="53"/>
+        <level id="54" exp="531369" rew_id="54"/>
+        <level id="55" exp="637642" rew_id="55"/>
+        <level id="56" exp="765170" rew_id="56"/>
+        <level id="57" exp="918204" rew_id="57"/>
+        <level id="58" exp="980000" rew_id="58"/>
+        <level id="59" exp="980000" rew_id="59"/>
+        <level id="60" exp="980000" rew_id="60"/>
+        <level id="61" exp="980000" rew_id="61"/>
+        <level id="62" exp="980000" rew_id="62"/>
+        <level id="63" exp="980000" rew_id="63"/>
+        <level id="64" exp="980000" rew_id="64"/>
+        <level id="65" exp="980000" rew_id="65"/>
+        <level id="66" exp="980000" rew_id="66"/>
+        <level id="67" exp="980000" rew_id="67"/>
+        <level id="68" exp="980000" rew_id="68"/>
+        <level id="69" exp="980000" rew_id="69"/>
+        <level id="70" exp="980000" rew_id="70"/>
+        <level id="71" exp="980000" rew_id="71"/>
+        <level id="72" exp="980000" rew_id="72"/>
+        <level id="73" exp="980000" rew_id="73"/>
+        <level id="74" exp="980000" rew_id="74"/>
+        <level id="75" exp="980000" rew_id="75"/>
+        <level id="76" exp="980000" rew_id="76"/>
+        <level id="77" exp="980000" rew_id="77"/>
+        <level id="79" exp="980000" rew_id="79"/>
+        <level id="80" exp="980000" rew_id="80"/>
+        <level id="81" exp="980000" rew_id="81"/>
+        <level id="82" exp="980000" rew_id="82"/>
+        <level id="83" exp="980000" rew_id="83"/>
+        <level id="84" exp="980000" rew_id="84"/>
+        <level id="85" exp="980000" rew_id="85"/>
+        <level id="86" exp="980000" rew_id="86"/>
+        <level id="87" exp="980000" rew_id="87"/>
+        <level id="88" exp="980000" rew_id="88"/>
+        <level id="89" exp="980000" rew_id="89"/>
+        <level id="90" exp="980000" rew_id="90"/>
+        <level id="91" exp="980000" rew_id="91"/>
+        <level id="92" exp="980000" rew_id="92"/>
+        <level id="93" exp="980000" rew_id="93"/>
+        <level id="94" exp="980000" rew_id="94"/>
+        
+    </exp_levels>
+    
+    <!-- naj pod fn ud money 0 - silver 1 - gold -->
+    
+    <exp_rewards>
+        <reward id="0">
+           <!--
+            <item type="naj" id="1" cnt="5"/>
+            <item type="pod" id="2" cnt="5"/>
+            -->
+            <item type="money" id="1" cnt="2"/>
+        </reward>
+        <reward id="1">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="2">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="3">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="4">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="5">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="6">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="7">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="8">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="9">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="10">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="11">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="12">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="13">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="14">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="15">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="16">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="17">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="18">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="19">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="20">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="21">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="22">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="23">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="24">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="25">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="26">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="27">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="28">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="29">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="30">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="31">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="32">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="33">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="34">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="35">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="36">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="37">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="38">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="39">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="40">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="41">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="42">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="43">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="44">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="45">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="46">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="47">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="48">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="49">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="50">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="51">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="52">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="53">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="54">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="55">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="56">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="57">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="58">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="59">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="60">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="61">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="62">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="63">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="64">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        
+        <reward id="65">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="66">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="67">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="68">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="69">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="70">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="71">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="72">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="73">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="74">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="75">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="76">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="77">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="78">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="79">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        
+        <reward id="80">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="81">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="82">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="83">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="84">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="85">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="86">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="87">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="88">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="89">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="90">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="91">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="92">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="93">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+        <reward id="94">
+            <item type="money" id="1" cnt="1"/>
+        </reward>
+    </exp_rewards>
+    
+    <exps>
+		<exp category="1" catch="1" open="2" />
+		<exp category="2" catch="2" open="4" />
+		<exp category="3" catch="3" open="5" />
+		<exp category="4" catch="4" open="8" />
+		<exp category="5" catch="5" open="8" />
+		<exp category="6" catch="6" open="10" />
+		<exp category="7" catch="7" open="12" />
+		<exp category="8" catch="5" open="8" />
+
+	</exps>
+</exp_data>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<version value="0" />
+<ballance_params>
+	<!-- Время ожидания клева -->
+	<!-- ep_time_for_check_klev - время бросания кубика -->
+	<!-- ep_ver_for_klev - вероятность клева -->
+	<before_klev ep_time_for_check_klev="2.0" ep_ver_for_klev="0.65"/>
+
+	<!-- Начало клева -->
+	<!-- ep_ver_klev_third - вероятность "поплавка под водой" -->
+	<!-- ep_ver_klev_second - вероятность "дергания" -->
+	<klev_start ep_ver_klev_third="0.85" ep_ver_klev_second="0.45" />
+	<!-- Базовая часть временных интервалов режимов клева-->
+	<klev_start_time ep_klev_first_start_time="2.0" ep_klev_second_start_time="2.0" ep_klev_third_start_time="2.0"/>
+	<!-- Переменная часть временных интервалов режимов клева-->
+	<klev_start_time_diap ep_klev_first_diap_time="5.0" ep_klev_second_diap_time="5.0" ep_klev_third_diap_time="5.0"/>
+
+	<!-- Параметры перехода между режимами -->
+	<!-- ep_ver_first_to_third - вероятность перехода с первого на третий -->
+	<!-- ep_ver_first_to_second - вероятность перехода с первого на второй -->
+	<klev_expired_time ep_ver_first_to_third="0.85" ep_ver_first_to_second="0.55" ep_ver_second_to_third="0.8"/>
+
+	<!-- Параметры поплавка для первого режима -->
+	<!-- ep_klev_accel - скорость тригонометрии -->
+	<!-- ep_klev_base_angle - угол наклона -->
+	<!-- ep_klev_max_dx - диапазон движения по оси x -->
+	<!-- ep_klev_max_dy - диапазон движения по оси y -->
+	<klev_poplavok_first ep_klev_accel="5.0" ep_klev_base_angle="5.0" ep_klev_max_dx="0.0" ep_klev_max_dy="1.0" />
+	<!-- Параметры поплавка для второго режима -->
+	<klev_poplavok_second ep_klev_accel="20.0" ep_klev_base_angle="5.0" ep_klev_max_dx="2.0" ep_klev_max_dy="5.0" />
+	<!-- Параметры поплавка для третьего режима -->
+	<klev_poplavok_third ep_klev_accel="10.0" ep_klev_base_angle="0.0" ep_klev_max_dx="5.0" ep_klev_max_dy="5.0" />
+
+
+	<!-- Параметры кругов на воде -->
+	<klev_circles_wait ver_circles="0.9" radius="15.0" radius_delta="5.0"/>
+	<klev_circles_first ver_circles="0.8" radius="15.0" radius_delta="5.0"/>
+	<klev_circles_second ver_circles="0.8" radius="15.0" radius_delta="5.0"/>
+	<klev_circles_third ver_circles="1.0" radius="15.0" radius_delta="5.0"/>
+
+	<!-- Вероятность выбора категории веса (в сумме должна быть единица) -->
+	<ver_category_of_weight category1="0.87" category2="0.1" category3="0.03"/>
+</ballance_params>
+<settings>
+	<bg filename="bg/main_bg.png"/>
+	<!-- Время ожидания клева и время продолжительности клева -->
+	<klev_params max_time_before="10.0" max_time_during="5.0"/>
+	<!-- Параметры лески во время вытягивания рыбы -->
+	<line_params>
+		<color r="30" g="30" b="30" a="5" />
+		<width value="1.5" />
+	</line_params>
+
+	<!-- Время генерации звуковых эффектов -->
+	<time_of_sound_effects startTime="8.0" deltaTime="4.0"/>
+
+	<!-- Координаты интерфейсных элементов ноль TOP LEFT-->
+	<interface>
+		<main_rod_sprite x="270" y="200"/>
+		<!--<main_rod_sprite x="350" y="270"/>-->
+		<menu_najivka x="35" y="446" filename="menu/substrate_icon.png" filename_pressed="menu/substrate_icon_down.png"/>
+		<menu_udochka x="103" y="446" filename="menu/substrate_icon.png" filename_pressed="menu/substrate_icon_down.png"/>
+		<menu_podkormka x="242" y="434" filename="menu/substrate_icon.png" filename_pressed="menu/substrate_icon_down.png"/>
+		<menu_quests x="40" y="50" filename="menu/quests_icon.png" filename_pressed="menu/quests_icon_down.png"/>
+		<menu_map x="760" y="50" filename="menu/map_icon.png" filename_pressed="menu/map_icon_down.png"/>
+		<fish_athlas x="760" y="130" filename="menu/fish_athlas_icon.png" filename_pressed="menu/fish_athlas_icon_down.png"/>
+		<lure_fish x="320" y="435" filename="menu/Use_Normal.png" filename_pressed="menu/Use_Active.png"/>
+		<menu_inventory x="55" y="430" filename="menu/inventory_icon.png" filename_pressed="menu/inventory_icon_down.png"/>
+		<menu_shop x="40" y="372" filename="menu/shop_icon.png" filename_pressed="menu/shop_icon_down.png"/>
+		<menu_zakinut x="715" y="399" filename="menu/bigbutton_icon.png" filename_pressed="menu/bigbutton_icon_down.png"/>
+	</interface>
+
+	<spinningParams delta_x="-20" delta_y="-70" sinx_koef="6.0" y_koef="9.0" speed_start="24" speed_delta="30" total_time_sec="12.0" good_time_start="3.0" good_time_delta="3.0"/>
+    
+    <num_of_start_easy_fishes value="9"/>
+    <price_for_uncatched_fish value="5"/>
+
+</settings>

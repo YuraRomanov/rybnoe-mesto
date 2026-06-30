@@ -1,0 +1,30 @@
+{
+  "name": "rybnoe-mesto",
+  "version": "1.0.0",
+  "description": "Рыбное место — браузерная рыбалка (Node.js + Express)",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "extract:apk": "node tools/extract-apk-data.mjs",
+    "extract:icons": "node tools/extract-icons.mjs",
+    "extract:ui-sprites": "node tools/extract-ui-sprites.mjs",
+    "extract:fish": "node tools/extract-fish-sprites.mjs",
+    "extract:rod": "node tools/extract-rod-sprites.mjs",
+    "prepare:misc": "node tools/prepare-misc-assets.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2"
+  },
+  "devDependencies": {
+    "ffmpeg-static": "^5.3.0",
+    "ffprobe-static": "^3.1.0",
+    "sharp": "^0.34.3"
+  }
+}
