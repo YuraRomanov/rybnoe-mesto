@@ -3,3 +3,7 @@ data/users.json
 data/saves.json
 .env
 *.log
+ios-app/node_modules/
+ios-app/www/
+ios-app/build/
+ios-app/ios/

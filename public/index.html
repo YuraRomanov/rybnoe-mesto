@@ -266,31 +266,6 @@
       </div>
     </div>
 
-    <div id="auth-screen">
-      <div class="auth-box panel-frame">
-        <div class="auth-logo">🐟</div>
-        <h1>Рыбное место</h1>
-        <p class="auth-sub">Новая эра</p>
-        <div class="auth-tabs">
-          <button type="button" class="auth-tab active" data-tab="login">Вход</button>
-          <button type="button" class="auth-tab" data-tab="register">Регистрация</button>
-        </div>
-        <div id="auth-login" class="auth-form">
-          <input type="text" id="login-name" placeholder="Имя рыбака" maxlength="20" autocomplete="username">
-          <input type="password" id="login-pass" placeholder="Пароль" autocomplete="current-password">
-          <label class="remember"><input type="checkbox" id="remember-me" checked> Запомнить меня</label>
-          <button type="button" class="btn-primary" id="btn-login">Войти</button>
-        </div>
-        <div id="auth-register" class="auth-form hidden">
-          <input type="text" id="reg-name" placeholder="Придумай имя" maxlength="20" autocomplete="username">
-          <input type="password" id="reg-pass" placeholder="Пароль (мин. 4)" autocomplete="new-password">
-          <input type="password" id="reg-pass2" placeholder="Повтори пароль">
-          <button type="button" class="btn-primary" id="btn-register">Создать аккаунт</button>
-        </div>
-        <p id="auth-error" class="auth-error"></p>
-        <div id="saved-users" class="saved-users"></div>
-      </div>
-    </div>
   </div>
 
   <script src="apk-data.js"></script>
@@ -310,7 +285,6 @@
   <script src="js/ui/fishing-ui.js"></script>
   <script src="js/fishing-controller.js"></script>
   <script src="rod-sprites.js"></script>
-  <script src="auth.js"></script>
   <script src="game.js"></script>
 </body>
 </html>

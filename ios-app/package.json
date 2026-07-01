@@ -1,0 +1,21 @@
+{
+  "name": "rybnoe-mesto-ios",
+  "version": "1.0.0",
+  "private": true,
+  "description": "iOS-обёртка для «Рыбное место» (Capacitor)",
+  "scripts": {
+    "sync": "node scripts/sync-web.mjs",
+    "cap:sync": "npm run sync && npx cap sync",
+    "cap:add-ios": "npm run sync && npx cap add ios",
+    "cap:open-ios": "npx cap open ios",
+    "cap:run-ios": "npm run cap:sync && npx cap run ios",
+    "build:ipa": "bash scripts/build-ipa.sh"
+  },
+  "dependencies": {
+    "@capacitor/core": "^7.4.2",
+    "@capacitor/ios": "^7.4.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.2"
+  }
+}

@@ -78,8 +78,8 @@ const defaultPlayer = () => ({
 });
 
 let player = defaultPlayer();
-let loggedIn = false;
 let gameLoopRunning = false;
+const SAVE_KEY = 'rybnoe-mesto-save';
 let pendingCatch = null;
 
 let game = {
@@ -265,7 +265,7 @@ function bindCastControls() {
 
   const onDown = (e) => {
     if (e.cancelable) e.preventDefault();
-    if (!loggedIn || castHeld) return;
+    if (castHeld) return;
     castHeld = true;
     if (e.pointerId != null && castBtn.setPointerCapture) {
       try { castBtn.setPointerCapture(e.pointerId); } catch (_) {}
@@ -298,35 +298,31 @@ let saveTimer = null;
 let tutorialSeen = false;
 
 function save() {
-  if (!loggedIn) return;
   clearTimeout(saveTimer);
-  saveTimer = setTimeout(async () => {
-    await putSave({
-      player,
-      tutorialSeen,
-    });
+  saveTimer = setTimeout(() => {
+    try {
+      localStorage.setItem(SAVE_KEY, JSON.stringify({ player, tutorialSeen }));
+    } catch (_) {}
   }, 400);
 }
 
-async function loadPlayerData(username) {
+function loadPlayerData() {
   player = defaultPlayer();
-  player.name = username;
   tutorialSeen = false;
   try {
-    const data = await fetchSave();
-    if (!data) return;
-    if (data.player) {
-      Object.assign(player, data.player);
-      player.name = username;
-      if (!player.sadok) {
-        player.sadok = (player.catches || []).map((item) => ({
-          uid: `${item.time || Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
-          ...item,
-          caughtAt: item.time || Date.now(),
-        }));
-      }
-      delete player.catches;
+    const raw = localStorage.getItem(SAVE_KEY);
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    if (!data?.player) return;
+    Object.assign(player, data.player);
+    if (!player.sadok) {
+      player.sadok = (player.catches || []).map((item) => ({
+        uid: `${item.time || Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+        ...item,
+        caughtAt: item.time || Date.now(),
+      }));
     }
+    delete player.catches;
     tutorialSeen = Boolean(data.tutorialSeen);
   } catch (_) {}
 }
@@ -728,12 +724,12 @@ function addRipple(x, y) {
 function update() {
   game.time++;
 
-  if (loggedIn && game.time % 300 === 0 && player.energy < player.energyMax) {
+  if (game.time % 300 === 0 && player.energy < player.energyMax) {
     player.energy = Math.min(player.energyMax, player.energy + 1);
     updateHUD();
   }
 
-  if (loggedIn && typeof FishingController !== 'undefined') {
+  if (typeof FishingController !== 'undefined') {
     FishingController.update(1);
     if (typeof BobberUI !== 'undefined') BobberUI.tick();
     updateRodAnim();
@@ -1045,94 +1041,35 @@ function renderBackpack() {
     : '<div class="backpack-empty">Пусто — загляни в магазин</div>';
 }
 
-async function renderSavedUsers() {
-  const box = document.getElementById('saved-users');
-  const users = await listSavedUsers();
-  if (!users.length) { box.innerHTML = ''; return; }
-  box.innerHTML = '<p>Быстрый вход:</p>' + users.map((u) =>
-    `<button type="button" class="saved-user-btn" data-user="${u}">${u}</button>`).join('');
-  box.querySelectorAll('.saved-user-btn').forEach((btn) => {
-    btn.onclick = () => {
-      document.getElementById('login-name').value = btn.dataset.user;
-      document.getElementById('login-pass').focus();
-    };
-  });
-}
-
-async function enterGame(username) {
-  loggedIn = true;
-  await loadPlayerData(username);
-  document.getElementById('auth-screen').classList.add('hidden');
+function startGame() {
+  loadPlayerData();
   const hud = document.getElementById('hud');
   if (hud) hud.classList.remove('is-hidden');
   if (typeof GAME_ICONS !== 'undefined') GAME_ICONS.applyHudAll();
   updateHUD();
   syncViewportVars();
   updateRodTip();
-  if (!gameLoopRunning) { gameLoopRunning = true; gameLoop(); }
-  save();
   if (!tutorialSeen) openModal('modal-tutorial');
 }
 
-async function initAuth() {
-  await renderSavedUsers();
-
-  document.querySelectorAll('.auth-tab').forEach((tab) => {
-    tab.onclick = () => {
-      document.querySelectorAll('.auth-tab').forEach((t) => t.classList.remove('active'));
-      tab.classList.add('active');
-      document.getElementById('auth-login').classList.toggle('hidden', tab.dataset.tab !== 'login');
-      document.getElementById('auth-register').classList.toggle('hidden', tab.dataset.tab !== 'register');
-      document.getElementById('auth-error').textContent = '';
-    };
-  });
-
-  document.getElementById('btn-login').onclick = async () => {
-    const name = document.getElementById('login-name').value;
-    const pass = document.getElementById('login-pass').value;
-    const remember = document.getElementById('remember-me').checked;
-    const r = await loginUser(name, pass, remember);
-    if (!r.ok) { document.getElementById('auth-error').textContent = r.msg; return; }
-    await enterGame(r.username);
-  };
-
-  document.getElementById('btn-register').onclick = async () => {
-    const name = document.getElementById('reg-name').value;
-    const p1 = document.getElementById('reg-pass').value;
-    const p2 = document.getElementById('reg-pass2').value;
-    if (p1 !== p2) { document.getElementById('auth-error').textContent = 'Пароли не совпадают'; return; }
-    const r = await registerUser(name, p1);
-    if (!r.ok) { document.getElementById('auth-error').textContent = r.msg; return; }
-    const login = await loginUser(name, p1, true);
-    if (!login.ok) { document.getElementById('auth-error').textContent = login.msg; return; }
-    await enterGame(name.trim());
-    toast('Аккаунт создан!');
-  };
-
-  document.getElementById('tutorial-start').onclick = () => {
-    closeModal('modal-tutorial');
-    if (loggedIn) {
-      tutorialSeen = true;
-      save();
-    }
-  };
-
-  const me = await fetchMe();
-  if (me?.username) await enterGame(me.username);
-}
-
-async function init() {
+function init() {
   bindViewport();
   bindMobileUi();
   initFishingController();
-  await initAuth();
+  startGame();
+
+  document.getElementById('tutorial-start').onclick = () => {
+    closeModal('modal-tutorial');
+    tutorialSeen = true;
+    save();
+  };
 
   bindCastControls();
 
   document.addEventListener('keydown', (e) => {
     if (e.code === 'Space' && !e.repeat) {
       e.preventDefault();
-      if (loggedIn) FishingController.onCastDown();
+      FishingController.onCastDown();
     }
   });
   document.addEventListener('keyup', (e) => {

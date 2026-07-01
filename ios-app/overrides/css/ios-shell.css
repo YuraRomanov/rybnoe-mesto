@@ -1,0 +1,22 @@
+/* Доп. стили для нативной iOS-оболочки (WKWebView) */
+html,
+body {
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  background: #0d1a24;
+}
+
+#game-app {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+.hud-bottom {
+  padding-bottom: max(8px, env(safe-area-inset-bottom));
+}
+
+.hud-top {
+  padding-top: max(4px, env(safe-area-inset-top));
+}
