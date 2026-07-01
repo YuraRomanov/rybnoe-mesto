@@ -59,10 +59,12 @@ function buildShopFromApk() {
       { id: 'hook3', name: 'Тройник', icon: '🪝', iconKey: 'hook-treble', level: 6, price: 200, currency: 'silver', bonus: 0.15 },
     ],
     bait: [
-      { id: 'bait1', name: 'Червь', icon: '🪱', iconKey: 'bait-worm', level: 1, price: 5, currency: 'silver', bonus: 0, qty: 10 },
-      { id: 'bait2', name: 'Мотыль', icon: '🐞', iconKey: 'bait-maggot', level: 2, price: 15, currency: 'silver', bonus: 0.05, qty: 10 },
-      { id: 'bait3', name: 'Кукуруза', icon: '🌽', iconKey: 'bait-corn', level: 3, price: 30, currency: 'silver', bonus: 0.1, qty: 10 },
-      { id: 'bait4', name: 'Опарыш', icon: '🪱', iconKey: 'bait-maggot', level: 4, price: 50, currency: 'silver', bonus: 0.15, qty: 10 },
+      { id: 'bait1', name: 'Червь', iconKey: 'bait-worm', level: 1, price: 5, currency: 'silver', bonus: 0, qty: 10 },
+      { id: 'bait2', name: 'Мотыль', iconKey: 'bait-bloodworm', level: 1, price: 15, currency: 'silver', bonus: 0.03, qty: 10 },
+      { id: 'bait3', name: 'Перловка', iconKey: 'bait-barley', level: 1, price: 25, currency: 'silver', bonus: 0.05, qty: 10 },
+      { id: 'bait4', name: 'Опарыш', iconKey: 'bait-maggot', level: 1, price: 12, currency: 'silver', bonus: 0.04, qty: 10 },
+      { id: 'bait5', name: 'Хлеб', iconKey: 'bait-bread', level: 1, price: 20, currency: 'silver', bonus: 0.06, qty: 10 },
+      { id: 'bait6', name: 'Тесто', iconKey: 'bait-dough', level: 1, price: 35, currency: 'silver', bonus: 0.08, qty: 10 },
     ],
     groundbait: [
       { id: 'gb1', name: 'Прикормка', icon: '🥣', iconKey: 'feeder-cage', level: 1, price: 20, currency: 'silver', bonus: 0.1, qty: 5 },

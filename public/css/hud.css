@@ -224,7 +224,7 @@
 .club-banner::after { right: 0; transform: scaleX(-1); border-radius: 0 4px 12px 0; }
 
 .club-emblem {
-  width: 36px;
+  width: 24px;
   height: 36px;
   object-fit: contain;
   filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
@@ -316,7 +316,16 @@ body.fishing-active .cast-btn-img {
 .water-cast-btn:hover .cast-btn-img { filter: brightness(1.06) drop-shadow(0 8px 18px rgba(0,0,0,0.5)); }
 .water-cast-btn:active { transform: scale(0.97); }
 .water-cast-btn.active .cast-btn-img {
-  animation: castPulse 0.9s ease-in-out infinite;
+  filter: brightness(1.08) drop-shadow(0 8px 20px rgba(255, 200, 80, 0.45));
+}
+
+.water-cast-btn.cast-btn--pull.active .cast-btn-img {
+  animation: castBtnPullPulse 0.45s ease-in-out infinite alternate;
+}
+
+@keyframes castBtnPullPulse {
+  from { filter: brightness(1.05) drop-shadow(0 6px 16px rgba(255, 180, 60, 0.35)); }
+  to { filter: brightness(1.14) drop-shadow(0 10px 22px rgba(255, 210, 90, 0.55)); }
 }
 
 @keyframes castPulse {
@@ -343,8 +352,8 @@ body.fishing-active .cast-btn-img {
 
 .dock-bar {
   display: flex;
-  gap: 3px;
-  padding: 5px 6px;
+  gap: 2px;
+  padding: 4px 5px;
   border-radius: 10px;
   background:
     linear-gradient(180deg, #c9a86c 0%, #8b6914 12%, #6d4c1a 50%, #8b6914 88%, #c9a86c 100%);
@@ -360,15 +369,13 @@ body.fishing-active .cast-btn-img {
   flex: 1;
   min-width: 0;
   aspect-ratio: 1;
-  max-height: 58px;
-  background:
-    linear-gradient(145deg, #2a2218 0%, #0f0b06 55%, #1a140c 100%);
-  border: 2px solid #b8954a;
-  border-radius: 6px;
-  box-shadow:
-    inset 0 2px 5px rgba(0,0,0,0.75),
-    inset 0 -1px 0 rgba(255,255,255,0.08),
-    0 1px 0 rgba(255,255,255,0.15);
+  max-height: 64px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -402,17 +409,17 @@ body.fishing-active .cast-btn-img {
 }
 
 .dock-slot-img {
-  width: 78%;
-  height: 78%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.6));
+  display: block;
   pointer-events: none;
 }
 
 .dock-slot-qty {
   position: absolute;
-  right: 2px;
-  bottom: 1px;
+  right: 4px;
+  bottom: 3px;
   min-width: 14px;
   padding: 0 3px;
   font-size: 10px;
@@ -438,10 +445,10 @@ html:not(.is-mobile) .dock-bar {
 }
 
 html:not(.is-mobile) .dock-slot {
-  flex: 0 0 54px;
-  width: 54px;
-  height: 54px;
-  max-height: 54px;
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+  max-height: 60px;
 }
 
 .inventory-row {
@@ -564,43 +571,83 @@ html:not(.is-mobile) .dock-slot {
   text-align: center;
 }
 
-/* --- Поплавок на воде --- */
+/* --- Поплавок на воде (линия воды = нижний край clip, половина под водой) --- */
 .bobber {
   position: absolute;
   left: 50%;
   top: 56%;
   z-index: 14;
-  width: 64px;
-  height: 64px;
-  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 0;
+  overflow: visible;
+  transform: translate(-50%, 0);
   pointer-events: none;
-  will-change: left, top;
+  will-change: left, top, transform;
+}
+
+.bobber.hidden {
+  display: none !important;
+}
+
+.bobber-clip {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 28px;
+  height: 60px;
+  overflow: hidden;
 }
 
 .bobber-img {
-  width: 100%;
-  height: 100%;
+  width: 28px;
+  height: auto;
+  display: block;
   object-fit: contain;
+  object-position: top center;
   background: transparent;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.45));
 }
 
-.bobber--calm { animation: bobberCalm 4s ease-in-out infinite; }
-.bobber--idle { animation: bobberCalm 4s ease-in-out infinite; }
-.bobber--bite { animation: bobberBite 0.55s ease-in-out infinite; filter: drop-shadow(0 0 10px #ffeb3b); }
-.bobber--fight { animation: bobberFight 0.35s ease-in-out infinite; }
+.bobber--calm { animation: bobberCalm 3.2s ease-in-out infinite; }
+.bobber--idle { animation: bobberCalm 3.2s ease-in-out infinite; }
+.bobber--flight { animation: bobberFlight 0.55s ease-in-out infinite alternate; }
+.bobber--nibble { animation: bobberNibble 0.42s ease-in-out infinite; filter: drop-shadow(0 0 6px rgba(255,235,120,0.5)); }
+.bobber--bite { animation: bobberBite 0.48s ease-in-out infinite; filter: drop-shadow(0 0 12px #ffeb3b); }
+.bobber--fight { animation: none; }
+
+.bobber--fight-pull .bobber-clip {
+  transform: translateY(3px);
+  transition: transform 0.1s ease-out;
+}
+
+.bobber--bite .bobber-clip {
+  height: 38px;
+  transition: height 0.15s ease;
+}
 
 @keyframes bobberCalm {
-  0%, 100% { transform: translate(-50%, -50%); }
-  50% { transform: translate(-50%, calc(-50% - 2px)); }
+  0%, 100% { transform: translate(-50%, 0) rotate(0deg); }
+  35% { transform: translate(-50%, -3px) rotate(-1deg); }
+  70% { transform: translate(-50%, 1px) rotate(1deg); }
+}
+@keyframes bobberFlight {
+  from { transform: translate(-50%, 0) rotate(-8deg) scale(1.02); }
+  to { transform: translate(-50%, 0) rotate(6deg) scale(0.98); }
+}
+@keyframes bobberNibble {
+  0%, 100% { transform: translate(-50%, 0); }
+  40% { transform: translate(-50%, -5px) rotate(-2deg); }
+  70% { transform: translate(-50%, 2px); }
 }
 @keyframes bobberBite {
-  0%, 100% { transform: translate(-50%, -50%); }
-  35% { transform: translate(-50%, calc(-50% - 14px)) rotate(-3deg); }
-  70% { transform: translate(-50%, calc(-50% + 6px)) rotate(2deg); }
+  0%, 100% { transform: translate(-50%, 0); }
+  30% { transform: translate(-50%, 10px) rotate(-3deg); }
+  55% { transform: translate(-50%, 4px) rotate(2deg); }
+  80% { transform: translate(-50%, 8px) rotate(-1deg); }
 }
 @keyframes bobberFight {
-  50% { transform: translate(-50%, calc(-50% - 3px)) rotate(2deg); }
+  0%, 100% { transform: translate(-50%, 0) rotate(-2deg); }
+  50% { transform: translate(-50%, -3px) rotate(3deg); }
 }
 
 .cast-power-track {
@@ -623,181 +670,107 @@ html:not(.is-mobile) .dock-slot {
   text-shadow: 0 1px 2px #000;
 }
 
-/* --- Шкала вываживания (референс) --- */
+/* --- Вываживание: одна шкала как в референсе --- */
 .fight-dock {
   position: fixed;
   left: 50%;
-  bottom: 78px;
+  top: auto;
+  bottom: calc(var(--dock-h) + var(--safe-bottom) + 10px);
   transform: translateX(-50%);
   z-index: 25;
-  width: min(92vw, 420px);
+  width: min(94vw, 480px);
   pointer-events: none;
 }
 
-.reel-bar-widget {
+.fight-reel {
   position: relative;
   width: 100%;
 }
 
-.reel-bar-bg {
+.fight-reel__frame {
   position: relative;
-  z-index: 2;
+  width: 100%;
+}
+
+.fight-reel__bg {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.55));
+  filter: drop-shadow(0 5px 16px rgba(0, 0, 0, 0.5));
   pointer-events: none;
 }
 
-/* Середина шкалы — градиентная заливка (без пустоты) */
-.reel-bar-inner {
+.fight-reel__inner {
   position: absolute;
-  left: 7.5%;
-  right: 7.5%;
-  top: 45%;
-  bottom: 25%;
-  z-index: 1;
-  border-radius: 7px;
+  left: 7.2%;
+  right: 7.2%;
+  top: 50%;
+  height: 36%;
+  transform: translateY(-50%);
+  border-radius: 5px;
   overflow: hidden;
-  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.35);
+  background: rgba(12, 14, 18, 0.92);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.65);
 }
 
-.reel-bar-fill {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  border-radius: 7px;
-  background: linear-gradient(
-    90deg,
-    #1b5e20 0%,
-    #388e3c 14%,
-    #43a047 28%,
-    #26a69a 48%,
-    #29b6f6 68%,
-    #1e88e5 84%,
-    #1565c0 100%
-  );
-  box-shadow:
-    inset 0 2px 0 rgba(255, 255, 255, 0.28),
-    inset 0 -3px 6px rgba(0, 0, 0, 0.22);
-  transition: filter 0.2s;
-}
-
-.reel-bar-fill--stress {
-  background: linear-gradient(
-    90deg,
-    #33691e 0%,
-    #689f38 20%,
-    #afb42b 45%,
-    #ffa726 70%,
-    #fb8c00 100%
-  );
-}
-
-.reel-bar-fill--danger {
-  background: linear-gradient(
-    90deg,
-    #4e342e 0%,
-    #e65100 25%,
-    #f44336 55%,
-    #d32f2f 100%
-  );
-  animation: reelPulse 0.35s ease-in-out infinite alternate;
-}
-
-/* Верхняя дорожка — позиция рыбы (слева берег, справа вода) */
-.reel-fish-track {
-  position: absolute;
-  left: 9%;
-  right: 9%;
-  top: 11%;
-  height: 30%;
-  pointer-events: none;
-  z-index: 3;
-}
-
-/* Нижняя дорожка — натяг лески */
-.reel-tension-track {
-  position: absolute;
-  left: 9%;
-  right: 9%;
-  bottom: 15%;
-  height: 11%;
-  border-radius: 6px;
-  overflow: hidden;
-  z-index: 3;
-  background: linear-gradient(180deg, rgba(20, 50, 30, 0.85) 0%, rgba(10, 30, 18, 0.95) 100%);
-  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.55);
-  --stress: 0%;
-}
-
-.reel-bar--danger .reel-bar-bg {
-  animation: reelBarDanger 0.4s ease-in-out infinite alternate;
-}
-
-.reel-progress {
+.fight-reel__fill {
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   width: 0%;
-  border-radius: 6px 0 0 6px;
-  background: linear-gradient(180deg, rgba(124,252,74,0.85) 0%, rgba(50,205,50,0.9) 45%, rgba(34,139,34,0.95) 100%);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
-  transition: width 0.1s linear, background 0.2s;
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    rgba(76, 120, 82, 0.85) 0%,
+    rgba(140, 160, 70, 0.8) 40%,
+    rgba(220, 160, 50, 0.85) 72%,
+    rgba(220, 80, 55, 0.9) 100%
+  );
+  transition: width 0.05s linear;
 }
 
-.reel-progress--stress {
-  background: linear-gradient(180deg, rgba(198,255,0,0.85) 0%, rgba(124,179,66,0.9) 50%, rgba(85,139,47,0.95) 100%);
-}
-
-.reel-progress--danger {
-  background: linear-gradient(180deg, rgba(255,235,59,0.9) 0%, rgba(255,152,0,0.9) 45%, rgba(229,57,53,0.95) 100%);
-  animation: reelPulse 0.35s ease-in-out infinite alternate;
-}
-
-@keyframes reelPulse {
-  from { filter: brightness(1); }
-  to { filter: brightness(1.15); }
-}
-
-@keyframes reelBarDanger {
-  from { filter: drop-shadow(0 6px 18px rgba(0,0,0,0.55)); }
-  to { filter: drop-shadow(0 6px 18px rgba(229,57,53,0.7)); }
-}
-
-.reel-fish-marker {
+.fight-reel__fish {
   position: absolute;
-  top: 50%;
-  left: 0%;
-  transform: translate(-50%, -50%);
-  z-index: 4;
-  transition: left 0.1s ease-out;
+  top: 2%;
+  left: 88%;
+  transform: translate(-50%, -68%);
+  z-index: 6;
+  transition: left 0.1s linear;
   pointer-events: none;
 }
 
-.reel-fish-icon {
-  width: 36px;
-  height: 28px;
+.fight-reel__fish--pulling .fight-fish-icon {
+  transform: scaleX(1) rotate(-12deg);
+  transition: transform 0.1s ease-out;
+}
+
+.fight-reel__fish--drifting .fight-fish-icon {
+  transform: scaleX(-1) rotate(10deg);
+  transition: transform 0.18s ease-out;
+}
+
+.fight-fish-icon {
+  width: 44px;
+  height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.75));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.75));
+  transform-origin: center center;
 }
 
-.reel-fish-icon img {
+.fight-fish-icon img,
+.fight-fish-icon .fish-sprite {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-/* Металлическая рыбка на верхней линии шкалы */
-.fight-fish-marker {
+.fight-fish-marker__shape {
   display: block;
-  width: 34px;
-  height: 26px;
+  width: 32px;
+  height: 24px;
   background: linear-gradient(
     155deg,
     #ffffff 0%,
@@ -816,26 +789,32 @@ html:not(.is-mobile) .dock-slot {
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
-  filter:
-    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.65))
-    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.65));
 }
 
-.fight-fish-unknown {
-  display: block;
-  width: 30px;
-  height: 22px;
-  border-radius: 50% 50% 42% 42%;
-  background: linear-gradient(180deg, #5a6f52 0%, #2f4228 100%);
-  box-shadow:
-    0 2px 4px rgba(0,0,0,0.7),
-    inset 0 1px 0 rgba(255,255,255,0.2);
+.fight-reel--pulling .fight-reel__fill {
+  filter: brightness(1.08);
 }
 
-body.fight-active .water-cast-btn { z-index: 30; }
+.fight-reel--warn .fight-reel__bg {
+  filter: drop-shadow(0 5px 16px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 8px rgba(255, 152, 0, 0.35));
+}
+
+.fight-reel--danger .fight-reel__bg {
+  animation: fightBarDanger 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes fightBarDanger {
+  from { filter: drop-shadow(0 5px 16px rgba(0, 0, 0, 0.5)); }
+  to { filter: drop-shadow(0 5px 16px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 14px rgba(229, 57, 53, 0.75)); }
+}
+
+body.fight-active .water-cast-btn {
+  z-index: 30;
+  bottom: calc(var(--dock-h) + var(--safe-bottom) + 54px);
+}
 
 .fight-hint {
-  margin: 6px 0 0;
+  margin: 8px 0 0;
   text-align: center;
   font-size: 12px;
   font-weight: 700;
@@ -905,60 +884,33 @@ body.fight-active .water-cast-btn { z-index: 30; }
   color: #d7ccc8;
 }
 
-/* --- Подсказка: поверните телефон --- */
-.rotate-hint {
+/* --- Mobile: всегда альбомный режим (без подсказки «поверните») --- */
+html.is-mobile.is-portrait .loading-screen {
+  width: 100vh;
+  height: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+html.is-mobile.is-portrait #game-app {
   position: fixed;
-  inset: 0;
-  z-index: 500;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 28px 24px;
-  text-align: center;
-  color: #ffecb3;
-  background: linear-gradient(160deg, #1a2838 0%, #0d2840 55%, #0a3040 100%);
+  top: 50%;
+  left: 50%;
+  width: 100vh;
+  height: 100vw;
+  max-width: 100vh;
+  max-height: 100vw;
+  transform: translate(-50%, -50%) rotate(90deg);
+  transform-origin: center center;
 }
 
-.rotate-hint-icon {
-  font-size: 56px;
-  line-height: 1;
-  animation: rotatePhoneHint 2.2s ease-in-out infinite;
+html.is-mobile.is-portrait {
+  overflow: hidden;
+  background: #0d1a24;
 }
 
-.rotate-hint-title {
-  margin: 0;
-  font-size: 22px;
-  font-weight: 800;
-}
-
-.rotate-hint-text {
-  margin: 0;
-  font-size: 14px;
-  color: #d7ccc8;
-  max-width: 260px;
-  line-height: 1.45;
-}
-
-@keyframes rotatePhoneHint {
-  0%, 100% { transform: rotate(0deg); }
-  45%, 55% { transform: rotate(90deg); }
-}
-
-/* --- Mobile portrait (вертикально) — только подсказка --- */
-@media (max-width: 900px) and (orientation: portrait), (pointer: coarse) and (orientation: portrait) {
-  html.is-mobile #hud .hud-bottom,
-  html.is-mobile #hud .water-cast-btn,
-  html.is-mobile #fight-ui {
-    visibility: hidden;
-    pointer-events: none;
-  }
-}
-
-/* --- Mobile landscape (горизонтально) — основной режим --- */
-@media (max-width: 900px) and (orientation: landscape),
-(pointer: coarse) and (orientation: landscape) {
+html.is-mobile {
   .hud-top {
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     grid-template-rows: auto;
@@ -1009,40 +961,47 @@ body.fight-active .water-cast-btn { z-index: 30; }
 
   .water-cast-btn:active { transform: scale(0.97); }
 
+  body.fight-active .water-cast-btn {
+    bottom: calc(var(--dock-h) + var(--safe-bottom) + 48px);
+  }
+
   .cast-btn-img {
-    height: 68px;
+    height: 56px;
     width: auto;
     max-width: min(34vw, 210px);
   }
 
-  .dock-bar { padding: 4px 5px; gap: 3px; }
-  .dock-slot { min-height: 42px; max-height: 46px; border-radius: 7px; }
+  .dock-bar { padding: 2px 3px; gap: 1px; }
+  .dock-slot { min-height: 36px; max-height: 40px; border-radius: 0; }
 
   .dock-slot-qty {
-    min-width: 14px;
-    height: 14px;
-    font-size: 9px;
-    line-height: 14px;
+    right: 2px;
+    bottom: 1px;
+    min-width: 11px;
+    height: 11px;
+    padding: 0 2px;
+    font-size: 8px;
+    line-height: 11px;
   }
 
-  .bobber { width: 46px; height: 46px; }
+  .bobber { width: 26px; }
+  .bobber-clip { width: 26px; height: 54px; }
+  .bobber-img { width: 26px; }
+  .bobber--bite .bobber-clip { height: 34px; }
 
   .fight-dock {
-    left: 50%;
-    bottom: max(6px, var(--safe-bottom));
-    transform: translateX(-50%);
-    width: min(58vw, 420px);
+    bottom: calc(var(--dock-h) + var(--safe-bottom) + 8px);
+    width: min(96vw, 440px);
   }
+
+  .fight-fish-icon { width: 36px; height: 28px; }
 
   .fight-hint {
-    font-size: 11px;
+    font-size: 10px;
     margin-top: 4px;
   }
-
-  .reel-fish-icon { width: 28px; height: 22px; }
-  .fight-fish-marker { width: 28px; height: 21px; }
 }
 
-html.is-mobile.is-landscape .hud-root {
+html.is-mobile .hud-root {
   justify-content: space-between;
 }

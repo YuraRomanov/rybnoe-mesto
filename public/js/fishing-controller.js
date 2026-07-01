@@ -50,7 +50,8 @@ const FishingController = (() => {
     const loc = bridge.getLocation();
     const mods = GearSystem.getModifiers(bridge.getPlayer());
     ctx.modifiers = mods;
-    const table = GameRNG.buildFishTable(loc, mods.biteBonus, FISH);
+    const baitId = bridge.getPlayer().gear?.bait || 'bait1';
+    const table = GameRNG.buildFishTable(loc, baitId, mods.biteBonus, FISH);
     const entry = GameRNG.pickWeighted(table.map((t) => ({ ...t, weight: t.weight })));
     const fish = { ...entry.fish };
     fish.weight = rollFishWeight(fish);
@@ -62,6 +63,24 @@ const FishingController = (() => {
     ctx.fish = fish;
     ctx.fight = { rarity };
     return fish;
+  }
+
+  function updateFightBobber(holding) {
+    const f = ctx.fight;
+    if (!f || typeof BobberUI === 'undefined') return;
+    const water = BobberUI.WATER_SPOT;
+    const near = BobberUI.FIGHT_PULL;
+    const haul = f.haul ?? Math.max(0, 1 - (f.displayFishPos ?? 85) / 100);
+    let x = water.x + (near.x - water.x) * haul;
+    let y = water.y + (near.y - water.y) * haul;
+    if (holding) {
+      y += 2.2;
+    } else {
+      y -= 0.6;
+    }
+    ctx.bobberPct = { x, y };
+    BobberUI.setPositionImmediate(x, y);
+    BobberUI.setPulling(holding);
   }
 
   function registerStates() {
@@ -87,21 +106,23 @@ const FishingController = (() => {
         ctx.bobberPct = { ...start };
         BobberUI.position(ctx.bobberPct.x, ctx.bobberPct.y);
         BobberUI.show();
-        BobberUI.setState('idle');
+        BobberUI.setState('flight');
         FishingUI.setCastBtn(true, 'Жди...');
         FishingUI.setStatus('Заброс...');
         GameEvents.emit(EV.CAST_START, { ctx });
       },
       update(c, dt) {
         const target = BobberUI.WATER_SPOT;
-        ctx.castFlight = Math.min(1, (ctx.castFlight || 0) + dt * 0.028);
+        ctx.castFlight = Math.min(1, (ctx.castFlight || 0) + dt * 0.022);
         const ease = easeInOutCubic(ctx.castFlight);
         const start = ctx.castStart || BobberUI.CAST_START;
+        const arc = Math.sin(ctx.castFlight * Math.PI) * 8;
         ctx.bobberPct.x = start.x + (target.x - start.x) * ease;
-        ctx.bobberPct.y = start.y + (target.y - start.y) * ease;
+        ctx.bobberPct.y = start.y + (target.y - start.y) * ease - arc;
         BobberUI.position(ctx.bobberPct.x, ctx.bobberPct.y);
         if (ctx.castFlight >= 1) {
           ctx.bobberPct = { ...target };
+          bridge.onCastSplash?.(ctx);
           GameFSM.transition(FSM.WAITING);
         }
       },
@@ -110,6 +131,7 @@ const FishingController = (() => {
     GameFSM.register(FSM.WAITING, {
       enter() {
         ctx.bobberPct = { ...BobberUI.WATER_SPOT };
+        ctx.nibbleCooldown = 0;
         BobberUI.center();
         BobberUI.setState('calm');
         FishingUI.setCastBtn(true, 'Жди');
@@ -148,8 +170,8 @@ const FishingController = (() => {
         ctx.biteWindowSec = GameRNG.range(t.hookWindowMinSec + 1.5, t.hookWindowMaxSec + 4);
         ctx.biteElapsed = 0;
         BobberUI.setState('bite');
-        FishingUI.setCastBtn(true, 'Тяни!');
-        FishingUI.setStatus('Поклёвка! Жми «Тяни»');
+        FishingUI.setCastBtn(true, 'Тянуть!');
+        FishingUI.setStatus('Поклёвка! Жми «Тянуть»');
         GameEvents.emit(EV.BITE_HOOK, { ctx });
       },
       update(c, dt) {
@@ -168,16 +190,19 @@ const FishingController = (() => {
       enter(c, payload) {
         const grade = payload?.hookGrade || 'good';
         ctx.bobberPct = { ...BobberUI.WATER_SPOT };
+        BobberUI.show();
         BobberUI.center();
         BobberUI.setState('fight');
         FightSystem.start(ctx, grade);
-        FishingUI.showFight(true);
-        FishingUI.setCastBtn(true, 'Тяни!');
-        FishingUI.setStatus('Тяни к берегу!');
+        updateFightBobber(false);
+        FishingUI.showFight(true, ctx);
+        FishingUI.setCastBtn(true, 'Вытащить');
+        FishingUI.setStatus('Вытащи рыбу!');
         FishingUI.updateFight(ctx);
       },
       update(c, dt) {
         const result = FightSystem.update(ctx, dt, holdingFight);
+        updateFightBobber(holdingFight);
         FishingUI.updateFight(ctx);
         GameEvents.emit(EV.FIGHT_TICK, { ctx, result });
         if (result === 'win') {
@@ -193,6 +218,7 @@ const FishingController = (() => {
       },
       exit() {
         FishingUI.showFight(false);
+        BobberUI.setPulling(false);
         BobberUI.hide();
       },
     });
@@ -252,6 +278,15 @@ const FishingController = (() => {
     const st = GameFSM.getState();
     if (st === FSM.WAITING) {
       ctx.waitElapsed += dt / 60;
+      const left = Math.max(0, ctx.waitSec - ctx.waitElapsed);
+      if (left < ctx.waitSec * 0.45 && ctx.nibbleCooldown <= 0 && GameRNG.random() < 0.018) {
+        BobberUI.setState('nibble');
+        ctx.nibbleCooldown = 45 + GameRNG.rangeInt(20, 50);
+        bridge.onBobberNibble?.(ctx);
+      }
+      if (ctx.nibbleCooldown > 0) ctx.nibbleCooldown -= dt;
+      else if (BobberUI.getState?.() === 'nibble') BobberUI.setState('calm');
+
       if (ctx.waitElapsed >= ctx.waitSec) {
         GameFSM.transition(FSM.BITE);
       }

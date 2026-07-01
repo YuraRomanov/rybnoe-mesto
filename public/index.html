@@ -6,15 +6,20 @@
   <meta name="theme-color" content="#0d1a24">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Рыбалка">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <title>Рыбное место — Новая эра</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/hud.css">
 </head>
 <body oncontextmenu="return false">
-  <div id="rotate-hint" class="rotate-hint hidden" aria-live="polite">
-    <div class="rotate-hint-icon" aria-hidden="true">📱</div>
-    <p class="rotate-hint-title">Поверните телефон</p>
-    <p class="rotate-hint-text">Игра рассчитана на горизонтальный экран</p>
+  <div id="loading-screen" class="loading-screen" role="status" aria-live="polite" aria-label="Загрузка игры">
+    <img class="loading-screen-img" src="assets/ui/loading-screen.png" alt="Рыбалка: Большая Вода">
+    <div class="loading-screen-bar-wrap" aria-hidden="true">
+      <div class="loading-screen-bar"></div>
+    </div>
   </div>
   <div id="game-app">
     <div class="scene-layer">
@@ -76,7 +81,9 @@
       </header>
 
       <div id="bobber" class="bobber bobber--calm hidden" aria-hidden="true">
-        <img class="bobber-img" src="assets/ui/hud/bobber.png?v=5" alt="">
+        <div class="bobber-clip">
+          <img class="bobber-img" src="assets/ui/hud/bobber.png?v=8" alt="">
+        </div>
       </div>
 
       <div id="cast-power-wrap" class="cast-power hidden">
@@ -85,20 +92,20 @@
       </div>
 
       <button id="cast-btn" class="water-cast-btn" type="button" aria-label="Забросить">
-        <img id="cast-btn-img" class="cast-btn-img" src="assets/ui/hud/cast-default.png?v=6" alt="">
+        <img id="cast-btn-img" class="cast-btn-img" src="assets/ui/hud/cast-default.png?v=8" alt="">
       </button>
 
       <footer class="hud-bottom">
         <div class="dock-bar">
           <div class="dock-slot" title="Удочка">
-            <img id="dock-icon-rod" class="dock-slot-img" data-game-icon="rod-bamboo" alt="">
+            <img id="dock-icon-rod" class="dock-slot-img" alt="">
           </div>
           <div class="dock-slot" title="Крючки">
-            <img id="dock-icon-hook" class="dock-slot-img" data-hud-icon="hook" alt="">
+            <img id="dock-icon-hook" class="dock-slot-img" alt="">
             <span id="qty-hook" class="dock-slot-qty">5</span>
           </div>
           <div class="dock-slot" title="Наживка" data-lock-while-fishing role="button" tabindex="0">
-            <img id="dock-icon-bait" class="dock-slot-img" data-hud-icon="bait" alt="">
+            <img id="dock-icon-bait" class="dock-slot-img" alt="">
             <span id="qty-bait" class="dock-slot-qty">20</span>
           </div>
           <div class="dock-slot" title="Готовка">
@@ -130,21 +137,18 @@
     </div>
 
     <div id="fight-ui" class="fight-dock hidden">
-      <div class="reel-bar-widget" id="reel-bar">
-        <img class="reel-bar-bg" src="assets/ui/hud/reel-bar-bg.png?v=4" alt="">
-        <div class="reel-bar-inner">
-          <div id="reel-bar-fill" class="reel-bar-fill"></div>
-        </div>
-        <div class="reel-fish-track">
-          <div id="fish-marker" class="reel-fish-marker">
-            <div id="fight-fish-icon" class="reel-fish-icon"></div>
+      <div class="fight-reel" id="fight-bar">
+        <div class="fight-reel__frame">
+          <img class="fight-reel__bg" src="assets/ui/hud/reel-bar-bg.png?v=5" alt="">
+          <div class="fight-reel__inner">
+            <div id="fight-bar-fill" class="fight-reel__fill"></div>
+          </div>
+          <div id="fish-marker" class="fight-reel__fish">
+            <div id="fight-fish-icon" class="fight-fish-icon"></div>
           </div>
         </div>
-        <div class="reel-tension-track">
-          <div id="reel-progress" class="reel-progress"></div>
-        </div>
       </div>
-      <p id="fight-hint" class="fight-hint">Тяни к берегу</p>
+      <p id="fight-hint" class="fight-hint">Жми «Вытащить» — тяни рыбу к берегу</p>
       <span id="fight-fish-name" class="sr-only">Рыба</span>
       <span id="fight-rarity" class="sr-only"></span>
     </div>
@@ -157,8 +161,8 @@
         <ol class="tutorial-steps">
           <li>Нажми <strong>«Забросить»</strong> — поплавок улетит на воду</li>
           <li>Жди поклёвки — поплавок слегка покачивается. Нажми <strong>«Жди»</strong>, чтобы вытащить удочку</li>
-          <li>Когда клюнёт — жми <strong>«Тяни»</strong></li>
-          <li>Удерживай кнопку — тяни рыбу к берегу (влево), отпускай при рывке</li>
+          <li>Когда клюнёт — жми <strong>«Тянуть»</strong></li>
+          <li>Жми <strong>«Вытащить»</strong> — натяжение растёт, рыба идёт к берегу; отпускай, чтобы леска ослабла</li>
           <li>После поимки — <strong>в садок</strong> или сразу <strong>продать</strong> рыбу</li>
         </ol>
         <button type="button" class="btn-primary" id="tutorial-start">Понятно</button>
@@ -270,6 +274,7 @@
 
   <script src="apk-data.js"></script>
   <script src="data/misc-fish.js"></script>
+  <script src="data/bait-data.js"></script>
   <script src="data/forest-lake.js"></script>
   <script src="data.js"></script>
   <script src="data/game-config.js"></script>

@@ -29,6 +29,9 @@ const GAME_CONFIG = {
   },
 
   fight: {
+    /** Шкала: 0 слева (срыв), 100 справа (улов) */
+    haulWinAt: 94,
+    haulLoseAt: 5,
     reelWinThreshold: 100,
     reelEscapeThreshold: 0,
     lineStressMax: 100,
@@ -39,7 +42,7 @@ const GAME_CONFIG = {
     tensionMaxBreak: 100,
     greenZoneMin: 32,
     greenZoneMax: 72,
-    holdTensionRate: 1.35,
+    holdTensionRate: 1.05,
     releaseTensionRate: 0.85,
     staminaDamageInZone: 0.55,
     staminaRegenOutZone: 0.08,

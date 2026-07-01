@@ -14,7 +14,10 @@ const GAME_ICONS = (() => {
     hook: 'hook',
     'bait-worm': 'bait-worm',
     'bait-maggot': 'bait-maggot',
-    'bait-corn': 'bait-corn',
+    'bait-bloodworm': 'bait-bloodworm',
+    'bait-bread': 'bait-bread',
+    'bait-barley': 'bait-barley',
+    'bait-corn': 'bait-barley',
     'bait-minnow': 'bait-minnow',
     'bait-dough': 'bait-dough',
     net: 'net',
@@ -33,12 +36,17 @@ const GAME_ICONS = (() => {
     'hook-treble': 'hook',
     bait: 'bait-worm',
     bait1: 'bait-worm',
-    bait2: 'bait-maggot',
-    bait3: 'bait-corn',
+    bait2: 'bait-bloodworm',
+    bait3: 'bait-barley',
     bait4: 'bait-maggot',
+    bait5: 'bait-bread',
+    bait6: 'bait-dough',
     'bait-worm': 'bait-worm',
     'bait-maggot': 'bait-maggot',
-    'bait-corn': 'bait-corn',
+    'bait-bloodworm': 'bait-bloodworm',
+    'bait-bread': 'bait-bread',
+    'bait-corn': 'bait-barley',
+    'bait-barley': 'bait-barley',
     'bait-minnow': 'bait-minnow',
     'bait-dough': 'bait-dough',
     groundbait: 'bait-dough',
@@ -103,7 +111,8 @@ const GAME_ICONS = (() => {
 
   function url(key) {
     const file = resolve(key);
-    return `${BASE}/${file}.png`;
+    const v = file.startsWith('bait-') ? '?v=2' : '';
+    return `${BASE}/${file}.png${v}`;
   }
 
   function img(key, className = 'game-icon', alt = '') {
@@ -135,9 +144,11 @@ const GAME_ICONS = (() => {
 
   function applyHudAll(root = document) {
     root.querySelectorAll('[data-hud-icon]').forEach((el) => {
+      if (el.id && el.id.startsWith('dock-icon-')) return;
       applyHud(el, el.dataset.hudIcon);
     });
     root.querySelectorAll('[data-game-icon]').forEach((el) => {
+      if (el.id && el.id.startsWith('dock-icon-')) return;
       el.src = url(el.dataset.gameIcon);
     });
   }

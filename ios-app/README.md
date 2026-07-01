@@ -42,14 +42,17 @@ npm run cap:sync
 
 ## Иконка и splash
 
-1. Положите квадратную PNG **1024×1024** в `ios-app/resources/icon.png`
-2. На Mac:
+Исходник: `resources/icon.png` (512×512, рыба + поплавок).
+
+На Mac:
 
 ```bash
 npm install -D @capacitor/assets
 npx capacitor-assets generate --ios
 npm run cap:sync
 ```
+
+Для веб-версии иконка: `public/assets/icon.png` + `manifest.webmanifest`.
 
 ## App Store (кратко)
 

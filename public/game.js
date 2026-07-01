@@ -59,6 +59,46 @@ function pickRodImage() {
   return rodImgs[pickRodFrameIndex()] || rodImgs[0];
 }
 
+function getRodScale() {
+  return (canvas.height / 900) * 0.5;
+}
+
+/** Геометрия спрайта: рукоять справа внизу, кончик слева вверху */
+function getRodSpriteLayout() {
+  const layout = getSceneLayout();
+  const base = layout.rodBase;
+  const scale = getRodScale();
+  const img = pickRodImage();
+  const frameT = game.rodFrameBlend / Math.max(1, ROD_FRAME_COUNT - 1);
+
+  if (!img?.complete || !img.naturalWidth) {
+    const tip = {
+      x: base.x - canvas.width * (0.12 + frameT * 0.05),
+      y: base.y - canvas.height * (0.36 + frameT * 0.05),
+    };
+    return { base, tip, dx: 0, dy: 0, dw: 0, dh: 0, ready: false };
+  }
+
+  const dw = img.naturalWidth * scale;
+  const dh = img.naturalHeight * scale;
+  const handleAnchorX = 0.88;
+  const dx = base.x - dw * handleAnchorX;
+  const dy = base.y - dh;
+  const tip = {
+    x: dx + dw * (0.028 + frameT * 0.11),
+    y: dy + dh * (0.035 + frameT * 0.075),
+  };
+  return {
+    base: { x: dx + dw * handleAnchorX, y: base.y },
+    tip,
+    dx,
+    dy,
+    dw,
+    dh,
+    ready: true,
+  };
+}
+
 const defaultPlayer = () => ({
   name: 'Рыбак',
   level: 1,
@@ -120,15 +160,22 @@ function getVisualState() {
   return STATES.IDLE;
 }
 
+function getDockInset() {
+  const raw = getComputedStyle(document.documentElement).getPropertyValue('--dock-h');
+  const dockH = parseFloat(raw) || 72;
+  return Math.max(56, dockH);
+}
+
 function getSceneLayout() {
   const w = canvas.width;
   const h = canvas.height;
   const bend = game.rodBend;
   const bob = getBobberWorldPos();
-  const baseX = w * 0.985;
-  const baseY = h * 0.995;
-  const tipX = w * (0.68 - bend * 0.06);
-  const tipY = h * (0.58 - bend * 0.1);
+  const dock = getDockInset();
+  const baseX = w * 0.54;
+  const baseY = h - dock * 0.22;
+  const tipX = w * (0.46 - bend * 0.05);
+  const tipY = h * (0.36 - bend * 0.08);
   return {
     waterY: h * 0.48,
     bobberFixed: bob ? { x: bob.x, y: bob.y } : null,
@@ -145,69 +192,40 @@ function getBobberWorldPos() {
   const vs = getVisualState();
   if (vs === STATES.IDLE) return null;
 
-  const center = typeof BobberUI !== 'undefined' ? BobberUI.WATER_SPOT : { x: 50, y: 56 };
+  const spot = typeof BobberUI !== 'undefined' ? BobberUI.WATER_SPOT : { x: 50, y: 56 };
   const fctx = typeof FishingController !== 'undefined' ? FishingController.getContext() : null;
   const pct = (typeof BobberUI !== 'undefined' && BobberUI.getDisplayPct)
     ? BobberUI.getDisplayPct()
-    : (fctx?.bobberPct || center);
+    : (fctx?.bobberPct || spot);
+
   let x = w * (pct.x / 100);
   let y = h * (pct.y / 100);
-  if (vs === STATES.FIGHT) {
-    const fight = fctx?.fight;
-    const pull = fight?.pullForce || 0;
-    const lunge = fight?.lunge || 0;
-    const phase = fight?.swayPhase ?? game.time * 0.1;
-    const away = (fight?.fishPos ?? 50) / 100;
-    x += Math.sin(phase) * (16 + pull * 34 + lunge * 26);
-    y += Math.cos(phase * 1.35) * (7 + lunge * 14) + away * 6;
-  } else if (vs === STATES.BITE) {
-    y += Math.sin(game.time * 0.5) * 3;
+
+  if (vs === STATES.BITE) {
+    y += 4 + Math.sin(game.time * 0.55) * 6;
+    x += Math.sin(game.time * 0.8) * 2;
   } else if (vs === STATES.WAITING) {
-    x = w * (center.x / 100);
-    y = h * (center.y / 100) + Math.sin(game.time * 0.025) * 2;
+    const bobberState = typeof BobberUI !== 'undefined' ? BobberUI.getState?.() : 'calm';
+    if (bobberState === 'nibble') y -= 3 + Math.sin(game.time * 0.9) * 3;
+    else y += Math.sin(game.time * 0.03) * 2;
   }
+
   return { x, y };
 }
 
 function updateRodTip() {
-  const base = getSceneLayout().rodBase;
-  const vs = getVisualState();
-  if (vs === STATES.IDLE) {
-    game.rodTip = {
-      x: base.x - canvas.width * 0.22,
-      y: base.y - canvas.height * 0.28,
-    };
-    return;
-  }
-  const bob = getBobberWorldPos();
-  if (!bob) {
-    game.rodTip = {
-      x: base.x - canvas.width * 0.22,
-      y: base.y - canvas.height * 0.28,
-    };
-    return;
-  }
-  if (vs === STATES.WAITING) {
-    const spot = typeof BobberUI !== 'undefined' ? BobberUI.WATER_SPOT : { x: 50, y: 56 };
-    const anchorX = canvas.width * (spot.x / 100);
-    game.rodTip = {
-      x: base.x + (anchorX - base.x) * 0.7,
-      y: base.y + (bob.y - base.y) * 0.7,
-    };
-    return;
-  }
-  game.rodTip = {
-    x: base.x + (bob.x - base.x) * 0.7,
-    y: base.y + (bob.y - base.y) * 0.7,
-  };
+  game.rodTip = getRodSpriteLayout().tip;
 }
 
 function getViewportSize() {
   const vv = window.visualViewport;
-  return {
-    width: Math.round(vv?.width ?? window.innerWidth),
-    height: Math.round(vv?.height ?? window.innerHeight),
-  };
+  let width = Math.round(vv?.width ?? window.innerWidth);
+  let height = Math.round(vv?.height ?? window.innerHeight);
+  const mobile = document.documentElement.classList.contains('is-mobile');
+  if (mobile && height > width) {
+    [width, height] = [height, width];
+  }
+  return { width, height };
 }
 
 function resizeCanvas() {
@@ -248,8 +266,6 @@ function bindMobileUi() {
     const portrait = window.innerHeight > window.innerWidth;
     document.documentElement.classList.toggle('is-portrait', portrait);
     document.documentElement.classList.toggle('is-landscape', !portrait);
-    const hint = document.getElementById('rotate-hint');
-    if (hint) hint.classList.toggle('hidden', !touch || !portrait);
     syncViewportVars();
   };
 
@@ -325,6 +341,17 @@ function loadPlayerData() {
     delete player.catches;
     tutorialSeen = Boolean(data.tutorialSeen);
   } catch (_) {}
+  normalizeBaitGear();
+}
+
+function normalizeBaitGear() {
+  const baits = SHOP?.bait || [];
+  const known = new Set(baits.map((b) => b.id));
+  if (!known.has(player.gear.bait)) player.gear.bait = 'bait1';
+  if ((player.inventory[player.gear.bait] || 0) <= 0) {
+    const fallback = baits.find((b) => (player.inventory[b.id] || 0) > 0);
+    if (fallback) player.gear.bait = fallback.id;
+  }
 }
 
 function toast(msg) {
@@ -397,8 +424,8 @@ function updateEquipmentHud() {
   };
 
   setImg('dock-icon-rod', GAME_ICONS.rodIconForItem(rod));
-  setImg('dock-icon-hook', GAME_ICONS.resolve(hook.id));
-  setImg('dock-icon-bait', GAME_ICONS.resolve(bait.id));
+  setImg('dock-icon-hook', hook.iconKey || GAME_ICONS.resolve(hook.id));
+  setImg('dock-icon-bait', bait.iconKey || GAME_ICONS.resolve(bait.id));
 }
 
 function updateHUD() {
@@ -483,6 +510,7 @@ function initFishingController() {
         return false;
       }
       player.inventory[player.gear.bait] = bait - 1;
+      if ((player.inventory[player.gear.bait] || 0) <= 0) normalizeBaitGear();
       updateHUD();
       return true;
     },
@@ -514,13 +542,18 @@ function initFishingController() {
       toast('Удочка вытащена');
       resetFishingVisuals();
     },
+    onCastSplash() {
+      const l = getSceneLayout();
+      if (l.bobberFixed) spawnSplash(l.bobberFixed.x, l.bobberFixed.y, 10);
+      addRipple(l.bobberFixed?.x || canvas.width * 0.5, l.bobberFixed?.y || canvas.height * 0.56);
+    },
+    onBobberNibble() {
+      const l = getSceneLayout();
+      if (l.bobberFixed) addRipple(l.bobberFixed.x, l.bobberFixed.y);
+    },
   });
 
   GameEvents.on(EV.STATE_ENTER, ({ state }) => {
-    if (state === FishingController.FSM.WAITING) {
-      const l = getSceneLayout();
-      spawnSplash(l.bobberFixed.x, l.bobberFixed.y, 8);
-    }
     updateEquipmentHud();
   });
 
@@ -745,15 +778,16 @@ function update() {
     if (vs === STATES.CASTING) {
       targetBend = 0.05 + (fctx?.castPower || 0) * 0.15;
     } else if (vs === STATES.WAITING) {
-      targetBend = 0.08 + Math.sin(game.time * 0.03) * 0.02;
-      if (game.time % 180 === 0) {
+      targetBend = 0.07 + Math.sin(game.time * 0.03) * 0.02;
+      if (game.time % 140 === 0) {
         const l = getSceneLayout();
         addRipple(l.bobberFixed.x, l.bobberFixed.y);
       }
     } else if (vs === STATES.BITE) {
-      targetBend = 0.3 + Math.sin(game.time * 0.4) * 0.1;
+      targetBend = 0.35 + Math.sin(game.time * 0.45) * 0.12;
     } else if (vs === STATES.FIGHT) {
-      targetBend = 0.25 + (game.lineTension / 100) * 0.45 + game.haulProgress * 0.2;
+      const holding = fctx?.fight?.holding;
+      targetBend = 0.28 + (game.lineTension / 100) * 0.5 + game.haulProgress * 0.28 + (holding ? 0.08 : 0);
     } else if (vs === STATES.IDLE) {
       targetBend = 0;
     }
@@ -793,9 +827,9 @@ function drawBackground() {
 }
 
 function drawRodFallback() {
-  const l = getSceneLayout();
-  const base = l.rodBase;
-  const tip = l.rodTip;
+  const rod = getRodSpriteLayout();
+  const base = getSceneLayout().rodBase;
+  const tip = rod.tip;
   const midX = base.x - (base.x - tip.x) * 0.42;
   const midY = base.y - (base.y - tip.y) * 0.48 + game.rodBend * 22;
 
@@ -821,24 +855,15 @@ function drawRodFallback() {
 }
 
 function drawRod() {
-  const vs = getVisualState();
-  if (vs === STATES.IDLE) return;
-
-  const img = pickRodImage();
-  const base = getSceneLayout().rodBase;
-  if (!img?.complete || !img.naturalWidth) {
+  const rod = getRodSpriteLayout();
+  if (!rod.ready) {
     drawRodFallback();
     return;
   }
-  const scale = (canvas.height / 900) * 0.28;
-  const dw = img.naturalWidth * scale;
-  const dh = img.naturalHeight * scale;
-  const dx = base.x - dw;
-  const dy = base.y - dh;
   ctx.save();
   ctx.shadowColor = 'rgba(0,0,0,0.4)';
   ctx.shadowBlur = 10;
-  ctx.drawImage(img, dx, dy, dw, dh);
+  ctx.drawImage(pickRodImage(), rod.dx, rod.dy, rod.dw, rod.dh);
   ctx.restore();
 }
 
@@ -848,32 +873,34 @@ function drawFishingLine(tip, bob, opts = {}) {
   const dy = bob.y - tip.y;
   const dist = Math.hypot(dx, dy) || 1;
   const tensionT = fighting ? tension : 0;
+  const tight = fighting && tensionT > 0.35;
   const slack = waiting || bite
     ? 1
     : fighting
-      ? Math.max(0.1, 1 - tensionT * 0.9)
-      : 0.9;
-  const sagRatio = waiting ? 0.3 : bite ? 0.2 : fighting ? 0.1 + (1 - tensionT) * 0.12 : 0.24;
-  const sagMin = waiting ? 26 : bite ? 16 : 12;
-  const sag = Math.min(dist * sagRatio * slack + sagMin, dist * 0.48);
+      ? Math.max(0.12, 1 - tensionT * 0.92)
+      : 0.85;
+  const sagRatio = waiting ? 0.28 : bite ? 0.18 : fighting ? 0.06 + (1 - tensionT) * 0.1 : 0.22;
+  const sagMin = waiting ? 22 : bite ? 14 : tight ? 6 : 10;
+  const sag = tight ? sagMin * 0.35 : Math.min(dist * sagRatio * slack + sagMin, dist * 0.42);
 
-  const c1x = tip.x + dx * 0.22;
-  const c1y = tip.y + dy * 0.18 + sag * 0.5;
-  const c2x = tip.x + dx * 0.78;
-  const c2y = tip.y + dy * 0.82 + sag;
+  const c1x = tip.x + dx * 0.28;
+  const c1y = tip.y + dy * 0.2 + sag * 0.45;
+  const c2x = tip.x + dx * 0.72;
+  const c2y = tip.y + dy * 0.78 + sag;
 
   ctx.beginPath();
   ctx.moveTo(tip.x, tip.y);
-  ctx.bezierCurveTo(c1x, c1y, c2x, c2y, bob.x, bob.y - 3);
+  ctx.bezierCurveTo(c1x, c1y, c2x, c2y, bob.x, bob.y);
   ctx.stroke();
 }
 
 function drawLineAndBobber() {
   const l = getSceneLayout();
   const vs = getVisualState();
-  if (vs === STATES.IDLE || !l.bobberFixed) return;
+  if (!l.bobberFixed) return;
   const bx = l.bobberFixed.x;
   const by = l.bobberFixed.y;
+  const lineBobY = by - 52;
   const tip = l.rodTip;
   const bite = vs === STATES.BITE;
   const fighting = vs === STATES.FIGHT;
@@ -886,21 +913,27 @@ function drawLineAndBobber() {
 
   ctx.strokeStyle = 'rgba(0,0,0,0.35)';
   ctx.lineWidth = fighting ? 2.8 + tension : 2.2;
-  drawFishingLine(tip, { x: bx, y: by + 1 }, { fighting, waiting, bite, tension });
+  drawFishingLine(tip, { x: bx, y: lineBobY }, { fighting, waiting, bite, tension });
 
   ctx.strokeStyle = fighting
     ? tension > 0.7 ? 'rgba(255,90,70,0.95)' : 'rgba(210,235,255,0.92)'
     : 'rgba(255,255,255,0.82)';
   ctx.lineWidth = fighting ? 1.4 + tension * 0.8 : 1.1;
-  drawFishingLine(tip, { x: bx, y: by - 4 }, { fighting, waiting, bite, tension });
+  drawFishingLine(tip, { x: bx, y: lineBobY - 1 }, { fighting, waiting, bite, tension });
 
   if (waiting || bite || fighting) {
-    ctx.strokeStyle = bite ? 'rgba(255,80,60,0.7)' : fighting ? 'rgba(100,200,255,0.35)' : 'rgba(100,200,255,0.28)';
-    ctx.lineWidth = bite ? 2 : 1;
-    const rr = bite ? 18 + Math.sin(game.time * 0.5) * 8 : waiting ? 7 : 5;
+    ctx.strokeStyle = bite ? 'rgba(255,80,60,0.75)' : fighting ? 'rgba(120,210,255,0.42)' : 'rgba(100,200,255,0.32)';
+    ctx.lineWidth = bite ? 2.2 : fighting ? 1.4 : 1;
+    const rr = bite ? 20 + Math.sin(game.time * 0.55) * 10 : fighting ? 9 + Math.sin(game.time * 0.2) * 3 : 8 + Math.sin(game.time * 0.04) * 2;
     ctx.beginPath();
-    ctx.ellipse(bx, by + 2, rr, rr * 0.3, 0, 0, Math.PI * 2);
+    ctx.ellipse(bx, by + 2, rr, rr * 0.32, 0, 0, Math.PI * 2);
     ctx.stroke();
+    if (waiting && !bite) {
+      ctx.strokeStyle = `rgba(255,255,255,${0.15 + Math.sin(game.time * 0.05) * 0.08})`;
+      ctx.beginPath();
+      ctx.ellipse(bx, by + 2, rr * 1.4, rr * 0.28, 0, 0, Math.PI * 2);
+      ctx.stroke();
+    }
   }
 
   ctx.restore();
@@ -981,22 +1014,32 @@ function renderShop() {
   const isBait = game.shopTab === 'bait';
   box.innerHTML = items.map((item) => {
     const owned = player.owned.includes(item.id);
-    const locked = player.level < item.level;
+    const locked = isBait ? false : player.level < item.level;
     const afford = item.currency === 'gold' ? player.gold >= item.price : player.silver >= item.price;
     const price = shopPriceHtml(item);
     const iconSrc = shopItemIcon(item, game.shopTab);
     const stock = player.inventory[item.id] || 0;
     const pack = item.qty || 10;
+    const equipped = player.gear.bait === item.id;
+    const hint = isBait && typeof BAIT_HINTS !== 'undefined' ? BAIT_HINTS[item.id] : '';
+    const lockNote = locked ? `<div class="item-lock">нужен ур. ${item.level}</div>` : '';
+    const poorNote = !locked && !afford ? '<div class="item-lock">не хватает монет</div>' : '';
     let action = '';
     if (isBait) {
+      const selectBtn = stock > 0
+        ? `<button type="button" class="select-btn ${equipped ? 'active' : ''}" data-select="${item.id}">${equipped ? '✓ На крючке' : 'Выбрать'}</button>`
+        : '';
       action = `<div class="item-stock">У вас: ${stock} шт.</div>
-        <button class="buy-btn" data-id="${item.id}" ${locked || !afford ? 'disabled' : ''}>Купить ×${pack} — ${price}</button>`;
+        ${hint ? `<div class="item-hint">Ловит: ${hint}</div>` : ''}
+        ${poorNote}
+        ${selectBtn}
+        <button class="buy-btn" data-id="${item.id}" ${!afford ? 'disabled' : ''}>Купить ×${pack} — ${price}</button>`;
     } else if (owned) {
       action = '<div class="owned-label">✓ Есть</div>';
     } else {
-      action = `<button class="buy-btn" data-id="${item.id}" ${locked || !afford ? 'disabled' : ''}>${price}</button>`;
+      action = `${lockNote}${poorNote}<button class="buy-btn" data-id="${item.id}" ${locked || !afford ? 'disabled' : ''}>${price}</button>`;
     }
-    return `<div class="shop-item ${owned && !isBait ? 'owned' : ''} ${locked ? 'locked' : ''}">
+    return `<div class="shop-item ${owned && !isBait ? 'owned' : ''} ${equipped && isBait ? 'equipped' : ''} ${locked ? 'locked' : ''}">
       <div class="item-icon"><img src="${iconSrc}" alt=""></div>
       <div class="item-name">${item.name}</div>
       <div class="item-level">уровень: ${item.level}</div>
@@ -1006,16 +1049,46 @@ function renderShop() {
   box.querySelectorAll('.buy-btn').forEach((btn) => {
     btn.onclick = () => buyItem(items.find((i) => i.id === btn.dataset.id));
   });
+  box.querySelectorAll('.select-btn').forEach((btn) => {
+    btn.onclick = () => equipBait(btn.dataset.select);
+  });
+}
+
+function equipBait(baitId) {
+  const bait = findShopItem(baitId, 'bait');
+  if (!bait) return;
+  const stock = player.inventory[baitId] || 0;
+  if (stock <= 0) {
+    toast('Сначала купите наживку');
+    return;
+  }
+  player.gear.bait = baitId;
+  updateHUD();
+  renderShop();
+  save();
+  toast(`Наживка: ${bait.name}`);
 }
 
 function buyItem(item) {
   if (!item) return;
-  if (item.currency === 'gold') { if (player.gold < item.price) return; player.gold -= item.price; }
-  else { if (player.silver < item.price) return; player.silver -= item.price; }
+  const isBait = game.shopTab === 'bait';
+  if (!isBait && player.level < item.level) {
+    toast(`Нужен ${item.level} уровень`);
+    return;
+  }
+  if (item.currency === 'gold') {
+    if (player.gold < item.price) { toast('Не хватает золота'); return; }
+    player.gold -= item.price;
+  } else {
+    if (player.silver < item.price) { toast('Не хватает серебра'); return; }
+    player.silver -= item.price;
+  }
   if (game.shopTab === 'bait') {
     const qty = item.qty || 10;
     player.inventory[item.id] = (player.inventory[item.id] || 0) + qty;
-    if (!player.gear.bait || player.gear.bait === 'bait1') player.gear.bait = item.id;
+    if (!player.gear.bait || (player.inventory[player.gear.bait] || 0) <= 0) {
+      player.gear.bait = item.id;
+    }
     toast(`Куплено: ${item.name} ×${qty}`);
   } else if (!player.owned.includes(item.id)) {
     player.owned.push(item.id);
@@ -1028,17 +1101,25 @@ function buyItem(item) {
 
 function renderBackpack() {
   const rows = [];
-  const add = (iconKey, name, qty) => {
+  const add = (iconKey, name, qty, baitId) => {
     if (!qty) return;
-    rows.push(`<div class="bp-row"><img src="${GAME_ICONS.url(iconKey)}" alt=""><span>${name}</span><b>×${qty}</b></div>`);
+    const equipped = baitId && player.gear.bait === baitId;
+    const cls = baitId ? 'bp-row bp-row--bait' : 'bp-row';
+    const tag = equipped ? ' <em class="bp-equipped">на крючке</em>' : '';
+    const data = baitId ? ` data-bait-id="${baitId}"` : '';
+    rows.push(`<div class="${cls}"${data}><img src="${GAME_ICONS.url(iconKey)}" alt=""><span>${name}${tag}</span><b>×${qty}</b></div>`);
   };
-  (SHOP.bait || []).forEach((b) => add(b.iconKey || b.id, b.name, player.inventory[b.id]));
+  (SHOP.bait || []).forEach((b) => add(b.iconKey || b.id, b.name, player.inventory[b.id], b.id));
   add('hook', 'Крючки', player.inventory.hook1);
   const rod = findShopItem(player.gear.rod, 'rods');
   if (rod) rows.push(`<div class="bp-row"><img src="${GAME_ICONS.url(GAME_ICONS.rodIconForItem(rod))}" alt=""><span>${rod.name}</span><b>✓</b></div>`);
-  document.getElementById('backpack-content').innerHTML = rows.length
+  const box = document.getElementById('backpack-content');
+  box.innerHTML = rows.length
     ? rows.join('')
     : '<div class="backpack-empty">Пусто — загляни в магазин</div>';
+  box.querySelectorAll('.bp-row--bait').forEach((row) => {
+    row.onclick = () => equipBait(row.dataset.baitId);
+  });
 }
 
 function startGame() {
@@ -1052,7 +1133,50 @@ function startGame() {
   if (!tutorialSeen) openModal('modal-tutorial');
 }
 
-function init() {
+const LOADING_MIN_MS = 3500;
+
+function preloadImage(src) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = img.onerror = resolve;
+    img.src = src;
+  });
+}
+
+async function runLoadingScreen() {
+  const screen = document.getElementById('loading-screen');
+  if (!screen) return;
+
+  document.body.classList.add('is-loading');
+  const started = Date.now();
+
+  const assets = [
+    'assets/icon.png',
+    'assets/locations/lake.png',
+    'assets/ui/hud/bobber.png?v=8',
+    'assets/ui/hud/cast-default.png?v=8',
+    'assets/ui/hud/cast-wait.png?v=8',
+    'assets/ui/hud/cast-pull.png?v=8',
+    'assets/ui/hud/reel-bar-bg.png?v=5',
+  ];
+  for (let i = 1; i <= ROD_FRAME_COUNT; i++) {
+    const base = ROD_SPRITES?.basePath || 'assets/rod/frames/rod-';
+    assets.push(`${base}${String(i).padStart(2, '0')}.png`);
+  }
+
+  await Promise.all(assets.map(preloadImage));
+
+  const waitLeft = LOADING_MIN_MS - (Date.now() - started);
+  if (waitLeft > 0) await new Promise((r) => setTimeout(r, waitLeft));
+
+  screen.classList.add('loading-screen--hide');
+  document.body.classList.remove('is-loading');
+  await new Promise((r) => setTimeout(r, 520));
+  screen.remove();
+}
+
+async function init() {
+  await runLoadingScreen();
   bindViewport();
   bindMobileUi();
   initFishingController();

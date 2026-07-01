@@ -12,7 +12,8 @@
     "extract:ui-sprites": "node tools/extract-ui-sprites.mjs",
     "extract:fish": "node tools/extract-fish-sprites.mjs",
     "extract:rod": "node tools/extract-rod-sprites.mjs",
-    "prepare:misc": "node tools/prepare-misc-assets.mjs"
+    "prepare:misc": "node tools/prepare-misc-assets.mjs",
+    "prepare:bait": "node tools/prepare-bait-icons.mjs"
   },
   "engines": {
     "node": ">=18"

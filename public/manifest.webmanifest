@@ -1,0 +1,24 @@
+{
+  "name": "Рыбное место — Новая эра",
+  "short_name": "Рыбалка",
+  "description": "Браузерная рыбалка",
+  "start_url": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#0d1a24",
+  "theme_color": "#3d8fd4",
+  "icons": [
+    {
+      "src": "assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
