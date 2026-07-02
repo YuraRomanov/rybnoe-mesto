@@ -47,6 +47,9 @@ jobs:
       - name: Sync Capacitor Android
         run: npx cap sync android
 
+      - name: Patch native landscape lock
+        run: npm run patch:native
+
       - name: Build debug APK
         run: bash scripts/build-apk.sh
 

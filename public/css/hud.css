@@ -677,7 +677,7 @@ html:not(.is-mobile) .dock-slot {
   text-shadow: 0 1px 2px #000;
 }
 
-/* --- Вываживание: одна шкала как в референсе --- */
+/* --- Вываживание: компактная шкала --- */
 .fight-dock {
   position: fixed;
   left: 50%;
@@ -685,7 +685,7 @@ html:not(.is-mobile) .dock-slot {
   bottom: calc(var(--dock-h) + var(--safe-bottom) + 10px);
   transform: translateX(-50%);
   z-index: 25;
-  width: min(94vw, 480px);
+  width: min(88vw, 340px);
   pointer-events: none;
 }
 
@@ -694,37 +694,23 @@ html:not(.is-mobile) .dock-slot {
   width: 100%;
 }
 
-.fight-reel__frame {
+.fight-reel__track {
   position: relative;
-  width: 100%;
-}
-
-.fight-reel__bg {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 5px 16px rgba(0, 0, 0, 0.5));
-  pointer-events: none;
-}
-
-.fight-reel__inner {
-  position: absolute;
-  left: 11.5%;
-  right: 11.5%;
-  top: 50%;
-  height: 23%;
-  transform: translateY(-50%);
+  height: 18px;
   border-radius: 999px;
   overflow: hidden;
-  background: rgba(10, 12, 16, 0.82);
-  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.55);
+  background: rgba(10, 12, 16, 0.88);
+  border: 2px solid rgba(141, 110, 74, 0.75);
+  box-shadow:
+    inset 0 1px 4px rgba(0, 0, 0, 0.55),
+    0 3px 10px rgba(0, 0, 0, 0.35);
 }
 
 .fight-reel__fill {
   position: absolute;
   left: 0;
   top: 50%;
-  height: 52%;
+  height: 100%;
   width: 0%;
   transform: translateY(-50%);
   border-radius: 999px;
@@ -739,82 +725,53 @@ html:not(.is-mobile) .dock-slot {
   box-shadow: 0 0 4px rgba(120, 200, 90, 0.25);
 }
 
-.fight-reel__fish {
+.fight-reel__marker {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 88%;
-  transform: translate(-50%, -72%);
-  z-index: 6;
+  width: 3px;
+  height: 72%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.65);
   transition: left 0.1s linear;
   pointer-events: none;
 }
 
-.fight-reel__fish--pulling .fight-fish-icon {
-  transform: scaleX(1) rotate(-12deg);
-  transition: transform 0.1s ease-out;
-}
-
-.fight-reel__fish--drifting .fight-fish-icon {
-  transform: scaleX(-1) rotate(10deg);
-  transition: transform 0.18s ease-out;
-}
-
-.fight-fish-icon {
-  width: 44px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.75));
-  transform-origin: center center;
-}
-
-.fight-fish-icon img,
-.fight-fish-icon .fish-sprite {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.fight-fish-marker__shape {
-  display: block;
-  width: 32px;
-  height: 24px;
-  background: linear-gradient(
-    155deg,
-    #ffffff 0%,
-    #dce4ec 16%,
-    #8fa3b5 38%,
-    #eef2f6 52%,
-    #9dadb9 66%,
-    #5f7385 82%,
-    #c8d4de 100%
-  );
-  -webkit-mask-image: url('../assets/ui/hud/fish-fight-mask.png');
-  mask-image: url('../assets/ui/hud/fish-fight-mask.png');
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
+.fight-reel__marker--pulling {
+  background: #fff59d;
+  box-shadow: 0 0 6px rgba(255, 245, 157, 0.85);
 }
 
 .fight-reel--pulling .fight-reel__fill {
   filter: brightness(1.08);
 }
 
-.fight-reel--warn .fight-reel__bg {
-  filter: drop-shadow(0 5px 16px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 8px rgba(255, 152, 0, 0.35));
+.fight-reel--warn .fight-reel__track {
+  border-color: rgba(255, 167, 38, 0.85);
+  box-shadow:
+    inset 0 1px 4px rgba(0, 0, 0, 0.55),
+    0 0 8px rgba(255, 152, 0, 0.28);
 }
 
-.fight-reel--danger .fight-reel__bg {
+.fight-reel--danger .fight-reel__track {
   animation: fightBarDanger 0.4s ease-in-out infinite alternate;
 }
 
 @keyframes fightBarDanger {
-  from { filter: drop-shadow(0 5px 16px rgba(0, 0, 0, 0.5)); }
-  to { filter: drop-shadow(0 5px 16px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 14px rgba(229, 57, 53, 0.75)); }
+  from {
+    border-color: rgba(229, 57, 53, 0.55);
+    box-shadow:
+      inset 0 1px 4px rgba(0, 0, 0, 0.55),
+      0 0 6px rgba(229, 57, 53, 0.25);
+  }
+  to {
+    border-color: rgba(229, 57, 53, 0.95);
+    box-shadow:
+      inset 0 1px 4px rgba(0, 0, 0, 0.55),
+      0 0 14px rgba(229, 57, 53, 0.65);
+  }
 }
 
 .fight-hint {
@@ -905,6 +862,23 @@ html.is-mobile.is-portrait .loading-screen {
   left: 50%;
   transform: translate(-50%, -50%) rotate(90deg);
   transform-origin: center center;
+}
+
+html.is-mobile.is-portrait .loading-screen-img,
+html.is-mobile .loading-screen-img {
+  object-fit: contain;
+  object-position: center;
+  width: min(100%, 960px);
+  height: min(100%, 540px);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+html.is-mobile .loading-screen-bar-wrap {
+  left: 18%;
+  right: 18%;
+  bottom: max(12px, env(safe-area-inset-bottom, 0px));
+  height: 6px;
 }
 
 html.is-mobile.is-portrait #game-app {
@@ -1034,10 +1008,20 @@ html.is-mobile {
 
   .fight-dock {
     left: max(8px, var(--safe-left));
-    right: min(30vw, 118px);
+    right: min(28vw, 96px);
     width: auto;
     transform: none;
     bottom: calc(var(--dock-h) + var(--safe-bottom) - 2px);
+  }
+
+  .fight-reel__track {
+    height: 12px;
+    border-width: 1.5px;
+  }
+
+  .fight-reel__marker {
+    width: 2px;
+    height: 68%;
   }
 
   .fight-hint {
@@ -1049,8 +1033,6 @@ html.is-mobile {
     margin-right: auto;
     line-height: 1.25;
   }
-
-  .fight-fish-icon { width: 32px; height: 26px; }
 }
 
 html.is-mobile .hud-root {

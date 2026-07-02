@@ -8,6 +8,8 @@ const AmbientAudio = (() => {
   let audio = null;
   let splashAudio = null;
   let started = false;
+  let pausedByHide = false;
+  let lifecycleBound = false;
 
   function init() {
     if (!audio) {
@@ -23,18 +25,35 @@ const AmbientAudio = (() => {
     }
   }
 
+  function pause() {
+    init();
+    if (audio && started && !audio.paused) {
+      audio.pause();
+      pausedByHide = true;
+    }
+  }
+
+  function resume() {
+    if (!document.hidden && audio && pausedByHide && started) {
+      audio.play().catch(() => {});
+      pausedByHide = false;
+    }
+  }
+
   async function start() {
     init();
-    if (started || !audio) return;
+    if (started || !audio || document.hidden) return;
     try {
       await audio.play();
       started = true;
+      pausedByHide = false;
     } catch (_) {
       /* браузер ждёт жест пользователя */
     }
   }
 
   function playSplash() {
+    if (document.hidden) return;
     init();
     if (!splashAudio) return;
     const clip = splashAudio.cloneNode();
@@ -48,9 +67,31 @@ const AmbientAudio = (() => {
     document.addEventListener('keydown', unlock, { once: true });
   }
 
+  function bindLifecycle() {
+    if (lifecycleBound) return;
+    lifecycleBound = true;
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) pause();
+      else resume();
+    });
+    window.addEventListener('pagehide', pause);
+    window.addEventListener('blur', pause);
+    window.addEventListener('focus', resume);
+
+    const cap = window.Capacitor;
+    const app = cap?.Plugins?.App;
+    if (app?.addListener) {
+      app.addListener('appStateChange', ({ isActive }) => {
+        if (isActive) resume();
+        else pause();
+      }).catch(() => {});
+    }
+  }
+
   function setVolume(v) {
     if (audio) audio.volume = Math.max(0, Math.min(1, v));
   }
 
-  return { init, start, playSplash, bindUnlock, setVolume };
+  return { init, start, pause, resume, playSplash, bindUnlock, bindLifecycle, setVolume };
 })();

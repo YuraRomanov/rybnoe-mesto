@@ -46,8 +46,10 @@ body.is-loading #game-app {
   position: fixed;
   inset: 0;
   z-index: 2000;
-  display: block;
-  background: #3d8fd4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #5eb8e8 0%, #3d8fd4 42%, #2a6fa8 100%);
   opacity: 1;
   transition: opacity 0.5s ease;
 }
@@ -399,14 +401,6 @@ body.is-loading #game-app {
 .fish-sprite--sm { width: 48px; height: 48px; }
 .fish-sprite--md { width: 56px; height: 56px; }
 .fish-sprite--lg { width: 96px; height: 96px; }
-
-.fight-fish-icon {
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .loc-preview-desc {
   font-size: 13px;

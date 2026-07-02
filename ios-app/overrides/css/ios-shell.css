@@ -8,6 +8,13 @@ body {
   background: #0d1a24;
 }
 
+html.is-mobile.is-portrait,
+html.is-mobile.is-portrait body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 #game-app {
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);

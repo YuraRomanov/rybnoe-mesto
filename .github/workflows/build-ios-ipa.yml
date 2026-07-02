@@ -40,6 +40,9 @@ jobs:
       - name: Sync Capacitor iOS
         run: npx cap sync ios
 
+      - name: Patch native landscape lock
+        run: npm run patch:native
+
       - name: Build unsigned IPA
         run: bash scripts/build-ipa.sh
 

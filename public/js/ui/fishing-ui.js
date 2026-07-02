@@ -1,13 +1,10 @@
-/** UI вываживания — шкала натяжения + рыба на верхнем краю */
+/** UI вываживания — шкала натяжения */
 const FishingUI = (() => {
   const CAST_BTN_SRC = {
     cast: 'assets/ui/hud/cast-default.png?v=8',
     wait: 'assets/ui/hud/cast-wait.png?v=8',
     pull: 'assets/ui/hud/cast-pull.png?v=8',
   };
-
-  const FIGHT_MARKER_HTML = '<span class="fight-fish-marker__shape" title="Рыба"></span>';
-  const FIGHT_DISPLAY_FISH = typeof GAME_FISH !== 'undefined' ? GAME_FISH.gold_karas : null;
 
   function castImageForLabel(label) {
     if (!label) return CAST_BTN_SRC.cast;
@@ -19,25 +16,9 @@ const FishingUI = (() => {
 
   function setStatus() {}
 
-  function renderFishIcon() {
-    const box = document.getElementById('fight-fish-icon');
-    if (!box) return;
-    if (FIGHT_DISPLAY_FISH && typeof FishSprites !== 'undefined') {
-      const html = FishSprites.renderHtml(FIGHT_DISPLAY_FISH, 'sm');
-      if (html) {
-        box.innerHTML = html;
-        return;
-      }
-    }
-    box.innerHTML = FIGHT_MARKER_HTML;
-  }
-
   function showFight(show) {
     document.getElementById('fight-ui')?.classList.toggle('hidden', !show);
     document.body.classList.toggle('fight-active', show);
-    const nameEl = document.getElementById('fight-fish-name');
-    if (nameEl && FIGHT_DISPLAY_FISH) nameEl.textContent = FIGHT_DISPLAY_FISH.name;
-    if (show) renderFishIcon();
   }
 
   function updateFight(ctx) {
@@ -55,8 +36,7 @@ const FishingUI = (() => {
 
     if (marker) {
       marker.style.left = `${fishPos}%`;
-      marker.classList.toggle('fight-reel__fish--pulling', pulling);
-      marker.classList.toggle('fight-reel__fish--drifting', !pulling);
+      marker.classList.toggle('fight-reel__marker--pulling', pulling);
     }
     if (barFill) {
       barFill.style.width = `${stressPct}%`;
@@ -75,7 +55,6 @@ const FishingUI = (() => {
         hint.textContent = 'Жми «Вытащить» — натяжение растёт';
       }
     }
-    renderFishIcon();
   }
 
   function setCastBtn(active, label) {

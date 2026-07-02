@@ -353,9 +353,22 @@ function bindMobileUi() {
   };
 
   updateOrientation();
+  tryLockLandscape();
   window.addEventListener('resize', updateOrientation);
-  window.addEventListener('orientationchange', () => setTimeout(updateOrientation, 120));
-  document.addEventListener('pointerdown', tryLockLandscape, { once: true, passive: true });
+  window.addEventListener('orientationchange', () => {
+    setTimeout(() => {
+      updateOrientation();
+      tryLockLandscape();
+      syncViewportVars();
+    }, 120);
+  });
+  document.addEventListener('pointerdown', tryLockLandscape, { passive: true });
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) {
+      updateOrientation();
+      tryLockLandscape();
+    }
+  });
 }
 
 function bindCastControls() {
@@ -1443,7 +1456,6 @@ async function runLoadingScreen() {
     'assets/ui/hud/cast-default.png?v=8',
     'assets/ui/hud/cast-wait.png?v=8',
     'assets/ui/hud/cast-pull.png?v=8',
-    'assets/ui/hud/reel-bar-bg.png?v=5',
     'assets/rod/rod.png?v=1',
     'assets/rod/spark-2000.png?v=2',
     'assets/ui/icons/rod-spark.png?v=2',
@@ -1461,14 +1473,16 @@ async function runLoadingScreen() {
 }
 
 async function init() {
+  bindMobileUi();
+
   if (typeof AmbientAudio !== 'undefined') {
     AmbientAudio.init();
     AmbientAudio.bindUnlock();
+    AmbientAudio.bindLifecycle();
   }
 
   await runLoadingScreen();
   bindViewport();
-  bindMobileUi();
   initFishingController();
   startGame();
 

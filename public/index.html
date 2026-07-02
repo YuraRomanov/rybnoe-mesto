@@ -8,12 +8,23 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Большая Вода">
+  <meta name="screen-orientation" content="landscape">
   <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
   <title>Рыбалка: Большая Вода</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/hud.css">
+  <script>
+    (function () {
+      var touch = window.matchMedia('(pointer: coarse)').matches
+        || window.matchMedia('(max-width: 900px)').matches;
+      if (touch) document.documentElement.classList.add('is-mobile');
+      var portrait = window.innerHeight > window.innerWidth;
+      document.documentElement.classList.toggle('is-portrait', portrait);
+      document.documentElement.classList.toggle('is-landscape', !portrait);
+    })();
+  </script>
 </head>
 <body oncontextmenu="return false">
   <div id="loading-screen" class="loading-screen" role="status" aria-live="polite" aria-label="Загрузка игры">
@@ -136,14 +147,9 @@
 
     <div id="fight-ui" class="fight-dock hidden">
       <div class="fight-reel" id="fight-bar">
-        <div class="fight-reel__frame">
-          <img class="fight-reel__bg" src="assets/ui/hud/reel-bar-bg.png?v=5" alt="">
-          <div class="fight-reel__inner">
-            <div id="fight-bar-fill" class="fight-reel__fill"></div>
-          </div>
-          <div id="fish-marker" class="fight-reel__fish">
-            <div id="fight-fish-icon" class="fight-fish-icon"></div>
-          </div>
+        <div class="fight-reel__track">
+          <div id="fight-bar-fill" class="fight-reel__fill"></div>
+          <div id="fish-marker" class="fight-reel__marker" aria-hidden="true"></div>
         </div>
       </div>
       <p id="fight-hint" class="fight-hint">Жми «Вытащить» — тяни рыбу к берегу</p>
