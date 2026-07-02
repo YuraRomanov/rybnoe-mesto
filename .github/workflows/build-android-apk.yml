@@ -1,4 +1,4 @@
-name: Build iOS IPA
+name: Build Android APK
 
 on:
   workflow_dispatch:
@@ -7,11 +7,11 @@ on:
     paths:
       - 'public/**'
       - 'ios-app/**'
-      - '.github/workflows/build-ios-ipa.yml'
+      - '.github/workflows/build-android-apk.yml'
 
 jobs:
-  ipa:
-    runs-on: macos-latest
+  apk:
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ios-app
@@ -25,27 +25,34 @@ jobs:
           cache: npm
           cache-dependency-path: ios-app/package-lock.json
 
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - uses: android-actions/setup-android@v3
+
       - name: Install dependencies
         run: npm ci
 
       - name: Sync web assets
         run: npm run sync
 
-      - name: Add iOS platform
-        run: npx cap add ios
+      - name: Add Android platform
+        run: npx cap add android
 
       - name: Generate app icons
         run: npm run generate:icons
 
-      - name: Sync Capacitor iOS
-        run: npx cap sync ios
+      - name: Sync Capacitor Android
+        run: npx cap sync android
 
-      - name: Build unsigned IPA
-        run: bash scripts/build-ipa.sh
+      - name: Build debug APK
+        run: bash scripts/build-apk.sh
 
-      - name: Upload IPA artifact
+      - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: rybalka-bolshaya-voda-ipa
-          path: ios-app/build/rybnoe-mesto.ipa
+          name: rybalka-bolshaya-voda-apk
+          path: ios-app/build/rybalka-bolshaya-voda.apk
           retention-days: 30

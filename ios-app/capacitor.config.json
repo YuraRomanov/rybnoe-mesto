@@ -9,6 +9,9 @@
     "scrollEnabled": false,
     "backgroundColor": "#0d1a24"
   },
+  "android": {
+    "backgroundColor": "#0d1a24"
+  },
   "server": {
     "androidScheme": "https"
   }

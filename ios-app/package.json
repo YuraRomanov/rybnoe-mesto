@@ -1,18 +1,23 @@
 {
-  "name": "rybnoe-mesto-ios",
+  "name": "rybnoe-mesto-mobile",
   "version": "1.0.0",
   "private": true,
-  "description": "iOS-обёртка «Рыбалка: Большая Вода» (Capacitor)",
+  "description": "Мобильная обёртка «Рыбалка: Большая Вода» (Capacitor iOS/Android)",
   "scripts": {
     "sync": "node scripts/sync-web.mjs",
-    "generate:icons": "node scripts/generate-ios-icons.mjs",
+    "generate:icons": "node scripts/generate-app-icons.mjs",
     "cap:sync": "npm run sync && npx cap sync",
     "cap:add-ios": "npm run sync && npx cap add ios && npm run generate:icons",
+    "cap:add-android": "npm run sync && npx cap add android && npm run generate:icons",
     "cap:open-ios": "npx cap open ios",
+    "cap:open-android": "npx cap open android",
     "cap:run-ios": "npm run cap:sync && npx cap run ios",
-    "build:ipa": "bash scripts/build-ipa.sh"
+    "cap:run-android": "npm run cap:sync && npx cap run android",
+    "build:ipa": "bash scripts/build-ipa.sh",
+    "build:apk": "bash scripts/build-apk.sh"
   },
   "dependencies": {
+    "@capacitor/android": "^7.4.2",
     "@capacitor/core": "^7.4.2",
     "@capacitor/ios": "^7.4.2"
   },

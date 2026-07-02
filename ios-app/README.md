@@ -62,17 +62,11 @@ npm run cap:sync
 
 ## Сборка без своего Mac
 
-Облачные Mac-сервисы: [Codemagic](https://codemagic.io), [GitHub Actions](https://docs.github.com/en/actions) (runner `macos-latest`), [MacStadium](https://www.macstadium.com).
+**iOS (IPA):** GitHub Actions → workflow `Build iOS IPA` → артефакт `rybalka-bolshaya-voda-ipa`.
 
-Пример шагов в CI:
+**Android (APK):** GitHub Actions → workflow `Build Android APK` → артефакт `rybalka-bolshaya-voda-apk`.
 
-```bash
-cd ios-app
-npm ci
-npm run cap:add-ios   # если папки ios/ ещё нет
-npm run cap:sync
-xcodebuild -workspace ios/App/App.xcworkspace -scheme App -configuration Release
-```
+Локально на Mac для iOS:
 
 ## Структура
 
