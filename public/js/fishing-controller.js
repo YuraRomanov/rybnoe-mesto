@@ -16,8 +16,55 @@ const FishingController = (() => {
   let bridge = null;
   let holdingFight = false;
 
+  const CAST_WINDUP_FRAC = 0.24;
+
   function easeInOutCubic(t) {
     return t < 0.5 ? 4 * t * t * t : 1 - ((-2 * t + 2) ** 3) / 2;
+  }
+
+  function easeOutCubic(t) {
+    return 1 - (1 - t) ** 3;
+  }
+
+  function updateCastAnim(dt) {
+    const start = ctx.castStart || BobberUI.CAST_START;
+    const target = ctx.castTarget || BobberUI.WATER_SPOT;
+    ctx.castFlight = Math.min(1, (ctx.castFlight || 0) + dt * 0.02);
+    const t = ctx.castFlight;
+
+    if (t < CAST_WINDUP_FRAC) {
+      ctx.castPhase = 'windup';
+      const w = t / CAST_WINDUP_FRAC;
+      const easeW = easeInOutCubic(w);
+      ctx.castSwing = easeW;
+      ctx.bobberPct = {
+        x: start.x + easeW * 2.4,
+        y: start.y + easeW * 2.0,
+      };
+      if (typeof BobberUI !== 'undefined' && BobberUI.getState?.() !== 'windup') {
+        BobberUI.setState('windup');
+      }
+    } else {
+      ctx.castPhase = 'flight';
+      const f = (t - CAST_WINDUP_FRAC) / (1 - CAST_WINDUP_FRAC);
+      const ease = easeOutCubic(f);
+      const arc = Math.sin(f * Math.PI) * 19;
+      const sway = Math.sin(f * Math.PI * 1.15) * 2.2;
+      let x = start.x + (target.x - start.x) * ease + sway;
+      let y = start.y + (target.y - start.y) * ease - arc;
+      if (f > 0.9) {
+        const land = (f - 0.9) / 0.1;
+        y += Math.sin(land * Math.PI) * 1.8;
+      }
+      ctx.castSwing = Math.max(0, 1 - f * 1.05);
+      ctx.bobberPct = { x, y };
+      if (typeof BobberUI !== 'undefined' && BobberUI.getState?.() !== 'flight') {
+        BobberUI.setState('flight');
+      }
+    }
+
+    BobberUI.position(ctx.bobberPct.x, ctx.bobberPct.y);
+    return t >= 1;
   }
 
   function createContext() {
@@ -33,6 +80,8 @@ const FishingController = (() => {
       castStart: null,
       castTarget: null,
       castFlight: 0,
+      castPhase: 'windup',
+      castSwing: 0,
       reelFlight: 0,
       reelStart: null,
       reelTarget: null,
@@ -103,24 +152,19 @@ const FishingController = (() => {
         ctx.castStart = { ...start };
         ctx.castTarget = { ...target };
         ctx.castFlight = 0;
+        ctx.castPhase = 'windup';
+        ctx.castSwing = 0;
         ctx.bobberPct = { ...start };
-        BobberUI.position(ctx.bobberPct.x, ctx.bobberPct.y);
-        BobberUI.show();
-        BobberUI.setState('flight');
+        BobberUI.setPositionImmediate(start.x, start.y);
+        BobberUI.show(false);
+        BobberUI.setState('windup');
         FishingUI.setCastBtn(true, 'Жди...');
         FishingUI.setStatus('Заброс...');
         GameEvents.emit(EV.CAST_START, { ctx });
       },
       update(c, dt) {
         const target = BobberUI.WATER_SPOT;
-        ctx.castFlight = Math.min(1, (ctx.castFlight || 0) + dt * 0.022);
-        const ease = easeInOutCubic(ctx.castFlight);
-        const start = ctx.castStart || BobberUI.CAST_START;
-        const arc = Math.sin(ctx.castFlight * Math.PI) * 8;
-        ctx.bobberPct.x = start.x + (target.x - start.x) * ease;
-        ctx.bobberPct.y = start.y + (target.y - start.y) * ease - arc;
-        BobberUI.position(ctx.bobberPct.x, ctx.bobberPct.y);
-        if (ctx.castFlight >= 1) {
+        if (updateCastAnim(dt)) {
           ctx.bobberPct = { ...target };
           bridge.onCastSplash?.(ctx);
           GameFSM.transition(FSM.WAITING);
@@ -132,6 +176,7 @@ const FishingController = (() => {
       enter() {
         ctx.bobberPct = { ...BobberUI.WATER_SPOT };
         ctx.nibbleCooldown = 0;
+        BobberUI.show();
         BobberUI.center();
         BobberUI.setState('calm');
         FishingUI.setCastBtn(true, 'Жди');

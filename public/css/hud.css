@@ -188,18 +188,19 @@
   object-fit: contain;
 }
 
-/* --- Центр шапки: клуб --- */
+/* --- Центр шапки: локация --- */
 .hud-top-center {
   justify-self: center;
   padding-top: 2px;
 }
 
-.club-banner {
+.location-banner {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 6px 16px 8px;
-  min-width: 200px;
+  padding: 7px 16px 8px 12px;
+  min-width: 140px;
   background:
     linear-gradient(180deg, rgba(255,248,220,0.95), rgba(210,180,140,0.92));
   border: 3px solid #8d6e4a;
@@ -207,45 +208,35 @@
   box-shadow:
     inset 0 2px 0 rgba(255,255,255,0.6),
     0 4px 12px rgba(0,0,0,0.35);
-  position: relative;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
 }
 
-.club-banner::before,
-.club-banner::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 12px;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(109,90,58,0.3), transparent);
+.location-banner:active {
+  transform: scale(0.98);
 }
 
-.club-banner::before { left: 0; border-radius: 4px 0 0 12px; }
-.club-banner::after { right: 0; transform: scaleX(-1); border-radius: 0 4px 12px 0; }
-
-.club-emblem {
-  width: 24px;
-  height: 36px;
+.location-float-icon {
+  width: 22px;
+  height: 22px;
   object-fit: contain;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+  animation: location-float-bob 2.8s ease-in-out infinite;
 }
 
-.club-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
+@keyframes location-float-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
 }
 
-.club-sub {
-  font-size: 10px;
-  color: #5d4037;
-  font-weight: 600;
-}
-
-.club-loc {
+.location-name {
   font-size: 14px;
   color: #3e2723;
   font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .hud-top-right {
@@ -311,6 +302,11 @@ body.fishing-active .cast-btn-img {
   width: auto;
   height: 68px;
   max-width: min(34vw, 210px);
+}
+
+/* Кнопка заброса/тяни — одна позиция, без прыжка при вываживании */
+body.fight-active .water-cast-btn {
+  z-index: 30;
 }
 
 .water-cast-btn:hover .cast-btn-img { filter: brightness(1.06) drop-shadow(0 8px 18px rgba(0,0,0,0.5)); }
@@ -382,6 +378,7 @@ body.fishing-active .cast-btn-img {
   cursor: default;
 }
 
+.dock-slot[title="Удочка"],
 .dock-slot[title="Наживка"],
 .dock-slot[title="Садок"],
 .dock-slot--boost {
@@ -402,6 +399,7 @@ body.fishing-active .cast-btn-img {
   cursor: not-allowed;
 }
 
+.dock-slot[title="Удочка"]:active,
 .dock-slot[title="Наживка"]:active,
 .dock-slot[title="Садок"]:active,
 .dock-slot--boost:active {
@@ -459,7 +457,7 @@ html:not(.is-mobile) .dock-slot {
 }
 
 .inv-scroll {
-  width: 28px;
+  width: 20px;
   height: 52px;
   flex-shrink: 0;
   border: 2px solid #ffd54f;
@@ -571,13 +569,13 @@ html:not(.is-mobile) .dock-slot {
   text-align: center;
 }
 
-/* --- Поплавок на воде (линия воды = нижний край clip, половина под водой) --- */
+/* --- Поплавок на воде (линия воды = нижний край clip) --- */
 .bobber {
   position: absolute;
   left: 50%;
   top: 56%;
   z-index: 14;
-  width: 28px;
+  width: 20px;
   height: 0;
   overflow: visible;
   transform: translate(-50%, 0);
@@ -593,24 +591,33 @@ html:not(.is-mobile) .dock-slot {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 28px;
-  height: 60px;
+  width: 20px;
+  height: 41px;
   overflow: hidden;
 }
 
 .bobber-img {
-  width: 28px;
+  width: 20px;
   height: auto;
   display: block;
   object-fit: contain;
   object-position: top center;
   background: transparent;
-  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.42));
 }
 
 .bobber--calm { animation: bobberCalm 3.2s ease-in-out infinite; }
 .bobber--idle { animation: bobberCalm 3.2s ease-in-out infinite; }
-.bobber--flight { animation: bobberFlight 0.55s ease-in-out infinite alternate; }
+.bobber--windup {
+  animation: none;
+}
+
+.bobber--windup .bobber-clip {
+  transform: rotate(16deg) translateY(2px);
+  transition: transform 0.1s ease-out;
+}
+
+.bobber--flight { animation: bobberFlight 0.2s ease-in-out infinite alternate; }
 .bobber--nibble { animation: bobberNibble 0.42s ease-in-out infinite; filter: drop-shadow(0 0 6px rgba(255,235,120,0.5)); }
 .bobber--bite { animation: bobberBite 0.48s ease-in-out infinite; filter: drop-shadow(0 0 12px #ffeb3b); }
 .bobber--fight { animation: none; }
@@ -621,7 +628,7 @@ html:not(.is-mobile) .dock-slot {
 }
 
 .bobber--bite .bobber-clip {
-  height: 38px;
+  height: 27px;
   transition: height 0.15s ease;
 }
 
@@ -631,8 +638,8 @@ html:not(.is-mobile) .dock-slot {
   70% { transform: translate(-50%, 1px) rotate(1deg); }
 }
 @keyframes bobberFlight {
-  from { transform: translate(-50%, 0) rotate(-8deg) scale(1.02); }
-  to { transform: translate(-50%, 0) rotate(6deg) scale(0.98); }
+  from { transform: translate(-50%, 0) rotate(-14deg) scale(1.04); }
+  to { transform: translate(-50%, 0) rotate(10deg) scale(0.96); }
 }
 @keyframes bobberNibble {
   0%, 100% { transform: translate(-50%, 0); }
@@ -702,39 +709,41 @@ html:not(.is-mobile) .dock-slot {
 
 .fight-reel__inner {
   position: absolute;
-  left: 7.2%;
-  right: 7.2%;
+  left: 11.5%;
+  right: 11.5%;
   top: 50%;
-  height: 36%;
+  height: 23%;
   transform: translateY(-50%);
-  border-radius: 5px;
+  border-radius: 999px;
   overflow: hidden;
-  background: rgba(12, 14, 18, 0.92);
-  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.65);
+  background: rgba(10, 12, 16, 0.82);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.55);
 }
 
 .fight-reel__fill {
   position: absolute;
   left: 0;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  height: 52%;
   width: 0%;
-  border-radius: 5px;
+  transform: translateY(-50%);
+  border-radius: 999px;
   background: linear-gradient(
     90deg,
-    rgba(76, 120, 82, 0.85) 0%,
-    rgba(140, 160, 70, 0.8) 40%,
-    rgba(220, 160, 50, 0.85) 72%,
-    rgba(220, 80, 55, 0.9) 100%
+    rgba(76, 120, 82, 0.92) 0%,
+    rgba(140, 160, 70, 0.88) 40%,
+    rgba(220, 160, 50, 0.9) 72%,
+    rgba(220, 80, 55, 0.95) 100%
   );
   transition: width 0.05s linear;
+  box-shadow: 0 0 4px rgba(120, 200, 90, 0.25);
 }
 
 .fight-reel__fish {
   position: absolute;
-  top: 2%;
+  top: 0;
   left: 88%;
-  transform: translate(-50%, -68%);
+  transform: translate(-50%, -72%);
   z-index: 6;
   transition: left 0.1s linear;
   pointer-events: none;
@@ -808,11 +817,6 @@ html:not(.is-mobile) .dock-slot {
   to { filter: drop-shadow(0 5px 16px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 14px rgba(229, 57, 53, 0.75)); }
 }
 
-body.fight-active .water-cast-btn {
-  z-index: 30;
-  bottom: calc(var(--dock-h) + var(--safe-bottom) + 54px);
-}
-
 .fight-hint {
   margin: 8px 0 0;
   text-align: center;
@@ -884,13 +888,23 @@ body.fight-active .water-cast-btn {
   color: #d7ccc8;
 }
 
-/* --- Mobile: всегда альбомный режим (без подсказки «поверните») --- */
+/* --- Mobile: всегда альбомный режим --- */
+html.is-mobile.is-portrait,
+html.is-mobile.is-portrait body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #0d1a24;
+}
+
 html.is-mobile.is-portrait .loading-screen {
+  position: fixed;
   width: 100vh;
   height: 100vw;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(90deg);
+  transform-origin: center center;
 }
 
 html.is-mobile.is-portrait #game-app {
@@ -903,11 +917,7 @@ html.is-mobile.is-portrait #game-app {
   max-height: 100vw;
   transform: translate(-50%, -50%) rotate(90deg);
   transform-origin: center center;
-}
-
-html.is-mobile.is-portrait {
   overflow: hidden;
-  background: #0d1a24;
 }
 
 html.is-mobile {
@@ -935,44 +945,77 @@ html.is-mobile {
   .currency-val { font-size: 11px; }
   .quick-ico-btn { width: 32px; height: 32px; }
 
-  .club-banner {
+  .location-banner {
     min-width: 0;
     width: auto;
-    padding: 4px 10px 5px;
+    padding: 4px 10px 5px 8px;
+    gap: 6px;
   }
 
-  .club-sub { display: none; }
-  .club-loc { font-size: 12px; }
-  .club-emblem { width: 28px; height: 28px; }
-
-  .hud-bottom {
-    padding: 0 max(8px, var(--safe-right)) max(6px, var(--safe-bottom)) max(8px, var(--safe-left));
+  .location-float-icon {
+    width: 18px;
+    height: 18px;
   }
+
+  .location-name { font-size: 12px; }
 
   .water-cast-btn {
-    right: max(10px, var(--safe-right));
+    right: max(8px, var(--safe-right));
     left: auto;
     top: auto;
-    bottom: calc(var(--dock-h) + var(--safe-bottom) + 8px);
+    bottom: calc(var(--dock-h) + var(--safe-bottom) + 10px);
     transform: none;
-    min-width: 48px;
-    min-height: 48px;
+    min-width: 52px;
+    min-height: 52px;
+    z-index: 28;
   }
 
-  .water-cast-btn:active { transform: scale(0.97); }
+  .water-cast-btn:active { transform: scale(0.96); }
 
+  body.fishing-active .water-cast-btn,
   body.fight-active .water-cast-btn {
-    bottom: calc(var(--dock-h) + var(--safe-bottom) + 48px);
+    bottom: calc(var(--dock-h) + var(--safe-bottom) + 10px);
+    transform: none;
   }
 
+  body.fishing-active .cast-btn-img,
   .cast-btn-img {
-    height: 56px;
+    height: 52px;
     width: auto;
-    max-width: min(34vw, 210px);
+    max-width: min(30vw, 180px);
   }
 
-  .dock-bar { padding: 2px 3px; gap: 1px; }
-  .dock-slot { min-height: 36px; max-height: 40px; border-radius: 0; }
+  .water-cast-btn.cast-btn--pull.active .cast-btn-img {
+    animation: castBtnPullPulse 0.45s ease-in-out infinite alternate;
+    transform: none;
+  }
+
+  .hud-bottom {
+    padding: 0 max(6px, var(--safe-right)) max(6px, var(--safe-bottom)) max(6px, var(--safe-left));
+    display: flex;
+    justify-content: center;
+  }
+
+  .dock-bar {
+    width: fit-content;
+    max-width: calc(100% - 8px);
+    padding: 2px 3px;
+    gap: 0;
+    border-radius: 10px;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.4),
+      inset 0 -2px 4px rgba(0,0,0,0.35),
+      0 3px 12px rgba(0,0,0,0.5);
+  }
+
+  .dock-slot {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    border-radius: 0;
+  }
 
   .dock-slot-qty {
     right: 2px;
@@ -984,22 +1027,30 @@ html.is-mobile {
     line-height: 11px;
   }
 
-  .bobber { width: 26px; }
-  .bobber-clip { width: 26px; height: 54px; }
-  .bobber-img { width: 26px; }
-  .bobber--bite .bobber-clip { height: 34px; }
+  .bobber { width: 17px; }
+  .bobber-clip { width: 17px; height: 35px; }
+  .bobber-img { width: 17px; }
+  .bobber--bite .bobber-clip { height: 24px; }
 
   .fight-dock {
-    bottom: calc(var(--dock-h) + var(--safe-bottom) + 8px);
-    width: min(96vw, 440px);
+    left: max(8px, var(--safe-left));
+    right: min(30vw, 118px);
+    width: auto;
+    transform: none;
+    bottom: calc(var(--dock-h) + var(--safe-bottom) - 2px);
   }
-
-  .fight-fish-icon { width: 36px; height: 28px; }
 
   .fight-hint {
-    font-size: 10px;
-    margin-top: 4px;
+    font-size: 9px;
+    margin-top: 2px;
+    opacity: 0.92;
+    max-width: 62vw;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.25;
   }
+
+  .fight-fish-icon { width: 32px; height: 26px; }
 }
 
 html.is-mobile .hud-root {

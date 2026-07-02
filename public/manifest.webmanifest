@@ -1,7 +1,7 @@
 {
-  "name": "Рыбное место — Новая эра",
-  "short_name": "Рыбалка",
-  "description": "Браузерная рыбалка",
+  "name": "Рыбалка: Большая Вода",
+  "short_name": "Большая Вода",
+  "description": "Рыбалка: Большая Вода",
   "start_url": "./",
   "display": "fullscreen",
   "orientation": "landscape",

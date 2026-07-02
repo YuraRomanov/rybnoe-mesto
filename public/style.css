@@ -292,34 +292,69 @@ body.is-loading #game-app {
 }
 
 /* Map / Shop / Catch */
-.map-window { width: min(520px, 96vw); }
+.map-window { width: min(560px, 96vw); }
 .map-content { display: flex; align-items: center; gap: 8px; margin-top: 12px; }
 .map-area {
   flex: 1;
-  height: 280px;
-  background: rgba(0,0,0,0.35);
+  height: min(58vw, 340px);
+  min-height: 260px;
+  background-color: rgba(0,0,0,0.35);
+  background-size: cover;
+  background-position: center;
   border-radius: 10px;
-  border: 2px solid #6d5a3a;
+  border: 3px solid #8d6e4a;
+  box-shadow: inset 0 0 24px rgba(0,0,0,0.25);
   position: relative;
   overflow: hidden;
 }
 
 .map-marker {
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
   cursor: pointer;
-  font-size: 22px;
-  text-align: center;
+  border: none;
+  background: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font: inherit;
+  color: inherit;
 }
 
-.map-marker.locked { opacity: 0.4; cursor: not-allowed; }
+.map-marker.locked { opacity: 0.72; cursor: not-allowed; }
+
+.map-marker--active .marker-label {
+  background: linear-gradient(180deg, #fff59d, #ffeb3b);
+  border-color: #f9a825;
+}
+
+.marker-pin {
+  width: 20px;
+  height: 34px;
+  background: url('assets/ui/hud/bobber.png?v=10') center top / contain no-repeat;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.55));
+}
+
+.marker-lock {
+  font-size: 9px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.85);
+  white-space: nowrap;
+}
 
 .marker-label {
-  font-size: 9px;
-  background: rgba(0,0,0,0.7);
-  padding: 2px 5px;
-  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #3e2723;
+  background: rgba(255, 248, 220, 0.94);
+  border: 1px solid #8d6e4a;
+  padding: 3px 7px;
+  border-radius: 5px;
   white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
 
 .map-arrow {
@@ -859,3 +894,69 @@ body.is-loading #game-app {
 .bp-row img { width: 40px; height: 40px; object-fit: contain; }
 .bp-row span { flex: 1; font-size: 14px; }
 .bp-row b { color: var(--accent); }
+
+.gear-picker-window {
+  width: min(92vw, 360px);
+}
+
+.gear-picker-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 50vh;
+  overflow-y: auto;
+  margin: 12px 0 14px;
+}
+
+.gear-picker-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(141, 110, 74, 0.4);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.gear-picker-row:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.gear-picker-row--active {
+  border-color: rgba(129, 199, 132, 0.75);
+  box-shadow: 0 0 0 1px rgba(129, 199, 132, 0.35);
+}
+
+.gear-picker-row img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.gear-picker-row span {
+  flex: 1;
+  font-size: 14px;
+}
+
+.gear-picker-row em {
+  font-style: normal;
+  font-size: 12px;
+  color: #a5d6a7;
+}
+
+.gear-picker-empty {
+  padding: 16px 8px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.gear-picker-shop {
+  width: 100%;
+}

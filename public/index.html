@@ -6,11 +6,12 @@
   <meta name="theme-color" content="#0d1a24">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Рыбалка">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Большая Вода">
   <link rel="icon" type="image/png" href="assets/icon.png">
-  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <title>Рыбное место — Новая эра</title>
+  <title>Рыбалка: Большая Вода</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/hud.css">
 </head>
@@ -66,13 +67,10 @@
         </div>
 
         <div class="hud-top-center">
-          <div class="club-banner">
-            <img data-hud-icon="club" alt="" class="club-emblem">
-            <div class="club-text">
-              <span class="club-sub">Клуб «На крючке»</span>
-              <strong id="location-name" class="club-loc">Лесное Озеро</strong>
-            </div>
-          </div>
+          <button type="button" class="location-banner" id="btn-location-banner" title="Карта">
+            <img class="location-float-icon" src="assets/ui/hud/bobber.png?v=10" alt="" aria-hidden="true">
+            <strong id="location-name" class="location-name">Левый берег</strong>
+          </button>
         </div>
 
         <div class="hud-top-right">
@@ -82,7 +80,7 @@
 
       <div id="bobber" class="bobber bobber--calm hidden" aria-hidden="true">
         <div class="bobber-clip">
-          <img class="bobber-img" src="assets/ui/hud/bobber.png?v=8" alt="">
+          <img class="bobber-img" src="assets/ui/hud/bobber.png?v=10" alt="">
         </div>
       </div>
 
@@ -97,7 +95,7 @@
 
       <footer class="hud-bottom">
         <div class="dock-bar">
-          <div class="dock-slot" title="Удочка">
+          <div class="dock-slot" title="Удочка" data-lock-while-fishing role="button" tabindex="0">
             <img id="dock-icon-rod" class="dock-slot-img" alt="">
           </div>
           <div class="dock-slot" title="Крючки">
@@ -184,11 +182,20 @@
     <div id="modal-location" class="modal hidden">
       <div class="modal-window location-window panel-frame">
         <button class="modal-close" data-close="modal-location">✕</button>
-        <h2 id="loc-preview-name">Лесное Озеро</h2>
+        <h2 id="loc-preview-name">Левый берег</h2>
         <div class="location-preview" id="loc-preview-img"></div>
         <p id="loc-preview-desc" class="loc-preview-desc"></p>
         <button class="btn-primary" id="btn-enter-location" type="button">Перейти</button>
         <div class="location-fish"><span>Рыба:</span><div id="loc-fish-icons" class="fish-icons"></div></div>
+      </div>
+    </div>
+
+    <div id="modal-gear-picker" class="modal hidden">
+      <div class="modal-window gear-picker-window panel-frame">
+        <button class="modal-close" data-close="modal-gear-picker" type="button">✕</button>
+        <h2 id="gear-picker-title">Удочки</h2>
+        <div class="gear-picker-list" id="gear-picker-list"></div>
+        <button type="button" class="btn-primary gear-picker-shop" id="gear-picker-shop">В магазин</button>
       </div>
     </div>
 
@@ -276,9 +283,12 @@
   <script src="data/misc-fish.js"></script>
   <script src="data/bait-data.js"></script>
   <script src="data/forest-lake.js"></script>
+  <script src="data/world-map.js"></script>
   <script src="data.js"></script>
+  <script src="data/rods-shop.js"></script>
   <script src="data/game-config.js"></script>
   <script src="js/core/events.js"></script>
+  <script src="js/core/ambient-audio.js"></script>
   <script src="js/core/rng.js"></script>
   <script src="js/core/fsm.js"></script>
   <script src="js/systems/gear.js"></script>
@@ -288,8 +298,8 @@
   <script src="js/ui/icons.js"></script>
   <script src="js/ui/bobber-ui.js"></script>
   <script src="js/ui/fishing-ui.js"></script>
+  <script src="js/ui/rod-line-ui.js"></script>
   <script src="js/fishing-controller.js"></script>
-  <script src="rod-sprites.js"></script>
   <script src="game.js"></script>
 </body>
 </html>

@@ -40,6 +40,8 @@ const FightSystem = (() => {
     const mods = ctx.modifiers || {};
     const fish = ctx.fish;
     const pace = reelPace(fish);
+    const largeHelp = mods.largeFishHelp || 0;
+    const tier = weightTier(fish);
 
     ctx.fight = {
       ...ctx.fight,
@@ -48,9 +50,9 @@ const FightSystem = (() => {
       holding: false,
       hookGrade,
       catchBonus: grade.catchBonus,
-      reelPower: (0.55 + mods.tensionControl * 0.12) * pace,
+      reelPower: (0.55 + mods.tensionControl * 0.12) * (pace + largeHelp * tier * 0.35),
       reelPace: pace,
-      tensionPace: tensionPace(fish),
+      tensionPace: tensionPace(fish) * (1 - largeHelp * tier * 0.22),
       driftPace: driftPace(fish),
       weightTier: weightTier(fish),
       winAt: 3,
@@ -69,13 +71,14 @@ const FightSystem = (() => {
     const tier = f.weightTier ?? weightTier(fish);
     const scale = dt * 0.5;
     const tensionMul = f.tensionPace ?? tensionPace(fish);
-    const tensionControl = 1 - (ctx.modifiers?.tensionControl || 0) * 0.25;
+    const largeHelp = ctx.modifiers?.largeFishHelp || 0;
+    const tensionControl = (1 - (ctx.modifiers?.tensionControl || 0) * 0.25) * (1 - largeHelp * tier * 0.18);
 
     f.holding = holding;
     FishBehavior.update(ctx, dt);
 
     if (holding) {
-      f.fishPos -= f.reelPower * scale * (f.catchBonus || 1);
+      f.fishPos -= f.reelPower * scale * (f.catchBonus || 1) * (1 + largeHelp * tier * 0.2);
       f.lineStress += c.holdTensionRate * scale * tensionMul * tensionControl;
     } else {
       f.fishPos += (f.driftPace ?? driftPace(fish)) * scale;

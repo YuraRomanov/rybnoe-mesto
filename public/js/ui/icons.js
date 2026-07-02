@@ -10,6 +10,7 @@ const GAME_ICONS = (() => {
     line: 'line',
     float: 'float',
     'rod-bamboo': 'rod-bamboo',
+    'rod-spark': 'rod-spark',
     'reel-tier-1': 'reel-tier-1',
     hook: 'hook',
     'bait-worm': 'bait-worm',
@@ -26,6 +27,8 @@ const GAME_ICONS = (() => {
   const MAP = {
     rod: 'rod-bamboo',
     rod_0: 'rod-bamboo',
+    rod_spark: 'rod-spark',
+    'rod-spark': 'rod-spark',
     'rod-modern': 'reel-tier-1',
     hook: 'hook',
     hook1: 'hook',
@@ -111,7 +114,9 @@ const GAME_ICONS = (() => {
 
   function url(key) {
     const file = resolve(key);
-    const v = file.startsWith('bait-') ? '?v=2' : '';
+    let v = '';
+    if (file.startsWith('bait-')) v = '?v=2';
+    else if (file === 'rod-spark') v = '?v=2';
     return `${BASE}/${file}.png${v}`;
   }
 
@@ -125,6 +130,8 @@ const GAME_ICONS = (() => {
 
   function rodIconForItem(rod) {
     if (!rod) return 'rod-bamboo';
+    if (rod.iconKey) return resolve(rod.iconKey);
+    if (rod.id === 'rod_spark') return 'rod-spark';
     if (rod.id === 'rod_0' || rod.price === 0) return 'rod-bamboo';
     return rodIconForLevel(rod.level || 1);
   }

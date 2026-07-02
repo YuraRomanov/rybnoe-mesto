@@ -1,6 +1,6 @@
 /** DOM-поплавок — позиция на воде озера (фон lake.png) */
 const BobberUI = (() => {
-  const BOBBER_SRC = 'assets/ui/hud/bobber.png?v=8';
+  const BOBBER_SRC = 'assets/ui/hud/bobber.png?v=10';
   const WATER_SPOT = { x: 50, y: 55 };
   const CAST_START = { x: 54, y: 64 };
   const FIGHT_PULL = { x: 53, y: 70 };
@@ -25,12 +25,12 @@ const BobberUI = (() => {
     hide();
   }
 
-  function show() {
+  function show(resetPosition = true) {
     if (!el) return;
     el.classList.remove('hidden');
     el.style.display = '';
     el.setAttribute('aria-hidden', 'false');
-    center();
+    if (resetPosition) center();
   }
 
   function hide() {
@@ -52,7 +52,7 @@ const BobberUI = (() => {
     if (!el) return;
     const wasHidden = el.classList.contains('hidden');
     el.classList.remove(
-      'bobber--calm', 'bobber--idle', 'bobber--flight',
+      'bobber--calm', 'bobber--idle', 'bobber--windup', 'bobber--flight',
       'bobber--nibble', 'bobber--bite', 'bobber--fight',
     );
     el.classList.add(`bobber--${next}`);
@@ -82,7 +82,7 @@ const BobberUI = (() => {
   }
 
   function tick(smooth = 0.2) {
-    const rate = state === 'flight' ? 0.34 : state === 'fight' ? 0.45 : 0.2;
+    const rate = state === 'flight' ? 0.55 : state === 'windup' ? 0.5 : state === 'fight' ? 0.45 : 0.2;
     displayPct.x += (targetPct.x - displayPct.x) * rate;
     displayPct.y += (targetPct.y - displayPct.y) * rate;
     applyPosition();
