@@ -15,6 +15,7 @@
   <title>Рыбалка: Большая Вода</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/hud.css">
+  <link rel="stylesheet" href="css/mobile-ui.css">
   <script>
     (function () {
       var touch = window.matchMedia('(pointer: coarse)').matches
@@ -28,9 +29,14 @@
 </head>
 <body oncontextmenu="return false">
   <div id="loading-screen" class="loading-screen" role="status" aria-live="polite" aria-label="Загрузка игры">
-    <img class="loading-screen-img" src="assets/ui/loading-screen.png" alt="Рыбалка: Большая Вода">
-    <div class="loading-screen-bar-wrap" aria-hidden="true">
-      <div class="loading-screen-bar"></div>
+    <img class="loading-screen-img" src="assets/ui/loading-screen.png?v=2" alt="Рыбалка: Большая Вода">
+    <div class="loading-overlay">
+      <div class="loading-bar-wrap">
+        <div class="loading-bar" id="loading-bar"></div>
+      </div>
+      <p class="loading-percent" id="loading-percent">0%</p>
+      <p class="loading-status" id="loading-status">Подготовка удочки…</p>
+      <p class="loading-tip" id="loading-tip"></p>
     </div>
   </div>
   <div id="game-app">
@@ -70,8 +76,12 @@
               <button type="button" class="quick-ico-btn" id="btn-map" title="Карта">
                 <img data-hud-icon="map" alt="">
               </button>
-              <button type="button" class="quick-ico-btn" id="btn-weather" title="Локация">
-                <img data-hud-icon="water" alt="">
+              <button type="button" class="quick-ico-btn quick-ico-btn--weather" id="btn-weather" title="Погода и время">
+                <span id="weather-emoji" class="weather-emoji" aria-hidden="true">☀️</span>
+                <span id="world-clock" class="world-clock">00:00</span>
+              </button>
+              <button type="button" class="quick-ico-btn quick-ico-btn--settings" id="btn-settings" title="Настройки">
+                <span class="settings-gear" aria-hidden="true">⚙</span>
               </button>
             </div>
           </div>
@@ -109,7 +119,7 @@
           <div class="dock-slot" title="Удочка" data-lock-while-fishing role="button" tabindex="0">
             <img id="dock-icon-rod" class="dock-slot-img" alt="">
           </div>
-          <div class="dock-slot" title="Крючки">
+          <div class="dock-slot" title="Крючки" data-lock-while-fishing role="button" tabindex="0">
             <img id="dock-icon-hook" class="dock-slot-img" alt="">
             <span id="qty-hook" class="dock-slot-qty">5</span>
           </div>
@@ -117,8 +127,9 @@
             <img id="dock-icon-bait" class="dock-slot-img" alt="">
             <span id="qty-bait" class="dock-slot-qty">20</span>
           </div>
-          <div class="dock-slot" title="Готовка">
-            <img class="dock-slot-img" data-hud-icon="cook" alt="">
+          <div class="dock-slot" title="Леска" data-lock-while-fishing role="button" tabindex="0">
+            <img id="dock-icon-line" class="dock-slot-img" alt="">
+            <span id="qty-line" class="dock-slot-qty">50</span>
           </div>
           <div class="dock-slot" title="Садок" id="btn-sadok" role="button" tabindex="0">
             <img class="dock-slot-img" data-hud-icon="net" alt="">
@@ -147,9 +158,9 @@
 
     <div id="fight-ui" class="fight-dock hidden">
       <div class="fight-reel" id="fight-bar">
+        <div id="fish-marker" class="fight-reel__fish" aria-hidden="true"></div>
         <div class="fight-reel__track">
           <div id="fight-bar-fill" class="fight-reel__fill"></div>
-          <div id="fish-marker" class="fight-reel__marker" aria-hidden="true"></div>
         </div>
       </div>
       <p id="fight-hint" class="fight-hint">Жми «Вытащить» — тяни рыбу к берегу</p>
@@ -161,7 +172,7 @@
 
     <div id="modal-tutorial" class="modal hidden">
       <div class="modal-window tutorial-window panel-frame">
-        <h2>Как ловить</h2>
+        <h2 class="modal-title"><img class="modal-title-ico" data-modal-icon="tutorial" alt=""><span>Как ловить</span></h2>
         <ol class="tutorial-steps">
           <li>Нажми <strong>«Забросить»</strong> — поплавок улетит на воду</li>
           <li>Жди поклёвки — поплавок слегка покачивается. Нажми <strong>«Жди»</strong>, чтобы вытащить удочку</li>
@@ -169,14 +180,14 @@
           <li>Жми <strong>«Вытащить»</strong> — натяжение растёт, рыба идёт к берегу; отпускай, чтобы леска ослабла</li>
           <li>После поимки — <strong>в садок</strong> или сразу <strong>продать</strong> рыбу</li>
         </ol>
-        <button type="button" class="btn-primary" id="tutorial-start">Понятно</button>
+        <button type="button" class="btn-primary" id="tutorial-start"><img class="btn-ico" data-btn-icon="float" alt=""><span>Понятно</span></button>
       </div>
     </div>
 
     <div id="modal-map" class="modal hidden">
       <div class="modal-window map-window panel-frame">
         <button class="modal-close" data-close="modal-map">✕</button>
-        <h2 id="map-region">Центральная Россия</h2>
+        <h2 class="modal-title"><img class="modal-title-ico" data-modal-icon="map" alt=""><span id="map-region">Центральная Россия</span></h2>
         <div class="map-content">
           <button class="map-arrow left" type="button">◀</button>
           <div class="map-area" id="map-area"></div>
@@ -188,20 +199,20 @@
     <div id="modal-location" class="modal hidden">
       <div class="modal-window location-window panel-frame">
         <button class="modal-close" data-close="modal-location">✕</button>
-        <h2 id="loc-preview-name">Левый берег</h2>
+        <h2 class="modal-title"><img class="modal-title-ico" data-modal-icon="location" alt=""><span id="loc-preview-name">Левый берег</span></h2>
         <div class="location-preview" id="loc-preview-img"></div>
         <p id="loc-preview-desc" class="loc-preview-desc"></p>
-        <button class="btn-primary" id="btn-enter-location" type="button">Перейти</button>
-        <div class="location-fish"><span>Рыба:</span><div id="loc-fish-icons" class="fish-icons"></div></div>
+        <button type="button" class="btn-primary" id="btn-enter-location"><img class="btn-ico" data-btn-icon="map" alt=""><span>Перейти</span></button>
+        <div class="location-fish"><img class="inline-ico" src="assets/ui/icons/float.png" alt=""><span>Рыба:</span><div id="loc-fish-icons" class="fish-icons"></div></div>
       </div>
     </div>
 
     <div id="modal-gear-picker" class="modal hidden">
       <div class="modal-window gear-picker-window panel-frame">
         <button class="modal-close" data-close="modal-gear-picker" type="button">✕</button>
-        <h2 id="gear-picker-title">Удочки</h2>
-        <div class="gear-picker-list" id="gear-picker-list"></div>
-        <button type="button" class="btn-primary gear-picker-shop" id="gear-picker-shop">В магазин</button>
+        <h2 id="gear-picker-title" class="modal-title"><img class="modal-title-ico" id="gear-picker-ico" data-modal-icon="rods" alt=""><span id="gear-picker-title-text">Удочки</span></h2>
+        <div class="gear-picker-list no-scrollbar" id="gear-picker-list"></div>
+        <button type="button" class="btn-primary gear-picker-shop" id="gear-picker-shop"><img class="btn-ico" data-btn-icon="shop" alt=""><span>В магазин</span></button>
       </div>
     </div>
 
@@ -209,40 +220,90 @@
       <div class="modal-window shop-window panel-frame">
         <button class="modal-close" data-close="modal-shop">✕</button>
         <div class="shop-header">
-          <h2>Магазин</h2>
+          <h2 class="modal-title"><img class="modal-title-ico" data-modal-icon="shop" alt=""><span>Магазин</span></h2>
           <div class="shop-currency">
             <span class="shop-curr"><img data-hud-icon="silver" alt=""><span id="shop-silver">0</span></span>
             <span class="shop-curr"><img data-hud-icon="gold" alt=""><span id="shop-gold">0</span></span>
           </div>
         </div>
-        <div class="tabs" id="shop-tabs">
-          <button class="tab active" data-tab="rods" type="button">Удочки</button>
-          <button class="tab" data-tab="hooks" type="button">Крючки</button>
-          <button class="tab" data-tab="bait" type="button">Наживка</button>
-          <button class="tab" data-tab="net" type="button">Сачок</button>
-          <button class="tab" data-tab="soup" type="button">Супы</button>
+        <div class="shop-body" id="shop-swipe-zone">
+          <div class="tabs" id="shop-tabs">
+            <button class="tab active" data-tab="rods" type="button"><img class="tab-ico" data-shop-tab-icon="rods" alt=""><span>Удочки</span></button>
+            <button class="tab" data-tab="hooks" type="button"><img class="tab-ico" data-shop-tab-icon="hooks" alt=""><span>Крючки</span></button>
+            <button class="tab" data-tab="lines" type="button"><img class="tab-ico" data-shop-tab-icon="lines" alt=""><span>Леска</span></button>
+            <button class="tab" data-tab="bait" type="button"><img class="tab-ico" data-shop-tab-icon="bait" alt=""><span>Наживка</span></button>
+            <button class="tab" data-tab="net" type="button"><img class="tab-ico" data-shop-tab-icon="net" alt=""><span>Сачок</span></button>
+            <button class="tab" data-tab="soup" type="button"><img class="tab-ico" data-shop-tab-icon="soup" alt=""><span>Супы</span></button>
+          </div>
+          <div class="shop-items no-scrollbar" id="shop-items"></div>
+          <p class="shop-swipe-hint" aria-hidden="true">← свайп для вкладок →</p>
         </div>
-        <div class="shop-items" id="shop-items"></div>
       </div>
     </div>
 
     <div id="modal-backpack" class="modal hidden">
       <div class="modal-window backpack-window panel-frame">
         <button class="modal-close" data-close="modal-backpack">✕</button>
-        <h2>Рюкзак</h2>
-        <div class="backpack-content" id="backpack-content"></div>
+        <h2 class="modal-title"><img class="modal-title-ico" data-modal-icon="backpack" alt=""><span>Рюкзак</span></h2>
+        <div class="backpack-content no-scrollbar" id="backpack-content"></div>
       </div>
     </div>
 
     <div id="modal-sadok" class="modal hidden">
       <div class="modal-window sadok-window panel-frame">
         <button class="modal-close" data-close="modal-sadok" type="button">✕</button>
-        <h2>Садок</h2>
+        <h2 class="modal-title"><img class="modal-title-ico" data-modal-icon="sadok" alt=""><span>Садок</span></h2>
         <p class="sadok-hint">Улов хранится здесь. Продайте рыбу, когда будете готовы.</p>
-        <div id="sadok-list" class="sadok-list"></div>
+        <div id="sadok-list" class="sadok-list no-scrollbar"></div>
         <div class="sadok-footer">
           <p id="sadok-total" class="sadok-total"></p>
-          <button type="button" class="btn-primary" id="sadok-sell-all" disabled>Продать всё</button>
+          <button type="button" class="btn-primary" id="sadok-sell-all" disabled><img class="btn-ico" data-btn-icon="silver" alt=""><span>Продать всё</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-weather" class="modal hidden">
+      <div class="modal-window weather-window panel-frame">
+        <button class="modal-close" data-close="modal-weather" type="button">✕</button>
+        <h2 class="modal-title"><span id="weather-modal-emoji" class="weather-modal-emoji" aria-hidden="true">☀️</span><span>Погода и время</span></h2>
+        <div class="weather-panel">
+          <div class="weather-panel__clock" id="weather-modal-clock">12:00</div>
+          <p class="weather-panel__phase" id="weather-modal-phase">День</p>
+          <p class="weather-panel__weather" id="weather-modal-weather">Ясно</p>
+          <p class="weather-panel__hint" id="weather-modal-hint"></p>
+          <p class="weather-panel__next" id="weather-modal-next"></p>
+          <p class="weather-panel__sync">Время одинаково у всех игроков</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-settings" class="modal hidden">
+      <div class="modal-window settings-window panel-frame">
+        <button class="modal-close" data-close="modal-settings" type="button">✕</button>
+        <h2 class="modal-title"><span class="settings-gear settings-gear--title" aria-hidden="true">⚙</span><span>Настройки</span></h2>
+        <div class="settings-panel">
+          <label class="settings-row">
+            <span class="settings-label">Природа (фон)</span>
+            <div class="settings-slider-wrap">
+              <input type="range" id="settings-ambient-vol" class="settings-slider" min="0" max="100" value="42">
+              <span class="settings-val" id="settings-ambient-val" aria-hidden="true"></span>
+            </div>
+          </label>
+          <label class="settings-row">
+            <span class="settings-label">Звуки (заброс)</span>
+            <div class="settings-slider-wrap">
+              <input type="range" id="settings-sfx-vol" class="settings-slider" min="0" max="100" value="62">
+              <span class="settings-val" id="settings-sfx-val" aria-hidden="true"></span>
+            </div>
+          </label>
+          <div class="settings-section settings-section--codes">
+            <span class="settings-label">Секретный код</span>
+            <div class="settings-code-row">
+              <input type="text" id="settings-code-input" class="settings-code-input" placeholder="Введите код" autocomplete="off" spellcheck="false">
+              <button type="button" class="btn-primary settings-code-btn" id="settings-code-submit">OK</button>
+            </div>
+            <p id="settings-code-msg" class="settings-code-msg" aria-live="polite"></p>
+          </div>
         </div>
       </div>
     </div>
@@ -273,12 +334,12 @@
           </div>
           <div class="catch-stat">
             <span class="catch-stat-label">Получено опыта</span>
-            <span id="catch-exp" class="catch-stat-value catch-stat-exp">2</span>
+            <span id="catch-exp" class="catch-stat-value catch-stat-exp"><img class="catch-stat-ico" src="assets/ui/icons/energy.png" alt=""><span id="catch-exp-val">2</span></span>
           </div>
         </div>
         <div class="catch-actions">
-          <button type="button" class="btn-catch btn-catch--sadok" id="catch-to-sadok">В садок</button>
-          <button type="button" class="btn-catch btn-catch--sell" id="catch-sell">Продать</button>
+          <button type="button" class="btn-catch btn-catch--sadok" id="catch-to-sadok"><img class="btn-ico" src="assets/ui/icons/net.png" alt=""><span>В садок</span></button>
+          <button type="button" class="btn-catch btn-catch--sell" id="catch-sell"><img class="btn-ico" src="assets/ui/icons/silver.png" alt=""><span>Продать</span></button>
         </div>
       </div>
     </div>
@@ -287,7 +348,11 @@
 
   <script src="apk-data.js"></script>
   <script src="data/misc-fish.js"></script>
+  <script src="data/fish-tackle-groups.js"></script>
   <script src="data/bait-data.js"></script>
+  <script src="data/hook-data.js"></script>
+  <script src="data/line-data.js"></script>
+  <script src="data/tackle-scoring.js"></script>
   <script src="data/forest-lake.js"></script>
   <script src="data/world-map.js"></script>
   <script src="data.js"></script>
@@ -300,7 +365,9 @@
   <script src="js/systems/gear.js"></script>
   <script src="js/systems/fish-behavior.js"></script>
   <script src="js/systems/fight.js"></script>
+  <script src="js/systems/world-time.js"></script>
   <script src="js/systems/economy.js"></script>
+  <script src="js/systems/settings.js"></script>
   <script src="js/ui/icons.js"></script>
   <script src="js/ui/bobber-ui.js"></script>
   <script src="js/ui/fishing-ui.js"></script>

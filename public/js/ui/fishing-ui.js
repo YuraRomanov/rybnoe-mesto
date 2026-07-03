@@ -6,6 +6,9 @@ const FishingUI = (() => {
     pull: 'assets/ui/hud/cast-pull.png?v=8',
   };
 
+  let lastFishPos = null;
+  let fishFaceLeft = false;
+
   function castImageForLabel(label) {
     if (!label) return CAST_BTN_SRC.cast;
     const t = label.toLowerCase();
@@ -19,6 +22,22 @@ const FishingUI = (() => {
   function showFight(show) {
     document.getElementById('fight-ui')?.classList.toggle('hidden', !show);
     document.body.classList.toggle('fight-active', show);
+    const marker = document.getElementById('fish-marker');
+    if (!show) {
+      lastFishPos = null;
+      fishFaceLeft = false;
+      if (marker) {
+        marker.innerHTML = '';
+        delete marker.dataset.ready;
+      }
+    } else if (marker && !marker.dataset.ready) {
+      marker.innerHTML = renderFightMarkerFish();
+      marker.dataset.ready = '1';
+    }
+  }
+
+  function renderFightMarkerFish() {
+    return '<span class="fight-reel__fish-icon fight-reel__fish-icon--right" aria-hidden="true"></span>';
   }
 
   function updateFight(ctx) {
@@ -35,8 +54,25 @@ const FishingUI = (() => {
     const pulling = Boolean(f.holding);
 
     if (marker) {
+      if (!marker.dataset.ready) {
+        marker.innerHTML = renderFightMarkerFish();
+        marker.dataset.ready = '1';
+      }
+      if (pulling) {
+        fishFaceLeft = false;
+      } else if (lastFishPos != null) {
+        const delta = fishPos - lastFishPos;
+        if (delta < -0.03) fishFaceLeft = true;
+        else if (delta > 0.03) fishFaceLeft = false;
+      }
+      lastFishPos = fishPos;
       marker.style.left = `${fishPos}%`;
-      marker.classList.toggle('fight-reel__marker--pulling', pulling);
+      marker.style.transform = 'translateX(-50%)';
+      const icon = marker.querySelector('.fight-reel__fish-icon');
+      if (icon) {
+        icon.classList.toggle('fight-reel__fish-icon--left', fishFaceLeft);
+        icon.classList.toggle('fight-reel__fish-icon--right', !fishFaceLeft);
+      }
     }
     if (barFill) {
       barFill.style.width = `${stressPct}%`;

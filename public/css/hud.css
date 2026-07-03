@@ -188,6 +188,38 @@
   object-fit: contain;
 }
 
+.quick-ico-btn--weather {
+  width: auto;
+  min-width: 32px;
+  height: 32px;
+  padding: 2px 5px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  line-height: 1;
+}
+
+.weather-emoji {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.world-clock {
+  font-size: 8px;
+  font-weight: 800;
+  color: #fff8e1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+  letter-spacing: 0.02em;
+}
+
+.quick-ico-btn--settings {
+  font-size: 18px;
+  color: #fff8e1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+}
+
 /* --- Центр шапки: локация --- */
 .hud-top-center {
   justify-self: center;
@@ -677,7 +709,7 @@ html:not(.is-mobile) .dock-slot {
   text-shadow: 0 1px 2px #000;
 }
 
-/* --- Вываживание: компактная шкала --- */
+/* --- Вываживание: шкала натяжения --- */
 .fight-dock {
   position: fixed;
   left: 50%;
@@ -685,19 +717,20 @@ html:not(.is-mobile) .dock-slot {
   bottom: calc(var(--dock-h) + var(--safe-bottom) + 10px);
   transform: translateX(-50%);
   z-index: 25;
-  width: min(88vw, 340px);
+  width: min(72vw, 400px);
   pointer-events: none;
 }
 
 .fight-reel {
   position: relative;
   width: 100%;
+  padding-top: 28px;
 }
 
 .fight-reel__track {
   position: relative;
-  height: 18px;
-  border-radius: 999px;
+  height: 30px;
+  border-radius: 5px;
   overflow: hidden;
   background: rgba(10, 12, 16, 0.88);
   border: 2px solid rgba(141, 110, 74, 0.75);
@@ -713,39 +746,68 @@ html:not(.is-mobile) .dock-slot {
   height: 100%;
   width: 0%;
   transform: translateY(-50%);
-  border-radius: 999px;
+  border-radius: 3px;
   background: linear-gradient(
     90deg,
-    rgba(76, 120, 82, 0.92) 0%,
-    rgba(140, 160, 70, 0.88) 40%,
-    rgba(220, 160, 50, 0.9) 72%,
-    rgba(220, 80, 55, 0.95) 100%
+    #43a047 0%,
+    #7cb342 28%,
+    #cddc39 52%,
+    #ffc107 76%,
+    #ff5722 100%
   );
   transition: width 0.05s linear;
-  box-shadow: 0 0 4px rgba(120, 200, 90, 0.25);
+  box-shadow: 0 0 10px rgba(255, 214, 0, 0.55);
 }
 
-.fight-reel__marker {
+.fight-reel__fish {
   position: absolute;
-  top: 50%;
+  top: 10px;
   left: 88%;
-  width: 3px;
-  height: 72%;
-  transform: translate(-50%, -50%);
-  border-radius: 2px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.65);
+  transform: translateX(-50%);
+  width: 50px;
+  height: 22px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   transition: left 0.1s linear;
   pointer-events: none;
+  z-index: 2;
 }
 
-.fight-reel__marker--pulling {
-  background: #fff59d;
-  box-shadow: 0 0 6px rgba(255, 245, 157, 0.85);
+.fight-reel__fish-icon {
+  display: block;
+  width: 50px;
+  height: 22px;
+  background: linear-gradient(
+    120deg,
+    #f7f9fb 0%,
+    #c2cad3 18%,
+    #ffffff 34%,
+    #8a95a0 50%,
+    #e6ebf0 66%,
+    #697682 82%,
+    #d8e0e8 100%
+  );
+  -webkit-mask-image: url('../assets/ui/fight-fish-silhouette.png?v=1');
+  mask-image: url('../assets/ui/fight-fish-silhouette.png?v=1');
+  mask-size: 100% 200%;
+  mask-repeat: no-repeat;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.42));
+}
+
+/* В исходнике верхняя смотрит вправо, нижняя — влево; направления поменяны */
+.fight-reel__fish-icon--left {
+  mask-position: center top;
+  transform: scaleX(-1);
+}
+
+.fight-reel__fish-icon--right {
+  mask-position: center bottom;
+  transform: scaleX(-1);
 }
 
 .fight-reel--pulling .fight-reel__fill {
-  filter: brightness(1.08);
+  filter: brightness(1.12) saturate(1.15);
 }
 
 .fight-reel--warn .fight-reel__track {
@@ -864,21 +926,24 @@ html.is-mobile.is-portrait .loading-screen {
   transform-origin: center center;
 }
 
-html.is-mobile.is-portrait .loading-screen-img,
 html.is-mobile .loading-screen-img {
   object-fit: contain;
   object-position: center;
-  width: min(100%, 960px);
-  height: min(100%, 540px);
-  max-width: 100%;
-  max-height: 100%;
 }
 
-html.is-mobile .loading-screen-bar-wrap {
-  left: 18%;
-  right: 18%;
-  bottom: max(12px, env(safe-area-inset-bottom, 0px));
-  height: 6px;
+html.is-mobile .loading-overlay {
+  width: min(72vw, 420px);
+  padding: 8px 12px 10px;
+  bottom: max(10px, env(safe-area-inset-bottom, 0px));
+}
+
+html.is-mobile .loading-bar-wrap {
+  height: 8px;
+}
+
+html.is-mobile .loading-tip {
+  font-size: 10px;
+  padding: 5px 8px;
 }
 
 html.is-mobile.is-portrait #game-app {
@@ -918,6 +983,9 @@ html.is-mobile {
   .currency-bar { min-width: 58px; padding: 2px 5px 2px 3px; }
   .currency-val { font-size: 11px; }
   .quick-ico-btn { width: 32px; height: 32px; }
+  .quick-ico-btn--weather { width: auto; min-width: 30px; height: 30px; padding: 1px 4px; }
+  .weather-emoji { font-size: 11px; }
+  .world-clock { font-size: 7px; }
 
   .location-banner {
     min-width: 0;
@@ -1007,21 +1075,37 @@ html.is-mobile {
   .bobber--bite .bobber-clip { height: 24px; }
 
   .fight-dock {
-    left: max(8px, var(--safe-left));
-    right: min(28vw, 96px);
-    width: auto;
-    transform: none;
+    left: 50%;
+    right: auto;
+    width: min(52vw, 210px);
+    transform: translateX(-50%);
     bottom: calc(var(--dock-h) + var(--safe-bottom) - 2px);
   }
 
-  .fight-reel__track {
-    height: 12px;
-    border-width: 1.5px;
+  .fight-reel {
+    padding-top: 22px;
   }
 
-  .fight-reel__marker {
-    width: 2px;
-    height: 68%;
+  .fight-reel__track {
+    height: 18px;
+    border-radius: 4px;
+    border-width: 2px;
+  }
+
+  .fight-reel__fill {
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(255, 214, 0, 0.5);
+  }
+
+  .fight-reel__fish {
+    top: 7px;
+    width: 38px;
+    height: 18px;
+  }
+
+  .fight-reel__fish-icon {
+    width: 38px;
+    height: 17px;
   }
 
   .fight-hint {

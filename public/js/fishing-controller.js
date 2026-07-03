@@ -100,7 +100,9 @@ const FishingController = (() => {
     const mods = GearSystem.getModifiers(bridge.getPlayer());
     ctx.modifiers = mods;
     const baitId = bridge.getPlayer().gear?.bait || 'bait1';
-    const table = GameRNG.buildFishTable(loc, baitId, mods.biteBonus, FISH);
+    const hookId = bridge.getPlayer().gear?.hook || 'hook1';
+    const lineId = bridge.getPlayer().gear?.line || 'line2';
+    const table = GameRNG.buildFishTable(loc, baitId, FISH, hookId, lineId);
     const entry = GameRNG.pickWeighted(table.map((t) => ({ ...t, weight: t.weight })));
     const fish = { ...entry.fish };
     fish.weight = rollFishWeight(fish);

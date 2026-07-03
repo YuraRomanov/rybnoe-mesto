@@ -73,10 +73,22 @@ const GAME_CONFIG = {
   },
 
   economy: {
-    expBase: 8,
+    expBase: 18,
     silverPerKg: 4,
     perfectHookExpBonus: 1.5,
     comboSilverBonus: 0.1,
     upgradeCostCurve: 1.65,
+  },
+
+  /** Порог опыта для следующего уровня: expBase + level * expPerLevel */
+  leveling: {
+    expBase: 60,
+    expPerLevel: 40,
+  },
+
+  /** 30 реальных минут = 24 игровых часа; время синхронно у всех игроков (UTC) */
+  worldTime: {
+    dayCycleMinutes: 30,
+    weatherSlotHours: 6,
   },
 };

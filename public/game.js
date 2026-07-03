@@ -1,5 +1,7 @@
 const canvas = document.getElementById('scene-canvas');
 const ctx = canvas.getContext('2d');
+let viewW = 0;
+let viewH = 0;
 
 const bgImage = new Image();
 let currentSceneSrc = 'assets/locations/lake.png';
@@ -56,8 +58,8 @@ function getCastBtnLayout() {
   const canvasRect = canvas.getBoundingClientRect();
   if (!btn || canvasRect.width <= 0) return null;
   const r = btn.getBoundingClientRect();
-  const sx = canvas.width / canvasRect.width;
-  const sy = canvas.height / canvasRect.height;
+  const sx = viewW / canvasRect.width;
+  const sy = viewH / canvasRect.height;
   return {
     left: (r.left - canvasRect.left) * sx,
     top: (r.top - canvasRect.top) * sy,
@@ -81,7 +83,7 @@ function getRodHandlePos(w, h, dock) {
 }
 
 function getRodTargetAngle(vs, fctx, handle, bob) {
-  const dh = canvas.height * ROD_SPRITE.heightRatio;
+  const dh = viewH * ROD_SPRITE.heightRatio;
   const aspect = rodImgReady ? rodImg.naturalWidth / rodImg.naturalHeight : 550 / 728;
   const dw = dh * aspect;
   const naturalAngle = Math.atan2(
@@ -116,8 +118,8 @@ function getRodTargetAngle(vs, fctx, handle, bob) {
 }
 
 function updateRodAnim() {
-  const w = canvas.width;
-  const h = canvas.height;
+  const w = viewW;
+  const h = viewH;
   const dock = getDockInset();
   const handle = getRodHandlePos(w, h, dock);
   const vs = typeof FishingController !== 'undefined' ? getVisualState() : STATES.IDLE;
@@ -132,8 +134,8 @@ function updateRodAnim() {
 }
 
 function getRodLayout() {
-  const w = canvas.width;
-  const h = canvas.height;
+  const w = viewW;
+  const h = viewH;
   const dock = getDockInset();
   const handle = getRodHandlePos(w, h, dock);
   const angle = game.rodAngle || -0.52;
@@ -163,7 +165,7 @@ const defaultPlayer = () => ({
   name: 'Рыбак',
   level: 1,
   exp: 0,
-  expMax: 500,
+  expMax: 100,
   energy: 150,
   energyMax: 150,
   silver: 100,
@@ -171,9 +173,9 @@ const defaultPlayer = () => ({
   luck: 5,
   tournamentWeight: 0,
   locationId: '0',
-  gear: { rod: 'rod_0', hook: 'hook1', bait: 'bait1', net: null },
+  gear: { rod: 'rod_0', hook: 'hook1', line: 'line2', bait: 'bait1', net: null },
   owned: ['rod_0', 'hook1'],
-  inventory: { bait1: 20, hook1: 5 },
+  inventory: { bait1: 20, hook1: 10, line2: 50 },
   sadok: [],
 });
 
@@ -227,8 +229,8 @@ function getDockInset() {
 }
 
 function getSceneLayout() {
-  const w = canvas.width;
-  const h = canvas.height;
+  const w = viewW;
+  const h = viewH;
   const bob = getBobberWorldPos();
   const rod = getRodLayout();
   return {
@@ -250,8 +252,8 @@ function getBobberCanvasLayout() {
   const r = clip.getBoundingClientRect();
   if (r.width < 1 || r.height < 1) return null;
 
-  const sx = canvas.width / canvasRect.width;
-  const sy = canvas.height / canvasRect.height;
+  const sx = viewW / canvasRect.width;
+  const sy = viewH / canvasRect.height;
   const centerX = (r.left + r.width / 2 - canvasRect.left) * sx;
   const topY = (r.top - canvasRect.top) * sy;
   const waterY = (r.bottom - canvasRect.top) * sy;
@@ -270,8 +272,8 @@ function getBobberWorldPos() {
   const dom = getBobberCanvasLayout();
   if (dom) return dom;
 
-  const w = canvas.width;
-  const h = canvas.height;
+  const w = viewW;
+  const h = viewH;
   const spot = typeof BobberUI !== 'undefined' ? BobberUI.WATER_SPOT : { x: 50, y: 56 };
   const fctx = typeof FishingController !== 'undefined' ? FishingController.getContext() : null;
   const pct = (typeof BobberUI !== 'undefined' && BobberUI.getDisplayPct)
@@ -305,8 +307,14 @@ function getViewportSize() {
 
 function resizeCanvas() {
   const { width, height } = getViewportSize();
-  canvas.width = width;
-  canvas.height = height;
+  viewW = width;
+  viewH = height;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+  canvas.width = Math.round(width * dpr);
+  canvas.height = Math.round(height * dpr);
+  canvas.style.width = `${width}px`;
+  canvas.style.height = `${height}px`;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   updateRodAnim();
   updateRodTip();
 }
@@ -377,6 +385,7 @@ function bindCastControls() {
   let castHeld = false;
 
   const onDown = (e) => {
+    if (isCatchModalOpen()) return;
     if (e.cancelable) e.preventDefault();
     if (castHeld) return;
     castHeld = true;
@@ -437,9 +446,36 @@ function loadPlayerData() {
     }
     delete player.catches;
     tutorialSeen = Boolean(data.tutorialSeen);
+    if (player.level) player.expMax = expForLevel(player.level);
   } catch (_) {}
   normalizeBaitGear();
+  normalizeHookGear();
+  normalizeLineGear();
   normalizeRodGear();
+}
+
+function normalizeHookGear() {
+  const hooks = SHOP?.hooks || [];
+  const known = new Set(hooks.map((h) => h.id));
+  if (!known.has(player.gear.hook)) player.gear.hook = 'hook1';
+  if ((player.inventory[player.gear.hook] || 0) <= 0) {
+    const fallback = hooks.find((h) => (player.inventory[h.id] || 0) > 0);
+    if (fallback) player.gear.hook = fallback.id;
+  }
+}
+
+function normalizeLineGear() {
+  const lines = SHOP?.lines || [];
+  if (!lines.length) return;
+  const known = new Set(lines.map((l) => l.id));
+  if (!player.gear.line) player.gear.line = 'line2';
+  if (!known.has(player.gear.line)) player.gear.line = 'line2';
+  const hasAnyLine = lines.some((l) => (player.inventory[l.id] || 0) > 0);
+  if (!hasAnyLine) player.inventory.line2 = (player.inventory.line2 || 0) + 30;
+  if ((player.inventory[player.gear.line] || 0) <= 0) {
+    const fallback = lines.find((l) => (player.inventory[l.id] || 0) > 0);
+    if (fallback) player.gear.line = fallback.id;
+  }
 }
 
 function normalizeRodGear() {
@@ -480,7 +516,17 @@ function getLocation() {
 }
 
 function expForLevel(lv) {
-  return 300 + lv * 200;
+  const c = GAME_CONFIG.leveling || {};
+  return (c.expBase ?? 60) + lv * (c.expPerLevel ?? 40);
+}
+
+function grantPlayerLevels(count = 1) {
+  const n = Math.max(1, Math.floor(count));
+  for (let i = 0; i < n; i++) {
+    const need = Math.max(1, player.expMax - player.exp);
+    addExp(need);
+  }
+  save();
 }
 
 function addExp(amount) {
@@ -509,9 +555,16 @@ function spendEnergy(n) {
 function addSilver(n) { player.silver += n; updateHUD(); }
 
 function shopItemIcon(item, tab) {
+  if (item.iconPending || item.iconKey === null) return null;
   if (item.iconKey) return GAME_ICONS.url(item.iconKey);
   if (tab === 'rods') return GAME_ICONS.url(GAME_ICONS.rodIconForItem(item));
   return GAME_ICONS.url(GAME_ICONS.resolve(item.id));
+}
+
+function itemIconMarkup(item, tab, emptyClass = 'icon-slot-empty') {
+  const src = shopItemIcon(item, tab);
+  if (!src) return `<span class="${emptyClass}" aria-hidden="true"></span>`;
+  return `<img src="${src}" alt="">`;
 }
 
 function shopPriceHtml(item) {
@@ -523,27 +576,55 @@ function shopPriceHtml(item) {
 function findShopItem(id, tab) {
   return (SHOP[tab] || SHOP.rods || []).find((i) => i.id === id)
     || SHOP.hooks?.find((i) => i.id === id)
+    || SHOP.lines?.find((i) => i.id === id)
     || SHOP.bait?.find((i) => i.id === id);
+}
+
+function tackleHint(itemId, kind) {
+  if (kind === 'bait' && typeof BAIT_HINTS !== 'undefined') return BAIT_HINTS[itemId] || '';
+  if (kind === 'hooks' && typeof HOOK_HINTS !== 'undefined') return HOOK_HINTS[itemId] || '';
+  if (kind === 'lines' && typeof LINE_HINTS !== 'undefined') return LINE_HINTS[itemId] || '';
+  return '';
+}
+
+function setDockTackleIcon(elId, item, fallbackKey) {
+  const el = document.getElementById(elId);
+  if (!el) return;
+  if (item?.iconPending || item?.iconKey === null) {
+    el.removeAttribute('src');
+    el.classList.add('dock-slot-img--empty');
+    return;
+  }
+  el.classList.remove('dock-slot-img--empty');
+  el.src = GAME_ICONS.url(item.iconKey || GAME_ICONS.resolve(item?.id || fallbackKey));
 }
 
 function updateEquipmentHud() {
   const rod = findShopItem(player.gear.rod, 'rods') || { name: 'Удочка', level: 1, id: 'rod_0' };
   const hook = findShopItem(player.gear.hook, 'hooks') || { name: 'Крючок', id: 'hook1' };
+  const line = findShopItem(player.gear.line, 'lines') || { name: 'Леска', id: 'line2' };
   const bait = findShopItem(player.gear.bait, 'bait') || { name: 'Наживка', id: 'bait1' };
 
   applyRodSprite(player.gear.rod || 'rod_0');
 
   const setImg = (id, key) => {
     const el = document.getElementById(id);
-    if (el) el.src = GAME_ICONS.url(key);
+    if (!el) return;
+    el.classList.remove('dock-slot-img--empty');
+    el.src = GAME_ICONS.url(key);
   };
 
   setImg('dock-icon-rod', GAME_ICONS.rodIconForItem(rod));
-  setImg('dock-icon-hook', hook.iconKey || GAME_ICONS.resolve(hook.id));
-  setImg('dock-icon-bait', bait.iconKey || GAME_ICONS.resolve(bait.id));
+  setDockTackleIcon('dock-icon-hook', hook, 'hook');
+  setDockTackleIcon('dock-icon-line', line, 'line');
+  setDockTackleIcon('dock-icon-bait', bait, 'bait-worm');
 
   const rodSlot = document.querySelector('.dock-slot[title^="Удочка"]');
   if (rodSlot) rodSlot.title = `Удочка: ${rod.name}`;
+  const hookSlot = document.querySelector('.dock-slot[title^="Крючки"]');
+  if (hookSlot) hookSlot.title = `Крючки: ${hook.name}`;
+  const lineSlot = document.querySelector('.dock-slot[title^="Леска"]');
+  if (lineSlot) lineSlot.title = `Леска: ${line.name}`;
 }
 
 function updateHUD() {
@@ -562,7 +643,9 @@ function updateHUD() {
   const silverBar = document.getElementById('silver-bar');
   if (silverBar) silverBar.style.width = `${Math.min(100, (player.silver / 500) * 100)}%`;
   document.getElementById('qty-bait').textContent = player.inventory[player.gear.bait] || 0;
-  document.getElementById('qty-hook').textContent = player.inventory.hook1 || 5;
+  document.getElementById('qty-hook').textContent = player.inventory[player.gear.hook] || 0;
+  const qtyLine = document.getElementById('qty-line');
+  if (qtyLine) qtyLine.textContent = player.inventory[player.gear.line] || 0;
   const sadokQty = document.getElementById('qty-sadok');
   if (sadokQty) {
     const count = player.sadok?.length || 0;
@@ -573,6 +656,49 @@ function updateHUD() {
   document.getElementById('shop-gold').textContent = player.gold;
   updateEquipmentHud();
   updateDockLocks();
+  updateWorldTimeHud();
+}
+
+let lastWorldClock = '';
+
+function updateWorldTimeHud() {
+  if (typeof WorldTime === 'undefined') return;
+  const state = WorldTime.getState();
+  const clockEl = document.getElementById('world-clock');
+  const emojiEl = document.getElementById('weather-emoji');
+  const btn = document.getElementById('btn-weather');
+  if (clockEl && state.clock !== lastWorldClock) {
+    clockEl.textContent = state.clock;
+    lastWorldClock = state.clock;
+  }
+  if (emojiEl) emojiEl.textContent = state.weather.emoji;
+  if (btn) {
+    btn.title = `${state.weather.label}, ${state.phase.label} — ${state.clock}`;
+  }
+}
+
+function renderWeatherModal() {
+  if (typeof WorldTime === 'undefined') return;
+  const state = WorldTime.getState();
+  const bite = WorldTime.getBiteBonus();
+  const biteLabel = bite > 0 ? `+${Math.round(bite * 100)}% к клёву` : bite < 0 ? `${Math.round(bite * 100)}% к клёву` : 'Обычный клёв';
+  const set = (id, text) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
+  };
+  const emoji = document.getElementById('weather-modal-emoji');
+  if (emoji) emoji.textContent = state.weather.emoji;
+  set('weather-modal-clock', state.clock);
+  set('weather-modal-phase', state.phase.label);
+  set('weather-modal-weather', `${state.weather.label} — ${state.weather.desc}`);
+  set('weather-modal-hint', `${state.phase.hint}. ${biteLabel}.`);
+  set('weather-modal-next', `До «${state.next.phase.label}»: ${WorldTime.formatDuration(state.next.realMsLeft)}`);
+}
+
+function openWeatherModal() {
+  if (isCatchModalOpen()) return;
+  renderWeatherModal();
+  openModal('modal-weather');
 }
 
 
@@ -580,23 +706,96 @@ function isFishingActive() {
   return typeof FishingController !== 'undefined' && FishingController.isFishing();
 }
 
+function isCatchModalOpen() {
+  return pendingCatch != null;
+}
+
+function setCatchModalOpen(open) {
+  document.body.classList.toggle('catch-active', open);
+  const modal = document.getElementById('modal-catch');
+  if (modal) modal.setAttribute('aria-hidden', open ? 'false' : 'true');
+  updateDockLocks();
+}
+
+const SHOP_TAB_ORDER = ['rods', 'hooks', 'lines', 'bait', 'net', 'soup'];
+
+function setShopTab(tabId) {
+  if (!SHOP_TAB_ORDER.includes(tabId)) return;
+  game.shopTab = tabId;
+  document.querySelectorAll('#shop-tabs .tab').forEach((t) => {
+    t.classList.toggle('active', t.dataset.tab === tabId);
+  });
+  renderShop();
+}
+
+function switchShopTab(delta) {
+  const idx = SHOP_TAB_ORDER.indexOf(game.shopTab);
+  if (idx < 0) return;
+  const next = idx + delta;
+  if (next < 0 || next >= SHOP_TAB_ORDER.length) return;
+  setShopTab(SHOP_TAB_ORDER[next]);
+}
+
+function bindShopSwipe() {
+  const zone = document.getElementById('shop-swipe-zone');
+  if (!zone || zone.dataset.swipeBound === '1') return;
+  zone.dataset.swipeBound = '1';
+
+  let startX = 0;
+  let startY = 0;
+  let tracking = false;
+
+  const onStart = (x, y, target) => {
+    if (target?.closest('button, input, label, a, .buy-btn, .select-btn')) return;
+    startX = x;
+    startY = y;
+    tracking = true;
+  };
+
+  const onEnd = (x, y) => {
+    if (!tracking) return;
+    tracking = false;
+    const dx = x - startX;
+    const dy = y - startY;
+    if (Math.abs(dx) < 52 || Math.abs(dx) < Math.abs(dy) * 1.2) return;
+    switchShopTab(dx < 0 ? 1 : -1);
+  };
+
+  zone.addEventListener('touchstart', (e) => {
+    onStart(e.touches[0].clientX, e.touches[0].clientY, e.target);
+  }, { passive: true });
+
+  zone.addEventListener('touchend', (e) => {
+    const t = e.changedTouches[0];
+    onEnd(t.clientX, t.clientY);
+  }, { passive: true });
+
+  zone.addEventListener('mousedown', (e) => {
+    if (e.button !== 0) return;
+    onStart(e.clientX, e.clientY, e.target);
+  });
+
+  zone.addEventListener('mouseup', (e) => {
+    onEnd(e.clientX, e.clientY);
+  });
+}
+
 function tryOpenShop(tab) {
+  if (isCatchModalOpen()) return;
   if (isFishingActive()) {
     toast('Сначала вытащи удочку');
     return;
   }
   if (tab) {
-    game.shopTab = tab;
-    document.querySelectorAll('#shop-tabs .tab').forEach((t) => {
-      t.classList.toggle('active', t.dataset.tab === tab);
-    });
+    setShopTab(tab);
+  } else {
+    renderShop();
   }
-  renderShop();
   openModal('modal-shop');
 }
 
 function updateDockLocks() {
-  const locked = isFishingActive();
+  const locked = isFishingActive() || isCatchModalOpen();
   document.querySelectorAll('[data-lock-while-fishing]').forEach((el) => {
     el.classList.toggle('dock-slot--disabled', locked);
     el.setAttribute('aria-disabled', locked ? 'true' : 'false');
@@ -608,8 +807,53 @@ function updateDockLocks() {
   }
 }
 
-function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
-function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
+function openSettingsModal() {
+  if (typeof SettingsSystem !== 'undefined') {
+    const ambient = document.getElementById('settings-ambient-vol');
+    const sfx = document.getElementById('settings-sfx-vol');
+    const s = SettingsSystem.get();
+    if (ambient) ambient.value = String(Math.round(s.ambientVolume * 100));
+    if (sfx) sfx.value = String(Math.round(s.sfxVolume * 100));
+    const ambVal = document.getElementById('settings-ambient-val');
+    const sfxVal = document.getElementById('settings-sfx-val');
+    if (ambVal) ambVal.textContent = `${Math.round(s.ambientVolume * 100)}%`;
+    if (sfxVal) sfxVal.textContent = `${Math.round(s.sfxVolume * 100)}%`;
+    const msg = document.getElementById('settings-code-msg');
+    if (msg) {
+      msg.textContent = '';
+      msg.classList.remove('settings-code-msg--ok', 'settings-code-msg--err');
+    }
+  }
+  openModal('modal-settings');
+}
+
+function openModal(id) { document.getElementById(id)?.classList.remove('hidden'); }
+
+function hideModal(id) {
+  document.getElementById(id)?.classList.add('hidden');
+}
+
+function closeModal(id) {
+  if (id === 'modal-catch' && pendingCatch) {
+    finalizeCatch(true);
+    return;
+  }
+  hideModal(id);
+}
+
+function consumeBrokenTackle() {
+  const lineId = player.gear.line;
+  const hookId = player.gear.hook;
+  if ((player.inventory[lineId] || 0) > 0) {
+    player.inventory[lineId] -= 1;
+  }
+  if (GameRNG.random() < 0.35 && (player.inventory[hookId] || 0) > 0) {
+    player.inventory[hookId] -= 1;
+  }
+  normalizeHookGear();
+  normalizeLineGear();
+  updateHUD();
+}
 
 function initFishingController() {
   if (typeof FishingController === 'undefined') return;
@@ -622,6 +866,16 @@ function initFishingController() {
       updateHUD();
     },
     consumeBait() {
+      const hookQty = player.inventory[player.gear.hook] || 0;
+      const lineQty = player.inventory[player.gear.line] || 0;
+      if (hookQty <= 0) {
+        toast('Купи крючки в магазине!');
+        return false;
+      }
+      if (lineQty <= 0) {
+        toast('Купи леску в магазине!');
+        return false;
+      }
       const bait = player.inventory[player.gear.bait] || 0;
       if (bait <= 0) {
         toast('Купи наживку в магазине!');
@@ -632,6 +886,7 @@ function initFishingController() {
       updateHUD();
       return true;
     },
+    consumeBrokenTackle,
     onHookResult(grade) {
       const labels = {
         perfect: 'Идеальная подсечка!',
@@ -651,7 +906,12 @@ function initFishingController() {
       catchFishFromFsm(fctx);
     },
     onFightLose(reason) {
-      toast(reason === 'break' ? 'Леска не выдержала!' : 'Рыба сорвалась!');
+      if (reason === 'break') {
+        consumeBrokenTackle();
+        toast('Леска не выдержала!');
+      } else {
+        toast('Рыба сорвалась!');
+      }
       const l = getSceneLayout();
       spawnSplash(l.bobberFixed.x, l.bobberFixed.y, 8);
       resetFishingVisuals();
@@ -663,7 +923,7 @@ function initFishingController() {
     onCastSplash() {
       const l = getSceneLayout();
       if (l.bobberFixed) spawnSplash(l.bobberFixed.x, l.bobberFixed.y, 10);
-      addRipple(l.bobberFixed?.x || canvas.width * 0.5, l.bobberFixed?.y || canvas.height * 0.56);
+      addRipple(l.bobberFixed?.x || viewW * 0.5, l.bobberFixed?.y || viewH * 0.56);
       if (typeof AmbientAudio !== 'undefined') AmbientAudio.playSplash();
     },
     onBobberNibble() {
@@ -749,7 +1009,7 @@ function showCatchModal(fctx) {
   const weightEl = document.getElementById('catch-weight');
   const priceKgEl = document.getElementById('catch-price-kg-val');
   const silverEl = document.getElementById('catch-total-silver');
-  const expEl = document.getElementById('catch-exp');
+  const expEl = document.getElementById('catch-exp-val');
 
   if (fishImg) fishImg.innerHTML = renderFishIcon(fish, 'lg');
   if (nameEl) nameEl.textContent = fish.name;
@@ -759,6 +1019,7 @@ function showCatchModal(fctx) {
   if (expEl) expEl.textContent = String(rewards.exp);
 
   resetFishingVisuals();
+  setCatchModalOpen(true);
   openModal('modal-catch');
 }
 
@@ -766,7 +1027,8 @@ function finalizeCatch(toSadok) {
   if (!pendingCatch) return;
   const { fish, hookGrade, rarityId, rewards, fctx } = pendingCatch;
   pendingCatch = null;
-  closeModal('modal-catch');
+  setCatchModalOpen(false);
+  hideModal('modal-catch');
 
   addExp(rewards.exp);
   player.tournamentWeight += fish.weight;
@@ -888,8 +1150,8 @@ function addRipple(x, y) {
 
 function drawWaterAmbient() {
   initWaterAmbient();
-  const w = canvas.width;
-  const h = canvas.height;
+  const w = viewW;
+  const h = viewH;
   const waterTop = h * 0.44;
   const t = game.time;
 
@@ -950,6 +1212,10 @@ function drawWaterAmbient() {
 function update() {
   game.time++;
 
+  if (game.time % 60 === 0 && typeof WorldTime !== 'undefined') {
+    updateWorldTimeHud();
+  }
+
   if (game.time % 300 === 0 && player.energy < player.energyMax) {
     player.energy = Math.min(player.energyMax, player.energy + 1);
     updateHUD();
@@ -990,8 +1256,8 @@ function update() {
   });
 
   if (game.time % 160 === 0) {
-    const w = canvas.width;
-    const h = canvas.height;
+    const w = viewW;
+    const h = viewH;
     addRipple(
       w * (0.25 + Math.random() * 0.5),
       h * (0.5 + Math.random() * 0.06),
@@ -1003,37 +1269,40 @@ function drawBackground() {
   if (bgReady) {
     const iw = bgImage.width;
     const ih = bgImage.height;
-    const cw = canvas.width;
-    const ch = canvas.height;
+    const cw = viewW;
+    const ch = viewH;
     const scale = Math.max(cw / iw, ch / ih);
     const sw = iw * scale;
     const sh = ih * scale;
     ctx.drawImage(bgImage, (cw - sw) / 2, (ch - sh) / 2, sw, sh);
   } else {
-    const g = ctx.createLinearGradient(0, 0, 0, canvas.height);
+    const g = ctx.createLinearGradient(0, 0, 0, viewH);
     g.addColorStop(0, '#87CEEB');
     g.addColorStop(0.5, '#4A90A4');
     g.addColorStop(1, '#2E6B4F');
     ctx.fillStyle = g;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, viewW, viewH);
   }
 }
 
 function drawRod() {
   const rod = getRodLayout();
   if (rod.ready) {
+    const dw = Math.round(rod.dw);
+    const dh = Math.round(rod.dh);
     ctx.save();
     ctx.translate(rod.base.x, rod.base.y);
     ctx.rotate(rod.angle);
-    ctx.shadowColor = 'rgba(0,0,0,0.35)';
-    ctx.shadowBlur = 10;
+    const smooth = ctx.imageSmoothingEnabled;
+    ctx.imageSmoothingEnabled = false;
     ctx.drawImage(
       rodImg,
-      -rod.dw * ROD_SPRITE.anchorX,
-      -rod.dh * ROD_SPRITE.anchorY,
-      rod.dw,
-      rod.dh,
+      Math.round(-dw * ROD_SPRITE.anchorX),
+      Math.round(-dh * ROD_SPRITE.anchorY),
+      dw,
+      dh,
     );
+    ctx.imageSmoothingEnabled = smooth;
     ctx.restore();
     return;
   }
@@ -1149,8 +1418,11 @@ function drawParticles() {
 }
 
 function drawScene() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, viewW, viewH);
   drawBackground();
+  if (typeof WorldTime !== 'undefined') {
+    WorldTime.drawOverlay(ctx, viewW, viewH);
+  }
   drawWaterAmbient();
   drawRipples();
   drawRod();
@@ -1166,6 +1438,7 @@ function gameLoop() {
 
 /* === Магазин / карта (сокращённо) === */
 function openMap() {
+  if (isCatchModalOpen()) return;
   renderMap();
   openModal('modal-map');
 }
@@ -1215,56 +1488,78 @@ function showLocationPreview(loc) {
   openModal('modal-location');
 }
 
+function isMobileUi() {
+  return document.documentElement.classList.contains('is-mobile');
+}
+
 function renderShop() {
   const items = SHOP[game.shopTab] || [];
   const box = document.getElementById('shop-items');
   const isBait = game.shopTab === 'bait';
   const isRod = game.shopTab === 'rods';
+  const isHook = game.shopTab === 'hooks';
+  const isLine = game.shopTab === 'lines';
+  const isTacklePack = isBait || isHook || isLine;
+  const compact = isMobileUi();
   box.innerHTML = items.map((item) => {
     const owned = player.owned.includes(item.id);
     const locked = isBait ? false : player.level < item.level;
     const afford = item.currency === 'gold' ? player.gold >= item.price : player.silver >= item.price;
     const price = shopPriceHtml(item);
     const iconSrc = shopItemIcon(item, game.shopTab);
+    const iconHtml = itemIconMarkup(item, game.shopTab, 'icon-slot-empty icon-slot-empty--shop');
     const stock = player.inventory[item.id] || 0;
     const pack = item.qty || 10;
     const equipped = isBait
       ? player.gear.bait === item.id
-      : isRod && player.gear.rod === item.id;
-    const hint = isBait && typeof BAIT_HINTS !== 'undefined' ? BAIT_HINTS[item.id] : '';
+      : isHook
+        ? player.gear.hook === item.id
+        : isLine
+          ? player.gear.line === item.id
+          : isRod && player.gear.rod === item.id;
+    const hint = tackleHint(item.id, game.shopTab);
     const lockNote = locked ? `<div class="item-lock">нужен ур. ${item.level}</div>` : '';
     const poorNote = !locked && !afford ? '<div class="item-lock">не хватает монет</div>' : '';
-    let action = '';
-    if (isBait) {
+    const levelLine = !compact || item.level > 1
+      ? `<div class="item-level">уровень: ${item.level}</div>`
+      : '';
+    let meta = `${levelLine}${lockNote}${poorNote}`;
+    let actions = '';
+    if (isTacklePack) {
       const selectBtn = stock > 0
-        ? `<button type="button" class="select-btn ${equipped ? 'active' : ''}" data-select="${item.id}">${equipped ? '✓ На крючке' : 'Выбрать'}</button>`
+        ? `<button type="button" class="select-btn ${equipped ? 'active' : ''}" data-select="${item.id}">${equipped ? '✓' : 'Выбрать'}</button>`
         : '';
-      action = `<div class="item-stock">У вас: ${stock} шт.</div>
-        ${hint ? `<div class="item-hint">Ловит: ${hint}</div>` : ''}
-        ${poorNote}
-        ${selectBtn}
-        <button class="buy-btn" data-id="${item.id}" ${!afford ? 'disabled' : ''}>Купить ×${pack} — ${price}</button>`;
+      meta = `<div class="item-stock">×${stock}</div>
+        ${hint ? `<div class="item-hint">${compact ? hint : `Ловит: ${hint}`}</div>` : ''}
+        ${meta}`;
+      actions = `${selectBtn}<button class="buy-btn" data-id="${item.id}" ${!afford || locked ? 'disabled' : ''}>×${pack} ${price}</button>`;
     } else if (owned) {
       if (isRod) {
-        action = `<button type="button" class="select-btn ${equipped ? 'active' : ''}" data-select-rod="${item.id}">${equipped ? '✓ Выбрана' : 'Выбрать'}</button>`;
+        actions = `<button type="button" class="select-btn ${equipped ? 'active' : ''}" data-select-rod="${item.id}">${equipped ? '✓' : 'Выбрать'}</button>`;
       } else {
-        action = '<div class="owned-label">✓ Есть</div>';
+        actions = `<div class="owned-label">${iconSrc ? `<img class="inline-ico" src="${iconSrc}" alt="">` : '<span class="icon-slot-empty icon-slot-empty--inline"></span>'} ✓</div>`;
       }
     } else {
-      action = `${lockNote}${poorNote}<button class="buy-btn" data-id="${item.id}" ${locked || !afford ? 'disabled' : ''}>${price}</button>`;
+      actions = `<button class="buy-btn" data-id="${item.id}" ${locked || !afford ? 'disabled' : ''}>${price}</button>`;
     }
-    return `<div class="shop-item ${owned && !isBait && !isRod ? 'owned' : ''} ${equipped && (isBait || isRod) ? 'equipped' : ''} ${locked ? 'locked' : ''}">
-      <div class="item-icon"><img src="${iconSrc}" alt=""></div>
-      <div class="item-name">${item.name}</div>
-      <div class="item-level">уровень: ${item.level}</div>
-      ${action}
+    return `<div class="shop-item ${owned && !isTacklePack && !isRod ? 'owned' : ''} ${equipped && (isTacklePack || isRod) ? 'equipped' : ''} ${locked ? 'locked' : ''}">
+      <div class="item-icon">${iconHtml}</div>
+      <div class="item-main">
+        <div class="item-name">${item.name}</div>
+        ${meta}
+      </div>
+      <div class="shop-item-actions">${actions}</div>
     </div>`;
   }).join('');
   box.querySelectorAll('.buy-btn').forEach((btn) => {
     btn.onclick = () => buyItem(items.find((i) => i.id === btn.dataset.id));
   });
   box.querySelectorAll('.select-btn').forEach((btn) => {
-    btn.onclick = () => equipBait(btn.dataset.select);
+    btn.onclick = () => {
+      if (isHook) equipHook(btn.dataset.select);
+      else if (isLine) equipLine(btn.dataset.select);
+      else equipBait(btn.dataset.select);
+    };
   });
   box.querySelectorAll('[data-select-rod]').forEach((btn) => {
     btn.onclick = () => equipRod(btn.dataset.selectRod);
@@ -1281,14 +1576,25 @@ function openGearPicker(kind) {
   openModal('modal-gear-picker');
 }
 
+function setModalTitleText(el, text) {
+  if (!el) return;
+  const span = el.querySelector('span');
+  if (span) span.textContent = text;
+  else el.textContent = text;
+}
+
 function renderGearPicker(kind) {
   const title = document.getElementById('gear-picker-title');
+  const titleText = document.getElementById('gear-picker-title-text');
+  const titleIco = document.getElementById('gear-picker-ico');
   const list = document.getElementById('gear-picker-list');
   const shopBtn = document.getElementById('gear-picker-shop');
   if (!list) return;
 
   if (kind === 'rods') {
-    if (title) title.textContent = 'Удочки';
+    if (titleText) titleText.textContent = 'Удочки';
+    else setModalTitleText(title, 'Удочки');
+    if (titleIco) titleIco.src = GAME_ICONS.url('rod-bamboo');
     if (shopBtn) shopBtn.dataset.tab = 'rods';
     const items = (SHOP.rods || []).filter((r) => player.owned.includes(r.id));
     list.innerHTML = items.length
@@ -1311,16 +1617,83 @@ function renderGearPicker(kind) {
     return;
   }
 
-  if (title) title.textContent = 'Наживка';
+  if (kind === 'hooks') {
+    if (titleText) titleText.textContent = 'Крючки';
+    else setModalTitleText(title, 'Крючки');
+    if (titleIco) titleIco.src = GAME_ICONS.url('hook');
+    if (shopBtn) shopBtn.dataset.tab = 'hooks';
+    const items = (SHOP.hooks || []).filter((h) => (player.inventory[h.id] || 0) > 0);
+    list.innerHTML = items.length
+      ? items.map((hook) => {
+        const active = player.gear.hook === hook.id;
+        const stock = player.inventory[hook.id] || 0;
+        const icon = shopItemIcon(hook, 'hooks');
+        const iconHtml = icon
+          ? `<img src="${icon}" alt="">`
+          : '<span class="icon-slot-empty icon-slot-empty--picker" aria-hidden="true"></span>';
+        const hint = tackleHint(hook.id, 'hooks');
+        return `<button type="button" class="gear-picker-row${active ? ' gear-picker-row--active' : ''}" data-hook-id="${hook.id}">
+          ${iconHtml}
+          <span>${hook.name}${hint ? `<small>${hint}</small>` : ''}</span>
+          <em>${active ? '✓' : `×${stock}`}</em>
+        </button>`;
+      }).join('')
+      : '<div class="gear-picker-empty">Нет крючков — загляни в магазин</div>';
+    list.querySelectorAll('[data-hook-id]').forEach((btn) => {
+      btn.onclick = () => {
+        equipHook(btn.dataset.hookId);
+        closeModal('modal-gear-picker');
+      };
+    });
+    return;
+  }
+
+  if (kind === 'lines') {
+    if (titleText) titleText.textContent = 'Леска';
+    else setModalTitleText(title, 'Леска');
+    if (titleIco) titleIco.src = GAME_ICONS.url('line');
+    if (shopBtn) shopBtn.dataset.tab = 'lines';
+    const items = (SHOP.lines || []).filter((l) => (player.inventory[l.id] || 0) > 0);
+    list.innerHTML = items.length
+      ? items.map((line) => {
+        const active = player.gear.line === line.id;
+        const stock = player.inventory[line.id] || 0;
+        const icon = shopItemIcon(line, 'lines');
+        const iconHtml = icon
+          ? `<img src="${icon}" alt="">`
+          : '<span class="icon-slot-empty icon-slot-empty--picker" aria-hidden="true"></span>';
+        const hint = tackleHint(line.id, 'lines');
+        return `<button type="button" class="gear-picker-row${active ? ' gear-picker-row--active' : ''}" data-line-id="${line.id}">
+          ${iconHtml}
+          <span>${line.name}${hint ? `<small>${hint}</small>` : ''}</span>
+          <em>${active ? '✓' : `×${stock}`}</em>
+        </button>`;
+      }).join('')
+      : '<div class="gear-picker-empty">Нет лески — загляни в магазин</div>';
+    list.querySelectorAll('[data-line-id]').forEach((btn) => {
+      btn.onclick = () => {
+        equipLine(btn.dataset.lineId);
+        closeModal('modal-gear-picker');
+      };
+    });
+    return;
+  }
+
+  if (titleText) titleText.textContent = 'Наживка';
+  else setModalTitleText(title, 'Наживка');
+  if (titleIco) titleIco.src = GAME_ICONS.url('bait-worm');
   if (shopBtn) shopBtn.dataset.tab = 'bait';
   const items = (SHOP.bait || []).filter((b) => (player.inventory[b.id] || 0) > 0);
   list.innerHTML = items.length
     ? items.map((bait) => {
       const active = player.gear.bait === bait.id;
       const stock = player.inventory[bait.id] || 0;
-      const icon = GAME_ICONS.url(bait.iconKey || GAME_ICONS.resolve(bait.id));
+      const icon = shopItemIcon(bait, 'bait');
+      const iconHtml = icon
+        ? `<img src="${icon}" alt="">`
+        : '<span class="icon-slot-empty icon-slot-empty--picker" aria-hidden="true"></span>';
       return `<button type="button" class="gear-picker-row${active ? ' gear-picker-row--active' : ''}" data-bait-id="${bait.id}">
-        <img src="${icon}" alt="">
+        ${iconHtml}
         <span>${bait.name}</span>
         <em>${active ? '✓' : `×${stock}`}</em>
       </button>`;
@@ -1360,10 +1733,41 @@ function equipBait(baitId) {
   toast(`Наживка: ${bait.name}`);
 }
 
+function equipHook(hookId) {
+  const hook = findShopItem(hookId, 'hooks');
+  if (!hook) return;
+  const stock = player.inventory[hookId] || 0;
+  if (stock <= 0) {
+    toast('Сначала купите крючки');
+    return;
+  }
+  player.gear.hook = hookId;
+  updateHUD();
+  renderShop();
+  save();
+  toast(`Крючок: ${hook.name}`);
+}
+
+function equipLine(lineId) {
+  const line = findShopItem(lineId, 'lines');
+  if (!line) return;
+  const stock = player.inventory[lineId] || 0;
+  if (stock <= 0) {
+    toast('Сначала купите леску');
+    return;
+  }
+  player.gear.line = lineId;
+  updateHUD();
+  renderShop();
+  save();
+  toast(`Леска: ${line.name}`);
+}
+
 function buyItem(item) {
   if (!item) return;
-  const isBait = game.shopTab === 'bait';
-  if (!isBait && player.level < item.level) {
+  const isTacklePack = game.shopTab === 'bait' || game.shopTab === 'hooks' || game.shopTab === 'lines';
+  const skipLevel = game.shopTab === 'bait';
+  if (!skipLevel && player.level < item.level) {
     toast(`Нужен ${item.level} уровень`);
     return;
   }
@@ -1381,6 +1785,20 @@ function buyItem(item) {
       player.gear.bait = item.id;
     }
     toast(`Куплено: ${item.name} ×${qty}`);
+  } else if (game.shopTab === 'hooks') {
+    const qty = item.qty || 10;
+    player.inventory[item.id] = (player.inventory[item.id] || 0) + qty;
+    if (!player.gear.hook || (player.inventory[player.gear.hook] || 0) <= 0) {
+      player.gear.hook = item.id;
+    }
+    toast(`Куплено: ${item.name} ×${qty}`);
+  } else if (game.shopTab === 'lines') {
+    const qty = item.qty || 50;
+    player.inventory[item.id] = (player.inventory[item.id] || 0) + qty;
+    if (!player.gear.line || (player.inventory[player.gear.line] || 0) <= 0) {
+      player.gear.line = item.id;
+    }
+    toast(`Куплено: ${item.name} ×${qty}`);
   } else if (game.shopTab === 'rods') {
     if (!player.owned.includes(item.id)) player.owned.push(item.id);
     player.gear.rod = item.id;
@@ -1396,16 +1814,24 @@ function buyItem(item) {
 
 function renderBackpack() {
   const rows = [];
-  const add = (iconKey, name, qty, baitId) => {
+  const addBait = (item, qty) => {
     if (!qty) return;
-    const equipped = baitId && player.gear.bait === baitId;
-    const cls = baitId ? 'bp-row bp-row--bait' : 'bp-row';
+    const equipped = player.gear.bait === item.id;
     const tag = equipped ? ' <em class="bp-equipped">на крючке</em>' : '';
-    const data = baitId ? ` data-bait-id="${baitId}"` : '';
-    rows.push(`<div class="${cls}"${data}><img src="${GAME_ICONS.url(iconKey)}" alt=""><span>${name}${tag}</span><b>×${qty}</b></div>`);
+    const iconHtml = itemIconMarkup(item, 'bait', 'icon-slot-empty icon-slot-empty--picker');
+    rows.push(`<div class="bp-row bp-row--bait" data-bait-id="${item.id}">${iconHtml}<span>${item.name}${tag}</span><b>×${qty}</b></div>`);
   };
-  (SHOP.bait || []).forEach((b) => add(b.iconKey || b.id, b.name, player.inventory[b.id], b.id));
-  add('hook', 'Крючки', player.inventory.hook1);
+  (SHOP.bait || []).forEach((b) => addBait(b, player.inventory[b.id]));
+  const addTackle = (item, tab, gearKey, label) => {
+    const qty = player.inventory[item.id] || 0;
+    if (!qty) return;
+    const equipped = player.gear[gearKey] === item.id;
+    const tag = equipped ? ` <em class="bp-equipped">на ${label}</em>` : '';
+    const iconHtml = itemIconMarkup(item, tab, 'icon-slot-empty icon-slot-empty--picker');
+    rows.push(`<div class="bp-row bp-row--tackle" data-tackle="${gearKey}" data-id="${item.id}">${iconHtml}<span>${item.name}${tag}</span><b>×${qty}</b></div>`);
+  };
+  (SHOP.hooks || []).forEach((h) => addTackle(h, 'hooks', 'hook', 'крючке'));
+  (SHOP.lines || []).forEach((l) => addTackle(l, 'lines', 'line', 'удочке'));
   const rod = findShopItem(player.gear.rod, 'rods');
   if (rod) rows.push(`<div class="bp-row"><img src="${GAME_ICONS.url(GAME_ICONS.rodIconForItem(rod))}" alt=""><span>${rod.name}</span><b>✓</b></div>`);
   const box = document.getElementById('backpack-content');
@@ -1415,6 +1841,12 @@ function renderBackpack() {
   box.querySelectorAll('.bp-row--bait').forEach((row) => {
     row.onclick = () => equipBait(row.dataset.baitId);
   });
+  box.querySelectorAll('.bp-row--tackle').forEach((row) => {
+    row.onclick = () => {
+      if (row.dataset.tackle === 'hook') equipHook(row.dataset.id);
+      else if (row.dataset.tackle === 'line') equipLine(row.dataset.id);
+    };
+  });
 }
 
 function startGame() {
@@ -1422,14 +1854,43 @@ function startGame() {
   applyLocationScene(getLocation());
   const hud = document.getElementById('hud');
   if (hud) hud.classList.remove('is-hidden');
-  if (typeof GAME_ICONS !== 'undefined') GAME_ICONS.applyHudAll();
+  if (typeof GAME_ICONS !== 'undefined') {
+    GAME_ICONS.applyHudAll();
+    GAME_ICONS.applyMenuIcons();
+  }
   updateHUD();
   syncViewportVars();
   updateRodTip();
   if (!tutorialSeen) openModal('modal-tutorial');
 }
 
-const LOADING_MIN_MS = 3500;
+const LOADING_MIN_MS = 2800;
+
+const LOADING_TIPS = [
+  'На живца чаще клюют щука, окунь и ротан',
+  'Хлеб и кукуруза — для карася и леща',
+  'Тонкая леска лучше для пескаря, но рвётся на крупной рыбе',
+  'Время суток и погода влияют на клёв',
+  'Подбирай крючок под размер рыбы',
+];
+
+const LOADING_STATUS = [
+  'Подготовка удочки…',
+  'Заряжаем снасти…',
+  'Натягиваем леску…',
+  'Смотрим на поплавок…',
+  'Почти готово…',
+];
+
+function setLoadingProgress(pct, statusText) {
+  const bar = document.getElementById('loading-bar');
+  const percent = document.getElementById('loading-percent');
+  const status = document.getElementById('loading-status');
+  const clamped = Math.max(0, Math.min(100, Math.round(pct)));
+  if (bar) bar.style.width = `${clamped}%`;
+  if (percent) percent.textContent = `${clamped}%`;
+  if (status && statusText) status.textContent = statusText;
+}
 
 function preloadImage(src) {
   return new Promise((resolve) => {
@@ -1445,8 +1906,14 @@ async function runLoadingScreen() {
 
   document.body.classList.add('is-loading');
   const started = Date.now();
+  const tipEl = document.getElementById('loading-tip');
+  if (tipEl) {
+    tipEl.textContent = LOADING_TIPS[Math.floor(Math.random() * LOADING_TIPS.length)];
+  }
+  setLoadingProgress(0, LOADING_STATUS[0]);
 
   const assets = [
+    'assets/ui/loading-screen.png?v=2',
     'assets/icon.png',
     'assets/locations/lake.png',
     'assets/locations/world-map.png?v=1',
@@ -1459,12 +1926,26 @@ async function runLoadingScreen() {
     'assets/rod/rod.png?v=1',
     'assets/rod/spark-2000.png?v=2',
     'assets/ui/icons/rod-spark.png?v=2',
+    'assets/ui/fight-fish-silhouette.png?v=1',
   ];
 
-  await Promise.all(assets.map(preloadImage));
+  const total = assets.length;
+  let loaded = 0;
+  await Promise.all(assets.map(async (src) => {
+    await preloadImage(src);
+    loaded += 1;
+    const pct = (loaded / total) * 88;
+    const statusIdx = Math.min(LOADING_STATUS.length - 1, Math.floor(pct / 22));
+    setLoadingProgress(pct, LOADING_STATUS[statusIdx]);
+  }));
+
+  setLoadingProgress(95, LOADING_STATUS[LOADING_STATUS.length - 1]);
 
   const waitLeft = LOADING_MIN_MS - (Date.now() - started);
   if (waitLeft > 0) await new Promise((r) => setTimeout(r, waitLeft));
+
+  setLoadingProgress(100, 'Поехали!');
+  await new Promise((r) => setTimeout(r, 180));
 
   screen.classList.add('loading-screen--hide');
   document.body.classList.remove('is-loading');
@@ -1480,6 +1961,12 @@ async function init() {
     AmbientAudio.bindUnlock();
     AmbientAudio.bindLifecycle();
   }
+  if (typeof SettingsSystem !== 'undefined') {
+    SettingsSystem.init();
+    SettingsSystem.bindUi();
+    window.grantPlayerLevels = grantPlayerLevels;
+  }
+  if (typeof GAME_ICONS !== 'undefined') GAME_ICONS.applyMenuIcons();
 
   await runLoadingScreen();
   bindViewport();
@@ -1500,12 +1987,14 @@ async function init() {
   }
 
   document.addEventListener('keydown', (e) => {
+    if (isCatchModalOpen()) return;
     if (e.code === 'Space' && !e.repeat) {
       e.preventDefault();
       FishingController.onCastDown();
     }
   });
   document.addEventListener('keyup', (e) => {
+    if (isCatchModalOpen()) return;
     if (e.code === 'Space') {
       e.preventDefault();
       FishingController.onCastUp();
@@ -1517,8 +2006,28 @@ async function init() {
   if (locationBanner) locationBanner.onclick = () => openMap();
   const btnShop = document.getElementById('btn-shop-quick');
   if (btnShop) btnShop.onclick = () => tryOpenShop();
-  const baitSlot = document.querySelector('.dock-slot[title="Наживка"]');
+  const baitSlot = document.querySelector('.dock-slot[title^="Наживка"]');
   if (baitSlot) baitSlot.onclick = () => openGearPicker('bait');
+  const hookSlot = document.querySelector('.dock-slot[title^="Крючки"]');
+  if (hookSlot) {
+    hookSlot.onclick = () => openGearPicker('hooks');
+    hookSlot.onkeydown = (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openGearPicker('hooks');
+      }
+    };
+  }
+  const lineSlot = document.querySelector('.dock-slot[title^="Леска"]');
+  if (lineSlot) {
+    lineSlot.onclick = () => openGearPicker('lines');
+    lineSlot.onkeydown = (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openGearPicker('lines');
+      }
+    };
+  }
   const rodSlot = document.querySelector('.dock-slot[title^="Удочка"]');
   if (rodSlot) {
     rodSlot.onclick = () => openGearPicker('rods');
@@ -1555,10 +2064,9 @@ async function init() {
   const btnGold = document.getElementById('btn-gold-plus');
   if (btnGold) btnGold.onclick = () => tryOpenShop();
   const btnWeather = document.getElementById('btn-weather');
-  if (btnWeather) btnWeather.onclick = () => {
-    const loc = getLocation();
-    toast(loc.description || loc.name);
-  };
+  if (btnWeather) btnWeather.onclick = () => openWeatherModal();
+  const btnSettings = document.getElementById('btn-settings');
+  if (btnSettings) btnSettings.onclick = () => openSettingsModal();
   document.getElementById('btn-enter-location').onclick = () => {
     if (game.selectedLocation && !game.selectedLocation.comingSoon) {
       player.locationId = game.selectedLocation.id;
@@ -1571,18 +2079,20 @@ async function init() {
   };
 
   document.querySelectorAll('.modal-close').forEach((b) => {
-    b.onclick = () => closeModal(b.dataset.close);
-  });
-  document.querySelectorAll('#shop-tabs .tab').forEach((tab) => {
-    tab.onclick = () => {
-      document.querySelectorAll('#shop-tabs .tab').forEach((t) => t.classList.remove('active'));
-      tab.classList.add('active');
-      game.shopTab = tab.dataset.tab;
-      renderShop();
+    b.onclick = () => {
+      const id = b.dataset.close;
+      if (id) closeModal(id);
     };
   });
+  document.querySelectorAll('#shop-tabs .tab').forEach((tab) => {
+    tab.onclick = () => setShopTab(tab.dataset.tab);
+  });
+  bindShopSwipe();
   document.querySelectorAll('.modal').forEach((m) => {
-    m.onclick = (e) => { if (e.target === m) closeModal(m.id); };
+    m.onclick = (e) => {
+      if (m.id === 'modal-catch') return;
+      if (e.target === m) closeModal(m.id);
+    };
   });
 
   if (!gameLoopRunning) { gameLoopRunning = true; gameLoop(); }

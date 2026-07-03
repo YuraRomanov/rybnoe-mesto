@@ -45,7 +45,7 @@ const GameRNG = (() => {
     return range(Math.max(2, min), Math.max(min + 1, max));
   }
 
-  function buildFishTable(location, baitId, baitBonus, locFish) {
+  function buildFishTable(location, baitId, locFish, hookId, lineId) {
     const pool = locFish || FISH;
     return (location.fishIds || []).map((id, i) => {
       const fish = pool[id] || pool[String(id)];
@@ -53,13 +53,13 @@ const GameRNG = (() => {
       const ver = (location.fishVer || [])[i] ?? 1;
       const cat = fish.category || 1;
       const rarity = GAME_CONFIG.rarityByCategory[cat] || 'common';
-      const baitMul = typeof baitFishMultiplier === 'function'
-        ? baitFishMultiplier(baitId, fish.id)
+      const tackleMul = typeof tackleCatchMultiplier === 'function'
+        ? tackleCatchMultiplier(baitId, hookId, lineId, fish.id)
         : 1;
       return {
         id: String(id),
         fish,
-        weight: ver * (1 + (baitBonus || 0)) * baitMul,
+        weight: ver * tackleMul,
         rarity,
       };
     }).filter(Boolean);

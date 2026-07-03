@@ -13,6 +13,7 @@
     "extract:fish": "node tools/extract-fish-sprites.mjs",
     "extract:rod": "node tools/extract-rod-sprites.mjs",
     "prepare:misc": "node tools/prepare-misc-assets.mjs",
+    "prepare:fish": "node tools/prepare-new-fish.mjs",
     "prepare:bait": "node tools/prepare-bait-icons.mjs"
   },
   "engines": {

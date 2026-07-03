@@ -1,0 +1,480 @@
+/* Компактные меню и карточки на телефонах */
+html.is-mobile .modal {
+  padding: 6px;
+  align-items: center;
+}
+
+html.is-mobile .modal-window {
+  width: min(94vw, 400px) !important;
+  max-height: min(calc(var(--app-h, 100vh) - 8px), 94dvh);
+  padding: 8px 10px max(8px, var(--safe-bottom));
+  border-radius: 10px;
+  border-width: 2px;
+}
+
+html.is-mobile .modal-window h2,
+html.is-mobile .modal-title {
+  font-size: 14px;
+  margin: 0 22px 6px 0;
+  gap: 6px;
+}
+
+html.is-mobile .modal-title-ico {
+  width: 20px;
+  height: 20px;
+}
+
+html.is-mobile .tab {
+  gap: 4px;
+  padding: 4px 7px;
+}
+
+html.is-mobile .tab-ico {
+  width: 16px;
+  height: 16px;
+}
+
+html.is-mobile .tab span {
+  font-size: 10px;
+}
+
+html.is-mobile .btn-ico {
+  width: 16px;
+  height: 16px;
+}
+
+html.is-mobile .btn-primary {
+  gap: 6px;
+}
+
+html.is-mobile .modal-close {
+  top: 6px;
+  right: 6px;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+html.is-mobile .btn-primary {
+  min-height: 34px;
+  padding: 7px 10px;
+  font-size: 13px;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+
+/* --- Магазин --- */
+html.is-mobile .shop-header {
+  margin-bottom: 6px;
+}
+
+html.is-mobile .shop-header h2 {
+  margin-bottom: 0;
+}
+
+html.is-mobile .shop-currency {
+  gap: 8px;
+  font-size: 11px;
+}
+
+html.is-mobile .shop-curr img {
+  width: 16px;
+  height: 16px;
+}
+
+html.is-mobile .tabs {
+  flex-wrap: wrap;
+  overflow: hidden;
+  gap: 3px;
+  margin-bottom: 5px;
+  padding-bottom: 0;
+  justify-content: center;
+}
+
+html.is-mobile .tabs .tab {
+  flex: 0 1 auto;
+  min-height: 26px;
+  padding: 3px 6px;
+  font-size: 9px;
+  border-radius: 6px;
+  border-width: 1px;
+}
+
+html.is-mobile .shop-body {
+  min-height: 0;
+}
+
+html.is-mobile .shop-items {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-height: none;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+html.is-mobile .shop-swipe-hint {
+  font-size: 9px;
+  margin-top: 3px;
+}
+
+html.is-mobile .shop-item {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  grid-template-areas:
+    "icon main actions";
+  gap: 4px 8px;
+  align-items: center;
+  padding: 5px 7px;
+  text-align: left;
+  border-radius: 8px;
+}
+
+html.is-mobile .item-icon {
+  grid-area: icon;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+}
+
+html.is-mobile .item-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+html.is-mobile .item-main {
+  grid-area: main;
+  min-width: 0;
+}
+
+html.is-mobile .item-name {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+html.is-mobile .item-level {
+  display: none;
+}
+
+html.is-mobile .item-stock,
+html.is-mobile .item-hint,
+html.is-mobile .item-lock,
+html.is-mobile .owned-label {
+  font-size: 9px;
+  margin: 1px 0 0;
+  line-height: 1.2;
+}
+
+html.is-mobile .item-hint {
+  color: #a5d6a7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+html.is-mobile .shop-item-actions {
+  grid-area: actions;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: stretch;
+}
+
+html.is-mobile .shop-item .buy-btn,
+html.is-mobile .shop-item .select-btn {
+  margin: 0;
+  min-height: 26px;
+  padding: 3px 6px;
+  font-size: 9px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+html.is-mobile .sadok-sell-btn,
+html.is-mobile #sadok-sell-all {
+  min-height: 30px;
+}
+
+html.is-mobile .shop-item .owned-label {
+  margin: 0;
+  text-align: center;
+}
+
+html.is-mobile .price-tag img {
+  width: 12px;
+  height: 12px;
+}
+
+/* --- Выбор удочки / наживки --- */
+html.is-mobile .gear-picker-window {
+  width: min(92vw, 340px) !important;
+}
+
+html.is-mobile .gear-picker-list {
+  gap: 3px;
+  max-height: min(44vh, 260px);
+  margin: 5px 0 6px;
+}
+
+html.is-mobile .gear-picker-row {
+  padding: 5px 8px;
+  gap: 8px;
+  border-radius: 8px;
+}
+
+html.is-mobile .gear-picker-row img {
+  width: 32px;
+  height: 32px;
+}
+
+html.is-mobile .gear-picker-row span {
+  font-size: 12px;
+}
+
+html.is-mobile .gear-picker-row em {
+  font-size: 11px;
+}
+
+html.is-mobile .gear-picker-empty {
+  padding: 10px 6px;
+  font-size: 11px;
+}
+
+/* --- Карта --- */
+html.is-mobile .map-window {
+  width: min(94vw, 400px) !important;
+}
+
+html.is-mobile .map-content {
+  margin-top: 6px;
+  gap: 4px;
+}
+
+html.is-mobile .map-area {
+  height: min(34vh, 165px);
+  min-height: 130px;
+  border-width: 2px;
+  border-radius: 8px;
+}
+
+html.is-mobile .map-arrow {
+  width: 28px;
+  height: 28px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+html.is-mobile .marker-pin {
+  width: 14px;
+  height: 24px;
+}
+
+html.is-mobile .marker-label {
+  font-size: 8px;
+  padding: 2px 5px;
+}
+
+/* --- Локация --- */
+html.is-mobile .location-window {
+  width: min(92vw, 340px) !important;
+}
+
+html.is-mobile .location-preview {
+  height: 72px;
+  margin: 6px 0;
+  border-radius: 8px;
+}
+
+html.is-mobile .loc-preview-desc {
+  font-size: 11px;
+  margin: 4px 0 6px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+html.is-mobile .location-fish {
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+html.is-mobile .fish-icons {
+  max-height: 56px;
+  gap: 4px;
+  padding: 4px 2px;
+}
+
+html.is-mobile .fish-sprite--sm {
+  width: 32px;
+  height: 32px;
+}
+
+/* --- Садок --- */
+html.is-mobile .sadok-hint {
+  font-size: 10px;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+html.is-mobile .sadok-list {
+  max-height: calc(var(--app-h, 100vh) * 0.4);
+  gap: 4px;
+}
+
+html.is-mobile .sadok-item {
+  grid-template-columns: 36px 1fr auto;
+  grid-template-areas: "icon info price";
+  gap: 4px 6px;
+  padding: 5px 7px;
+  border-radius: 8px;
+}
+
+html.is-mobile .owned-label .inline-ico {
+  width: 14px;
+  height: 14px;
+}
+
+html.is-mobile .sadok-item-icon {
+  width: 34px;
+  height: 34px;
+}
+
+html.is-mobile .sadok-item-icon .fish-sprite--sm {
+  width: 32px;
+  height: 32px;
+}
+
+html.is-mobile .sadok-item-name {
+  font-size: 11px;
+}
+
+html.is-mobile .sadok-item-meta {
+  font-size: 9px;
+}
+
+html.is-mobile .sadok-item-price {
+  font-size: 11px;
+}
+
+html.is-mobile .sadok-item-price img {
+  width: 14px;
+  height: 14px;
+}
+
+html.is-mobile .sadok-sell-btn {
+  min-height: 30px;
+  font-size: 11px;
+  padding: 4px 8px;
+}
+
+html.is-mobile .sadok-total {
+  font-size: 11px;
+}
+
+html.is-mobile .sadok-footer {
+  margin-top: 6px;
+  gap: 6px;
+}
+
+/* --- Рюкзак --- */
+html.is-mobile .bp-row {
+  padding: 6px 8px;
+  gap: 8px;
+}
+
+html.is-mobile .bp-row img {
+  width: 28px;
+  height: 28px;
+}
+
+html.is-mobile .bp-row span {
+  font-size: 12px;
+}
+
+html.is-mobile .backpack-empty {
+  padding: 16px;
+  font-size: 12px;
+}
+
+/* --- Обучение --- */
+html.is-mobile .tutorial-steps {
+  margin: 6px 0 8px 18px;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+html.is-mobile .tutorial-steps li {
+  margin-bottom: 4px;
+}
+
+/* --- Улов --- */
+html.is-mobile .catch-window {
+  width: min(88vw, 320px) !important;
+  padding: 12px 12px 10px;
+}
+
+html.is-mobile .catch-title {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+html.is-mobile .catch-fish-hero {
+  min-height: 72px;
+  margin: 0;
+}
+
+html.is-mobile .catch-fish-hero .fish-sprite--lg {
+  width: 88px;
+  height: 88px;
+}
+
+html.is-mobile .catch-card {
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+html.is-mobile .catch-fish-name {
+  font-size: 14px;
+}
+
+html.is-mobile .catch-fish-weight,
+html.is-mobile .catch-price-kg-label {
+  font-size: 11px;
+}
+
+html.is-mobile .catch-stats {
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+html.is-mobile .catch-stat-label {
+  font-size: 10px;
+}
+
+html.is-mobile .catch-stat-value {
+  font-size: 13px;
+}
+
+html.is-mobile .catch-actions {
+  gap: 6px;
+}
+
+html.is-mobile .btn-catch {
+  padding: 8px 6px;
+  font-size: 11px;
+  min-height: 34px;
+}
+
+/* --- Тост --- */
+html.is-mobile .toast {
+  font-size: 11px;
+  padding: 7px 10px;
+  width: min(78vw, 300px);
+}

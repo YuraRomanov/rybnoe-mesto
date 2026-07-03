@@ -18,8 +18,11 @@ const GAME_ICONS = (() => {
     'bait-bloodworm': 'bait-bloodworm',
     'bait-bread': 'bait-bread',
     'bait-barley': 'bait-barley',
-    'bait-corn': 'bait-barley',
+    'bait-corn': 'bait-corn',
     'bait-minnow': 'bait-minnow',
+    'bait-peas': 'bait-peas',
+    'bait-caster': 'bait-caster',
+    'bait-maybug': 'bait-maybug',
     'bait-dough': 'bait-dough',
     net: 'net',
   };
@@ -33,7 +36,12 @@ const GAME_ICONS = (() => {
     hook: 'hook',
     hook1: 'hook',
     hook2: 'hook',
-    hook3: 'hook',
+    hook7: 'hook',
+    line1: 'line',
+    line2: 'line',
+    line3: 'line',
+    line4: 'line',
+    line5: 'line',
     'hook-single': 'hook',
     'hook-heavy': 'hook',
     'hook-treble': 'hook',
@@ -44,13 +52,21 @@ const GAME_ICONS = (() => {
     bait4: 'bait-maggot',
     bait5: 'bait-bread',
     bait6: 'bait-dough',
+    bait7: 'bait-corn',
+    bait8: 'bait-minnow',
+    bait9: 'bait-peas',
+    bait10: 'bait-caster',
+    bait12: 'bait-maybug',
     'bait-worm': 'bait-worm',
     'bait-maggot': 'bait-maggot',
     'bait-bloodworm': 'bait-bloodworm',
     'bait-bread': 'bait-bread',
-    'bait-corn': 'bait-barley',
-    'bait-barley': 'bait-barley',
+    'bait-corn': 'bait-corn',
     'bait-minnow': 'bait-minnow',
+    'bait-peas': 'bait-peas',
+    'bait-caster': 'bait-caster',
+    'bait-maybug': 'bait-maybug',
+    'bait-barley': 'bait-barley',
     'bait-dough': 'bait-dough',
     groundbait: 'bait-dough',
     gb1: 'bait-dough',
@@ -77,6 +93,36 @@ const GAME_ICONS = (() => {
     cook: 'bait-dough',
     boost: 'gold',
     lure: 'bait-minnow',
+    canteen: 'bait-dough',
+    'potion-energy': 'energy',
+    'feeder-cage': 'bait-dough',
+    'feeder-method': 'bait-dough',
+    soup: 'energy',
+    soup1: 'energy',
+    soup2: 'energy',
+  };
+
+  const SHOP_TABS = {
+    rods: 'rod-bamboo',
+    hooks: 'hook',
+    lines: 'line',
+    bait: 'bait-worm',
+    net: 'net',
+    soup: 'energy',
+  };
+
+  const MODAL_ICONS = {
+    shop: 'reel-tier-1',
+    map: 'map',
+    location: 'float',
+    tutorial: 'float',
+    backpack: 'net',
+    sadok: 'net',
+    rods: 'rod-bamboo',
+    bait: 'bait-worm',
+    hooks: 'hook',
+    lines: 'line',
+    catch: 'net',
   };
 
   const HUD = {
@@ -109,6 +155,7 @@ const GAME_ICONS = (() => {
     }
     if (key.startsWith('bait')) return MAP[key] || 'bait-worm';
     if (key.startsWith('hook')) return 'hook';
+    if (key.startsWith('line')) return 'line';
     return MAP[key] || key;
   }
 
@@ -160,7 +207,29 @@ const GAME_ICONS = (() => {
     });
   }
 
+  function shopTabIcon(tab) {
+    return SHOP_TABS[tab] || 'reel-tier-1';
+  }
+
+  function applyMenuIcons(root = document) {
+    root.querySelectorAll('[data-shop-tab-icon]').forEach((el) => {
+      const tab = el.dataset.shopTabIcon;
+      el.src = url(shopTabIcon(tab));
+      el.alt = '';
+    });
+    root.querySelectorAll('[data-modal-icon]').forEach((el) => {
+      const key = el.dataset.modalIcon;
+      el.src = url(MODAL_ICONS[key] || resolve(key));
+      el.alt = '';
+    });
+    root.querySelectorAll('[data-btn-icon]').forEach((el) => {
+      el.src = url(resolve(el.dataset.btnIcon));
+      el.alt = '';
+    });
+  }
+
   return {
-    url, img, resolve, rodIconForLevel, rodIconForItem, applyHud, applyHudAll, MAP, HUD, FILES, ROD_TIERS,
+    url, img, resolve, rodIconForLevel, rodIconForItem, shopTabIcon,
+    applyHud, applyHudAll, applyMenuIcons, MAP, HUD, FILES, ROD_TIERS, SHOP_TABS, MODAL_ICONS,
   };
 })();

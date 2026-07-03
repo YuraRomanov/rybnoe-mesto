@@ -73,13 +73,16 @@ const FightSystem = (() => {
     const tensionMul = f.tensionPace ?? tensionPace(fish);
     const largeHelp = ctx.modifiers?.largeFishHelp || 0;
     const tensionControl = (1 - (ctx.modifiers?.tensionControl || 0) * 0.25) * (1 - largeHelp * tier * 0.18);
+    const lineStressMul = typeof lineStressMultiplier === 'function'
+      ? lineStressMultiplier(ctx.modifiers?.lineId, tier)
+      : 1;
 
     f.holding = holding;
     FishBehavior.update(ctx, dt);
 
     if (holding) {
       f.fishPos -= f.reelPower * scale * (f.catchBonus || 1) * (1 + largeHelp * tier * 0.2);
-      f.lineStress += c.holdTensionRate * scale * tensionMul * tensionControl;
+      f.lineStress += c.holdTensionRate * scale * tensionMul * tensionControl * lineStressMul;
     } else {
       f.fishPos += (f.driftPace ?? driftPace(fish)) * scale;
       f.lineStress -= c.stressIdleRecover * scale * (1.85 + tier * 0.35);

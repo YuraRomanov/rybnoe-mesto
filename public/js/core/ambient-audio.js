@@ -10,18 +10,20 @@ const AmbientAudio = (() => {
   let started = false;
   let pausedByHide = false;
   let lifecycleBound = false;
+  let ambientVolume = VOLUME;
+  let splashVolume = SPLASH_VOLUME;
 
   function init() {
     if (!audio) {
       audio = new Audio(SRC);
       audio.loop = true;
       audio.preload = 'auto';
-      audio.volume = VOLUME;
+      audio.volume = ambientVolume;
     }
     if (!splashAudio) {
       splashAudio = new Audio(SPLASH_SRC);
       splashAudio.preload = 'auto';
-      splashAudio.volume = SPLASH_VOLUME;
+      splashAudio.volume = splashVolume;
     }
   }
 
@@ -57,7 +59,7 @@ const AmbientAudio = (() => {
     init();
     if (!splashAudio) return;
     const clip = splashAudio.cloneNode();
-    clip.volume = SPLASH_VOLUME;
+    clip.volume = splashVolume;
     clip.play().catch(() => {});
   }
 
@@ -90,8 +92,20 @@ const AmbientAudio = (() => {
   }
 
   function setVolume(v) {
-    if (audio) audio.volume = Math.max(0, Math.min(1, v));
+    ambientVolume = Math.max(0, Math.min(1, v));
+    if (audio) audio.volume = ambientVolume;
   }
 
-  return { init, start, pause, resume, playSplash, bindUnlock, bindLifecycle, setVolume };
+  function setSplashVolume(v) {
+    splashVolume = Math.max(0, Math.min(1, v));
+    if (splashAudio) splashAudio.volume = splashVolume;
+  }
+
+  function getVolume() { return ambientVolume; }
+  function getSplashVolume() { return splashVolume; }
+
+  return {
+    init, start, pause, resume, playSplash, bindUnlock, bindLifecycle,
+    setVolume, setSplashVolume, getVolume, getSplashVolume,
+  };
 })();

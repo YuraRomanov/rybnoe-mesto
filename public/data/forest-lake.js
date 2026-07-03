@@ -2,9 +2,12 @@
 const FOREST_LAKE = {
   id: '0',
   name: 'Левый берег',
-  description: 'Тихий берег у соснового леса. Плотва, карась, окунь и другая местная рыба.',
-  fishIds: ['plotva', 'karas', 'gold_karas', 'okun', 'ersh', 'vyun'],
-  fishVer: [2.8, 2.6, 0.45, 2.2, 1.4, 0.85],
+  description: 'Тихий берег у соснового леса. Плотва, лещ, линь, щука и другая местная рыба.',
+  fishIds: [
+    'plotva', 'karas', 'gold_karas', 'okun', 'ersh', 'vyun',
+    'lesh', 'peskari', 'lin', 'rotan', 'shchuka',
+  ],
+  fishVer: [2.5, 2.4, 0.4, 1.8, 1.2, 0.7, 1.6, 2.0, 0.9, 0.6, 0.35],
 };
 
 const FISH_SPRITE_MAP = Object.fromEntries(
