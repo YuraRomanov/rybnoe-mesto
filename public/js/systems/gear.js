@@ -8,7 +8,7 @@ const GearSystem = (() => {
     const rod = getRodItem(player);
     if (rod?.rodTier) return rod.rodTier;
     const lvl = rod?.level || 1;
-    return Math.min(5, Math.max(1, Math.ceil(lvl / 2)));
+    return Math.min(8, Math.max(1, Math.ceil(lvl / 2)));
   }
 
   function getModifiers(player) {

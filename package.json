@@ -14,7 +14,11 @@
     "extract:rod": "node tools/extract-rod-sprites.mjs",
     "prepare:misc": "node tools/prepare-misc-assets.mjs",
     "prepare:fish": "node tools/prepare-new-fish.mjs",
-    "prepare:bait": "node tools/prepare-bait-icons.mjs"
+    "prepare:bait": "node tools/prepare-bait-icons.mjs",
+    "prepare:currency": "node tools/prepare-currency-icons.mjs",
+    "prepare:levels": "node tools/prepare-level-icons.mjs",
+    "prepare:ui": "node tools/prepare-ui-icons.mjs",
+    "prepare:rods": "node tools/prepare-rod-icons.mjs"
   },
   "engines": {
     "node": ">=18"

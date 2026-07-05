@@ -1370,3 +1370,118 @@ body.catch-active #modal-catch .catch-window {
 .settings-code-msg--err {
   color: #ef9a9a;
 }
+
+.levelup-window {
+  position: relative;
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 22px 18px 18px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 213, 79, 0.22), transparent 55%),
+    linear-gradient(180deg, #4e342e 0%, #2d1b14 100%);
+  border: 3px solid #ffd54f;
+  border-radius: 16px;
+  box-shadow:
+    0 0 0 1px rgba(255, 213, 79, 0.35),
+    0 16px 40px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+.levelup-glow {
+  position: absolute;
+  inset: -30% -20%;
+  background: radial-gradient(circle, rgba(255, 213, 79, 0.18), transparent 62%);
+  pointer-events: none;
+  animation: levelup-glow 2.4s ease-in-out infinite;
+}
+
+.levelup-hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 4px 0 10px;
+}
+
+.levelup-icon {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+  animation: levelup-pop 0.55s cubic-bezier(0.2, 1.1, 0.3, 1) both;
+}
+
+.levelup-kicker {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffe082;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.levelup-title {
+  margin: 0 0 6px;
+  font-size: 24px;
+  line-height: 1.15;
+  color: #fff8e1;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.levelup-rank {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffd54f;
+}
+
+.levelup-msg {
+  margin: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(255, 248, 225, 0.88);
+}
+
+.levelup-perks {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 213, 79, 0.22);
+  text-align: left;
+}
+
+.levelup-perks li {
+  position: relative;
+  padding: 4px 0 4px 18px;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #fff8e1;
+}
+
+.levelup-perks li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  color: #ffd54f;
+  font-size: 11px;
+}
+
+.levelup-btn {
+  margin-top: 2px;
+}
+
+@keyframes levelup-pop {
+  0% { transform: scale(0.4) rotate(-8deg); opacity: 0; }
+  70% { transform: scale(1.08) rotate(2deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes levelup-glow {
+  0%, 100% { opacity: 0.65; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}

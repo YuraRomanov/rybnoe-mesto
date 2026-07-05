@@ -34,6 +34,9 @@ const BAIT_GROUP_WEIGHTS = {
   bait10: {
     carp: 1.6, herbivore: 1.5, bottom: 1.25, predator: 0.2,
   },
+  bait11: {
+    predator: 1.75, perch: 1.65, pike: 1.7, carp: 0.4, small: 0.45, bottom: 0.55, omnivore: 0.5,
+  },
   bait12: {
     predator: 2.5, perch: 2.2, pike: 2.8, carp: 0.2, bottom: 0.35, small: 0.25,
   },
@@ -50,6 +53,7 @@ const BAIT_HINTS = {
   bait8: 'Щука, окунь, ротан — хищники',
   bait9: 'Лещ, карась, горох',
   bait10: 'Плотва, карась, крупная мирная',
+  bait11: 'Окунь, плотва, щука',
   bait12: 'Щука, окунь, хищники',
 };
 

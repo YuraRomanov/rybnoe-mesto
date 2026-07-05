@@ -48,7 +48,10 @@
       <header class="hud-top">
         <div class="hud-top-left">
           <div class="level-row">
-            <div class="level-badge" aria-label="Уровень"><span id="player-level">1</span></div>
+            <div class="level-badge" id="level-badge" aria-label="Уровень 1">
+              <img id="player-level-icon" class="level-badge-img" src="assets/ui/icons/levels/level-1.png?v=1" alt="">
+              <span id="player-level" class="sr-only">1</span>
+            </div>
             <div class="bars-stack">
               <div class="res-bar res-bar--xp">
                 <div class="res-bar-track"><div id="exp-bar" class="res-bar-fill"></div></div>
@@ -70,7 +73,9 @@
             <div class="currency-bar currency-bar--gold">
               <img data-hud-icon="gold" alt="">
               <span id="gold-top" class="currency-val">0</span>
-              <button type="button" class="btn-gold-plus" id="btn-gold-plus" title="Магазин">+</button>
+              <button type="button" class="btn-gold-plus" id="btn-gold-plus" title="Магазин">
+                <img data-hud-icon="shop" alt="">
+              </button>
             </div>
             <div class="quick-icons">
               <button type="button" class="quick-ico-btn" id="btn-map" title="Карта">
@@ -81,7 +86,7 @@
                 <span id="world-clock" class="world-clock">00:00</span>
               </button>
               <button type="button" class="quick-ico-btn quick-ico-btn--settings" id="btn-settings" title="Настройки">
-                <span class="settings-gear" aria-hidden="true">⚙</span>
+                <img data-hud-icon="settings" alt="">
               </button>
             </div>
           </div>
@@ -135,8 +140,8 @@
             <img class="dock-slot-img" data-hud-icon="net" alt="">
             <span id="qty-sadok" class="dock-slot-qty hidden">0</span>
           </div>
-          <div class="dock-slot dock-slot--boost" title="Бустеры" id="btn-shop-quick" data-lock-while-fishing role="button" tabindex="0">
-            <img class="dock-slot-img" data-hud-icon="boost" alt="">
+          <div class="dock-slot dock-slot--boost" title="Магазин" id="btn-shop-quick" data-lock-while-fishing role="button" tabindex="0">
+            <img class="dock-slot-img" data-hud-icon="shop" alt="">
           </div>
         </div>
       </footer>
@@ -280,7 +285,7 @@
     <div id="modal-settings" class="modal hidden">
       <div class="modal-window settings-window panel-frame">
         <button class="modal-close" data-close="modal-settings" type="button">✕</button>
-        <h2 class="modal-title"><span class="settings-gear settings-gear--title" aria-hidden="true">⚙</span><span>Настройки</span></h2>
+        <h2 class="modal-title"><img class="modal-title-ico" data-modal-icon="settings" alt=""><span>Настройки</span></h2>
         <div class="settings-panel">
           <label class="settings-row">
             <span class="settings-label">Природа (фон)</span>
@@ -308,6 +313,21 @@
       </div>
     </div>
 
+    <div id="modal-levelup" class="modal hidden" aria-hidden="true">
+      <div class="modal-window levelup-window">
+        <div class="levelup-glow" aria-hidden="true"></div>
+        <div class="levelup-hero">
+          <img id="levelup-icon" class="levelup-icon" src="assets/ui/icons/levels/level-1.png?v=1" alt="">
+        </div>
+        <p class="levelup-kicker">Поздравляем!</p>
+        <h2 class="levelup-title">Новый уровень <span id="levelup-num">2</span></h2>
+        <p id="levelup-rank" class="levelup-rank">Новичок у берега</p>
+        <p id="levelup-msg" class="levelup-msg">Твой опыт растёт — клёв только крепнет!</p>
+        <ul id="levelup-perks" class="levelup-perks"></ul>
+        <button type="button" class="btn-primary levelup-btn" id="btn-levelup-ok">Ура!</button>
+      </div>
+    </div>
+
     <div id="modal-catch" class="modal hidden" aria-hidden="true">
       <div class="modal-window catch-window">
         <button class="modal-close" id="catch-close" type="button" aria-label="Закрыть">✕</button>
@@ -319,7 +339,7 @@
           <div class="catch-price-kg">
             <span class="catch-price-kg-label">цена за кг.</span>
             <div class="catch-price-kg-row">
-              <img src="assets/ui/icons/silver.png" alt="" width="20" height="20">
+              <img src="assets/ui/icons/silver.png?v=2" alt="" width="20" height="20">
               <span id="catch-price-kg-val">20</span>
             </div>
           </div>
@@ -328,7 +348,7 @@
           <div class="catch-stat">
             <span class="catch-stat-label">Стоимость</span>
             <div class="catch-stat-value">
-              <img src="assets/ui/icons/silver.png" alt="">
+              <img src="assets/ui/icons/silver.png?v=2" alt="">
               <span id="catch-total-silver">1</span>
             </div>
           </div>
@@ -339,7 +359,7 @@
         </div>
         <div class="catch-actions">
           <button type="button" class="btn-catch btn-catch--sadok" id="catch-to-sadok"><img class="btn-ico" src="assets/ui/icons/net.png" alt=""><span>В садок</span></button>
-          <button type="button" class="btn-catch btn-catch--sell" id="catch-sell"><img class="btn-ico" src="assets/ui/icons/silver.png" alt=""><span>Продать</span></button>
+          <button type="button" class="btn-catch btn-catch--sell" id="catch-sell"><img class="btn-ico" src="assets/ui/icons/silver.png?v=2" alt=""><span>Продать</span></button>
         </div>
       </div>
     </div>
@@ -353,6 +373,7 @@
   <script src="data/hook-data.js"></script>
   <script src="data/line-data.js"></script>
   <script src="data/tackle-scoring.js"></script>
+  <script src="data/rod-data.js"></script>
   <script src="data/forest-lake.js"></script>
   <script src="data/world-map.js"></script>
   <script src="data.js"></script>

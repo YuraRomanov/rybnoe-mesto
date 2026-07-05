@@ -30,6 +30,12 @@ rodImg.src = 'assets/rod/rod.png?v=1';
 const ROD_SPRITE_SRC = {
   rod_0: 'assets/rod/rod.png?v=1',
   rod_spark: 'assets/rod/spark-2000.png?v=2',
+  rod_wave: 'assets/rod/wave-3000.png?v=1',
+  rod_titan: 'assets/rod/titan-4000.png?v=1',
+  rod_phantom: 'assets/rod/phantom-5000.png?v=1',
+  rod_dragon: 'assets/rod/dragon-6000.png?v=1',
+  rod_legend: 'assets/rod/legend-7000.png?v=1',
+  rod_kraken: 'assets/rod/kraken-9000.png?v=1',
 };
 
 function applyRodSprite(rodId) {
@@ -520,12 +526,95 @@ function expForLevel(lv) {
   return (c.expBase ?? 60) + lv * (c.expPerLevel ?? 40);
 }
 
+const LEVEL_UP_MSGS = [
+  'Отличная работа! Клёв только набирает обороты.',
+  'Твой опыт растёт — рыба это чувствует!',
+  'Ещё один шаг к трофейному улову!',
+  'Берег уже знает твоё имя — так держать!',
+  'Новые водоёмы открываются для смелых рыбаков.',
+  'С каждым уровнем снасти в магазине становятся круче.',
+];
+
+let levelUpQueue = [];
+
+function levelUpRankTitle(level) {
+  if (level >= 30) return 'Легенда рыбного места';
+  if (level >= 25) return 'Мастер глубин';
+  if (level >= 20) return 'Стальной рыболов';
+  if (level >= 15) return 'Знаток водоёмов';
+  if (level >= 10) return 'Бывалый рыбак';
+  if (level >= 5) return 'Завсегдатай пруда';
+  return 'Новичок у берега';
+}
+
+function levelUpPerks(level) {
+  const perks = [
+    `Макс. энергия: ${150 + level * 10}`,
+    'Энергия полностью восстановлена',
+  ];
+  const unlocked = [];
+  ['rods', 'hooks', 'lines', 'bait', 'net', 'soup'].forEach((tab) => {
+    (SHOP[tab] || []).forEach((item) => {
+      if (item.level === level) unlocked.push(item.name);
+    });
+  });
+  if (unlocked.length) {
+    const names = unlocked.slice(0, 3).join(', ');
+    perks.push(`В магазине: ${names}${unlocked.length > 3 ? '…' : ''}`);
+  }
+  return perks;
+}
+
+function renderLevelUpModal(level) {
+  const icon = document.getElementById('levelup-icon');
+  const num = document.getElementById('levelup-num');
+  const rank = document.getElementById('levelup-rank');
+  const msg = document.getElementById('levelup-msg');
+  const perksEl = document.getElementById('levelup-perks');
+  if (icon && typeof GAME_ICONS !== 'undefined') icon.src = GAME_ICONS.levelUrl(level);
+  if (num) num.textContent = String(level);
+  if (rank) rank.textContent = levelUpRankTitle(level);
+  if (msg) msg.textContent = LEVEL_UP_MSGS[(level - 1) % LEVEL_UP_MSGS.length];
+  if (perksEl) {
+    perksEl.innerHTML = levelUpPerks(level).map((p) => `<li>${p}</li>`).join('');
+  }
+}
+
+function showNextLevelUpModal() {
+  const level = levelUpQueue[0];
+  if (!level) return;
+  renderLevelUpModal(level);
+  const modal = document.getElementById('modal-levelup');
+  if (modal) modal.setAttribute('aria-hidden', 'false');
+  openModal('modal-levelup');
+}
+
+function queueLevelUp(level) {
+  levelUpQueue.push(level);
+  if (levelUpQueue.length === 1) showNextLevelUpModal();
+}
+
+function closeLevelUpModal() {
+  levelUpQueue.shift();
+  const modal = document.getElementById('modal-levelup');
+  hideModal('modal-levelup');
+  if (modal) modal.setAttribute('aria-hidden', 'true');
+  if (levelUpQueue.length > 0) showNextLevelUpModal();
+}
+
 function grantPlayerLevels(count = 1) {
   const n = Math.max(1, Math.floor(count));
   for (let i = 0; i < n; i++) {
     const need = Math.max(1, player.expMax - player.exp);
     addExp(need);
   }
+  save();
+}
+
+function grantSilver(amount = 0) {
+  const n = Math.max(0, Math.floor(amount));
+  if (n <= 0) return;
+  addSilver(n);
   save();
 }
 
@@ -537,7 +626,7 @@ function addExp(amount) {
     player.expMax = expForLevel(player.level);
     player.energyMax = 150 + player.level * 10;
     player.energy = player.energyMax;
-    toast(`Уровень ${player.level}!`);
+    queueLevelUp(player.level);
   }
   updateHUD();
 }
@@ -584,6 +673,10 @@ function tackleHint(itemId, kind) {
   if (kind === 'bait' && typeof BAIT_HINTS !== 'undefined') return BAIT_HINTS[itemId] || '';
   if (kind === 'hooks' && typeof HOOK_HINTS !== 'undefined') return HOOK_HINTS[itemId] || '';
   if (kind === 'lines' && typeof LINE_HINTS !== 'undefined') return LINE_HINTS[itemId] || '';
+  if (kind === 'rods' && typeof rodShopHint === 'function') {
+    const rod = findShopItem(itemId, 'rods');
+    return rod ? rodShopHint(rod) : '';
+  }
   return '';
 }
 
@@ -629,7 +722,12 @@ function updateEquipmentHud() {
 
 function updateHUD() {
   document.getElementById('player-name').textContent = player.name;
-  document.getElementById('player-level').textContent = player.level;
+  const levelEl = document.getElementById('player-level');
+  const levelIcon = document.getElementById('player-level-icon');
+  const levelBadge = document.getElementById('level-badge');
+  if (levelEl) levelEl.textContent = player.level;
+  if (levelIcon) levelIcon.src = GAME_ICONS.levelUrl(player.level);
+  if (levelBadge) levelBadge.setAttribute('aria-label', `Уровень ${player.level}`);
   document.getElementById('silver-top').textContent = player.silver;
   const goldTop = document.getElementById('gold-top');
   if (goldTop) goldTop.textContent = player.gold;
@@ -1533,12 +1631,16 @@ function renderShop() {
         ${hint ? `<div class="item-hint">${compact ? hint : `Ловит: ${hint}`}</div>` : ''}
         ${meta}`;
       actions = `${selectBtn}<button class="buy-btn" data-id="${item.id}" ${!afford || locked ? 'disabled' : ''}>×${pack} ${price}</button>`;
-    } else if (owned) {
-      if (isRod) {
+    } else if (isRod) {
+      const rodHint = tackleHint(item.id, 'rods');
+      meta = `${rodHint ? `<div class="item-hint">${rodHint}</div>` : ''}${meta}`;
+      if (owned) {
         actions = `<button type="button" class="select-btn ${equipped ? 'active' : ''}" data-select-rod="${item.id}">${equipped ? '✓' : 'Выбрать'}</button>`;
       } else {
-        actions = `<div class="owned-label">${iconSrc ? `<img class="inline-ico" src="${iconSrc}" alt="">` : '<span class="icon-slot-empty icon-slot-empty--inline"></span>'} ✓</div>`;
+        actions = `<button class="buy-btn" data-id="${item.id}" ${locked || !afford ? 'disabled' : ''}>${price}</button>`;
       }
+    } else if (owned) {
+      actions = `<div class="owned-label">${iconSrc ? `<img class="inline-ico" src="${iconSrc}" alt="">` : '<span class="icon-slot-empty icon-slot-empty--inline"></span>'} ✓</div>`;
     } else {
       actions = `<button class="buy-btn" data-id="${item.id}" ${locked || !afford ? 'disabled' : ''}>${price}</button>`;
     }
@@ -1872,6 +1974,7 @@ const LOADING_TIPS = [
   'Тонкая леска лучше для пескаря, но рвётся на крупной рыбе',
   'Время суток и погода влияют на клёв',
   'Подбирай крючок под размер рыбы',
+  'Лучшая удочка — чаще крупная рыба и легче вываживание',
 ];
 
 const LOADING_STATUS = [
@@ -1965,6 +2068,7 @@ async function init() {
     SettingsSystem.init();
     SettingsSystem.bindUi();
     window.grantPlayerLevels = grantPlayerLevels;
+    window.grantSilver = grantSilver;
   }
   if (typeof GAME_ICONS !== 'undefined') GAME_ICONS.applyMenuIcons();
 
@@ -2067,6 +2171,7 @@ async function init() {
   if (btnWeather) btnWeather.onclick = () => openWeatherModal();
   const btnSettings = document.getElementById('btn-settings');
   if (btnSettings) btnSettings.onclick = () => openSettingsModal();
+  document.getElementById('btn-levelup-ok')?.addEventListener('click', closeLevelUpModal);
   document.getElementById('btn-enter-location').onclick = () => {
     if (game.selectedLocation && !game.selectedLocation.comingSoon) {
       player.locationId = game.selectedLocation.id;
@@ -2091,7 +2196,10 @@ async function init() {
   document.querySelectorAll('.modal').forEach((m) => {
     m.onclick = (e) => {
       if (m.id === 'modal-catch') return;
-      if (e.target === m) closeModal(m.id);
+      if (e.target === m) {
+        if (m.id === 'modal-levelup') closeLevelUpModal();
+        else closeModal(m.id);
+      }
     };
   });
 

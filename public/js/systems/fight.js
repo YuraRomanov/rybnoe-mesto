@@ -50,10 +50,10 @@ const FightSystem = (() => {
       holding: false,
       hookGrade,
       catchBonus: grade.catchBonus,
-      reelPower: (0.55 + mods.tensionControl * 0.12) * (pace + largeHelp * tier * 0.35),
+      reelPower: (0.55 + mods.tensionControl * 0.16) * (pace + largeHelp * tier * 0.48),
       reelPace: pace,
-      tensionPace: tensionPace(fish) * (1 - largeHelp * tier * 0.22),
-      driftPace: driftPace(fish),
+      tensionPace: tensionPace(fish) * (1 - largeHelp * tier * 0.32),
+      driftPace: driftPace(fish) * (1 - (mods.stability || 0) * 0.4),
       weightTier: weightTier(fish),
       winAt: 3,
       loseAt: 98,
@@ -72,7 +72,8 @@ const FightSystem = (() => {
     const scale = dt * 0.5;
     const tensionMul = f.tensionPace ?? tensionPace(fish);
     const largeHelp = ctx.modifiers?.largeFishHelp || 0;
-    const tensionControl = (1 - (ctx.modifiers?.tensionControl || 0) * 0.25) * (1 - largeHelp * tier * 0.18);
+    const stability = ctx.modifiers?.stability || 0;
+    const tensionControl = (1 - (ctx.modifiers?.tensionControl || 0) * 0.32) * (1 - largeHelp * tier * 0.28);
     const lineStressMul = typeof lineStressMultiplier === 'function'
       ? lineStressMultiplier(ctx.modifiers?.lineId, tier)
       : 1;
@@ -81,11 +82,11 @@ const FightSystem = (() => {
     FishBehavior.update(ctx, dt);
 
     if (holding) {
-      f.fishPos -= f.reelPower * scale * (f.catchBonus || 1) * (1 + largeHelp * tier * 0.2);
+      f.fishPos -= f.reelPower * scale * (f.catchBonus || 1) * (1 + largeHelp * tier * 0.32);
       f.lineStress += c.holdTensionRate * scale * tensionMul * tensionControl * lineStressMul;
     } else {
-      f.fishPos += (f.driftPace ?? driftPace(fish)) * scale;
-      f.lineStress -= c.stressIdleRecover * scale * (1.85 + tier * 0.35);
+      f.fishPos += (f.driftPace ?? driftPace(fish)) * scale * (1 - stability * 0.45);
+      f.lineStress -= c.stressIdleRecover * scale * (1.85 + tier * 0.35 + stability * 0.25);
     }
 
     f.fishPos = Math.max(0, Math.min(100, f.fishPos));

@@ -89,6 +89,10 @@ const FishingController = (() => {
   }
 
   function rollFishWeight(fish) {
+    const rodId = bridge.getPlayer().gear?.rod || 'rod_0';
+    if (typeof rollFishWeightWithRod === 'function') {
+      return rollFishWeightWithRod(fish, rodId, () => GameRNG.random());
+    }
     const minW = fish.minW;
     const maxW = Math.max(minW + 0.02, fish.maxW);
     const w = minW + GameRNG.random() * (maxW - minW);
@@ -102,7 +106,8 @@ const FishingController = (() => {
     const baitId = bridge.getPlayer().gear?.bait || 'bait1';
     const hookId = bridge.getPlayer().gear?.hook || 'hook1';
     const lineId = bridge.getPlayer().gear?.line || 'line2';
-    const table = GameRNG.buildFishTable(loc, baitId, FISH, hookId, lineId);
+    const rodId = bridge.getPlayer().gear?.rod || 'rod_0';
+    const table = GameRNG.buildFishTable(loc, baitId, FISH, hookId, lineId, rodId);
     const entry = GameRNG.pickWeighted(table.map((t) => ({ ...t, weight: t.weight })));
     const fish = { ...entry.fish };
     fish.weight = rollFishWeight(fish);

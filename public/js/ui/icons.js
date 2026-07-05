@@ -11,6 +11,12 @@ const GAME_ICONS = (() => {
     float: 'float',
     'rod-bamboo': 'rod-bamboo',
     'rod-spark': 'rod-spark',
+    'rod-wave': 'rod-wave',
+    'rod-titan': 'rod-titan',
+    'rod-phantom': 'rod-phantom',
+    'rod-dragon': 'rod-dragon',
+    'rod-legend': 'rod-legend',
+    'rod-kraken': 'rod-kraken',
     'reel-tier-1': 'reel-tier-1',
     hook: 'hook',
     'bait-worm': 'bait-worm',
@@ -23,15 +29,30 @@ const GAME_ICONS = (() => {
     'bait-peas': 'bait-peas',
     'bait-caster': 'bait-caster',
     'bait-maybug': 'bait-maybug',
+    'bait-fly': 'bait-fly',
     'bait-dough': 'bait-dough',
     net: 'net',
+    shop: 'shop',
+    settings: 'settings',
   };
 
   const MAP = {
     rod: 'rod-bamboo',
     rod_0: 'rod-bamboo',
     rod_spark: 'rod-spark',
+    rod_wave: 'rod-wave',
+    rod_titan: 'rod-titan',
+    rod_phantom: 'rod-phantom',
+    rod_dragon: 'rod-dragon',
+    rod_legend: 'rod-legend',
+    rod_kraken: 'rod-kraken',
     'rod-spark': 'rod-spark',
+    'rod-wave': 'rod-wave',
+    'rod-titan': 'rod-titan',
+    'rod-phantom': 'rod-phantom',
+    'rod-dragon': 'rod-dragon',
+    'rod-legend': 'rod-legend',
+    'rod-kraken': 'rod-kraken',
     'rod-modern': 'reel-tier-1',
     hook: 'hook',
     hook1: 'hook',
@@ -56,6 +77,7 @@ const GAME_ICONS = (() => {
     bait8: 'bait-minnow',
     bait9: 'bait-peas',
     bait10: 'bait-caster',
+    bait11: 'bait-fly',
     bait12: 'bait-maybug',
     'bait-worm': 'bait-worm',
     'bait-maggot': 'bait-maggot',
@@ -66,6 +88,7 @@ const GAME_ICONS = (() => {
     'bait-peas': 'bait-peas',
     'bait-caster': 'bait-caster',
     'bait-maybug': 'bait-maybug',
+    'bait-fly': 'bait-fly',
     'bait-barley': 'bait-barley',
     'bait-dough': 'bait-dough',
     groundbait: 'bait-dough',
@@ -79,7 +102,8 @@ const GAME_ICONS = (() => {
     silver: 'silver',
     gold: 'gold',
     map: 'map',
-    shop: 'reel-tier-1',
+    shop: 'shop',
+    settings: 'settings',
     backpack: 'net',
     home: 'map',
     cast: 'rod-bamboo',
@@ -112,7 +136,8 @@ const GAME_ICONS = (() => {
   };
 
   const MODAL_ICONS = {
-    shop: 'reel-tier-1',
+    shop: 'shop',
+    settings: 'settings',
     map: 'map',
     location: 'float',
     tutorial: 'float',
@@ -137,13 +162,21 @@ const GAME_ICONS = (() => {
     cook: 'bait-dough',
     net: 'net',
     boost: 'gold',
-    shop: 'reel-tier-1',
+    shop: 'shop',
+    settings: 'settings',
     backpack: 'net',
     home: 'map',
     mail: null,
   };
 
   const ROD_TIERS = ['rod-bamboo', 'reel-tier-1'];
+  const LEVEL_MAX = 30;
+  const LEVEL_VER = '?v=1';
+
+  function levelUrl(level = 1) {
+    const n = Math.max(1, Math.min(LEVEL_MAX, Math.floor(level) || 1));
+    return `${BASE}/levels/level-${n}.png${LEVEL_VER}`;
+  }
 
   function resolve(key) {
     if (!key) return 'rod-bamboo';
@@ -162,8 +195,11 @@ const GAME_ICONS = (() => {
   function url(key) {
     const file = resolve(key);
     let v = '';
-    if (file.startsWith('bait-')) v = '?v=2';
+    if (file.startsWith('bait-')) v = '?v=3';
+    else if (file === 'silver' || file === 'gold') v = '?v=2';
+    else if (file === 'shop' || file === 'settings') v = '?v=1';
     else if (file === 'rod-spark') v = '?v=2';
+    else if (file.startsWith('rod-') && file !== 'rod-bamboo') v = '?v=2';
     return `${BASE}/${file}.png${v}`;
   }
 
@@ -178,7 +214,7 @@ const GAME_ICONS = (() => {
   function rodIconForItem(rod) {
     if (!rod) return 'rod-bamboo';
     if (rod.iconKey) return resolve(rod.iconKey);
-    if (rod.id === 'rod_spark') return 'rod-spark';
+    if (MAP[rod.id]) return resolve(rod.id);
     if (rod.id === 'rod_0' || rod.price === 0) return 'rod-bamboo';
     return rodIconForLevel(rod.level || 1);
   }
@@ -193,7 +229,7 @@ const GAME_ICONS = (() => {
     }
     imgEl.style.display = '';
     imgEl.closest('.hud-icon--text')?.classList.remove('hud-icon--text');
-    imgEl.src = `${BASE}/${file}.png`;
+    imgEl.src = url(key);
   }
 
   function applyHudAll(root = document) {
@@ -229,7 +265,7 @@ const GAME_ICONS = (() => {
   }
 
   return {
-    url, img, resolve, rodIconForLevel, rodIconForItem, shopTabIcon,
+    url, img, resolve, levelUrl, rodIconForLevel, rodIconForItem, shopTabIcon,
     applyHud, applyHudAll, applyMenuIcons, MAP, HUD, FILES, ROD_TIERS, SHOP_TABS, MODAL_ICONS,
   };
 })();

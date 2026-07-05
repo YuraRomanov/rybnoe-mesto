@@ -38,20 +38,22 @@
 }
 
 .level-badge {
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #ff6b5b, #c62828 55%, #8b1a1a);
-  border: 3px solid #ffd54f;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 2px 4px rgba(255,255,255,0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 900;
-  font-size: 18px;
-  color: #fff;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  position: relative;
+}
+
+.level-badge-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45));
+  pointer-events: none;
 }
 
 .bars-stack {
@@ -153,17 +155,26 @@
 }
 
 .btn-gold-plus {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
+  padding: 1px;
   border: none;
   border-radius: 4px;
-  background: linear-gradient(180deg, #42a5f5, #1565c0);
-  color: #fff;
-  font-weight: 900;
-  font-size: 14px;
-  line-height: 1;
+  background: linear-gradient(180deg, #5d4037, #3e2723);
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-gold-plus img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
 }
 
 .quick-icons {
@@ -215,9 +226,7 @@
 }
 
 .quick-ico-btn--settings {
-  font-size: 18px;
-  color: #fff8e1;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+  padding: 1px;
 }
 
 /* --- Центр шапки: локация --- */
@@ -977,7 +986,7 @@ html.is-mobile {
   }
 
   .player-nameplate { font-size: 11px; padding: 3px 6px; }
-  .level-badge { width: 34px; height: 34px; font-size: 14px; }
+  .level-badge { width: 40px; height: 40px; }
   .res-bar-track { height: 11px; }
   .res-bar-text { font-size: 9px; min-width: 44px; }
   .currency-bar { min-width: 58px; padding: 2px 5px 2px 3px; }

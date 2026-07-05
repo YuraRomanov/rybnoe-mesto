@@ -69,6 +69,11 @@ const SettingsSystem = (() => {
       return { ok: true, message: 'Код принят! +1 уровень' };
     }
 
+    if (code === 'СЕРЕБРО10000' || code === 'SILVER10000' || code === 'SEREBRO10000') {
+      if (typeof hooks.addSilver === 'function') hooks.addSilver(10000);
+      return { ok: true, message: 'Код принят! +10 000 серебра' };
+    }
+
     return { ok: false, message: 'Неизвестный код' };
   }
 
@@ -111,6 +116,7 @@ const SettingsSystem = (() => {
     const submitCode = () => {
       const result = redeemCode(codeInput?.value, {
         levelUp: typeof window.grantPlayerLevels === 'function' ? window.grantPlayerLevels : null,
+        addSilver: typeof window.grantSilver === 'function' ? window.grantSilver : null,
       });
       if (codeMsg) {
         codeMsg.textContent = result.message;

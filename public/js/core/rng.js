@@ -45,7 +45,7 @@ const GameRNG = (() => {
     return range(Math.max(2, min), Math.max(min + 1, max));
   }
 
-  function buildFishTable(location, baitId, locFish, hookId, lineId) {
+  function buildFishTable(location, baitId, locFish, hookId, lineId, rodId) {
     const pool = locFish || FISH;
     return (location.fishIds || []).map((id, i) => {
       const fish = pool[id] || pool[String(id)];
@@ -56,10 +56,13 @@ const GameRNG = (() => {
       const tackleMul = typeof tackleCatchMultiplier === 'function'
         ? tackleCatchMultiplier(baitId, hookId, lineId, fish.id)
         : 1;
+      const rodMul = typeof rodCatchMultiplier === 'function'
+        ? rodCatchMultiplier(rodId, fish)
+        : 1;
       return {
         id: String(id),
         fish,
-        weight: ver * tackleMul,
+        weight: ver * tackleMul * rodMul,
         rarity,
       };
     }).filter(Boolean);

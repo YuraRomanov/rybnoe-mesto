@@ -58,6 +58,9 @@ const GAME_CONFIG = {
     3: { biteBonus: 0.10, rareBonus: 0.06, tensionControl: 0.10, stability: 0.10 },
     4: { biteBonus: 0.16, rareBonus: 0.10, tensionControl: 0.15, stability: 0.14 },
     5: { biteBonus: 0.22, rareBonus: 0.15, tensionControl: 0.22, stability: 0.20 },
+    6: { biteBonus: 0.26, rareBonus: 0.18, tensionControl: 0.26, stability: 0.24 },
+    7: { biteBonus: 0.30, rareBonus: 0.22, tensionControl: 0.30, stability: 0.28 },
+    8: { biteBonus: 0.35, rareBonus: 0.28, tensionControl: 0.36, stability: 0.34 },
   },
 
   fishPatterns: {

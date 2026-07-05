@@ -12,6 +12,11 @@ const BAITS = [
   ['c__Users_User_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_____-89b19942-93cf-49ce-bf59-aade859c661e.png', 'bait-bread'],
   ['c__Users_User_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images______-fbafe994-61cb-4855-999f-a66dddbd0e2f.png', 'bait-dough'],
   ['c__Users_User_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_________-5b7c07de-0816-4cf7-a899-7df0347e5c07.png', 'bait-barley'],
+  ['c__Users_User_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_ChatGPT_Image_3____._2026__.__18_23_48__1_-011f129a-e557-4c72-9bff-904bc13d3569.png', 'bait-corn'],
+  ['c__Users_User_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_ChatGPT_Image_3____._2026__.__18_23_49__2_-d3e8db21-d8d4-4b71-99ae-e8c9e4d8ba89.png', 'bait-minnow'],
+  ['c__Users_User_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_ChatGPT_Image_3____._2026__.__18_23_50__3_-066ac87a-9400-4574-a8a1-136b6313eda5.png', 'bait-caster'],
+  ['c__Users_User_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_ChatGPT_Image_3____._2026__.__18_23_50__4_-3488aa27-c7ee-479a-8a9f-c51e8a14c800.png', 'bait-maybug'],
+  ['c__Users_User_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_ChatGPT_Image_3____._2026__.__18_23_50__5_-88888b47-b8f0-497d-870c-69b7e24f64bb.png', 'bait-fly'],
 ];
 
 function isBackgroundPixel(r, g, b, a) {
@@ -76,7 +81,10 @@ async function processBait(srcFile, outName) {
     return;
   }
   const img = await stripBackgroundFlood(src);
-  await img.png({ compressionLevel: 9 }).toFile(dest);
+  await img
+    .resize(256, 256, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .png({ compressionLevel: 9 })
+    .toFile(dest);
   console.log('ok', outName);
 }
 
